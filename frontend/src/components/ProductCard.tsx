@@ -4,15 +4,16 @@ import { Product } from "@/types";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { useCart } from "@/providers/CartProvider";
+import { usePricing } from "@/providers/PricingProvider";
 import { ExternalLink } from "lucide-react";
-import { calculateBRLPrice } from "@/lib/pricingConfig";
 import { siteConfig } from "@/config/site";
 
 export function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
+  const { calculatePrice } = usePricing();
 
-  const currentBrl = calculateBRLPrice(product.price, product.category);
-  const previousBrl = calculateBRLPrice(product.previousPrice, product.category);
+  const currentBrl = calculatePrice(product.price, product.category);
+  const previousBrl = calculatePrice(product.previousPrice, product.category);
 
   const zapMessage = `Olá, tenho interesse no produto *${product.name}* (Ref: ${product.id}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}\nLink Original: ${product.url}`;
   const zapUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(zapMessage)}`;

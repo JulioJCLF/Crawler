@@ -1,12 +1,13 @@
 import type { NextConfig } from "next";
 
+const isStaticExport = process.env.STATIC_EXPORT === "true";
+
 const nextConfig: NextConfig = {
-  output: "export",
+  output: isStaticExport ? "export" : "standalone",
   images: {
     unoptimized: true,
   },
-  // O repositório no GitHub se chama crawler, então o base path do GitHub Pages será /crawler
-  basePath: "/crawler",
+  basePath: process.env.NEXT_PUBLIC_BASE_PATH ?? (isStaticExport ? "/crawler" : ""),
 };
 
 export default nextConfig;

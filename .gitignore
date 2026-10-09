@@ -7,3 +7,9 @@ portal/public/
 portal/.quartz-cache/
 
 .DS_Store
+
+# runtime data
+data/*.json
+data/*.tmp
+frontend/data/*.json
+frontend/data/*.tmp
