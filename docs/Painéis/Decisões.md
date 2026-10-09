@@ -1,12 +1,12 @@
 ---
 tipo: painel
-gerado_em: 2026-09-23
+gerado_em: 2026-10-09
 tags:
   - crawler/painel
 ---
 # Decisões
 
-> [!info] Página gerada automaticamente em 2026-09-23. Escolhas registradas e por quê.
+> [!info] Página gerada automaticamente em 2026-10-09. Escolhas registradas e por quê.
 
 | Decisão | Status | Data |
 |---|---|---|
@@ -17,3 +17,4 @@ tags:
 | [[DEC-005 GitHub Actions como agendador]] | ✅ aceita | 2026-09-20 |
 | [[DEC-006 Documentação spec-driven é a fonte da verdade]] | ✅ aceita | 2026-09-20 |
 | [[DEC-007 Adoção do sistema de documentação e trilhos para agentes]] | ✅ aceita | 2026-09-20 |
+| [[DEC-008 Servidor dinâmico Next.js no Railway com autenticação e gestão de preços]] | ✅ aceita | 2026-10-09 |

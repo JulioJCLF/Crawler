@@ -1,6 +1,8 @@
 "use client";
 
 import { useTheme } from "@/providers/ThemeProvider";
+import { Shield } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
   const { theme } = useTheme();
@@ -32,11 +34,20 @@ export function Hero() {
           </p>
         </div>
 
-        <div className="flex gap-4">
+        <div className="flex items-center gap-3">
           <div className="bg-card border border-border rounded-md p-3 flex items-center gap-3 font-mono text-xs text-muted-foreground">
             <span className="w-2 h-2 rounded-full bg-accent animate-pulse shadow-[0_0_8px_var(--accent)]"></span>
             Status: <strong className="text-foreground">Online</strong>
           </div>
+
+          <Link
+            href="/admin"
+            className="bg-card border border-border rounded-md p-3 flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-foreground hover:border-accent/40 transition-colors"
+            title="Painel Administrativo de Precificação"
+          >
+            <Shield className="w-3.5 h-3.5 text-accent" />
+            <span className="hidden sm:inline">Admin</span>
+          </Link>
         </div>
       </div>
     </div>

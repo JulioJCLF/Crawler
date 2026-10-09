@@ -30,3 +30,20 @@ export interface Snapshot {
   categories: CategorySummary[];
   products: Product[];
 }
+
+export interface PricingConfig {
+  exchangeRate: number; // Ex: 5.50
+  defaultMarkup: number; // Ex: 1.50 (+50%)
+  categoryMarkups: Record<string, number>; // Ex: { "replicas": 1.50, ... }
+  updatedAt?: string;
+  updatedBy?: string;
+}
+
+export interface CalculatedPrice {
+  amount: number;
+  formatted: string;
+  usdAmount: number;
+  exchangeRate: number;
+  markup: number;
+  marginPercent: number;
+}

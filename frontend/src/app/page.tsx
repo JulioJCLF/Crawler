@@ -377,6 +377,22 @@ export default function Home() {
                 </button>
               </div>
             )}
+
+            <footer className="mt-8 py-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-muted-foreground">
+              <div>
+                <span>Arsenal Sports Catalog · {availableProducts.length} itens indexados</span>
+              </div>
+              <div className="flex items-center gap-4">
+                <a
+                  href="/admin"
+                  className="hover:text-foreground transition-colors flex items-center gap-1.5"
+                >
+                  Gestão de Valores
+                </a>
+                <span>·</span>
+                <span>Railway Ready</span>
+              </div>
+            </footer>
           </div>
         </main>
       </div>
