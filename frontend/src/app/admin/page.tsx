@@ -20,6 +20,7 @@ import {
   TrendingUp,
 } from "lucide-react";
 import Link from "next/link";
+import { Logo } from "@/components/layout/Logo";
 import { PricingConfig } from "@/types";
 import {
   DEFAULT_PRICING_CONFIG,
@@ -344,12 +345,12 @@ export default function AdminDashboardPage() {
       <header className="border-b border-border bg-card/60 backdrop-blur sticky top-0 z-40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded bg-accent/20 border border-accent/40 flex items-center justify-center text-accent">
-              <Shield className="w-4 h-4" />
+            <div className="w-10 h-10 rounded-lg bg-card border border-border p-1.5 flex items-center justify-center">
+              <Logo className="w-full h-full object-contain" />
             </div>
             <div>
               <span className="font-heading text-lg font-bold tracking-wider uppercase block leading-none">
-                Arsenal Admin
+                Hunting World Admin
               </span>
               <span className="font-mono text-[10px] text-muted-foreground uppercase tracking-widest">
                 Gestão de Fluxo de Valores

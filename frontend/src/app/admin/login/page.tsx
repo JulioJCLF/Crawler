@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Shield, Lock, User, ArrowRight, AlertCircle, Store } from "lucide-react";
 import Link from "next/link";
+import { Logo } from "@/components/layout/Logo";
 
 export default function AdminLoginPage() {
   const router = useRouter();
@@ -48,14 +49,14 @@ export default function AdminLoginPage() {
         <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/20 via-accent to-accent/20" />
 
         <div className="text-center mb-8">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 border border-accent/30 text-accent mb-4">
-            <Shield className="w-7 h-7" />
+          <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-card border border-border p-2.5 shadow-lg mb-4">
+            <Logo className="w-full h-full object-contain filter drop-shadow" />
           </div>
           <h1 className="font-heading text-3xl font-bold tracking-wider uppercase text-foreground">
-            Acesso Restrito
+            Hunting World
           </h1>
           <p className="font-mono text-xs text-muted-foreground mt-1 tracking-wider uppercase">
-            Gestão de Fluxo de Valores & Precificação
+            Acesso Restrito · Gestão de Valores
           </p>
         </div>
 

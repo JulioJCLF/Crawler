@@ -13,15 +13,13 @@
 export type ThemeName = "hunting" | "minimal" | "dark" | "light";
 export type LayoutMode = "sidebar" | "topbar" | "drawer";
 
-/**
- * IMPORTANTE: mantenha igual ao `basePath` do next.config.ts.
- * Usado para montar as URLs de assets locais (logo, imagens em /public) porque
- * o GitHub Pages serve o site sob /crawler.
- */
-export const BASE_PATH = "/crawler";
+export const BASE_PATH = process.env.NEXT_PUBLIC_BASE_PATH ?? (process.env.STATIC_EXPORT === "true" ? "/crawler" : "");
 
 /** Monta o caminho de um asset local respeitando o basePath. */
-export const asset = (path: string) => `${BASE_PATH}${path.startsWith("/") ? path : `/${path}`}`;
+export const asset = (path: string) => {
+  const cleanPath = path.startsWith("/") ? path : `/${path}`;
+  return `${BASE_PATH}${cleanPath}`;
+};
 
 export interface SiteConfig {
   /** Nome da marca (usado em textos e no alt da logo). */
