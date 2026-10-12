@@ -29,7 +29,11 @@ ENV HOSTNAME="0.0.0.0"
 RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
+# Cria diretório de dados persistente (onde o Railway Volume /app/data é montado)
 RUN mkdir -p /app/data && chown nextjs:nodejs /app/data
+
+# Copia snapshot inicial local para servir de base inicial se o volume estiver vazio
+COPY --chown=nextjs:nodejs backend/snapshot.json ./snapshot.json
 
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./

@@ -1,12 +1,12 @@
 ---
 tipo: painel
-gerado_em: 2026-10-09
+gerado_em: 2026-10-12
 tags:
   - crawler/painel
 ---
 # Requisitos por fase
 
-> [!info] Página gerada automaticamente em 2026-10-09. Situação de cada item, organizado pelos blocos de trabalho.
+> [!info] Página gerada automaticamente em 2026-10-12. Situação de cada item, organizado pelos blocos de trabalho.
 
 ## 1 · Crawler
 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 5/5
@@ -51,10 +51,11 @@ tags:
 | [[REQ-017 Mostrar filtros ativos e permitir limpá-los de uma vez]] | 🚀 implementado | should |
 
 ## 5 · Qualidade
-🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 2/2
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 3/3
 
 | Requisito | Status | Prioridade |
 |---|---|---|
 | [[REQ-016 Garantir testes automatizados a cada mudança]] | 🚀 implementado | must |
 | [[REQ-020 Painel visual de gestão de margens e câmbio com autenticação]] | 🚀 implementado | must |
+| [[REQ-021 Cache de catálogo server-side e persistência via Railway Volume]] | 🚀 implementado | must |
 

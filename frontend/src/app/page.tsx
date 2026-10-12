@@ -27,18 +27,31 @@ export default function Home() {
   const itemsPerPage = 36;
 
   useEffect(() => {
-    // Busca do Github Raw (banco de dados estático)
-    const fetchUrl = "https://raw.githubusercontent.com/JulioJCLF/crawler/main/backend/snapshot.json";
+    // Prioriza o endpoint de cache server-side acelerado no Railway, com fallback para o GitHub Raw
+    const apiUrl = "/api/products";
+    const githubFallbackUrl = "https://raw.githubusercontent.com/JulioJCLF/crawler/main/backend/snapshot.json";
 
-    fetch(fetchUrl)
-      .then((res) => res.json())
+    fetch(apiUrl)
+      .then((res) => {
+        if (!res.ok) throw new Error(`API error: ${res.status}`);
+        return res.json();
+      })
       .then((data) => {
         setSnapshot(data);
         setLoading(false);
       })
       .catch((err) => {
-        console.error("Failed to fetch snapshot", err);
-        setLoading(false);
+        console.warn("[Catalogue] Falha ao buscar de /api/products, tentando fallback do GitHub:", err);
+        fetch(githubFallbackUrl)
+          .then((res) => res.json())
+          .then((data) => {
+            setSnapshot(data);
+            setLoading(false);
+          })
+          .catch((fallbackErr) => {
+            console.error("Falha ao recuperar catálogo de ambas as fontes:", fallbackErr);
+            setLoading(false);
+          });
       });
   }, []);
 
