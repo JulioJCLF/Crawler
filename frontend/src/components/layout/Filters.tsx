@@ -4,6 +4,7 @@ import { useTheme } from "@/providers/ThemeProvider";
 import { Input } from "@/components/ui/input";
 import { CategorySummary } from "@/types";
 import { Logo } from "@/components/layout/Logo";
+import { QUICK_SEARCH_SUGGESTIONS, PRICE_RANGES } from "@/lib/searchUtils";
 
 interface FiltersProps {
   categories: CategorySummary[];
@@ -18,6 +19,8 @@ interface FiltersProps {
   onSelectVestCategory: (vestCat: string | null) => void;
   selectedBrand: string | null;
   onSelectBrand: (brand: string | null) => void;
+  selectedPriceRange: string | null;
+  onSelectPriceRange: (rangeId: string | null) => void;
   sortOrder: string;
   onSortChange: (sort: string) => void;
   availableBrands: string[];
@@ -41,7 +44,6 @@ export const MACRO_CATEGORIES = [
 
 const BB_WEIGHTS = ["0.20g", "0.23g", "0.25g", "0.28g", "0.30g", "0.32g", "0.36g", "0.40g", "0.43g", "0.45g", "0.48g", "0.50g"];
 
-// Definindo as Regex no backend/page, aqui mandamos apenas as chaves.
 export const VEST_CATEGORIES = [
   { value: "holsters", label: "Holsters" },
   { value: "helmets", label: "Helmets" },
@@ -67,6 +69,8 @@ export function Filters({
   onSelectVestCategory,
   selectedBrand,
   onSelectBrand,
+  selectedPriceRange,
+  onSelectPriceRange,
   sortOrder,
   onSortChange,
   availableBrands
@@ -81,7 +85,7 @@ export function Filters({
         <Logo className="h-12 w-auto object-contain flex-shrink-0" />
         <div className="w-full md:max-w-[800px] flex gap-2 flex-wrap">
           <Input 
-            placeholder="Buscar código ou nome..." 
+            placeholder="Buscar equipamento, modelo ou ref..." 
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
             className="font-mono text-sm w-full md:w-auto flex-1"
@@ -96,6 +100,17 @@ export function Filters({
             <option value="asc">A-Z</option>
             <option value="price_asc">Menor Preço</option>
             <option value="price_desc">Maior Preço</option>
+          </select>
+
+          <select
+            value={selectedPriceRange || ""}
+            onChange={(e) => onSelectPriceRange(e.target.value || null)}
+            className="font-mono text-xs px-2 py-2 rounded-md bg-background border border-border flex-1 md:flex-none"
+          >
+            <option value="">Qualquer Preço</option>
+            {PRICE_RANGES.map((r) => (
+              <option key={r.id} value={r.id}>{r.label}</option>
+            ))}
           </select>
 
           {isReplicaCategory && (
@@ -179,7 +194,7 @@ export function Filters({
         </p>
       </div>
 
-      <div className="space-y-4 md:space-y-6">
+      <div className="space-y-4 md:space-y-5">
         <div>
           <label className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2 block">
             Ordenação
@@ -198,14 +213,51 @@ export function Filters({
 
         <div>
           <label className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2 block">
-            Busca por Palavra-chave
+            Busca Inteligente
           </label>
           <Input 
-            placeholder="Código ou nome..." 
+            placeholder="Ex: glock, m4, red dot..." 
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
             className="font-mono text-sm bg-background border-border"
           />
+
+          {/* Sugestões rápidas de busca */}
+          <div className="mt-2 flex flex-wrap gap-1">
+            {QUICK_SEARCH_SUGGESTIONS.map((s) => (
+              <button
+                key={s.label}
+                type="button"
+                onClick={() => onSearchChange(s.query)}
+                className={`text-[10px] font-mono px-2 py-0.5 rounded border transition-colors ${
+                  search.toLowerCase() === s.query.toLowerCase()
+                    ? "bg-accent text-accent-foreground border-accent font-bold"
+                    : "bg-background text-muted-foreground border-border hover:border-accent/50 hover:text-foreground"
+                }`}
+              >
+                {s.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Filtro por Faixa de Preço em Reais */}
+        <div>
+          <label className="font-mono text-[10px] uppercase tracking-widest text-muted-foreground mb-2 block">
+            Faixa de Preço (R$)
+          </label>
+          <select
+            value={selectedPriceRange || ""}
+            onChange={(e) => onSelectPriceRange(e.target.value || null)}
+            className="w-full font-mono text-sm p-2 rounded-md bg-background border border-border text-foreground"
+          >
+            <option value="">Todos os Preços</option>
+            {PRICE_RANGES.map((r) => (
+              <option key={r.id} value={r.id}>
+                {r.label}
+              </option>
+            ))}
+          </select>
         </div>
 
         {isReplicaCategory && (

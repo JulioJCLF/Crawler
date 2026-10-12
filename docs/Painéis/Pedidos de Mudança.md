@@ -10,6 +10,7 @@ tags:
 
 | Pedido | Status | Pedido por | Data | Urgência |
 |---|---|---|---|---|
+| [[PM-005 Busca tolerante a erros, multi-termo, sugestões rápidas e filtro por faixa de preço]] | 🚀 aplicado | Luiz | 2026-10-12 | alta |
 | [[PM-004 Robustez com Railway Volume e cache acelerado de produtos]] | 🚀 aplicado | Luiz | 2026-10-12 | alta |
 | [[PM-003 Painel de alteração de fluxo de valores e deploy no Railway]] | 🚀 aplicado | Luiz | 2026-10-09 | alta |
 | [[PM-002 Aumentar a confiabilidade do sistema]] | ✅ aprovado | Luiz | 2026-09-20 | normal |

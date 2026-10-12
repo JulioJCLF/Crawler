@@ -1,4 +1,5 @@
 import { MACRO_CATEGORIES, VEST_CATEGORIES } from "@/components/layout/Filters";
+import { PRICE_RANGES } from "@/lib/searchUtils";
 
 export interface FilterState {
   search: string;
@@ -6,6 +7,7 @@ export interface FilterState {
   brand: string | null;
   weight: string | null;
   vestCategory: string | null;
+  priceRange: string | null;
 }
 
 export type FilterKey = keyof FilterState;
@@ -23,7 +25,11 @@ function vestLabel(value: string): string {
   return VEST_CATEGORIES.find((v) => v.value === value)?.label || value;
 }
 
-// REQ-017: monta o resumo de filtros ativos para exibir na vitrine.
+function priceRangeLabel(rangeId: string): string {
+  return PRICE_RANGES.find((r) => r.id === rangeId)?.label || rangeId;
+}
+
+// REQ-017 / REQ-022: monta o resumo de filtros ativos para exibir na vitrine.
 export function buildActiveFilterChips(state: FilterState): ActiveFilterChip[] {
   const chips: ActiveFilterChip[] = [];
 
@@ -32,6 +38,9 @@ export function buildActiveFilterChips(state: FilterState): ActiveFilterChip[] {
   }
   if (state.category) {
     chips.push({ key: "category", label: categoryLabel(state.category) });
+  }
+  if (state.priceRange) {
+    chips.push({ key: "priceRange", label: `Preço: ${priceRangeLabel(state.priceRange)}` });
   }
   if (state.brand) {
     chips.push({ key: "brand", label: state.brand });
@@ -53,4 +62,5 @@ export const CLEARED_FILTER_STATE: FilterState = {
   brand: null,
   weight: null,
   vestCategory: null,
+  priceRange: null,
 };

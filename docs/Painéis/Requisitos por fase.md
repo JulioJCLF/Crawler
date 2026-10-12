@@ -51,11 +51,12 @@ tags:
 | [[REQ-017 Mostrar filtros ativos e permitir limpá-los de uma vez]] | 🚀 implementado | should |
 
 ## 5 · Qualidade
-🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 3/3
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 4/4
 
 | Requisito | Status | Prioridade |
 |---|---|---|
 | [[REQ-016 Garantir testes automatizados a cada mudança]] | 🚀 implementado | must |
 | [[REQ-020 Painel visual de gestão de margens e câmbio com autenticação]] | 🚀 implementado | must |
 | [[REQ-021 Cache de catálogo server-side e persistência via Railway Volume]] | 🚀 implementado | must |
+| [[REQ-022 Busca inteligente multi-termo, sugestões e filtro de preço em reais]] | 🚀 implementado | must |
 

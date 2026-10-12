@@ -6,10 +6,12 @@ import { ActiveFilters } from "@/components/layout/ActiveFilters";
 import { Radar } from "@/components/layout/Radar";
 import { ProductCard } from "@/components/ProductCard";
 import { useTheme } from "@/providers/ThemeProvider";
+import { usePricing } from "@/providers/PricingProvider";
 import { parseUsdPrice } from "@/lib/pricingConfig";
 import { AIRSOFT_BRANDS } from "@/lib/brands";
 import { siteConfig } from "@/config/site";
 import { buildActiveFilterChips, CLEARED_FILTER_STATE, FilterKey } from "@/lib/activeFilters";
+import { matchesSmartSearch, matchesPriceRange } from "@/lib/searchUtils";
 
 export default function Home() {
   const [snapshot, setSnapshot] = useState<any>(null);
@@ -17,10 +19,12 @@ export default function Home() {
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const { layout, setTheme, setLayout, theme } = useTheme();
+  const { calculatePrice } = usePricing();
 
   const [selectedWeight, setSelectedWeight] = useState<string | null>(null);
   const [selectedVestCategory, setSelectedVestCategory] = useState<string | null>(null);
   const [selectedBrand, setSelectedBrand] = useState<string | null>(null);
+  const [selectedPriceRange, setSelectedPriceRange] = useState<string | null>(null);
   const [sortOrder, setSortOrder] = useState<string>("recent");
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -123,6 +127,11 @@ export default function Home() {
     setCurrentPage(1);
   };
 
+  const handlePriceRangeChange = (rangeId: string | null) => {
+    setSelectedPriceRange(rangeId);
+    setCurrentPage(1);
+  };
+
   const handleSortChange = (sort: string) => {
     setSortOrder(sort);
     setCurrentPage(1);
@@ -130,7 +139,7 @@ export default function Home() {
 
   // availableProducts e availableBrands são calculados acima (antes dos returns).
 
-  // REQ-017: remove um filtro específico do resumo, mantendo os demais.
+  // REQ-017 / REQ-022: remove um filtro específico do resumo, mantendo os demais.
   const handleRemoveFilter = (key: FilterKey) => {
     switch (key) {
       case "search":
@@ -148,21 +157,25 @@ export default function Home() {
       case "vestCategory":
         handleVestCategoryChange(CLEARED_FILTER_STATE.vestCategory);
         break;
+      case "priceRange":
+        handlePriceRangeChange(CLEARED_FILTER_STATE.priceRange);
+        break;
     }
   };
 
-  // REQ-017 / RN1 / RN2: limpa todos os filtros, reseta a página, mas não toca em sortOrder.
+  // REQ-017 / REQ-022: limpa todos os filtros, reseta a página, mas não toca em sortOrder.
   const handleClearAllFilters = () => {
     setSearch(CLEARED_FILTER_STATE.search);
     setSelectedCategory(CLEARED_FILTER_STATE.category);
     setSelectedBrand(CLEARED_FILTER_STATE.brand);
     setSelectedWeight(CLEARED_FILTER_STATE.weight);
     setSelectedVestCategory(CLEARED_FILTER_STATE.vestCategory);
+    setSelectedPriceRange(CLEARED_FILTER_STATE.priceRange);
     setCurrentPage(1);
   };
 
   const filteredProducts = availableProducts.filter((p: any) => {
-    const matchesSearch = p.name.toLowerCase().includes(search.toLowerCase());
+    const matchesSearch = matchesSmartSearch(p.name, search);
     let matchesCat = true;
 
     if (selectedCategory) {
@@ -255,7 +268,13 @@ export default function Home() {
       matchesBrand = brandRegex.test(p.name);
     }
 
-    return matchesSearch && matchesCat && matchesWeight && matchesVest && matchesBrand;
+    let matchesPrice = true;
+    if (selectedPriceRange) {
+      const calculated = calculatePrice(p.price, p.category);
+      matchesPrice = matchesPriceRange(calculated?.amount, selectedPriceRange);
+    }
+
+    return matchesSearch && matchesCat && matchesWeight && matchesVest && matchesBrand && matchesPrice;
   });
 
   const activeFilterChips = buildActiveFilterChips({
@@ -264,6 +283,7 @@ export default function Home() {
     brand: selectedBrand,
     weight: selectedWeight,
     vestCategory: selectedVestCategory,
+    priceRange: selectedPriceRange,
   });
 
   // Apply Sorting
@@ -326,6 +346,8 @@ export default function Home() {
           onSelectVestCategory={handleVestCategoryChange}
           selectedBrand={selectedBrand}
           onSelectBrand={handleBrandChange}
+          selectedPriceRange={selectedPriceRange}
+          onSelectPriceRange={handlePriceRangeChange}
           sortOrder={sortOrder}
           onSortChange={handleSortChange}
           availableBrands={availableBrands}
