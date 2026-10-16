@@ -87,3 +87,18 @@ export interface AdminProductListResponse {
   };
 }
 
+export type UserRole = "master" | "dolar_operator";
+
+export interface AuthUser {
+  username: string;
+  email: string;
+  role: UserRole;
+  updatedAt?: string;
+}
+
+export interface PasswordResetToken {
+  code: string;
+  username: string;
+  expiresAt: number;
+}
+

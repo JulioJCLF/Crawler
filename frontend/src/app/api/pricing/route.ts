@@ -20,7 +20,26 @@ export async function POST(req: NextRequest) {
 
   try {
     const body = await req.json();
-    const result = updatePricingConfig(body, user.username);
+
+    // Se o usuário for operador de dólar, restringe alteração apenas à cotação do dólar
+    let payload = body;
+    if (user.role === "dolar_operator") {
+      if (body.exchangeRate === undefined || typeof body.exchangeRate !== "number" || body.exchangeRate <= 0) {
+        return NextResponse.json(
+          { error: "Operador de câmbio pode alterar apenas a cotação do dólar (valor numérico positivo)." },
+          { status: 400 }
+        );
+      }
+
+      const currentConfig = getPricingConfig();
+      payload = {
+        exchangeRate: body.exchangeRate,
+        defaultMarkup: currentConfig.defaultMarkup,
+        categoryMarkups: currentConfig.categoryMarkups,
+      };
+    }
+
+    const result = updatePricingConfig(payload, user.username);
 
     if (!result.success) {
       return NextResponse.json(
@@ -31,7 +50,10 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: "Configuração de precificação atualizada com sucesso.",
+      message:
+        user.role === "dolar_operator"
+          ? "Cotação do dólar atualizada com sucesso!"
+          : "Configuração de precificação atualizada com sucesso.",
       config: result.config,
     });
   } catch (err) {

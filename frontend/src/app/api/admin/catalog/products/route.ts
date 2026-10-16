@@ -18,6 +18,13 @@ export async function GET(req: NextRequest) {
     );
   }
 
+  if (user.role !== "master") {
+    return NextResponse.json(
+      { error: "Apenas Administrador Master pode gerenciar o catálogo." },
+      { status: 403 }
+    );
+  }
+
   const { searchParams } = new URL(req.url);
   const query = searchParams.get("q") || undefined;
   const category = searchParams.get("category") || undefined;
@@ -59,6 +66,13 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  if (user.role !== "master") {
+    return NextResponse.json(
+      { error: "Apenas Administrador Master pode gerenciar o catálogo." },
+      { status: 403 }
+    );
+  }
+
   try {
     const body = await req.json();
     const res = createCustomProduct(body);
@@ -90,6 +104,13 @@ export async function PUT(req: NextRequest) {
 
   if (!user) {
     return NextResponse.json({ error: "Acesso não autorizado." }, { status: 401 });
+  }
+
+  if (user.role !== "master") {
+    return NextResponse.json(
+      { error: "Apenas Administrador Master pode gerenciar o catálogo." },
+      { status: 403 }
+    );
   }
 
   try {
@@ -127,6 +148,13 @@ export async function DELETE(req: NextRequest) {
     return NextResponse.json({ error: "Acesso não autorizado." }, { status: 401 });
   }
 
+  if (user.role !== "master") {
+    return NextResponse.json(
+      { error: "Apenas Administrador Master pode gerenciar o catálogo." },
+      { status: 403 }
+    );
+  }
+
   const { searchParams } = new URL(req.url);
   let id = searchParams.get("id");
 
@@ -162,4 +190,3 @@ export async function DELETE(req: NextRequest) {
     return NextResponse.json({ error: "Erro ao excluir produto." }, { status: 500 });
   }
 }
-

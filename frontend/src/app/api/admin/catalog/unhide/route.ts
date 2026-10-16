@@ -11,6 +11,13 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Acesso não autorizado." }, { status: 401 });
   }
 
+  if (user.role !== "master") {
+    return NextResponse.json(
+      { error: "Apenas Administrador Master pode gerenciar o catálogo." },
+      { status: 403 }
+    );
+  }
+
   try {
     const { id } = await req.json();
     if (!id) {

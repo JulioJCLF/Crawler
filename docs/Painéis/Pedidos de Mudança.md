@@ -10,6 +10,7 @@ tags:
 
 | Pedido | Status | Pedido por | Data | Urgência |
 |---|---|---|---|---|
+| [[PM-007 Dois níveis de acesso no painel e recuperação de senha]] | ✅ aprovado | Luiz | 2026-10-16 | alta |
 | [[PM-006 Gestão visual de produtos pelo front end]] | ✅ aprovado | Luiz | 2026-10-16 | alta |
 | [[PM-005 Busca tolerante a erros, multi-termo, sugestões rápidas e filtro por faixa de preço]] | 🚀 aplicado | Luiz | 2026-10-12 | alta |
 | [[PM-004 Robustez com Railway Volume e cache acelerado de produtos]] | 🚀 aplicado | Luiz | 2026-10-12 | alta |

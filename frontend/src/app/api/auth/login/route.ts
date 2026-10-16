@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { validateCredentials, createSessionToken, SESSION_COOKIE_NAME } from "@/lib/auth";
+import { authenticateUser, createSessionToken, SESSION_COOKIE_NAME } from "@/lib/auth";
 
 export async function POST(req: NextRequest) {
   try {
@@ -12,20 +12,24 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    const isValid = validateCredentials(username, password);
+    const authResult = authenticateUser(username, password);
 
-    if (!isValid) {
+    if (!authResult) {
       return NextResponse.json(
         { error: "Usuário ou senha incorretos." },
         { status: 401 }
       );
     }
 
-    const token = createSessionToken(username.trim().toLowerCase());
+    const token = createSessionToken(authResult.username, 24, authResult.role);
     const response = NextResponse.json({
       success: true,
       message: "Login realizado com sucesso.",
-      user: { username: username.trim().toLowerCase() },
+      user: {
+        username: authResult.username,
+        email: authResult.email,
+        role: authResult.role,
+      },
     });
 
     response.cookies.set({

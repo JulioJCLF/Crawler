@@ -9,7 +9,10 @@ vi.mock("@/lib/auth", () => ({
   SESSION_COOKIE_NAME: "admin_session",
   verifySessionToken: vi.fn((token) => {
     if (token === "valid-admin-token") {
-      return { username: "admin", role: "admin" };
+      return { username: "admin", role: "master" };
+    }
+    if (token === "valid-cambio-token") {
+      return { username: "cambio", role: "dolar_operator" };
     }
     return null;
   }),
@@ -65,7 +68,19 @@ describe("Rotas de API - Gestão de Catálogo Administrativo", () => {
     expect(res.status).toBe(401);
   });
 
-  it("retorna lista de produtos e estatísticas para administrador autenticado", async () => {
+  it("rejeita acesso do operador de dólar (dolar_operator) com 403 Forbidden", async () => {
+    const req = new NextRequest("http://localhost:3000/api/admin/catalog/products", {
+      headers: {
+        cookie: "admin_session=valid-cambio-token",
+      },
+    });
+    const res = await getCatalogProducts(req);
+    expect(res.status).toBe(403);
+    const data = await res.json();
+    expect(data.error).toContain("Apenas Administrador Master");
+  });
+
+  it("retorna lista de produtos e estatísticas para administrador master autenticado", async () => {
     const req = new NextRequest("http://localhost:3000/api/admin/catalog/products?status=all", {
       headers: {
         cookie: "admin_session=valid-admin-token",
@@ -82,7 +97,7 @@ describe("Rotas de API - Gestão de Catálogo Administrativo", () => {
     expect(data.stats.totalActive).toBe(2);
   });
 
-  it("permite cadastrar produto manual via POST autenticado", async () => {
+  it("permite cadastrar produto manual via POST autenticado como master", async () => {
     const req = new NextRequest("http://localhost:3000/api/admin/catalog/products", {
       method: "POST",
       headers: {

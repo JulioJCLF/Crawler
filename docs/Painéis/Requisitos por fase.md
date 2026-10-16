@@ -61,9 +61,10 @@ tags:
 | [[REQ-022 Busca inteligente multi-termo, sugestões e filtro de preço em reais]] | 🚀 implementado | must |
 
 ## 6 · Sem fase definida
-🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 1/1
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 2/2
 
 | Requisito | Status | Prioridade |
 |---|---|---|
 | [[REQ-023 Gestão visual de produtos (cadastro, ocultação e catálogo híbrido)]] | 🚀 implementado | must |
+| [[REQ-024 Controle de acesso por perfis e recuperação de senha por e-mail]] | 🚀 implementado | must |
 
