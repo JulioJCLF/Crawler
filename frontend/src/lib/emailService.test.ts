@@ -25,7 +25,7 @@ describe("emailService - Serviço de Envio de E-mails", () => {
   it("simula envio com sucesso em ambiente de teste quando SMTP não está configurado", async () => {
     // Em ambiente de teste (VITEST=true), deve simular com sucesso
     const res = await sendPasswordResetEmail(
-      "teste@huntworld.com.br",
+      "teste@huntingworld.com",
       "admin",
       "654321"
     );

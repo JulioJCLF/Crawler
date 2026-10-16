@@ -50,11 +50,11 @@ async function main() {
       console.log("1) Administrador Master:");
       console.log("   - Usuário: admin");
       console.log("   - Senha:   arsenal@admin2026");
-      console.log("   - E-mail:  admin@huntworld.com.br\n");
+      console.log("   - E-mail:  admin@huntingworld.com\n");
       console.log("2) Operador de Dólar / Câmbio:");
       console.log("   - Usuário: cambio");
       console.log("   - Senha:   arsenal@dolar2026");
-      console.log("   - E-mail:  cambio@huntworld.com.br");
+      console.log("   - E-mail:  matheus@huntingworld.com");
       console.log("--------------------------------------------------");
       console.log("🔑 Chave Mestra de Recuperação Web:");
       console.log("   arsenal-reset-2026");

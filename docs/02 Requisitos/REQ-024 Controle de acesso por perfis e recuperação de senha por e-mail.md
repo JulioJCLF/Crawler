@@ -29,8 +29,8 @@ O sistema possuía apenas uma credencial administrativa única compartilhada. Pa
    - **Admin Master (`admin`)**: acesso irrestrito ao Gerenciador de Catálogo, Precificação Completa (Dólar, Margem Padrão e Categorias), Simulador e Gestão de Contas (troca de senhas e e-mails de recuperação).
    - **Operador de Dólar (`cambio`)**: ao logar, a aba de Catálogo fica oculta e as rotas de API `/api/admin/catalog/*` respondem `403 Forbidden`. Na aba de Precificação, apenas a Cotação do Dólar é editável; as margens de lucro ficam travadas para edição.
 2. **Credenciais Iniciais Padrão**:
-   - Admin Master: usuário `admin`, senha `arsenal@admin2026`, e-mail `admin@huntworld.com.br` (ou `ADMIN_EMAIL`).
-   - Operador de Dólar: usuário `cambio`, senha `arsenal@dolar2026`, e-mail `cambio@huntworld.com.br` (ou `CAMBIO_EMAIL`).
+   - Admin Master: usuário `admin`, senha `arsenal@admin2026`, e-mail `admin@huntingworld.com` (ou `ADMIN_EMAIL`).
+   - Operador de Dólar: usuário `cambio`, senha `arsenal@dolar2026`, e-mail `matheus@huntingworld.com` (ou `CAMBIO_EMAIL`).
 3. **Recuperação de Senha por E-mail**:
    - Na tela `/admin/login`, o link "Esqueci minha senha" permite digitar o usuário ou e-mail.
    - O sistema gera um código de 6 dígitos seguro com validade de 15 minutos e envia por e-mail (via SMTP configurável).

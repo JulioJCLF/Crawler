@@ -57,11 +57,11 @@ export function hashPassword(password: string, salt: string): string {
 export function getDefaultUsers(): Record<string, StoredUser> {
   const adminUser = (process.env.ADMIN_USERNAME || "admin").trim().toLowerCase();
   const adminPass = process.env.ADMIN_PASSWORD || "arsenal@admin2026";
-  const adminEmail = (process.env.ADMIN_EMAIL || "admin@huntworld.com.br").trim().toLowerCase();
+  const adminEmail = (process.env.ADMIN_EMAIL || "admin@huntingworld.com").trim().toLowerCase();
 
   const cambioUser = (process.env.CAMBIO_USERNAME || "cambio").trim().toLowerCase();
   const cambioPass = process.env.CAMBIO_PASSWORD || "arsenal@dolar2026";
-  const cambioEmail = (process.env.CAMBIO_EMAIL || "cambio@huntworld.com.br").trim().toLowerCase();
+  const cambioEmail = (process.env.CAMBIO_EMAIL || "matheus@huntingworld.com").trim().toLowerCase();
 
   const adminSalt = crypto.randomBytes(16).toString("hex");
   const cambioSalt = crypto.randomBytes(16).toString("hex");
@@ -122,7 +122,7 @@ export function getStoredAuthConfig(): MultiUserAuthConfig {
           ...defaults,
           [legacyUser]: {
             username: legacyUser,
-            email: process.env.ADMIN_EMAIL || "admin@huntworld.com.br",
+            email: process.env.ADMIN_EMAIL || "admin@huntingworld.com",
             role: "master",
             passwordHash: parsed.passwordHash,
             salt: parsed.salt,

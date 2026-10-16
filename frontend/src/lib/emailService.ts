@@ -21,7 +21,7 @@ export function getSmtpConfig() {
   const user = process.env.SMTP_USER || "";
   const pass = process.env.SMTP_PASS || "";
   const secure = process.env.SMTP_SECURE === "true" || port === 465;
-  const from = process.env.SMTP_FROM || `"Hunting World" <${user || "noreply@huntworld.com.br"}>`;
+  const from = process.env.SMTP_FROM || `"Hunting World" <${user || "noreply@huntingworld.com"}>`;
 
   return { host, port, user, pass, secure, from };
 }
