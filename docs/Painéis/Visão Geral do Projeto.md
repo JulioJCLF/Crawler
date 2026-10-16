@@ -1,15 +1,15 @@
 ---
 tipo: painel
-gerado_em: 2026-10-12
+gerado_em: 2026-10-16
 tags:
   - crawler/painel
 ---
 # Visão Geral do Projeto
 
-> [!info] Página gerada automaticamente em 2026-10-12. Resumo do andamento. Detalhes: [[Requisitos por fase]].
+> [!info] Página gerada automaticamente em 2026-10-16. Resumo do andamento. Detalhes: [[Requisitos por fase]].
 
 ## Progresso
-🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **21 de 22** itens concluídos
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **22 de 23** itens concluídos
 
 ## Requisitos por status
 | Status | Quantidade |
@@ -18,17 +18,17 @@ tags:
 | 👀 em-revisao | 0 |
 | ✅ aprovado | 1 |
 | 🔨 em-desenvolvimento | 0 |
-| 🚀 implementado | 21 |
+| 🚀 implementado | 22 |
 | 🗑️ descartado | 0 |
 
 ## 📨 Pedidos de mudança em aberto: 0
 Nenhum.
 
 ## 🕒 Últimas sessões de trabalho
+- [[2026-10-16 - Luiz - Gestao visual de produtos e catalogo hibrido]]
 - [[2026-10-12 - Luiz - Railway Volume e cache acelerado de produtos]]
 - [[2026-10-12 - Luiz - Busca inteligente e filtro de preco em reais]]
 - [[2026-10-09 - Luiz - Painel de alteração de fluxo de valores e deploy Railway]]
 - [[2026-09-23 - Luiz - Novo número de WhatsApp da vitrine]]
-- [[2026-09-23 - Luiz - Filtros sobrepondo produtos no celular]]
 
 Linha do tempo completa: [[Registro de Mudanças]]

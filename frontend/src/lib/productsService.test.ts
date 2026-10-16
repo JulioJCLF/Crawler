@@ -1,9 +1,10 @@
-import { describe, it, expect, beforeEach, vi } from "vitest";
+import { describe, it, expect, beforeEach, afterAll, vi } from "vitest";
 import {
   getProductsCatalog,
   _clearProductsMemoryCacheForTesting,
   _setProductsMemoryCacheForTesting,
 } from "./productsService";
+import { resetCatalogForTesting } from "./catalogService";
 import { Snapshot } from "@/types";
 
 const mockSnapshot: Snapshot = {
@@ -37,8 +38,13 @@ const mockSnapshot: Snapshot = {
 
 describe("productsService - Cache server-side de produtos", () => {
   beforeEach(() => {
+    resetCatalogForTesting();
     _clearProductsMemoryCacheForTesting();
     vi.restoreAllMocks();
+  });
+
+  afterAll(() => {
+    resetCatalogForTesting();
   });
 
   it("retorna dados diretamente do cache em memória quando válido", async () => {

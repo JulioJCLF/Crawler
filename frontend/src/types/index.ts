@@ -11,6 +11,12 @@ export interface Product {
   changeType?: "restock" | "sob_consulta" | "price_change" | "new";
   previousPrice?: string | null;
   priceHistory?: PricePoint[];
+  source?: "crawler" | "manual";
+  fixedBrlPrice?: number;
+  status?: "active" | "hidden";
+  hiddenAt?: string;
+  hiddenReason?: string;
+  updatedAt?: string;
 }
 
 export interface PricePoint {
@@ -47,3 +53,37 @@ export interface CalculatedPrice {
   markup: number;
   marginPercent: number;
 }
+
+export interface CustomProductInput {
+  name: string;
+  category: string;
+  categoryLabel?: string;
+  price?: string | null; // Ex: "USD 120.00"
+  fixedBrlPrice?: number; // Ex: 450.00
+  image?: string | null;
+  url?: string;
+  status?: "active" | "hidden";
+}
+
+export interface HiddenProductEntry {
+  id: string;
+  name?: string;
+  hiddenAt: string;
+  reason?: string;
+  source?: "crawler" | "manual";
+}
+
+export interface AdminProductListResponse {
+  products: Product[];
+  total: number;
+  page: number;
+  totalPages: number;
+  limit: number;
+  stats: {
+    totalActive: number;
+    totalHidden: number;
+    totalManual: number;
+    totalCatalog: number;
+  };
+}
+

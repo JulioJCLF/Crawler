@@ -1,12 +1,12 @@
 ---
 tipo: painel
-gerado_em: 2026-10-12
+gerado_em: 2026-10-16
 tags:
   - crawler/painel
 ---
 # Requisitos por categoria
 
-> [!info] Página gerada automaticamente em 2026-10-12. Mesma lista, organizada pela categoria de cada item.
+> [!info] Página gerada automaticamente em 2026-10-16. Mesma lista, organizada pela categoria de cada item.
 
 ## Backend (crawler)
 
@@ -31,6 +31,7 @@ tags:
 | [[REQ-020 Painel visual de gestão de margens e câmbio com autenticação]] | 🚀 implementado |
 | [[REQ-021 Cache de catálogo server-side e persistência via Railway Volume]] | 🚀 implementado |
 | [[REQ-022 Busca inteligente multi-termo, sugestões e filtro de preço em reais]] | 🚀 implementado |
+| [[REQ-023 Gestão visual de produtos (cadastro, ocultação e catálogo híbrido)]] | 🚀 implementado |
 
 ## Automação
 

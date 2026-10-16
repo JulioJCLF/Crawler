@@ -18,9 +18,11 @@ import {
   Search,
   ChevronRight,
   TrendingUp,
+  Package,
 } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/layout/Logo";
+import { CatalogManager } from "@/components/admin/CatalogManager";
 import { PricingConfig } from "@/types";
 import {
   DEFAULT_PRICING_CONFIG,
@@ -76,6 +78,7 @@ export default function AdminDashboardPage() {
   const [lastSaved, setLastSaved] = useState<PricingConfig | null>(null);
 
   // Estados da interface
+  const [activeTab, setActiveTab] = useState<"catalog" | "pricing">("catalog");
   const [categorySearch, setCategorySearch] = useState("");
   const [saving, setSaving] = useState(false);
   const [feedback, setFeedback] = useState<{ type: "success" | "error"; message: string } | null>(null);
@@ -388,7 +391,38 @@ export default function AdminDashboardPage() {
 
       {/* Conteúdo Principal */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-        {/* Banner de Feedback */}
+        {/* Navegação por Abas Principais */}
+        <div className="flex border-b border-border space-x-2">
+          <button
+            onClick={() => setActiveTab("catalog")}
+            className={`inline-flex items-center gap-2 px-5 py-3 border-b-2 font-heading text-sm uppercase tracking-wider font-bold transition-all cursor-pointer ${
+              activeTab === "catalog"
+                ? "border-primary text-primary bg-primary/5"
+                : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/30"
+            }`}
+          >
+            <Package className="w-4 h-4" />
+            <span>Gerenciador de Catálogo</span>
+          </button>
+
+          <button
+            onClick={() => setActiveTab("pricing")}
+            className={`inline-flex items-center gap-2 px-5 py-3 border-b-2 font-heading text-sm uppercase tracking-wider font-bold transition-all cursor-pointer ${
+              activeTab === "pricing"
+                ? "border-primary text-primary bg-primary/5"
+                : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/30"
+            }`}
+          >
+            <DollarSign className="w-4 h-4" />
+            <span>Precificação e Câmbio</span>
+          </button>
+        </div>
+
+        {activeTab === "catalog" ? (
+          <CatalogManager />
+        ) : (
+          <div className="space-y-8">
+            {/* Banner de Feedback */}
         {feedback && (
           <div
             className={`p-4 rounded-xl border flex items-center justify-between font-mono text-sm animate-in fade-in duration-200 ${
@@ -838,7 +872,9 @@ export default function AdminDashboardPage() {
             })}
           </div>
         </div>
-      </main>
+      </div>
+    )}
+    </main>
 
       {/* Modal: Alterar Senha */}
       {showPasswordModal && (

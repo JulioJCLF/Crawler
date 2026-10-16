@@ -1,12 +1,12 @@
 ---
 tipo: painel
-gerado_em: 2026-10-12
+gerado_em: 2026-10-16
 tags:
   - crawler/painel
 ---
 # Decisões
 
-> [!info] Página gerada automaticamente em 2026-10-12. Escolhas registradas e por quê.
+> [!info] Página gerada automaticamente em 2026-10-16. Escolhas registradas e por quê.
 
 | Decisão | Status | Data |
 |---|---|---|
@@ -18,3 +18,4 @@ tags:
 | [[DEC-006 Documentação spec-driven é a fonte da verdade]] | ✅ aceita | 2026-09-20 |
 | [[DEC-007 Adoção do sistema de documentação e trilhos para agentes]] | ✅ aceita | 2026-09-20 |
 | [[DEC-008 Servidor dinâmico Next.js no Railway com autenticação e gestão de preços]] | ✅ aceita | 2026-10-09 |
+| [[DEC-009 Catálogo híbrido com persistência de produtos manuais e bloqueios no Railway Volume]] | ✅ aceita | 2026-10-16 |

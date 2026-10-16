@@ -93,7 +93,8 @@ export function parseUsdPrice(priceStr: string | null | undefined): number {
 export function calculateBRLPrice(
   usdPriceStr: string | null | undefined,
   category: string,
-  config?: PricingConfig | null
+  config?: PricingConfig | null,
+  fixedBrlPrice?: number | null
 ): {
   amount: number;
   formatted: string;
@@ -102,6 +103,22 @@ export function calculateBRLPrice(
   markup: number;
   marginPercent: number;
 } | null {
+  if (typeof fixedBrlPrice === "number" && fixedBrlPrice > 0) {
+    const formatted = new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    }).format(fixedBrlPrice);
+
+    return {
+      amount: fixedBrlPrice,
+      formatted,
+      usdAmount: 0,
+      exchangeRate: config?.exchangeRate || EXCHANGE_RATE,
+      markup: 1,
+      marginPercent: 0,
+    };
+  }
+
   const usdAmount = parseUsdPrice(usdPriceStr);
   if (usdAmount <= 0) return null;
 

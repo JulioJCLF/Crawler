@@ -9,7 +9,8 @@ interface PricingContextType {
   isLoading: boolean;
   calculatePrice: (
     usdPriceStr: string | null | undefined,
-    category: string
+    category: string,
+    fixedBrlPrice?: number | null
   ) => {
     amount: number;
     formatted: string;
@@ -24,8 +25,8 @@ interface PricingContextType {
 const PricingContext = createContext<PricingContextType>({
   pricingConfig: DEFAULT_PRICING_CONFIG,
   isLoading: false,
-  calculatePrice: (usdPriceStr, category) =>
-    calculateBRLPrice(usdPriceStr, category, DEFAULT_PRICING_CONFIG),
+  calculatePrice: (usdPriceStr, category, fixedBrlPrice) =>
+    calculateBRLPrice(usdPriceStr, category, DEFAULT_PRICING_CONFIG, fixedBrlPrice),
   refreshPricing: async () => {},
 });
 
@@ -54,11 +55,12 @@ export function PricingProvider({ children }: { children: React.ReactNode }) {
   }, [fetchPricing]);
 
   const calculatePrice = useCallback(
-    (usdPriceStr: string | null | undefined, category: string) => {
-      return calculateBRLPrice(usdPriceStr, category, pricingConfig);
+    (usdPriceStr: string | null | undefined, category: string, fixedBrlPrice?: number | null) => {
+      return calculateBRLPrice(usdPriceStr, category, pricingConfig, fixedBrlPrice);
     },
     [pricingConfig]
   );
+
 
   return (
     <PricingContext.Provider

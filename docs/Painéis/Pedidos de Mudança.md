@@ -1,15 +1,16 @@
 ---
 tipo: painel
-gerado_em: 2026-10-12
+gerado_em: 2026-10-16
 tags:
   - crawler/painel
 ---
 # Pedidos de Mudança
 
-> [!info] Página gerada automaticamente em 2026-10-12. Pedidos da equipe e em que pé estão. Como pedir: [[Como Pedir uma Mudança]].
+> [!info] Página gerada automaticamente em 2026-10-16. Pedidos da equipe e em que pé estão. Como pedir: [[Como Pedir uma Mudança]].
 
 | Pedido | Status | Pedido por | Data | Urgência |
 |---|---|---|---|---|
+| [[PM-006 Gestão visual de produtos pelo front end]] | ✅ aprovado | Luiz | 2026-10-16 | alta |
 | [[PM-005 Busca tolerante a erros, multi-termo, sugestões rápidas e filtro por faixa de preço]] | 🚀 aplicado | Luiz | 2026-10-12 | alta |
 | [[PM-004 Robustez com Railway Volume e cache acelerado de produtos]] | 🚀 aplicado | Luiz | 2026-10-12 | alta |
 | [[PM-003 Painel de alteração de fluxo de valores e deploy no Railway]] | 🚀 aplicado | Luiz | 2026-10-09 | alta |

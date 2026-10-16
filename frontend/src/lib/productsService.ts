@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { Snapshot } from "@/types";
+import { buildUnifiedSnapshot } from "./catalogService";
 
 const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), "data");
 const CACHE_FILE = path.join(DATA_DIR, "snapshot-cache.json");
@@ -137,12 +138,10 @@ async function fetchFromRemote(timeoutMs: number = 8000): Promise<Snapshot | nul
 }
 
 /**
- * Retorna o catálogo de produtos com estratégia Stale-While-Revalidate:
- * 1. Se o cache em memória for recente, entrega em 0ms.
- * 2. Se estiver expirado ou vazio, tenta buscar do GitHub ou do disco/volume.
- * 3. Se a busca remota falhar, entrega o cache antigo sem quebrar o cliente.
+/**
+ * Obtém o snapshot base bruto (do crawler / GitHub / disco).
  */
-export async function getProductsCatalog(forceRefresh: boolean = false): Promise<{
+export async function getBaseProductsSnapshot(forceRefresh: boolean = false): Promise<{
   snapshot: Snapshot;
   source: string;
   cachedAt: number;
@@ -216,6 +215,34 @@ export async function getProductsCatalog(forceRefresh: boolean = false): Promise
   };
 }
 
+/**
+ * Retorna o catálogo unificado de produtos (híbrido):
+ * Snapshot base filtrado com remoção dos produtos ocultos e adição dos manuais.
+ */
+export async function getProductsCatalog(forceRefresh: boolean = false): Promise<{
+  snapshot: Snapshot;
+  source: string;
+  cachedAt: number;
+}> {
+  const base = await getBaseProductsSnapshot(forceRefresh);
+  const unified = buildUnifiedSnapshot(base.snapshot);
+
+  return {
+    snapshot: unified,
+    source: base.source,
+    cachedAt: base.cachedAt,
+  };
+}
+
+/** Invalida o cache em memória para forçar releitura */
+export function invalidateProductsMemoryCache(): void {
+  inMemoryCache = {
+    data: null,
+    fetchedAt: 0,
+    source: "memory",
+  };
+}
+
 /** Limpa cache de memória (usado para testes unitários) */
 export function _clearProductsMemoryCacheForTesting(): void {
   inMemoryCache = {
@@ -233,3 +260,4 @@ export function _setProductsMemoryCacheForTesting(data: Snapshot): void {
     source: "memory",
   };
 }
+

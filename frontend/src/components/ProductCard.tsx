@@ -12,10 +12,11 @@ export function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
   const { calculatePrice } = usePricing();
 
-  const currentBrl = calculatePrice(product.price, product.category);
+  const currentBrl = calculatePrice(product.price, product.category, product.fixedBrlPrice);
   const previousBrl = calculatePrice(product.previousPrice, product.category);
 
-  const zapMessage = `Olá, tenho interesse no produto *${product.name}* (Ref: ${product.id}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}\nLink Original: ${product.url}`;
+  const hasExternalUrl = Boolean(product.url && product.url.trim());
+  const zapMessage = `Olá, tenho interesse no produto *${product.name}* (Ref: ${product.id}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}${hasExternalUrl ? `\nLink Original: ${product.url}` : ""}`;
   const zapUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(zapMessage)}`;
 
   // Cálculo de Porcentagem de Desconto
@@ -23,6 +24,7 @@ export function ProductCard({ product }: { product: Product }) {
   if (currentBrl && previousBrl && currentBrl.amount < previousBrl.amount) {
     discountPercentage = Math.round(((previousBrl.amount - currentBrl.amount) / previousBrl.amount) * 100);
   }
+
 
   return (
     <Card className="flex flex-col h-full overflow-hidden transition-all hover:border-primary/50 hover:shadow-md">
@@ -61,13 +63,15 @@ export function ProductCard({ product }: { product: Product }) {
       <CardContent className="p-4 flex-1 flex flex-col gap-2">
         <h3 className="text-sm font-medium leading-snug line-clamp-3">
           <a 
-            href={product.url} 
+            href={hasExternalUrl ? product.url : zapUrl} 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4 flex items-start gap-1 group"
           >
             {product.name}
-            <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity mt-1 flex-shrink-0" />
+            {hasExternalUrl && (
+              <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity mt-1 flex-shrink-0" />
+            )}
           </a>
         </h3>
         <span className="text-[10px] text-muted-foreground font-mono uppercase">Ref: {product.id} · {product.categoryLabel || product.category}</span>

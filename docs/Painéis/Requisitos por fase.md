@@ -1,12 +1,12 @@
 ---
 tipo: painel
-gerado_em: 2026-10-12
+gerado_em: 2026-10-16
 tags:
   - crawler/painel
 ---
 # Requisitos por fase
 
-> [!info] Página gerada automaticamente em 2026-10-12. Situação de cada item, organizado pelos blocos de trabalho.
+> [!info] Página gerada automaticamente em 2026-10-16. Situação de cada item, organizado pelos blocos de trabalho.
 
 ## 1 · Crawler
 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 5/5
@@ -59,4 +59,11 @@ tags:
 | [[REQ-020 Painel visual de gestão de margens e câmbio com autenticação]] | 🚀 implementado | must |
 | [[REQ-021 Cache de catálogo server-side e persistência via Railway Volume]] | 🚀 implementado | must |
 | [[REQ-022 Busca inteligente multi-termo, sugestões e filtro de preço em reais]] | 🚀 implementado | must |
+
+## 6 · Sem fase definida
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 1/1
+
+| Requisito | Status | Prioridade |
+|---|---|---|
+| [[REQ-023 Gestão visual de produtos (cadastro, ocultação e catálogo híbrido)]] | 🚀 implementado | must |
 
