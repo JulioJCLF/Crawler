@@ -41,6 +41,14 @@ function findOpenCategoryIssueNumber(): number | null {
   return issues.length > 0 ? issues[0].number : null;
 }
 
+function ensureLabel(label: string, description: string, color: string): void {
+  try {
+    gh(["label", "create", label, "--force", "--description", description, "--color", color]);
+  } catch (err) {
+    console.warn(`[reportCategoryDrops] Aviso ao garantir label '${label}':`, err);
+  }
+}
+
 async function main() {
   const alertPath = process.argv[2];
   if (!alertPath) {
@@ -55,7 +63,13 @@ async function main() {
 
   switch (action.type) {
     case "create":
-      gh(["issue", "create", "--title", action.title, "--body", action.body, "--label", action.label]);
+      ensureLabel(action.label, "Alerta de queda brusca em categoria do crawler (REQ-019)", "e99695");
+      try {
+        gh(["issue", "create", "--title", action.title, "--body", action.body, "--label", action.label]);
+      } catch (err) {
+        console.warn(`[reportCategoryDrops] Falha ao criar issue com rótulo '${action.label}'. Tentando sem rótulo:`, err);
+        gh(["issue", "create", "--title", action.title, "--body", action.body]);
+      }
       console.log("Issue de queda de categoria criada.");
       break;
     case "update":

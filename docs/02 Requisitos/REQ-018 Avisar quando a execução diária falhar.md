@@ -66,5 +66,6 @@ Não se aplica.
 ## Histórico
 | Data | O que mudou | Quem | Referência |
 |---|---|---|---|
+| 2026-10-17 | Corrigida falha no alerta quando o rótulo não existia no GitHub: criados rótulos no repositório (`alerta-execucao`, `alerta-categoria`), adicionado `ensureLabel` e fallback seguro para criação sem interromper o pipeline | Luiz | [[REQ-018 Avisar quando a execução diária falhar]] |
 | 2026-09-21 | Implementado: `backend/src/reliability/failureAlert.ts` (decisão, testada) + `backend/src/reportExecutionStatus.ts` (chama `gh`) + passo novo em `watch.yml` com permissão `issues: write`. Verificado localmente o caminho de leitura (`gh issue list`) contra o repositório real; os caminhos de criar/atualizar/fechar Issue não foram testados contra o repositório real para não deixar Issue de teste — ficam cobertos pelos testes unitários da decisão | Luiz | branch `req-018-alerta-falha-execucao` |
 | 2026-09-20 | Criado a partir do PM-002 | Luiz | [[PM-002 Aumentar a confiabilidade do sistema]] |

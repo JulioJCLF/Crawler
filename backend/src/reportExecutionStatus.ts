@@ -10,6 +10,14 @@ function gh(args: string[]): string {
   return execFileSync("gh", args, { encoding: "utf8" });
 }
 
+function ensureLabel(label: string, description: string, color: string): void {
+  try {
+    gh(["label", "create", label, "--force", "--description", description, "--color", color]);
+  } catch (err) {
+    console.warn(`[reportExecutionStatus] Aviso ao garantir label '${label}':`, err);
+  }
+}
+
 function parseArgs(argv: string[]): { status: string; runUrl: string } {
   const get = (flag: string) => {
     const i = argv.indexOf(flag);
@@ -54,7 +62,13 @@ function main() {
 
   switch (action.type) {
     case "create":
-      gh(["issue", "create", "--title", action.title, "--body", action.body, "--label", action.label]);
+      ensureLabel(action.label, "Alerta de falha na execução diária do crawler (REQ-018)", "d73a4a");
+      try {
+        gh(["issue", "create", "--title", action.title, "--body", action.body, "--label", action.label]);
+      } catch (err) {
+        console.warn(`[reportExecutionStatus] Falha ao criar issue com rótulo '${action.label}'. Tentando sem rótulo:`, err);
+        gh(["issue", "create", "--title", action.title, "--body", action.body]);
+      }
       console.log("Issue de falha criada.");
       break;
     case "update":
