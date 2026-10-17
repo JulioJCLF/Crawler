@@ -123,7 +123,9 @@ export default function AdminDashboardPage() {
           setAdminRole(role);
           setAdminEmail(data.user?.email || "");
 
-          if (role === "dolar_operator") {
+          if (role === "master") {
+            setActiveTab("catalog");
+          } else {
             setActiveTab("pricing");
           }
           setAuthLoading(false);
@@ -536,21 +538,24 @@ export default function AdminDashboardPage() {
 
       {/* Conteúdo Principal */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
-        {/* Navegação por Abas Principais (apenas Master vê aba de catálogo) */}
+        {/* Navegação por Abas Principais */}
         <div className="flex border-b border-border space-x-2">
-          {adminRole === "master" && (
-            <button
-              onClick={() => setActiveTab("catalog")}
-              className={`inline-flex items-center gap-2 px-5 py-3 border-b-2 font-heading text-sm uppercase tracking-wider font-bold transition-all cursor-pointer ${
-                activeTab === "catalog"
-                  ? "border-primary text-primary bg-primary/5"
-                  : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/30"
-              }`}
-            >
-              <Package className="w-4 h-4" />
-              <span>Gerenciador de Catálogo</span>
-            </button>
-          )}
+          <button
+            onClick={() => setActiveTab("catalog")}
+            className={`inline-flex items-center gap-2 px-5 py-3 border-b-2 font-heading text-sm uppercase tracking-wider font-bold transition-all cursor-pointer ${
+              activeTab === "catalog"
+                ? "border-primary text-primary bg-primary/5"
+                : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/30"
+            }`}
+          >
+            <Package className="w-4 h-4" />
+            <span>Gerenciador de Catálogo</span>
+            {adminRole === "dolar_operator" && (
+              <span className="text-[10px] bg-muted px-1.5 py-0.5 rounded text-muted-foreground uppercase font-mono">
+                Master
+              </span>
+            )}
+          </button>
 
           <button
             onClick={() => setActiveTab("pricing")}
@@ -565,8 +570,29 @@ export default function AdminDashboardPage() {
           </button>
         </div>
 
-        {activeTab === "catalog" && adminRole === "master" ? (
-          <CatalogManager />
+        {activeTab === "catalog" ? (
+          adminRole === "master" ? (
+            <CatalogManager />
+          ) : (
+            <div className="p-8 rounded-xl border border-amber-500/30 bg-amber-950/20 text-foreground space-y-4">
+              <div className="flex items-center gap-3 text-amber-400 font-heading text-lg font-bold uppercase tracking-wider">
+                <AlertCircle className="w-5 h-5" />
+                <span>Gerenciador de Catálogo (Exclusivo Perfil Master)</span>
+              </div>
+              <p className="text-sm font-mono text-muted-foreground">
+                Você está atualmente autenticado como <strong>{adminUser}</strong> (Perfil: Operador de Câmbio).
+                O gerenciamento de produtos (inserção, edição e ocultação) requer permissão de <strong>Admin Master</strong>.
+              </p>
+              <div className="pt-2">
+                <button
+                  onClick={handleLogout}
+                  className="px-4 py-2 rounded-lg bg-primary text-primary-foreground font-heading uppercase text-xs tracking-wider font-bold hover:bg-primary/90 transition-colors cursor-pointer"
+                >
+                  Sair e Entrar como Admin Master
+                </button>
+              </div>
+            </div>
+          )
         ) : (
           <div className="space-y-8">
             {/* Aviso para Operador de Dólar */}

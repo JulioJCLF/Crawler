@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "@/providers/ThemeProvider";
-import { Shield } from "lucide-react";
+import { Shield, Package } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/layout/Logo";
 
@@ -50,11 +50,11 @@ export function Hero() {
 
           <Link
             href="/admin"
-            className="bg-card border border-border rounded-md p-3 flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-foreground hover:border-accent/40 transition-colors"
-            title="Painel Administrativo de Precificação"
+            className="bg-card border border-accent/40 rounded-md p-2.5 sm:px-3 flex items-center gap-2 font-mono text-xs text-foreground hover:bg-accent/10 hover:border-accent transition-all shadow-sm"
+            title="Acessar Gerenciador de Catálogo e Painel Administrativo"
           >
-            <Shield className="w-3.5 h-3.5 text-accent" />
-            <span className="hidden sm:inline">Admin</span>
+            <Package className="w-3.5 h-3.5 text-accent" />
+            <span className="font-bold uppercase tracking-wider text-[11px]">Gerenciar Catálogo</span>
           </Link>
         </div>
       </div>

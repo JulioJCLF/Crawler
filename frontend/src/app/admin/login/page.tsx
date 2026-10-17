@@ -319,7 +319,31 @@ export default function AdminLoginPage() {
           </button>
         </form>
 
-        <div className="mt-8 pt-6 border-t border-border flex items-center justify-between text-xs font-mono text-muted-foreground">
+        {/* Guia rápido de perfis e acessos */}
+        <div className="mt-6 pt-5 border-t border-border/60 space-y-2">
+          <div className="flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-wider text-muted-foreground">
+            <HelpCircle className="w-3.5 h-3.5 text-accent" />
+            <span>Credenciais de Acesso:</span>
+          </div>
+          <div className="grid grid-cols-1 gap-2 text-xs font-mono">
+            <div className="p-2.5 rounded-lg border border-primary/30 bg-primary/5 flex items-center justify-between">
+              <div>
+                <span className="font-bold text-primary">admin</span>
+                <span className="block text-[10px] text-muted-foreground">Master · Catálogo Completo & Preços</span>
+              </div>
+              <span className="text-[10px] px-2 py-0.5 rounded bg-primary/20 text-primary font-bold">arsenal@admin2026</span>
+            </div>
+            <div className="p-2.5 rounded-lg border border-emerald-500/30 bg-emerald-950/20 flex items-center justify-between">
+              <div>
+                <span className="font-bold text-emerald-400">cambio</span>
+                <span className="block text-[10px] text-muted-foreground">Operador · Apenas Cotação do Dólar</span>
+              </div>
+              <span className="text-[10px] px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold">arsenal@dolar2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-6 pt-4 border-t border-border flex items-center justify-between text-xs font-mono text-muted-foreground">
           <Link
             href="/"
             className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"

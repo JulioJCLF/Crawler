@@ -420,9 +420,9 @@ export default function Home() {
               <div className="flex items-center gap-4">
                 <a
                   href="/admin"
-                  className="hover:text-foreground transition-colors flex items-center gap-1.5"
+                  className="hover:text-foreground transition-colors flex items-center gap-1.5 font-bold"
                 >
-                  Gestão de Valores
+                  Gerenciador de Catálogo & Preços
                 </a>
                 <span>·</span>
                 <span>Railway Ready</span>
