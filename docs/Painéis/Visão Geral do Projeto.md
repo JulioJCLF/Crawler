@@ -25,10 +25,10 @@ tags:
 Nenhum.
 
 ## 🕒 Últimas sessões de trabalho
+- [[2026-10-16 - Luiz - Reset de cache no admin e feedback visual ao ocultar produto]]
 - [[2026-10-16 - Luiz - Gestao visual de produtos e catalogo hibrido]]
 - [[2026-10-16 - Luiz - Dois perfis de acesso e recuperacao de senha por email]]
 - [[2026-10-16 - Luiz - Deploy no Railway e visibilidade do gerenciador de catalogo]]
 - [[2026-10-12 - Luiz - Railway Volume e cache acelerado de produtos]]
-- [[2026-10-12 - Luiz - Busca inteligente e filtro de preco em reais]]
 
 Linha do tempo completa: [[Registro de Mudanças]]

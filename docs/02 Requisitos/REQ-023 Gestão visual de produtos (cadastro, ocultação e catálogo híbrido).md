@@ -59,6 +59,7 @@ Antes desta funcionalidade, a vitrine da Hunting World dependia estritamente dos
 ## Histórico
 | Data | O que mudou | Quem | Referência |
 |---|---|---|---|
+| 2026-10-16 | Adicionado botão de reset de cache no servidor, eliminação de cache HTTP estático e feedback visual instantâneo ao ocultar produto (toast flutuante, animação de linha e tachado) | Luiz | [[REQ-023 Gestão visual de produtos (cadastro, ocultação e catálogo híbrido)]] |
 | 2026-10-16 | Implementação completa com CatalogManager, rotas API, catálogo híbrido e testes | Luiz | [[REQ-023 Gestão visual de produtos (cadastro, ocultação e catálogo híbrido)]] |
 | 2026-10-16 | Requisito criado para gestão visual de produtos, cadastro manual e ocultação inteligente | Luiz | [[PM-006 Gestão visual de produtos pelo front end]] |
 

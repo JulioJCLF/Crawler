@@ -48,9 +48,25 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [selectedStatus, setSelectedStatus] = useState<"all" | "active" | "hidden" | "manual">("all");
 
-  // Estados de ações
+  // Estados de ações e feedback
   const [feedback, setFeedback] = useState<{ type: "success" | "error"; message: string } | null>(null);
   const [actionLoadingId, setActionLoadingId] = useState<string | null>(null);
+
+  // Estados de feedback visual avançado e toast flutuante
+  const [toast, setToast] = useState<{
+    type: "success" | "error" | "info";
+    title: string;
+    message: string;
+    actionLabel?: string;
+    onAction?: () => void;
+  } | null>(null);
+
+  // ID do produto recentemente alterado para animação inline na tabela
+  const [recentlyActionedId, setRecentlyActionedId] = useState<string | null>(null);
+  const [recentlyActionedType, setRecentlyActionedType] = useState<"hidden" | "restored" | null>(null);
+
+  // Estado de reset de cache do servidor
+  const [resettingCache, setResettingCache] = useState(false);
 
   // Estados do modal de produto
   const [showModal, setShowModal] = useState(false);
@@ -68,6 +84,16 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
   // Modal de confirmação de ocultação com motivo
   const [hidingProduct, setHidingProduct] = useState<Product | null>(null);
   const [hideReason, setHideReason] = useState("");
+
+  // Auto-dismiss do Toast flutuante após 5.5s
+  useEffect(() => {
+    if (toast) {
+      const timer = setTimeout(() => {
+        setToast(null);
+      }, 5500);
+      return () => clearTimeout(timer);
+    }
+  }, [toast]);
 
   // Debounce na digitação da busca
   useEffect(() => {
@@ -242,20 +268,55 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
     }
   };
 
-  // Confirmar Ocultação de produto
+  // Resetar Cache do Servidor e Sincronizar Catálogo
+  const handleResetCache = async () => {
+    setResettingCache(true);
+    try {
+      const res = await fetch("/api/admin/catalog/reset-cache", {
+        method: "POST",
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Falha ao resetar cache");
+
+      setToast({
+        type: "info",
+        title: "Cache do Servidor Resetado!",
+        message: `${data.count} itens sincronizados diretamente com a fonte original. Vitrine atualizada!`,
+      });
+
+      setFeedback({
+        type: "success",
+        message: "Cache do servidor limpo com sucesso! Os dados foram recarregados da fonte mais recente.",
+      });
+
+      fetchProducts();
+      onCatalogChanged?.();
+    } catch (err: any) {
+      setToast({
+        type: "error",
+        title: "Falha ao Resetar Cache",
+        message: err.message || "Erro de comunicação ao resetar cache.",
+      });
+    } finally {
+      setResettingCache(false);
+    }
+  };
+
+  // Confirmar Ocultação de produto com feedback visual de alto impacto
   const handleConfirmHide = async () => {
     if (!hidingProduct) return;
-    setActionLoadingId(hidingProduct.id);
+    const targetProduct = hidingProduct;
+    setActionLoadingId(targetProduct.id);
 
     try {
       const res = await fetch("/api/admin/catalog/hide", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          id: hidingProduct.id,
-          name: hidingProduct.name,
+          id: targetProduct.id,
+          name: targetProduct.name,
           reason: hideReason.trim() || "Ocultado pelo lojista",
-          source: hidingProduct.source || "crawler",
+          source: targetProduct.source || "crawler",
         }),
       });
 
@@ -264,23 +325,47 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
         throw new Error(data.error || "Falha ao ocultar");
       }
 
+      // 1. Ativa destaque de animação visual na linha
+      setRecentlyActionedId(targetProduct.id);
+      setRecentlyActionedType("hidden");
+
+      // 2. Dispara Toast Flutuante com botão para Desfazer com 1 clique
+      setToast({
+        type: "success",
+        title: "Produto Ocultado da Vitrine!",
+        message: `"${targetProduct.name}" foi removido do ar e não aparece mais para os clientes.`,
+        actionLabel: "Desfazer Ocultação",
+        onAction: () => handleUnhide(targetProduct),
+      });
+
       setFeedback({
         type: "success",
-        message: `"${hidingProduct.name}" foi ocultado da vitrine com sucesso.`,
+        message: `"${targetProduct.name}" foi ocultado da vitrine com sucesso.`,
       });
 
       setHidingProduct(null);
       setHideReason("");
       fetchProducts();
       onCatalogChanged?.();
+
+      // Desativa o pulso da linha após 5 segundos
+      setTimeout(() => {
+        setRecentlyActionedId((prev) => (prev === targetProduct.id ? null : prev));
+        setRecentlyActionedType(null);
+      }, 5000);
     } catch (err: any) {
+      setToast({
+        type: "error",
+        title: "Erro ao Ocultar",
+        message: err.message || "Falha ao ocultar produto.",
+      });
       setFeedback({ type: "error", message: err.message || "Erro ao ocultar produto." });
     } finally {
       setActionLoadingId(null);
     }
   };
 
-  // Restaurar produto oculto
+  // Restaurar produto oculto com feedback visual de alto impacto
   const handleUnhide = async (p: Product) => {
     setActionLoadingId(p.id);
     try {
@@ -295,6 +380,16 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
         throw new Error(data.error || "Falha ao restaurar");
       }
 
+      // Ativa destaque de restauração na linha
+      setRecentlyActionedId(p.id);
+      setRecentlyActionedType("restored");
+
+      setToast({
+        type: "success",
+        title: "Produto Restaurado com Sucesso!",
+        message: `"${p.name}" voltou a ficar ativo e visível na vitrine!`,
+      });
+
       setFeedback({
         type: "success",
         message: `"${p.name}" foi restaurado e voltou a aparecer na vitrine!`,
@@ -302,7 +397,17 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
 
       fetchProducts();
       onCatalogChanged?.();
+
+      setTimeout(() => {
+        setRecentlyActionedId((prev) => (prev === p.id ? null : prev));
+        setRecentlyActionedType(null);
+      }, 5000);
     } catch (err: any) {
+      setToast({
+        type: "error",
+        title: "Erro ao Restaurar",
+        message: err.message || "Falha ao restaurar produto.",
+      });
       setFeedback({ type: "error", message: err.message || "Erro ao restaurar produto." });
     } finally {
       setActionLoadingId(null);
@@ -494,6 +599,17 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
             <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin" : ""}`} />
           </button>
 
+          {/* Botão Resetar Cache do Servidor */}
+          <button
+            onClick={handleResetCache}
+            disabled={resettingCache}
+            className="inline-flex items-center gap-1.5 px-3 py-2 border border-accent/40 rounded-lg hover:bg-accent/15 transition-all text-accent text-xs font-mono uppercase tracking-wider font-bold cursor-pointer disabled:opacity-50"
+            title="Limpar cache do servidor e forçar sincronização com a fonte original"
+          >
+            <RefreshCw className={`w-3.5 h-3.5 ${resettingCache ? "animate-spin" : ""}`} />
+            <span>{resettingCache ? "Resetando..." : "Resetar Cache"}</span>
+          </button>
+
           {/* Botão Novo Produto */}
           <button
             onClick={handleOpenCreateModal}
@@ -542,12 +658,19 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                   const isHidden = p.status === "hidden";
                   const isManual = p.source === "manual";
                   const isActing = actionLoadingId === p.id;
+                  const isRecentlyActioned = recentlyActionedId === p.id;
 
                   return (
                     <tr
                       key={p.id}
-                      className={`hover:bg-muted/30 transition-colors ${
-                        isHidden ? "opacity-60 bg-muted/10" : ""
+                      className={`transition-all duration-500 ${
+                        isRecentlyActioned && recentlyActionedType === "hidden"
+                          ? "bg-rose-950/40 border-l-4 border-rose-500 shadow-md ring-1 ring-rose-500/40"
+                          : isRecentlyActioned && recentlyActionedType === "restored"
+                          ? "bg-emerald-950/40 border-l-4 border-emerald-500 shadow-md ring-1 ring-emerald-500/40"
+                          : isHidden
+                          ? "opacity-60 bg-muted/10 hover:bg-muted/20"
+                          : "hover:bg-muted/30"
                       }`}
                     >
                       {/* Miniatura */}
@@ -572,7 +695,11 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                       {/* Nome e Identificação */}
                       <td className="py-3 px-4">
                         <div className="flex flex-col gap-1 max-w-md">
-                          <div className="font-medium text-xs md:text-sm line-clamp-2 leading-snug">
+                          <div
+                            className={`font-medium text-xs md:text-sm line-clamp-2 leading-snug ${
+                              isHidden ? "line-through text-muted-foreground" : ""
+                            }`}
+                          >
                             {p.name}
                           </div>
                           <div className="flex items-center gap-2">
@@ -614,14 +741,14 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                       <td className="py-3 px-4 whitespace-nowrap font-mono text-xs">
                         {p.fixedBrlPrice ? (
                           <div className="flex flex-col">
-                            <span className="font-bold text-primary">
+                            <span className={`font-bold text-primary ${isHidden ? "line-through opacity-60" : ""}`}>
                               R$ {p.fixedBrlPrice.toFixed(2).replace(".", ",")}
                             </span>
                             <span className="text-[10px] text-muted-foreground">Fixo em R$</span>
                           </div>
                         ) : p.price ? (
                           <div className="flex flex-col">
-                            <span className="font-bold">{p.price}</span>
+                            <span className={`font-bold ${isHidden ? "line-through opacity-60" : ""}`}>{p.price}</span>
                             <span className="text-[10px] text-muted-foreground">Conversão dinâmica</span>
                           </div>
                         ) : (
@@ -631,7 +758,21 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
 
                       {/* Status */}
                       <td className="py-3 px-4 whitespace-nowrap font-mono text-xs">
-                        {isHidden ? (
+                        {isRecentlyActioned && recentlyActionedType === "hidden" ? (
+                          <div className="flex flex-col animate-pulse">
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-rose-500/25 text-rose-300 font-bold border border-rose-500/60 shadow-sm text-[11px]">
+                              <EyeOff className="w-3.5 h-3.5 text-rose-400" />
+                              Recém Ocultado!
+                            </span>
+                          </div>
+                        ) : isRecentlyActioned && recentlyActionedType === "restored" ? (
+                          <div className="flex flex-col animate-pulse">
+                            <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-emerald-500/25 text-emerald-300 font-bold border border-emerald-500/60 shadow-sm text-[11px]">
+                              <Eye className="w-3.5 h-3.5 text-emerald-400" />
+                              Recém Restaurado!
+                            </span>
+                          </div>
+                        ) : isHidden ? (
                           <div className="flex flex-col">
                             <span className="inline-flex items-center gap-1.5 text-rose-400 font-bold">
                               <EyeOff className="w-3.5 h-3.5" />
@@ -1003,6 +1144,48 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
               </div>
             </form>
           </div>
+        </div>
+      )}
+
+      {/* Toast Flutuante Fixo (Visível em qualquer posição do scroll) */}
+      {toast && (
+        <div className="fixed bottom-6 right-6 z-50 max-w-md w-full p-4 rounded-2xl shadow-2xl border backdrop-blur-md animate-in slide-in-from-bottom-5 duration-300 flex items-start gap-3.5 bg-card/95 border-border">
+          <div className="p-2 rounded-xl shrink-0 mt-0.5 bg-muted">
+            {toast.type === "success" ? (
+              <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+            ) : toast.type === "error" ? (
+              <AlertCircle className="w-5 h-5 text-rose-400" />
+            ) : (
+              <RefreshCw className="w-5 h-5 text-primary" />
+            )}
+          </div>
+          <div className="flex-1 min-w-0">
+            <h4 className="text-sm font-bold font-heading uppercase tracking-wider text-foreground">
+              {toast.title}
+            </h4>
+            <p className="text-xs font-mono text-muted-foreground mt-0.5 break-words">
+              {toast.message}
+            </p>
+            {toast.actionLabel && toast.onAction && (
+              <button
+                type="button"
+                onClick={() => {
+                  toast.onAction?.();
+                  setToast(null);
+                }}
+                className="mt-2 text-xs font-mono uppercase tracking-wider font-bold text-accent hover:underline cursor-pointer flex items-center gap-1"
+              >
+                ↩️ {toast.actionLabel}
+              </button>
+            )}
+          </div>
+          <button
+            type="button"
+            onClick={() => setToast(null)}
+            className="text-muted-foreground hover:text-foreground p-1 rounded-md hover:bg-muted transition-colors cursor-pointer"
+          >
+            <X className="w-4 h-4" />
+          </button>
         </div>
       )}
     </div>

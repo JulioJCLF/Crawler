@@ -9,10 +9,10 @@ export async function GET(req: NextRequest) {
 
   const response = NextResponse.json(snapshot);
 
-  // Headers de Cache HTTP profissional para browsers e proxies Railway / Cloudflare
+  // Sem cache no cliente para que itens ocultados/adicionados reflitam imediatamente
   response.headers.set(
     "Cache-Control",
-    "public, max-age=60, s-maxage=1800, stale-while-revalidate=86400"
+    "no-store, no-cache, must-revalidate, proxy-revalidate"
   );
   response.headers.set("X-Catalogue-Source", source);
   response.headers.set("X-Catalogue-Count", snapshot.count.toString());

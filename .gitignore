@@ -13,3 +13,5 @@ data/*.json
 data/*.tmp
 frontend/data/*.json
 frontend/data/*.tmp
+.vite/
+

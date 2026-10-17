@@ -243,6 +243,29 @@ export function invalidateProductsMemoryCache(): void {
   };
 }
 
+/**
+ * Limpa completamente o cache em memória e o arquivo de snapshot no disco,
+ * forçando releitura imediata da fonte.
+ */
+export async function clearProductsCache(): Promise<Snapshot> {
+  inMemoryCache = {
+    data: null,
+    fetchedAt: 0,
+    source: "memory",
+  };
+
+  try {
+    if (fs.existsSync(CACHE_FILE)) {
+      fs.unlinkSync(CACHE_FILE);
+    }
+  } catch (err) {
+    console.warn("[productsService] Erro ao remover CACHE_FILE no reset:", err);
+  }
+
+  const result = await getProductsCatalog(true);
+  return result.snapshot;
+}
+
 /** Limpa cache de memória (usado para testes unitários) */
 export function _clearProductsMemoryCacheForTesting(): void {
   inMemoryCache = {

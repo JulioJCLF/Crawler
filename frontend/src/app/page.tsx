@@ -35,7 +35,7 @@ export default function Home() {
     const apiUrl = "/api/products";
     const githubFallbackUrl = "https://raw.githubusercontent.com/JulioJCLF/crawler/main/backend/snapshot.json";
 
-    fetch(apiUrl)
+    fetch(apiUrl, { cache: "no-store" })
       .then((res) => {
         if (!res.ok) throw new Error(`API error: ${res.status}`);
         return res.json();

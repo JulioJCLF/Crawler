@@ -2,6 +2,7 @@ import { describe, it, expect, vi } from "vitest";
 import { GET as getCatalogProducts, POST as createCatalogProduct } from "./products/route";
 import { POST as hideProductRoute } from "./hide/route";
 import { POST as unhideProductRoute } from "./unhide/route";
+import { POST as resetCacheRoute } from "./reset-cache/route";
 import { NextRequest } from "next/server";
 
 // Mock de autenticação
@@ -46,8 +47,12 @@ vi.mock("@/lib/catalogService", () => ({
   unhideProduct: vi.fn(() => ({ success: true })),
 }));
 
-// Mock do snapshot base
+// Mock do snapshot base e cache
 vi.mock("@/lib/productsService", () => ({
+  clearProductsCache: vi.fn().mockResolvedValue({
+    count: 2,
+    updatedAt: "2026-10-16T12:00:00.000Z",
+  }),
   getBaseProductsSnapshot: vi.fn().mockResolvedValue({
     snapshot: {
       updatedAt: "2026-10-16T12:00:00.000Z",
@@ -153,5 +158,33 @@ describe("Rotas de API - Gestão de Catálogo Administrativo", () => {
 
     const unhideData = await unhideRes.json();
     expect(unhideData.success).toBe(true);
+  });
+
+  it("permite ao master resetar o cache do catálogo", async () => {
+    const req = new NextRequest("http://localhost:3000/api/admin/catalog/reset-cache", {
+      method: "POST",
+      headers: {
+        cookie: "admin_session=valid-admin-token",
+      },
+    });
+
+    const res = await resetCacheRoute(req);
+    expect(res.status).toBe(200);
+
+    const data = await res.json();
+    expect(data.success).toBe(true);
+    expect(data.count).toBe(2);
+  });
+
+  it("rejeita reset de cache para operador de dolar", async () => {
+    const req = new NextRequest("http://localhost:3000/api/admin/catalog/reset-cache", {
+      method: "POST",
+      headers: {
+        cookie: "admin_session=valid-cambio-token",
+      },
+    });
+
+    const res = await resetCacheRoute(req);
+    expect(res.status).toBe(403);
   });
 });
