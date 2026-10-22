@@ -9,6 +9,7 @@ Linha do tempo de tudo o que mudou. **Mais recente no topo.** Detalhes de cada s
 
 | Data | O que mudou (em linguagem simples) | Quem | Detalhes |
 |---|---|---|---|
+| 2026-10-21 | Removida completamente a marca Arsenal Sports de todos os títulos e descrições dos 12.303 produtos do catálogo, preservando integralmente o histórico de preços. O robô e a vitrine agora limpam automaticamente o nome do fornecedor nos cards, links de WhatsApp e rodapé | Luiz | [[2026-10-21 - Luiz - Remocao da escrita Arsenal Sports dos produtos e vitrine]] |
 | 2026-10-17 | Corrigida falha no alerta diário do GitHub Actions: criados os rótulos alerta-execucao e alerta-categoria no repositório e adicionada garantia automática de labels e fallback seguro para criação de issues sem quebrar o pipeline | Luiz | [[2026-10-17 - Luiz - Correcao do alerta de falha e labels do GitHub]] |
 | 2026-10-16 | Adicionado botão de reset de cache no servidor no painel /admin e feedback visual instantâneo ao ocultar produto (toast flutuante com desfazer, destaque animado na linha e texto tachado), com fim do cache antigo no navegador | Luiz | [[2026-10-16 - Luiz - Reset de cache no admin e feedback visual ao ocultar produto]] |
 | 2026-10-16 | Sistema publicado e online no Railway com volume persistente ativo. Corrigida permissão de escrita do container no volume montado com su-exec e garantida a visibilidade contínua do Gerenciador de Catálogo no /admin e na vitrine | Luiz | [[2026-10-16 - Luiz - Deploy no Railway e visibilidade do gerenciador de catalogo]] |

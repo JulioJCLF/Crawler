@@ -1,5 +1,5 @@
 import { CheerioCrawler, log } from 'crawlee';
-import { CATEGORIES, MAX_PAGES, PAGE_PARAM, isValidProduct, enforceCategory, CATEGORY_WEIGHTS } from './config.js';
+import { CATEGORIES, MAX_PAGES, PAGE_PARAM, isValidProduct, cleanProductName, enforceCategory, CATEGORY_WEIGHTS } from './config.js';
 import type { Product } from './types.js';
 
 export async function runCrawler(): Promise<Product[]> {
@@ -28,13 +28,16 @@ export async function runCrawler(): Promise<Product[]> {
         
         foundOnPage++;
 
-        const title = ($(el).attr("title") || $(el).text() || "").trim().replace(/\s+/g, " ");
-        if (!title) return;
+        const rawTitle = ($(el).attr("title") || $(el).text() || "").trim().replace(/\s+/g, " ");
+        if (!rawTitle) return;
 
         // Apply our filter to exclude useless items
-        if (!isValidProduct(title)) {
+        if (!isValidProduct(rawTitle)) {
           return;
         }
+
+        const title = cleanProductName(rawTitle);
+        if (!title) return;
 
         const { categorySlug: enforcedCatSlug, weight: newWeight } = enforceCategory(title, originalCatSlug);
         validOnPage++;

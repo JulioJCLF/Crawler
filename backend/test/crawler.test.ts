@@ -1,7 +1,40 @@
 import { describe, it, expect } from 'vitest';
-import { enforceCategory, CATEGORY_WEIGHTS } from '../src/config';
+import { enforceCategory, CATEGORY_WEIGHTS, cleanProductName } from '../src/config';
 
 describe('Crawler Logic', () => {
+  describe('cleanProductName', () => {
+    it('should remove trailing "Arsenal Sports"', () => {
+      expect(cleanProductName('APS MAGAZINE 23R CO2 FOR ACP601 BLACK Arsenal Sports')).toBe('APS MAGAZINE 23R CO2 FOR ACP601 BLACK');
+    });
+
+    it('should remove "Arsenal Sports" with dash or pipe separator', () => {
+      expect(cleanProductName('Red Dot Sight - Arsenal Sports')).toBe('Red Dot Sight');
+      expect(cleanProductName('M4 Tactical Grip | Arsenal Sports')).toBe('M4 Tactical Grip');
+    });
+
+    it('should remove "Arsenal Sports" when in brackets or parentheses', () => {
+      expect(cleanProductName('Speedloader (Arsenal Sports)')).toBe('Speedloader');
+      expect(cleanProductName('Speedloader [Arsenal Sports]')).toBe('Speedloader');
+    });
+
+    it('should remove leading "Arsenal Sports"', () => {
+      expect(cleanProductName('Arsenal Sports - BBs 0.25g 1kg')).toBe('BBs 0.25g 1kg');
+      expect(cleanProductName('ARSENAL SPORTS BATERIA NI-MH 9.6V')).toBe('BATERIA NI-MH 9.6V');
+    });
+
+    it('should remove "Arsenal Sports" in the middle of a string', () => {
+      expect(cleanProductName('G&G POLO SHIRT WITH LOGO ARSENAL SPORTS PINK SIZE L')).toBe('G&G POLO SHIRT WITH LOGO PINK SIZE L');
+      expect(cleanProductName('KRISS VECTOR AEG SMG ( TAN - BLACK CUSTOM PAINT ARSENAL SPORTS)')).toBe('KRISS VECTOR AEG SMG ( TAN - BLACK CUSTOM PAINT)');
+    });
+
+    it('should preserve technical suffixes like 14MM-', () => {
+      expect(cleanProductName('CYMA ADAPTER ALUMINUM AIRSOFT THREAD 14MM+ TO 14MM- Arsenal Sports')).toBe('CYMA ADAPTER ALUMINUM AIRSOFT THREAD 14MM+ TO 14MM-');
+    });
+
+    it('should handle empty or null string gracefully', () => {
+      expect(cleanProductName('')).toBe('');
+    });
+  });
   describe('enforceCategory', () => {
     it('should convert magazines incorrectly placed in replicas to magazines', () => {
       const result = enforceCategory('Magazine for M4 AEG', 'replicas');

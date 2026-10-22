@@ -14,6 +14,7 @@ import {
   getAdminCatalog,
   resetCatalogForTesting,
   setDataDirForTesting,
+  cleanProductName,
 } from "./catalogService";
 import { Snapshot, Product } from "@/types";
 
@@ -215,5 +216,45 @@ describe("catalogService - Gestão visual de produtos e Catálogo Híbrido", () 
     const searchRes = getAdminCatalog(mockSnapshot, { query: "Especial" });
     expect(searchRes.products.length).toBe(1);
     expect(searchRes.products[0].name).toBe("Produto Manual Especial");
+  });
+
+  it("cleanProductName remove menções a 'Arsenal Sports' e preserva sufixos técnicos", () => {
+    expect(cleanProductName("APS MAGAZINE 23R CO2 FOR ACP601 BLACK Arsenal Sports")).toBe("APS MAGAZINE 23R CO2 FOR ACP601 BLACK");
+    expect(cleanProductName("CYMA ADAPTER 14MM+ TO 14MM- Arsenal Sports")).toBe("CYMA ADAPTER 14MM+ TO 14MM-");
+    expect(cleanProductName("Item - Arsenal Sports")).toBe("Item");
+    expect(cleanProductName("Item (Arsenal Sports)")).toBe("Item");
+    expect(cleanProductName("Arsenal Sports - Bateria 9.6V")).toBe("Bateria 9.6V");
+  });
+
+  it("buildUnifiedSnapshot sanitiza automaticamente 'Arsenal Sports' dos produtos", () => {
+    const rawSnapshot: Snapshot = {
+      updatedAt: "2026-10-21T12:00:00.000Z",
+      count: 2,
+      categories: [{ slug: "replicas", label: "Réplicas", count: 2 }],
+      products: [
+        {
+          id: "201",
+          name: "Rifle M4 Carbine Arsenal Sports",
+          url: "https://example.com/201",
+          price: "USD 200,00",
+          image: null,
+          category: "replicas",
+          categoryLabel: "Réplicas",
+        },
+        {
+          id: "202",
+          name: "Pistola Glock G19 (Arsenal Sports)",
+          url: "https://example.com/202",
+          price: "USD 150,00",
+          image: null,
+          category: "replicas",
+          categoryLabel: "Réplicas",
+        },
+      ],
+    };
+
+    const unified = buildUnifiedSnapshot(rawSnapshot);
+    expect(unified.products[0].name).toBe("Rifle M4 Carbine");
+    expect(unified.products[1].name).toBe("Pistola Glock G19");
   });
 });

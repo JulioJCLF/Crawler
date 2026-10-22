@@ -415,7 +415,7 @@ export default function Home() {
 
             <footer className="mt-8 py-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono text-muted-foreground">
               <div>
-                <span>Arsenal Sports Catalog · {availableProducts.length} itens indexados</span>
+                <span>{siteConfig.brandName} Catalog · {availableProducts.length} itens indexados</span>
               </div>
               <div className="flex items-center gap-4">
                 <a

@@ -21,7 +21,7 @@ Exemplos monitorados (ao todo 14 categorias):
 A lógica ocorre no hook `requestHandler` do Crawlee.
 1. Busca por `a[href*="/produto/"]` (links que levam a produtos).
 2. O **ID do Produto** é garantido via regex da URL: `/\/produto\/.*-(\d+)\.html/`.
-3. O título é limpo de espaços extras: `\s+` reduzido para espaço único.
+3. O título é limpo de espaços extras e sanitizado via `cleanProductName` para remover a menção ao fornecedor ("Arsenal Sports"), preservando termos técnicos e especificações (como "14MM-").
 4. Preço é localizado via regex para captura explícita em USD: `USD\s*([\d.,]+)`.
 5. URLs de produtos e de imagens sofrem padronização forçada, ganhando o prefixo absoluto (`https://www.arsenalsports.com...`) se vierem como relativas.
 

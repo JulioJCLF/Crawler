@@ -7,16 +7,18 @@ import { useCart } from "@/providers/CartProvider";
 import { usePricing } from "@/providers/PricingProvider";
 import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { cleanProductName } from "@/lib/catalogService";
 
 export function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
   const { calculatePrice } = usePricing();
 
+  const productName = cleanProductName(product.name);
   const currentBrl = calculatePrice(product.price, product.category, product.fixedBrlPrice);
   const previousBrl = calculatePrice(product.previousPrice, product.category);
 
   const hasExternalUrl = Boolean(product.url && product.url.trim());
-  const zapMessage = `Olá, tenho interesse no produto *${product.name}* (Ref: ${product.id}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}${hasExternalUrl ? `\nLink Original: ${product.url}` : ""}`;
+  const zapMessage = `Olá, tenho interesse no produto *${productName}* (Ref: ${product.id}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}${hasExternalUrl ? `\nLink Original: ${product.url}` : ""}`;
   const zapUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(zapMessage)}`;
 
   // Cálculo de Porcentagem de Desconto
@@ -51,7 +53,7 @@ export function ProductCard({ product }: { product: Product }) {
           // eslint-disable-next-line @next/next/no-img-element
           <img 
             src={product.image} 
-            alt={product.name}
+            alt={productName}
             className="object-contain max-h-full max-w-full mix-blend-multiply dark:mix-blend-normal"
             loading="lazy"
           />
@@ -68,7 +70,7 @@ export function ProductCard({ product }: { product: Product }) {
             rel="noopener noreferrer"
             className="hover:text-primary transition-colors hover:underline decoration-primary/30 underline-offset-4 flex items-start gap-1 group"
           >
-            {product.name}
+            {productName}
             {hasExternalUrl && (
               <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity mt-1 flex-shrink-0" />
             )}

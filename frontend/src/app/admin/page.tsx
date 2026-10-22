@@ -706,7 +706,7 @@ export default function AdminDashboardPage() {
                 </div>
 
                 <p className="text-xs text-muted-foreground mb-4">
-                  Valor em reais (R$) usado para converter o preço original em dólar dos produtos da Arsenal Sports.
+                  Valor em reais (R$) usado para converter o preço original em dólar dos produtos do catálogo.
                 </p>
 
                 <div className="flex items-center gap-3">

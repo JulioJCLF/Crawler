@@ -63,6 +63,22 @@ export function resolveCategoryLabel(slug: string): string {
 }
 
 /**
+ * Remove qualquer ocorrência da escrita "Arsenal Sports" do título/descrição
+ * do produto (seja como sufixo, prefixo, entre parênteses ou separado por hífen),
+ * preservando o restante do título e especificações técnicas (como roscas "14MM-").
+ */
+export function cleanProductName(name: string): string {
+  if (!name) return "";
+  return name
+    .replace(/\s*[\(\[]\s*arsenal\s+sports\s*[\)\]]/gi, "")
+    .replace(/(\s+[-|/•]\s*|\s+)\barsenal\s+sports\b/gi, "")
+    .replace(/^\barsenal\s+sports\b\s*[-|/•]?\s*/gi, "")
+    .replace(/\barsenal\s+sports\b/gi, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/**
  * Lê o mapa de produtos ocultados (IDs bloqueados) do disco.
  */
 export function getHiddenProducts(): Record<string, HiddenProductEntry> {
@@ -214,7 +230,7 @@ export function createCustomProduct(
 
   const newProduct: Product = {
     id,
-    name: input.name.trim(),
+    name: cleanProductName(input.name.trim()),
     category: input.category.trim(),
     categoryLabel: label,
     price: input.price ? input.price.trim() : null,
@@ -257,7 +273,7 @@ export function updateCustomProduct(
 
   const updated: Product = {
     ...existing,
-    ...(updates.name ? { name: updates.name.trim() } : {}),
+    ...(updates.name ? { name: cleanProductName(updates.name.trim()) } : {}),
     ...(updates.category ? { category: updates.category.trim(), categoryLabel: label } : {}),
     ...(updates.price !== undefined ? { price: updates.price ? updates.price.trim() : null } : {}),
     ...(updates.fixedBrlPrice !== undefined
@@ -319,8 +335,11 @@ export function buildUnifiedSnapshot(baseSnapshot: Snapshot): Snapshot {
     (p) => !hidden[p.id] && p.status !== "hidden"
   );
 
-  // 3. Junta produtos mantendo manuais no topo/destaque
-  const unifiedProducts = [...activeCustomProducts, ...activeCrawlerProducts];
+  // 3. Junta produtos mantendo manuais no topo/destaque e sanitiza o título removendo referências a "Arsenal Sports"
+  const unifiedProducts = [...activeCustomProducts, ...activeCrawlerProducts].map((p) => {
+    const cleaned = cleanProductName(p.name);
+    return cleaned === p.name ? p : { ...p, name: cleaned };
+  });
 
   // 4. Recalcula categorias com contagens atualizadas
   const categoryCountMap = new Map<string, number>();
