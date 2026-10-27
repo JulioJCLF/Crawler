@@ -1,102 +1,32 @@
-# 🌐 Watcher & Crawler de Airsoft (Arsenal Sports)
-> **Automated web scraping and product changes notification system.**
+# Arsenal Crawler Blueprint
 
-Language / Idioma:
-[🇺🇸 English](#-english-version) | [🇧🇷 Versão em Português](#-versao-em-portugues)
+## System Overview
+Automated web scraping, catalog change detection, currency-adjusted commercial vitrine, and backoffice moderation suite for Arsenal Sports catalog data. The system crawls product categories, sanitizes titles, tracks historic pricing revisions in persistent snapshots, and serves an interactive storefront with dynamic USD/BRL currency conversion, margin computation, shopping cart dispatch via WhatsApp, and automated reliability alerts.
 
----
+## Local Interface & Invariants
+- `Makefile`: Central project orchestration interface providing targets for documentation (`make docs`), backend testing (`make test`), typechecking (`make typecheck`), local crawling (`make crawler`), and frontend development (`make frontend-dev`).
+- `docker-entrypoint.sh`: Container entrypoint managing process execution and file permissions in production environments.
+- `projeto.json`: Project taxonomy, sprint phases, and documentation generator configuration.
 
-## 🇺🇸 English Version
+## Subdirectories & System Boundaries
+- [Backend](./backend/README.md): TypeScript crawler service built on Crawlee and Cheerio, handling multi-category pagination, change detection, price history preservation, category overrides, and failure alerts.
+- [Frontend](./frontend/README.md): Next.js storefront vitrine and administrative portal providing catalog search, multi-facet filtering, dynamic BRL pricing, shopping cart with WhatsApp order generation, and catalog moderation.
+- [Scripts](./scripts/README.md): Python automation utilities generating real-time project progress dashboards and tracking panels in `docs/Painéis`.
 
-An automated, resilient web crawler designed to monitor multiple product categories from "Arsenal Sports". The script crawls paginated listings, parses key product details, tracks inventory/price changes against snapshots, and pushes real-time notifications via webhooks.
+## Global Invariants
+- **Spec-Driven Development**: All new features and functional changes must originate in requirements documentation (`docs/02 Requisitos`) and technical specifications before implementation.
+- **Respect Source Infrastructure**: Scraper concurrency, request timeouts, and backoff delays must strictly adhere to `03-crawler-spec.md` to prevent load spikes on target servers.
+- **Snapshot Immutability & History Preservation**: `snapshot.json` is a historical ledger; price points, `firstSeen` timestamps, and historic price revisions must never be truncated or overwritten destructively.
+- **Commercial Storefront Mandate**: No refactoring may remove product prices, the shopping cart drawer, or the direct WhatsApp order link from product cards.
+- **Brand Cleansing**: Product displays, WhatsApp messages, and notifications must sanitize titles removing supplier branding while preserving technical specifications and model codes.
 
-### ✨ Key Features
-- **Multi-Category Watcher**: Crawls 12 different product categories (from replicas to internal parts).
-- **Anti-Scraping Bypass**: Employs realistic headers (User-Agent, Accept-Language) and custom category-level delays to avoid request blocking.
-- **Change Detection**: Stores data in `snapshot.json` to compare previous runs, logging new arrivals, price modifications, or sold-out items.
-- **Discord/Telegram Webhook Alerts**: Pushes clean notifications instantly when changes occur.
+## Global Side Effects
+- Performs scheduled HTTP scraping requests against target catalog web pages.
+- Reads and updates versioned `backend/snapshot.json` and administrative persistence stores (`pricing.json`, `auth.json`, `hidden_products.json`, `custom_products.json`).
+- Generates GitHub issues and labels via GitHub CLI (`gh`) during scheduled CI crawler workflows on failures or category drop anomalies.
+- Overwrites markdown tracking panels in `docs/Painéis/`.
 
-### 🛠️ Technologies
-- **Node.js** (v18+ with native `fetch` support)
-- **Cheerio** (Resilient DOM parsing & scraping)
-- **Filesystem Node API** (`node:fs/promises`)
-
-### 🚀 Getting Started
-
-#### Prerequisites
-- Node.js installed locally.
-
-#### Installation & Setup
-1. Clone or copy the folder:
-   ```bash
-   cd crawler
-   npm install cheerio
-   ```
-2. Configure your Discord or Telegram Webhook environment variable (Optional):
-   ```bash
-   # Linux/macOS
-   export WEBHOOK_URL="https://discord.com/api/webhooks/your-id"
-   
-   # Windows (PowerShell)
-   $env:WEBHOOK_URL="https://discord.com/api/webhooks/your-id"
-   ```
-3. Run the script:
-   ```bash
-   node crawler.js
-   ```
-
-### 📁 Project Structure
-```
-crawler/
-├── crawler.js        # Core crawler logic and webhook integration
-├── package.json      # Dependencies and script settings
-├── snapshot.json     # Local database of products for diff checks
-└── .gitignore        # Git ignore configurations
-```
-
----
-
-## 🇧🇷 Versão em Português
-
-Um crawler e monitor automatizado projetado para mapear categorias de produtos no site "Arsenal Sports". Ele analisa listagens paginadas, extrai informações cruciais (nomes, preços, imagens), detecta mudanças e envia alertas instantâneos via webhook.
-
-### ✨ Funcionalidades
-- **Monitoramento Multi-Categoria**: Rastreia 12 categorias distintas (réplicas, upgrades, magazines, BBs, etc).
-- **Bypass de Anti-Scraping**: Utiliza User-Agents e delays configuráveis entre requisições para evitar bloqueios de IP.
-- **Detecção de Mudanças**: Armazena o estado atual em `snapshot.json` para realizar checagens incrementais (novidades, alterações de preço e itens esgotados).
-- **Notificação Instantânea**: Dispara alertas detalhados via Discord/Telegram Webhook.
-
-### 🛠️ Tecnologias
-- **Node.js** (v18+ com suporte nativo a `fetch`)
-- **Cheerio** (Parsing rápido de DOM HTML)
-- **API Filesystem do Node** (`node:fs/promises`)
-
-### 🚀 Começando
-
-#### Pré-requisitos
-- Node.js instalado.
-
-#### Instalação
-1. Acesse o diretório e instale as dependências:
-   ```bash
-   cd crawler
-   npm install cheerio
-   ```
-2. Configure a variável de ambiente para notificações (Opcional):
-   ```bash
-   # Windows (PowerShell)
-   $env:WEBHOOK_URL="https://discord.com/api/webhooks/sua-url"
-   ```
-3. Execute o monitoramento:
-   ```bash
-   node crawler.js
-   ```
-
-### 📁 Estrutura
-```
-crawler/
-├── crawler.js        # Lógica principal do scraper e integrações
-├── package.json      # Dependências (cheerio)
-├── snapshot.json     # Banco de dados local para checagem incremental
-└── .gitignore        # Configurações do Git
-```
+## System Verification
+- Run tests: `make test`
+- Type check: `make typecheck`
+- Generate docs: `make docs`

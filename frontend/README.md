@@ -1,4 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Frontend Vitrine & Backoffice
+
+## System Overview
+Next.js static export vitrine and dynamic administrative backoffice for the Arsenal Crawler. Displays catalog products with dynamic currency conversion (USD to BRL), commercial markup, shopping cart with WhatsApp order dispatch, and an administrative portal for product moderation and pricing controls.
+
+## Local Interface & Invariants
+- `next.config.ts`: Configures static export (`output: 'export'`) when `STATIC_EXPORT=true` for GitHub Pages, with base path `/crawler`.
+- `vitest.config.ts`: Vitest test configuration with React Testing Library and JSDOM environment.
+- `docker-entrypoint.sh`: Container entrypoint ensuring volume write permissions via `su-exec` in Railway deployments.
+
+## Subdirectories & System Boundaries
+- [scripts](./scripts/README.md): Catalog audit and authentication credential reset CLI scripts.
+- [src](./src/README.md): Application source code containing App Router pages, components, services, and state providers.
 
 ## Getting Started
 
@@ -16,21 +28,19 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying `src/app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load Geist, a new font family for Vercel.
 
-## Learn More
+## Global Invariants
+- **Commercial Viability**: No UI refactor may remove product prices, shopping cart functionality, or the direct WhatsApp order link (mandate per `05-frontend-guidelines.md`).
+- **Brand Cleansing**: Storefront displays must sanitize product titles to remove supplier branding while preserving technical specifications and model designations.
+- **Role Permissions**: Financial exchange rate editing is accessible to `dolar_operator` and `master`, whereas destructive catalog hiding and custom product creation are restricted to `master`.
 
-To learn more about Next.js, take a look at the following resources:
+## Global Side Effects
+- Reads and updates persisted JSON data in `data/` or volume mount (`pricing.json`, `auth.json`, `hidden_products.json`, `custom_products.json`).
+- Dispatches order messages via external WhatsApp Web API.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## System Verification
+- Run: `cd frontend && npm test`
+- Typecheck: `cd frontend && npx tsc --noEmit`
