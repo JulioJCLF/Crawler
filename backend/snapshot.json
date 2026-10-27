@@ -10,7 +10,7 @@
     {
       "slug": "pecas-externas",
       "label": "Peças Externas",
-      "count": 1819
+      "count": 1820
     },
     {
       "slug": "pecas-internas",
@@ -35,12 +35,12 @@
     {
       "slug": "magazines",
       "label": "Magazines",
-      "count": 1110
+      "count": 1169
     },
     {
       "slug": "bbs",
       "label": "BBs",
-      "count": 162
+      "count": 102
     },
     {
       "slug": "gas",
@@ -508,7 +508,7 @@
       "url": "https://www.arsenalsports.com/produto/airtech-studios-eml-easy-magazine-loader-for-gg-smc9--gtp9-20838.html",
       "price": "USD 13,00",
       "image": "https://www.arsenalsports.com/img/20838/produtos/400/0fb9442f859ab098a5fefa4df26deb65.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -574,7 +574,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-speed-loader-100r-black-translucid-30690.html",
       "price": "USD 8,00",
       "image": "https://www.arsenalsports.com/img/30690/produtos/400/f540158c16d91020fb8365522bfb3723.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -585,7 +585,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-speed-loader-370r-magazine-crank-m4-aeg--gbb-16966.html",
       "price": "USD 18,00",
       "image": "https://www.arsenalsports.com/img/16966/produtos/400/d5d84268f4629249a6c4ad53b9b77b01.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -596,7 +596,7 @@
       "url": "https://www.arsenalsports.com/produto/armorer-works-speed-loader-45mm-31099.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/31099/produtos/400/749ba3c2243929faadb1af446738f505.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -3864,7 +3864,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-speed-loader-100r-black-11647.html",
       "price": "USD 2,00",
       "image": "https://www.arsenalsports.com/img/11647/produtos/400/0941a150f5151874b70aec501346fd51.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -3988,7 +3988,7 @@
       "url": "https://www.arsenalsports.com/produto/kingarms-speed-loader-200r-blue-22204.html",
       "price": "USD 6,00",
       "image": "https://www.arsenalsports.com/img/22204/produtos/400/cbff7a746dd29c267cd11251bd9aaee0.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -3999,7 +3999,7 @@
       "url": "https://www.arsenalsports.com/produto/kingarms-speed-loader-200r-transparent-22206.html",
       "price": "USD 6,00",
       "image": "https://www.arsenalsports.com/img/22206/produtos/400/508638b6a099beb9810c83bf7b1a6066.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -4164,7 +4164,7 @@
       "url": "https://www.arsenalsports.com/produto/pts-odin-innovations-speed-loader-1600r-m12-black-15788.html",
       "price": "USD 42,00",
       "image": "https://www.arsenalsports.com/img/15788/produtos/400/92bb532babcd8eb0229d43b4ae226be3.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -4175,7 +4175,7 @@
       "url": "https://www.arsenalsports.com/produto/pts-odin-innovations-speed-loader-1600r-m12-flat-dark-earth-15787.html",
       "price": "USD 42,00",
       "image": "https://www.arsenalsports.com/img/15787/produtos/400/420039e0fafafd415ad66431bb4be87c.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -4186,7 +4186,7 @@
       "url": "https://www.arsenalsports.com/produto/pts-odin-innovations-speed-loader-m12-od-green-19049.html",
       "price": "USD 42,00",
       "image": "https://www.arsenalsports.com/img/19049/produtos/400/55d6b69a599f390f64936106a11fe633.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -4197,7 +4197,7 @@
       "url": "https://www.arsenalsports.com/produto/pts-odin-m12-sidewinder-rebuild-reapair-kit--20444.html",
       "price": "USD 8,00",
       "image": "https://www.arsenalsports.com/img/20444/produtos/400/1177536a8c94e336a05f7f8758c8a4d9.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -4208,7 +4208,7 @@
       "url": "https://www.arsenalsports.com/produto/src-bb-loading-mr-roll-up-25980.html",
       "price": "USD 15,00",
       "image": "https://www.arsenalsports.com/img/25980/produtos/400/4215c4b590baa275f4e9aff615e69062.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -8907,7 +8907,7 @@
       "url": "https://www.arsenalsports.com/produto/src-speed-loader-400r-black-translucid-25976.html",
       "price": "USD 8,00",
       "image": "https://www.arsenalsports.com/img/25976/produtos/400/03d7e6b2ea0fc6582ab5e7307e7e39b4.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -8962,7 +8962,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-speed-loader-bb-auto-35230.html",
       "price": "USD 115,00",
       "image": "https://www.arsenalsports.com/img/35230/produtos/400/b216c66b49139b0a19f3ebf6b825e28b.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": [
@@ -8985,7 +8985,7 @@
       "url": "https://www.arsenalsports.com/produto/ufc-speed-loader-470r-blue-26828.html",
       "price": "USD 7,00",
       "image": "https://www.arsenalsports.com/img/26828/produtos/400/92a9f47e1ea3c418e15b27e201dd6ba3.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -8996,7 +8996,7 @@
       "url": "https://www.arsenalsports.com/produto/ufc-speed-loader-470r-grey-26829.html",
       "price": "USD 7,00",
       "image": "https://www.arsenalsports.com/img/26829/produtos/400/3e5522285952eb9369494ed119280070.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9007,7 +9007,7 @@
       "url": "https://www.arsenalsports.com/produto/ufc-speed-loader-470r-orange-26830.html",
       "price": "USD 7,00",
       "image": "https://www.arsenalsports.com/img/26830/produtos/400/f0df46c271b9bf479af2b89823fab82d.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9018,7 +9018,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-speed-loader-90r-for-gbbr-rifle-black-translucid-22116.html",
       "price": "USD 3,00",
       "image": "https://www.arsenalsports.com/img/22116/produtos/400/dd4f9261c2e6fff60eace3c913841ac3.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9029,7 +9029,7 @@
       "url": "https://www.arsenalsports.com/produto/we-speed-loader-470r-clear-transparent-29528.html",
       "price": "USD 7,00",
       "image": "https://www.arsenalsports.com/img/29528/produtos/400/49957ec99a0284f00d6d2e40122a2008.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9040,7 +9040,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-1000r-silent-version-black-30194.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30194/produtos/400/1f9dbfe684cc3739145dd020aa076500.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9051,7 +9051,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-1000r-silent-version-limpid-20106.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/20106/produtos/400/8b32a04a5605d9c57191db3c5fecfd9a.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9062,7 +9062,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-1000r-silent-version-tan-30195.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30195/produtos/400/a0acf2d39f007bfe2fdd21f1556a1b6d.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9073,7 +9073,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-1000r-silent-version-yellow-limpid-20858.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/20858/produtos/400/16251e5651394e021a2f87562ff1a18a.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9084,7 +9084,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-120r-wst-blue-30197.html",
       "price": "USD 2,00",
       "image": "https://www.arsenalsports.com/img/30197/produtos/400/cef22cde7d299b688939eb2c25f4fe68.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9095,7 +9095,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-120r-wst-limpid-30198.html",
       "price": "USD 2,00",
       "image": "https://www.arsenalsports.com/img/30198/produtos/400/41f54bf9ee5bb93af2fb7d4bd7642e77.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9106,7 +9106,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-120r-wst-od-green-30199.html",
       "price": "USD 2,00",
       "image": "https://www.arsenalsports.com/img/30199/produtos/400/024c955f8118a1af6dd6ab2845d5d233.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9117,7 +9117,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-120r-wst-pink-30200.html",
       "price": "USD 2,00",
       "image": "https://www.arsenalsports.com/img/30200/produtos/400/92d7c3dc2f5747f17df9525bedaca4d8.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9128,7 +9128,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-120r-wst-yellow-30201.html",
       "price": "USD 2,00",
       "image": "https://www.arsenalsports.com/img/30201/produtos/400/4fb59036dcbf0be755faa5d9793f52a5.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9139,7 +9139,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-155r-small-size-limpid-20860.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/20860/produtos/400/c3989d05babeb56fe3d5d385f44a7c79.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9150,7 +9150,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-3000r-bottle-included-black-21370.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/21370/produtos/400/220fc9fc95970887746d14df3288356f.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": [
@@ -9169,7 +9169,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-500r-ak-style-black-30423.html",
       "price": "USD 6,00",
       "image": "https://www.arsenalsports.com/img/30423/produtos/400/b7efdaf3c095721009edafbd7c127d01.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9180,7 +9180,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-500r-black-30203.html",
       "price": "USD 6,00",
       "image": "https://www.arsenalsports.com/img/30203/produtos/400/cee59a678de750f50665d9d631679a09.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9191,7 +9191,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-500r-blue-30328.html",
       "price": "USD 6,00",
       "image": "https://www.arsenalsports.com/img/30328/produtos/400/088abc9416922f234d2a14ad4f199644.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9202,7 +9202,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-500r-limpid-transparent-30329.html",
       "price": "USD 6,00",
       "image": "https://www.arsenalsports.com/img/30329/produtos/400/40d63c07f6a1f4f6ac8178bec957755c.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9213,7 +9213,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-500r-od-green-30330.html",
       "price": "USD 6,00",
       "image": "https://www.arsenalsports.com/img/30330/produtos/400/c3a588baffd4ff92e6c89bd9e9a91299.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9224,7 +9224,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-700r-electronic-radio-model-prc152-black-24399.html",
       "price": "USD 40,00",
       "image": "https://www.arsenalsports.com/img/24399/produtos/400/50f3429e397eaa8613ba0645757a3e98.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9235,7 +9235,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-700r-electronic-radio-model-prc152-od-green-30476.html",
       "price": "USD 40,00",
       "image": "https://www.arsenalsports.com/img/30476/produtos/400/1b1b7048b4e08d441b56b23c100c4470.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9246,7 +9246,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-700r-electronic-radio-model-prc152-tan-30477.html",
       "price": "USD 40,00",
       "image": "https://www.arsenalsports.com/img/30477/produtos/400/566c0efc61b76905aa9d0775f9824799.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9257,7 +9257,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-adapter-for-g36-aeg-magazine-24392.html",
       "price": "USD 8,00",
       "image": "https://www.arsenalsports.com/img/24392/produtos/400/4c99fa16cfa466c4c5d968d559eed87e.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -9268,7 +9268,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-speed-loader-470-rounds-bb-clear-transparent-32356.html",
       "price": "USD 6,00",
       "image": "https://www.arsenalsports.com/img/32356/produtos/400/afdefed837a81fb434ff75e1bb685e99.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -13618,7 +13618,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-speed-loader-90-rounds-clear-black-transparent--32357.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/32357/produtos/400/bc9b41412059b3cb1625d76d4148e0d9.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -13662,7 +13662,7 @@
       "url": "https://www.arsenalsports.com/produto/acetech-speed-loader-12000bbs-carga-black-34575.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34575/produtos/400/b132dbd92abd30bc0db333d8c70652cd.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": [],
@@ -13676,7 +13676,7 @@
       "url": "https://www.arsenalsports.com/produto/acetech-speed-loader-ktc-kenton-for-g17--g18-series-black-32052.html",
       "price": "USD 15,00",
       "image": "https://www.arsenalsports.com/img/32052/produtos/400/0d20adfe7113f99fb9d655d47efa9098.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -13687,7 +13687,7 @@
       "url": "https://www.arsenalsports.com/produto/acetech-speed-loader-ktc-kenton-for-g17--g18-series-red-32053.html",
       "price": "USD 15,00",
       "image": "https://www.arsenalsports.com/img/32053/produtos/400/8e8dcfe752add40531ab8e9fb0337bf4.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -13698,7 +13698,7 @@
       "url": "https://www.arsenalsports.com/produto/acetech-speed-loader-ktc-kenton-for-g17--g18-series-transparent-32054.html",
       "price": "USD 15,00",
       "image": "https://www.arsenalsports.com/img/32054/produtos/400/ef0217fee9148c15c6f8a76efad3ddbc.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -13709,7 +13709,7 @@
       "url": "https://www.arsenalsports.com/produto/acetech-tracer-at2000-with-s0006cb-ck043-and-bb-king-bbs-025gr-20463.html",
       "price": "USD 94,00",
       "image": "https://www.arsenalsports.com/img/20463/produtos/400/24d7fdc7e77c27ffa7a603c3f7612975.jpg",
-      "category": "bbs",
+      "category": "pecas-externas",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -14027,7 +14027,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-speed-loader-470r-c127-black-translucid-12966.html",
       "price": "USD 6,00",
       "image": "https://www.arsenalsports.com/img/12966/produtos/400/a243b0b299ea72f6b2dcee659a0979d2.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -14087,7 +14087,7 @@
       "url": "https://www.arsenalsports.com/produto/gg-speed-loader-120r-transparent-33526.html",
       "price": "USD 5,00",
       "image": "https://www.arsenalsports.com/img/33526/produtos/400/fcf0c05b51faab53a150d8f292027e8e.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -18394,7 +18394,7 @@
       "url": "https://www.arsenalsports.com/produto/gg-speed-loader-120r-transparent-brown-33527.html",
       "price": "USD 5,00",
       "image": "https://www.arsenalsports.com/img/33527/produtos/400/97a951a2a348200fcdae789ff24ef482.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -18405,7 +18405,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-bbs-030g--3000r--wosport-bottle-speed-loader-combo-24309.html",
       "price": "USD 24,00",
       "image": "https://www.arsenalsports.com/img/24309/produtos/400/b3b060bfdb047eef9894b027d8aa3949.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -18504,7 +18504,7 @@
       "url": "https://www.arsenalsports.com/produto/src-bb-loader-for-revolver-shells-25977.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/25977/produtos/400/c777b48f6599d8a43a16b80219d3946e.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": [
@@ -18523,7 +18523,7 @@
       "url": "https://www.arsenalsports.com/produto/t238-speed-loader-electric-1800rd-pro-edition-33162.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/33162/produtos/400/fcf67789a069ab61f56bed0476b9d5b4.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": [
@@ -18542,7 +18542,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-speed-loader-70r-silver-35838.html",
       "price": "USD 5,00",
       "image": "https://www.arsenalsports.com/img/35838/produtos/400/4e67d528fa598f0dfdbc736362f533c0.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-08-11T13:11:45.584Z",
       "priceHistory": [
@@ -18560,7 +18560,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-1000r-silent-version-blue-limpid-20857.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/20857/produtos/400/5eaac62efb4fd739a92c7e263ddc9e6c.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -18571,7 +18571,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-1000r-silent-version-dark-yellow-limpid-20859.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/20859/produtos/400/d1e6953564fc8f1ba9b6bce811e73aa6.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -18582,7 +18582,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-1000r-silent-version-multicam-20103.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/20103/produtos/400/7d4752375289d4cba062f0dfbf2f6066.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -18593,7 +18593,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-120r-wst-black-30196.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30196/produtos/400/e0f23fb59e6bc430a66414958afcb1e9.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -18604,7 +18604,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-155r-small-size-black-30202.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30202/produtos/400/4c362b8f8cfa1951dfec525974bbed95.png",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -18615,7 +18615,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-adapter-for-ak-aeg-magazine-24391.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/24391/produtos/400/c53cab164a7ecac3dd6af31f55d299f7.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
@@ -18626,7 +18626,7 @@
       "url": "https://www.arsenalsports.com/produto/wosport-speed-loader-adapter-for-mp5-aeg-magazine-24393.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/24393/produtos/400/14e74619b5efb581932c004cd7a07ba8.jpg",
-      "category": "bbs",
+      "category": "magazines",
       "categoryLabel": "BBs",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []

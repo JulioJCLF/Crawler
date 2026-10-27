@@ -94,6 +94,29 @@ describe('Crawler Logic', () => {
       expect(result.categorySlug).toBe('buckings');
       expect(result.weight).toBeGreaterThan(100);
     });
+
+    it('should route speed loaders from bbs to magazines (PM-009)', () => {
+      const result1 = enforceCategory('CYMA SPEED LOADER 100R BLACK', 'bbs');
+      const result2 = enforceCategory('PTS ODIN INNOVATIONS SPEED LOADER 1600R M12 BLACK', 'bbs');
+      const result3 = enforceCategory('PTS ODIN M12 SIDEWINDER REBUILD REAPAIR KIT', 'bbs');
+      expect(result1.categorySlug).toBe('magazines');
+      expect(result2.categorySlug).toBe('magazines');
+      expect(result3.categorySlug).toBe('magazines');
+    });
+
+    it('should route tracer units from bbs to pecas-externas (PM-009)', () => {
+      const result1 = enforceCategory('ACETECH TRACER AT2000 WITH S0006-CB CK043 AND BB KING BBS 0.25GR', 'bbs');
+      const result2 = enforceCategory('ACETECH TRACER AT2000 FOR GREEN BBS ONLY', 'pecas-externas');
+      expect(result1.categorySlug).toBe('pecas-externas');
+      expect(result2.categorySlug).toBe('pecas-externas');
+    });
+
+    it('should preserve genuine tracer BBs in bbs category (PM-009)', () => {
+      const result1 = enforceCategory('ACETECH BBS RED TRACER 0.25G / 2700R BOTTLE', 'bbs');
+      const result2 = enforceCategory('G&G BBS GREEN TRACER 0.20G / 2700R BOTTLE', 'bbs');
+      expect(result1.categorySlug).toBe('bbs');
+      expect(result2.categorySlug).toBe('bbs');
+    });
   });
 
   describe('CATEGORY_WEIGHTS', () => {

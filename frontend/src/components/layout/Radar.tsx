@@ -14,23 +14,23 @@ export function Radar({ products }: { products: Product[] }) {
   if (highlights.length === 0) return null;
 
   return (
-    <div className="bg-surface border-b border-border bg-card transition-all duration-300">
+    <div className="bg-card border-b border-border transition-colors">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-4">
         <div 
           className="flex items-center justify-between cursor-pointer group"
           onClick={() => setIsOpen(!isOpen)}
         >
           <div className="flex items-center gap-3">
-            <div className="w-2 h-2 rounded-full bg-accent animate-ping shadow-[0_0_8px_var(--accent)]" />
-            <h2 className="font-heading font-bold text-lg uppercase tracking-wider text-foreground group-hover:text-accent transition-colors">
+            <span className="w-2 h-2 bg-accent inline-block" />
+            <h2 className="font-display font-medium text-base uppercase tracking-wider text-foreground group-hover:text-accent transition-colors">
               Radar de Novidades
             </h2>
-            <span className="font-mono text-[10px] text-muted-foreground ml-2 hidden sm:inline-block">
-              Últimas 24h ({highlights.length} itens)
+            <span className="font-mono text-xs text-muted-foreground ml-2 hidden sm:inline-block">
+              [24H · {highlights.length} ITENS DETECTADOS]
             </span>
           </div>
-          <button className="text-muted-foreground group-hover:text-accent transition-colors p-1">
-            {isOpen ? <ChevronUp className="w-5 h-5" /> : <ChevronDown className="w-5 h-5" />}
+          <button className="text-muted-foreground group-hover:text-accent transition-colors p-1" aria-label="Alternar radar">
+            {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
           </button>
         </div>
 

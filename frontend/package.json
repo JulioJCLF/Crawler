@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "test": "vitest run",
-    "auth:reset": "npx tsx scripts/reset-auth.ts"
+    "auth:reset": "npx tsx scripts/reset-auth.ts",
+    "audit:catalog": "tsx scripts/catalog-audit.ts"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

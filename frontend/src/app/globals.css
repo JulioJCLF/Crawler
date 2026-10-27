@@ -1,4 +1,10 @@
+/* Hallmark · shape: Workbench · genre: modern-minimal · theme: Hunting (Preserved Brand Colors) · redesign: full
+ * hero: Stage · nav: edge-aligned · footer: mast · imagery: the product · signature: corner-ticks
+ * axes: dark/grotesk-sans/warm · posture: committed · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P5 H5 E5 S5 R5 V5 · weakest: H, tightened hero copy */
 @import "tailwindcss";
+@import "./tokens.css";
+@import "./base.css" layer(base);
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
@@ -7,9 +13,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-sans);
-  --font-mono: var(--font-mono);
-  --font-heading: var(--font-heading);
+  --font-sans: "Switzer", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Switzer", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-mono, "Geist Mono", monospace);
+  --font-heading: "Switzer", ui-sans-serif, system-ui, sans-serif;
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -42,57 +49,34 @@
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
-  --radius-4xl: calc(var(--radius) * 2.6);
+  --radius: 6px;
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --radius: 0.625rem;
-}
-
-.dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
+  --background: #0b0d0c;
+  --foreground: #f0efea;
+  --card: #141815;
+  --card-foreground: #f0efea;
+  --popover: #1b201c;
+  --popover-foreground: #f0efea;
+  --primary: #c6ff00;
+  --primary-foreground: #0b0d0c;
+  --secondary: #1b201c;
+  --secondary-foreground: #f0efea;
+  --muted: #1b201c;
+  --muted-foreground: #8b948c;
+  --accent: #c6ff00;
+  --accent-foreground: #0b0d0c;
+  --destructive: #ff5b4a;
+  --destructive-foreground: #0b0d0c;
+  --border: #2a312c;
+  --input: #141815;
+  --ring: #c6ff00;
+  --radius: 6px;
 }
 
 /* ==================================
-   Theme: Hunting (Dark, Tactical)
+   Theme: Hunting (Original Colors Restored)
 ================================== */
 .theme-hunting {
   --background: #0b0d0c;
@@ -104,14 +88,14 @@
   --popover: #1b201c;
   --popover-foreground: #f0efea;
   
-  /* Verde Oliva / Militar */
-  --primary: #4d5030;
+  /* Verde Militar / Destaques */
+  --primary: #c6ff00;
   --primary-foreground: #0b0d0c;
   
-  --secondary: #3d4026;
+  --secondary: #1b201c;
   --secondary-foreground: #f0efea;
   
-  /* Verde Neon (Highlight original) */
+  /* Verde Neon (Highlight Original Hunting World) */
   --accent: #c6ff00;
   --accent-foreground: #0b0d0c;
   
@@ -122,10 +106,10 @@
   --destructive-foreground: #0b0d0c;
   
   --border: #2a312c;
-  --input: #1b201c;
-  --ring: #4d5030;
+  --input: #141815;
+  --ring: #c6ff00;
   
-  --radius: 0.25rem; /* 4px radius */
+  --radius: 6px;
 }
 
 /* ==================================
@@ -138,7 +122,7 @@
   --card: #f9fafb;
   --card-foreground: #111827;
   
-  --primary: #2563eb; /* Blue */
+  --primary: #2563eb;
   --primary-foreground: #ffffff;
   
   --secondary: #e5e7eb;
@@ -154,24 +138,48 @@
   --input: #f9fafb;
   --ring: #2563eb;
   
-  --radius: 0.5rem;
+  --radius: 6px;
 }
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border;
   }
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
-  }
-  html {
-    @apply font-sans;
+    @apply bg-background text-foreground;
   }
 }
-/* Esconde a barra de rolagem nas listas que rolam de lado (categorias no celular). */
+
+/* Esconde a barra de rolagem nas listas que rolam de lado */
 @utility scrollbar-hide {
   scrollbar-width: none;
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+/* Corner Ticks (Marcadores táticos) */
+.corner-ticks {
+  position: relative;
+}
+.corner-ticks::before,
+.corner-ticks::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  pointer-events: none;
+  z-index: 10;
+}
+.corner-ticks::before {
+  top: -1px;
+  left: -1px;
+  border-top: 1.5px solid var(--accent);
+  border-left: 1.5px solid var(--accent);
+}
+.corner-ticks::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 1.5px solid var(--accent);
+  border-right: 1.5px solid var(--accent);
 }

@@ -35,20 +35,21 @@ export function FloatingCart() {
       {totalItems > 0 && (
         <button
           onClick={() => setIsCartOpen(true)}
-          className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex items-center justify-center w-14 h-14 bg-accent text-accent-foreground rounded-full shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:scale-105 transition-transform"
+          className="fixed bottom-6 right-6 md:bottom-10 md:right-10 z-50 flex items-center justify-center w-12 h-12 bg-accent text-accent-foreground border border-accent shadow-none hover:opacity-95 transition-opacity"
+          aria-label="Abrir carrinho"
         >
-          <ShoppingCart className="w-6 h-6" />
-          <Badge className="absolute -top-2 -right-2 bg-destructive text-destructive-foreground font-mono px-2 py-0.5 text-xs animate-bounce">
+          <ShoppingCart className="w-5 h-5" />
+          <span className="absolute -top-2 -right-2 bg-destructive text-destructive-foreground font-mono px-1.5 py-0.5 text-[11px] border border-destructive">
             {totalItems}
-          </Badge>
+          </span>
         </button>
       )}
 
       {/* Drawer do Carrinho */}
       <Sheet open={isCartOpen} onOpenChange={setIsCartOpen}>
-        <SheetContent className="w-full sm:max-w-md flex flex-col bg-card border-border p-6 sm:p-8">
+        <SheetContent className="w-full sm:max-w-md flex flex-col bg-card border-l border-border p-6 sm:p-8 rounded-none">
           <SheetHeader className="border-b border-border pb-4">
-            <SheetTitle className="font-heading uppercase text-xl flex items-center gap-2">
+            <SheetTitle className="font-display uppercase text-lg font-medium flex items-center gap-2">
               <ShoppingCart className="w-5 h-5 text-accent" />
               Seu Carrinho
             </SheetTitle>
@@ -65,10 +66,10 @@ export function FloatingCart() {
                 <div className="flex flex-col gap-4">
                   {items.map((item) => (
                     <div key={item.product.id} className="flex gap-4 items-start border-b border-border pb-4">
-                      <div className="w-16 h-16 bg-muted/20 rounded flex items-center justify-center p-1 shrink-0">
+                      <div className="w-16 h-16 bg-muted/20 border border-border flex items-center justify-center p-1 shrink-0">
                         {item.product.image ? (
                           // eslint-disable-next-line @next/next/no-img-element
-                          <img src={item.product.image} alt={item.product.name} className="max-w-full max-h-full object-contain mix-blend-multiply dark:mix-blend-normal" />
+                          <img src={item.product.image} alt={item.product.name} className="max-w-full max-h-full object-contain" />
                         ) : (
                           <span className="text-[8px] font-mono text-muted-foreground">SEM IMG</span>
                         )}

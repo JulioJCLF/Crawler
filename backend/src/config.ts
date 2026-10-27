@@ -71,6 +71,25 @@ export function enforceCategory(name: string, originalCategory: string): { categ
     return { categorySlug: "buckings", weight: 110 };
   }
 
+  // SPEED LOADERS / CARREGADORES RÁPIDOS (REQ-001 / PM-009):
+  // Não pertencem à categoria de BBs (munição) nem a réplicas; vão para magazines (peso 50).
+  if (lowerName.match(/\b(speed\s*loader|speedloader|bb\s*loader|bb\s*loading|magazine\s*loader|odin\s*m12)\b/i)) {
+    return { categorySlug: "magazines", weight: 50 };
+  }
+
+  // TRACER UNITS / SILENCIADORES (REQ-001 / PM-009):
+  // Aparelhos traçadores e silenciadores são peças externas, não BBs/munição (peso 50).
+  if (
+    lowerName.match(/\b(tracer|silencer|suppressor|silenciador)\b/i) &&
+    !lowerName.match(/\b(adapter|cable|case|pouch|mount|battery|handguard)\b/i) &&
+    (lowerName.match(/\b(unit|at2000|at1000|bifrost|blaster|lighter|predator|quark|raider|thor|spitfire|griffon|storm|swift|flare|cube|smoke|wolf|drop-in|silencer|suppressor)\b/i) ||
+      !lowerName.match(/\b0\.\d{2}g?\b/i)) &&
+    !lowerName.endsWith("airsoft rifle") &&
+    !lowerName.includes("airsoft pistol")
+  ) {
+    return { categorySlug: "pecas-externas", weight: 50 };
+  }
+
   // OVERRIDES GLOBAIS: Garante que armas verdadeiras não caiam em peças (PESO 100)
   if (
     lowerName.endsWith("airsoft rifle") || 
