@@ -117,6 +117,32 @@ describe('Crawler Logic', () => {
       expect(result1.categorySlug).toBe('bbs');
       expect(result2.categorySlug).toBe('bbs');
     });
+
+    it('should route gun cases, rifle bags and hard protective cases to cases (PM-010)', () => {
+      const result1 = enforceCategory('ARMADILLO CASE 28LT FOR RIFLE ASSAULT / DMR / SNIPER', 'vestuario');
+      const result2 = enforceCategory('WOSPORT RIFLE BAG DOUBLE CARBINE CASE 107CM MULTICAM', 'vestuario');
+      const result3 = enforceCategory('SRC PISTOL CASE POLYMER - INSIDE DIAMETER 29CM BLACK', 'vestuario');
+      const result4 = enforceCategory('WADSN CASE PROTECTIVE BOX LARGE 175X110X50MM BLACK', 'vestuario');
+      const result5 = enforceCategory('ARMADILLO CASE 02LT FOR BATTERY OR ACESSORIES', 'baterias');
+      expect(result1.categorySlug).toBe('cases');
+      expect(result2.categorySlug).toBe('cases');
+      expect(result3.categorySlug).toBe('cases');
+      expect(result4.categorySlug).toBe('cases');
+      expect(result5.categorySlug).toBe('cases');
+    });
+
+    it('should not route mechanical parts or PEQ battery cases to cases (PM-010)', () => {
+      const result1 = enforceCategory('CLASSIC ARMY GEARBOX CASE 9MM FOR M14', 'pecas-internas');
+      const result2 = enforceCategory('G&G GEARBOX CASE FOR EBR ETU', 'pecas-internas');
+      const result3 = enforceCategory('WOSPORT BATTERY CASE PICATINNY MOCK LASER MAWL-C1 BLACK', 'baterias');
+      const result4 = enforceCategory('ESHOOTER TRACER CARBON FIBER CASE BLACK', 'pecas-externas');
+      const result5 = enforceCategory('CTM-TAC BARREL CASE CNC TYPE E FOR AAP01 GREEN', 'pistolas');
+      expect(result1.categorySlug).not.toBe('cases');
+      expect(result2.categorySlug).not.toBe('cases');
+      expect(result3.categorySlug).not.toBe('cases');
+      expect(result4.categorySlug).not.toBe('cases');
+      expect(result5.categorySlug).not.toBe('cases');
+    });
   });
 
   describe('CATEGORY_WEIGHTS', () => {

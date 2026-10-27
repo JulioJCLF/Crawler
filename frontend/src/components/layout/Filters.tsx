@@ -50,6 +50,7 @@ export const MACRO_CATEGORIES = [
   { slug: "#pecas-externas", label: "Peças Externas", group: "pecas" },
   { slug: "#vestuario", label: "Vestuário Tático", group: "vestuario" },
   { slug: "#coldres", label: "Coldres", group: "vestuario" },
+  { slug: "#cases", label: "Cases & Maletas", group: "vestuario" },
   { slug: "#hpa", label: "HPA & Ar Comprimido", group: "suprimentos" },
   { slug: "#bbs", label: "Munição (BBs)", group: "suprimentos" },
   { slug: "#suprimentos", label: "Gás e Baterias", group: "suprimentos" },

@@ -9,6 +9,7 @@ Linha do tempo de tudo o que mudou. **Mais recente no topo.** Detalhes de cada s
 
 | Data | O que mudou (em linguagem simples) | Quem | Detalhes |
 |---|---|---|---|
+| 2026-10-27 | Criada a categoria exclusiva "Cases & Maletas" para reunir 84 maletas rígidas, cases de rifles/pistolas e bolsas de transporte de armas que estavam misturadas em vestuário, com filtro próprio na vitrine e suporte a margem customizada no /admin | Antigravity | [[2026-10-27 - Antigravity - Categoria dedicada para cases e maletas]] |
 | 2026-10-27 | Corrigida falha de deploy na Vercel: desativado o modo standalone condicionalmente para o ambiente da Vercel, eliminando o erro de rastreamento de arquivos (.nft.json) e mantendo o modo container para Railway | Antigravity | [[2026-10-27 - Antigravity - Compatibilidade de build Vercel e Railway]] |
 | 2026-10-26 | Removidos todos os 61 speed loaders e 19 unidades de tracer da categoria de BBs (munição), reclassificando os carregadores rápidos para "Magazines & Carregadores" e os aparelhos de tracer para "Peças Externas / Tracers & Silenciadores", preservando 100% do histórico de preços | Antigravity | [[2026-10-26 - Antigravity - Reclassificacao de speed loaders e tracers fora de BBs]] |
 | 2026-10-26 | Adoção do modelo Elephant-and-Goldfish (EGM) em toda a árvore do projeto: gerados e verificados contratos arquiteturais (README.md) em 36 diretórios de código com interfaces públicas, invariantes, efeitos colaterais e verificação de zero drift | Antigravity | [[2026-10-26 - Antigravity - Adocao do Elephant-and-Goldfish Model (EGM)]] |

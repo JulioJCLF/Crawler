@@ -18,6 +18,7 @@ export const DEFAULT_CATEGORY_MARKUPS: Record<string, number> = {
   "miras": 1.50,
   "vestuario": 1.50,
   "buckings": 1.50,
+  "cases": 1.50,
   "default": 1.50
 };
 
@@ -48,6 +49,7 @@ export const CATALOG_CATEGORIES_METADATA = [
   { slug: "miras", label: "Miras e Red Dots" },
   { slug: "vestuario", label: "Equipamento e Vestuário" },
   { slug: "buckings", label: "Buckings" },
+  { slug: "cases", label: "Cases & Maletas" },
 ];
 
 export function markupToPercent(markup: number): number {

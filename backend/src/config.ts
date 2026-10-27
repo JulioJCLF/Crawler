@@ -23,6 +23,7 @@ export const CATEGORIES = [
  */
 export const VIRTUAL_CATEGORIES = [
   { slug: "buckings", label: "Buckings" },
+  { slug: "cases",    label: "Cases & Maletas" },
 ];
 
 /** Todas as categorias válidas (crawl + derivadas). Use para resumo/validação. */
@@ -58,6 +59,7 @@ export const CATEGORY_WEIGHTS: Record<string, number> = {
   "granadas": 5,
   "speedsoft": 5,
   "buckings": 6,
+  "cases": 6,
 };
 
 export function enforceCategory(name: string, originalCategory: string): { categorySlug: string, weight: number } {
@@ -69,6 +71,16 @@ export function enforceCategory(name: string, originalCategory: string): { categ
   // têm "AEG" no nome e estavam sendo forçados para "replicas".
   if (lowerName.match(/\bbucking\b/) || lowerName.match(/hop[\s-]?up rubber/)) {
     return { categorySlug: "buckings", weight: 110 };
+  }
+
+  // CASES & MALETAS (REQ-001 / PM-010):
+  // Maletas rígidas, cases de rifles/pistolas, caixas estanques e bolsas de transporte de armas (gun bag/rifle bag).
+  // Exclui carcaças de gearbox ("gearbox shell case"), caixas PEQ de bateria, capas de tracer e magazines.
+  if (
+    !lowerName.match(/\b(gearbox|battery\s*case|peq|mock\s*laser|tracer|flare|barrel\s*case|magazine|mag\b|mid.?cap|hi.?cap|drum|shell\s*shotgun|hop-up\s*chamber|chamber\s*case)\b/i) &&
+    lowerName.match(/\b(gun\s*bag|gunbag|rifle\s*bag|carbine\s*case|pistol\s*case|rifle\s*case|hard\s*case|hardcase|safety\s*case|case\s*safety|protective\s*box|ammo\s*box|ammo\s*case|beauty\s*case|maleta|maletas)\b|\barmadillo\s+case\b|\bcase\s+(?:protective|waterproof|portable|storm)\b|\bcase\s+pistol\b|\bpistol\s+case\b/i)
+  ) {
+    return { categorySlug: "cases", weight: 50 };
   }
 
   // SPEED LOADERS / CARREGADORES RÁPIDOS (REQ-001 / PM-009):

@@ -34,12 +34,15 @@ O robô precisa saber onde olhar. As categorias e suas URLs ficam em `backend/sr
 - RN1: a lista de categorias é configuração, não vem do site.
 - RN2: produto repetido em duas categorias fica com a categoria de **maior peso** (`CATEGORY_WEIGHTS` em `config.ts`, aplicado por `enforceCategory`), não com a do primeiro encontro. Exemplos: nome que bate com regra de "arma de verdade" tem peso 100; "bucking" (borracha de hop-up) tem peso 110 e vence qualquer coisa; categorias de peça genérica ficam entre 1 e 6. Esse peso também pode redirecionar o produto para uma categoria diferente da de origem (ex.: um item raspado em "réplicas" mas que é peça vai parar em "peças internas/externas"), incluindo a categoria derivada "buckings", que não tem URL própria no site (`VIRTUAL_CATEGORIES`).
 - RN3: speed loaders (carregadores rápidos de magazines/BBs e kits Odin M12) não devem permanecer na categoria `bbs`; são reclassificados com peso 50 para `magazines`. Unidades traçadoras (Tracer Units) que não sejam munição são reclassificadas para `pecas-externas` (PM-009).
+- RN4: maletas rígidas, cases de rifles/pistolas, bolsas de transporte de armas (gun bags/rifle bags) e caixas estanques não devem permanecer misturadas em `vestuario`; são reclassificadas com peso 50 para a categoria derivada `cases` ("Cases & Maletas") (PM-010). Componentes internos como carcaças de gearbox ("gearbox shell case") e caixas falsas de bateria tipo PEQ permanecem em suas respectivas categorias de peças/baterias.
 
 ## Critérios de aceite
 - [x] **Dado** a lista com 14 categorias, **quando** a execução começa, **então** existe ao menos uma requisição para cada categoria.
 - [x] **Dado** um produto presente em duas categorias, **quando** o snapshot é salvo, **então** ele aparece uma vez só, com a categoria de maior peso entre as duas.
 - [x] **Dado** um speed loader ou kit de carregador encontrado na listagem de BBs, **quando** passar pela categorização, **então** é reclassificado para `magazines`.
 - [x] **Dado** uma unidade de tracer encontrada na listagem de BBs, **quando** passar pela categorização, **então** é reclassificada para `pecas-externas`.
+- [x] **Dado** uma maleta, case de arma ou gun bag encontrado na listagem de vestuário ou baterias, **quando** passar pela categorização, **então** é reclassificado para `cases`.
+- [x] **Dado** uma carcaça de gearbox com a palavra "case" (ex: "GEARBOX CASE"), **quando** passar pela categorização, **então** não é direcionada para `cases`, permanecendo em peças internas.
 
 ## Dúvidas em aberto
 - [x] Conferir se o comportamento descrito bate com o código atual. — Não batia (RN2); corrigido em 2026-09-21.
@@ -48,6 +51,7 @@ O robô precisa saber onde olhar. As categorias e suas URLs ficam em `backend/sr
 ## Histórico
 | Data | O que mudou | Quem | Referência |
 |---|---|---|---|
+| 2026-10-27 | RN4 adicionada: categoria derivada `cases` para maletas e cases de transporte (PM-010) | Luiz | [[PM-010 Categoria dedicada para cases e maletas de transporte]] |
 | 2026-10-26 | RN3 adicionada: speed loaders vão para magazines e tracer units para peças externas (PM-009) | Luiz | [[PM-009 Reclassificacao de speed loaders e tracers fora da categoria de BBs]] |
 | 2026-09-21 | RN2 corrigida: categoria de produto duplicado é decidida por peso (`enforceCategory`), não por ordem de descoberta. Achado no docs-check | Luiz | branch `docs-check-2026-09-21` |
 | 2026-09-20 | Requisito escrito a partir do sistema em funcionamento | Luiz | [[DEC-007 Adoção do sistema de documentação e trilhos para agentes]] |

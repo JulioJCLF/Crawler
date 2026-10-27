@@ -6,6 +6,7 @@ Domain business logic, catalog data access services, price calculation rules, st
 ## Interface
 - `cleanProductName(name: string): string`: Cleans product names stripping provider branding while maintaining specifications.
 - `isSpeedLoader(product: { name: string }): boolean`: Identifies speed loaders, quick loaders, and loader repair kits.
+- `isCase(product: { name: string, category?: string }): boolean`: Identifies hard protective cases, gun bags, rifle bags, and pistol cases while excluding mechanical housings.
 - `buildActiveFilterChips(state: FilterState): ActiveFilterChip[]`: Formats active search and category filters into removable UI chips.
 - `CLEARED_FILTER_STATE: FilterState`: Default clean filter state object.
 - `isAccessory(name: string): boolean` / `isReplicaGun(name: string): boolean` / `isShotgun(product: any): boolean`: Pure categorization helpers.

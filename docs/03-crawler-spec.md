@@ -42,6 +42,7 @@ Depois de extraído, cada produto passa por `enforceCategory(nome, categoriaOrig
 - Nomes com "bucking" ou "hop-up rubber" viram a categoria derivada `buckings` (peso 110 — a mais alta, não tem URL própria no site, é montada só pela heurística).
 - Nomes com "speed loader", "speedloader", "bb loader", "magazine loader" ou kits Odin M12 são reclassificados para `magazines` (peso 50), removendo-os da listagem de `bbs`.
 - Nomes com "tracer unit", "silencer" ou modelos de aparelho traçador (AT2000, Bifrost, Blaster, etc.) que não sejam munição com gramatura (ex: 0.25g) são reclassificados para `pecas-externas` (peso 50), impedindo que caiam em `bbs`.
+- Nomes de maletas rígidas, caixas estanques, cases de transporte de armas (gun bag / rifle bag / pistol case) viram a categoria derivada `cases` (peso 50), isolando-os de `vestuario`, excluindo peças mecânicas como carcaças de gearbox ("gearbox case") e PEQs/battery cases.
 - Nomes que batem com padrão de arma de verdade (ex.: termina em "airsoft rifle", "sniper rifle", "aeg" sem contexto de peça) viram `replicas` (peso 100).
 - Dentro de `replicas`, nomes com termos de peça (magazine, cylinder, spring, gearbox, hop up, stock, grip, etc.) são reclassificados para `magazines`, `pecas-internas` ou `pecas-externas`.
 - Cada categoria tem um peso fixo em `CATEGORY_WEIGHTS` (de 1 a 6, fora os casos acima). Quando o mesmo produto aparece em duas categorias de origem diferentes, vence o de maior peso.

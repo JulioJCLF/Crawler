@@ -50,7 +50,7 @@
     {
       "slug": "baterias",
       "label": "Baterias & Carregadores",
-      "count": 228
+      "count": 227
     },
     {
       "slug": "granadas",
@@ -70,12 +70,17 @@
     {
       "slug": "vestuario",
       "label": "Equipamento e Vestuário",
-      "count": 1386
+      "count": 1303
     },
     {
       "slug": "buckings",
       "label": "Buckings",
       "count": 278
+    },
+    {
+      "slug": "cases",
+      "label": "Cases & Maletas",
+      "count": 84
     }
   ],
   "products": [
@@ -85,8 +90,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-02lt-for-battery-or-acessories-23873.html",
       "price": "USD 14,00",
       "image": "https://www.arsenalsports.com/img/23873/produtos/400/ae268371c73d84f8a4bcc9b0a1e004a6.jpeg",
-      "category": "baterias",
-      "categoryLabel": "Baterias & Carregadores",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-07-03T05:23:02.126Z",
       "priceHistory": []
     },
@@ -55453,8 +55458,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-287lt-military-storage-multipurpose-16271.html",
       "price": "USD 226,00",
       "image": "https://www.arsenalsports.com/img/16271/produtos/400/5b7e431dd5f0437c9e4c96c2eacd0463.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55471,8 +55476,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-28lt-for-rifle-assault--dmr--sniper-16269.html",
       "price": "USD 55,00",
       "image": "https://www.arsenalsports.com/img/16269/produtos/400/82b4db83a2217ca518f7529b4eb5df27.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55489,8 +55494,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-28lt-for-rifle-assault-or-dmr-16268.html",
       "price": "USD 33,00",
       "image": "https://www.arsenalsports.com/img/16268/produtos/400/3dfda97d2a3dfde2f70b4b86bf583be9.jpeg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55507,8 +55512,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-54lt-for-rifle-assault--dmr--sniper-35142.html",
       "price": "USD 90,00",
       "image": "https://www.arsenalsports.com/img/35142/produtos/400/27cd96e1ed020373fef7607738769517.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55525,8 +55530,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-ammo-box-182lt-multifunction-box-23872.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/23872/produtos/400/c6f0a212b48162a52145974ffe0a573d.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -55538,8 +55543,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-ammo-box-mod906-23871.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/23871/produtos/400/64fdf48954c9cca11fbdda74b6ef63e2.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55556,8 +55561,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-pistol-with-key--finger-286x168x54-29935.html",
       "price": "USD 75,00",
       "image": "https://www.arsenalsports.com/img/29935/produtos/400/200bf05c3c737eaeda3bd66d6cab8d13.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55574,8 +55579,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-pistol-with-key--finger-291x191x58-29934.html",
       "price": "USD 48,00",
       "image": "https://www.arsenalsports.com/img/29934/produtos/400/0fec4e4fe4dcc69cc71196f7eea617b7.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55592,8 +55597,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-34l-multipurpose-35924.html",
       "price": "USD 88,00",
       "image": "https://www.arsenalsports.com/img/35924/produtos/400/6bef2b2209d3661b9f0d327e6780c243.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-23T12:45:01.225Z",
       "priceHistory": [
         {
@@ -55610,8 +55615,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-hard-protective-helemt-and-drone-16276.html",
       "price": "USD 68,00",
       "image": "https://www.arsenalsports.com/img/16276/produtos/400/c93ad3e291420685e8ccebedfbafb76b.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55628,8 +55633,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-hard-protective-medical-and-drone-mod-ar786639-black-16273.html",
       "price": "USD 279,00",
       "image": "https://www.arsenalsports.com/img/16273/produtos/400/d0d33aaaec72feaa8eca36ea03b60ede.jpeg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55646,8 +55651,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-hard-protective-pistol-23938.html",
       "price": "USD 16,00",
       "image": "https://www.arsenalsports.com/img/23938/produtos/400/cda92ac3517709159ed626022b12b288.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55664,8 +55669,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-hard-protective-pistol--23939.html",
       "price": "USD 7,00",
       "image": "https://www.arsenalsports.com/img/23939/produtos/400/8a063ac3476a68577b1d91e426d04423.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55682,8 +55687,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-hard-protective-watch-and-ecigartte-16274.html",
       "price": "USD 12,00",
       "image": "https://www.arsenalsports.com/img/16274/produtos/400/e334e5f2583c003df96251ebadda2b68.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -55700,8 +55705,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-hard-protective-watch-and-ecigartte---16275.html",
       "price": "USD 16,00",
       "image": "https://www.arsenalsports.com/img/16275/produtos/400/fe71c059208bc19272682b4ea7fe700c.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -61697,8 +61702,8 @@
       "url": "https://www.arsenalsports.com/produto/cytac-ammo-case-9mm-40-45-200r-22977.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/22977/produtos/400/0c02356aca359ee3f9bfd79e3301df60.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -61715,8 +61720,8 @@
       "url": "https://www.arsenalsports.com/produto/cytac-ammo-case-shotgun-shell-25r-22976.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/22976/produtos/400/676be4947d5663de5f4cfc4ab5548109.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -72154,8 +72159,8 @@
       "url": "https://www.arsenalsports.com/produto/emerson-gear-travel-beauty-case-foliage-green-fg500d-26478.html",
       "price": "USD 22,00",
       "image": "https://www.arsenalsports.com/img/26478/produtos/400/cf333970525ff30a0283e484f2403873.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -78691,8 +78696,8 @@
       "url": "https://www.arsenalsports.com/produto/gg-case-pistol-black-15356.html",
       "price": "USD 10,00",
       "image": "https://www.arsenalsports.com/img/15356/produtos/400/fd0fe239a3b8cd10095a529b4d569845.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -78709,8 +78714,8 @@
       "url": "https://www.arsenalsports.com/produto/gg-case-pistol-green-15358.html",
       "price": "USD 10,00",
       "image": "https://www.arsenalsports.com/img/15358/produtos/400/6097bcb46a9815f0ec840f700613c43a.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -78727,8 +78732,8 @@
       "url": "https://www.arsenalsports.com/produto/gg-case-pistol-tan-15357.html",
       "price": "USD 10,00",
       "image": "https://www.arsenalsports.com/img/15357/produtos/400/3341044be9e5793de1e74a32b86ccb2a.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -84978,8 +84983,8 @@
       "url": "https://www.arsenalsports.com/produto/snowpeak-rifle-bag-mod-gb01-75cm-fabric-900d-black-35162.html",
       "price": "USD 22,00",
       "image": "https://www.arsenalsports.com/img/35162/produtos/400/8fd1e0e1aea30a5aa7c3fb8bc261f806.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -85045,8 +85050,8 @@
       "url": "https://www.arsenalsports.com/produto/src-pistol-case-polymer--inside-diameter-29cm-black-12019.html",
       "price": "USD 7,00",
       "image": "https://www.arsenalsports.com/img/12019/produtos/400/e803c2d20f5275ac9f8a90a474c93a29.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91788,8 +91793,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-extra-large-190x110x65mm-black-25173.html",
       "price": "USD 5,00",
       "image": "https://www.arsenalsports.com/img/25173/produtos/400/2d44eae1c4177ae40fee15a6740656f9.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91806,8 +91811,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-extra-large-190x110x65mm-desert-25174.html",
       "price": "USD 5,00",
       "image": "https://www.arsenalsports.com/img/25174/produtos/400/ff718f4bc2c1cbb9b542639ad1b396b8.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91824,8 +91829,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-extra-small-120x90x45mm-black-25171.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/25171/produtos/400/7a0b026f53c42e3b9365aa29be2df796.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91842,8 +91847,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-extra-small-120x90x45mm-desert-25172.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/25172/produtos/400/fe7416a6a0c59c8386daa07eba2fd61c.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91860,8 +91865,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-large-175x110x50mm-black-25167.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/25167/produtos/400/e5ea283b7fac6298ed27f4cd44e278e3.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91878,8 +91883,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-large-175x110x50mm-desert-25168.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/25168/produtos/400/aafd4d53be2147f873f5b4c238159eb4.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91896,8 +91901,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-medium-160x100x45mm-black-25169.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/25169/produtos/400/8ef4357a2c4af8492fed9a121556427e.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91914,8 +91919,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-medium-160x100x45mm-desert-25170.html",
       "price": "USD 4,00",
       "image": "https://www.arsenalsports.com/img/25170/produtos/400/cf7a9592c2ca96eb0d4c6775833981dc.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91932,8 +91937,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-small-125x100x65mm-black-25175.html",
       "price": "USD 3,00",
       "image": "https://www.arsenalsports.com/img/25175/produtos/400/eabe134a148a2184756f9458f54a8413.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -91950,8 +91955,8 @@
       "url": "https://www.arsenalsports.com/produto/wadsn-case-protective-box-small-125x100x65mm-desert-25176.html",
       "price": "USD 3,00",
       "image": "https://www.arsenalsports.com/img/25176/produtos/400/e18e3545e2313d2d8344cf9fba44926e.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -102549,8 +102554,8 @@
       "url": "https://www.arsenalsports.com/produto/we-ultimate-pistol-case-with-internal-led-illumination-8854.html",
       "price": "USD 28,00",
       "image": "https://www.arsenalsports.com/img/8854/produtos/400/4625ca80bfa051ac2052f2afc06f7929.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -105260,8 +105265,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-bag-rifle-m4-molle-gunbag-100cm-tan-30055.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30055/produtos/400/6d027f2da43a8ae8a4efd7745c8e34a2.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -108591,8 +108596,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-case-portable-safety-32cm-black-24383.html",
       "price": "USD 15,00",
       "image": "https://www.arsenalsports.com/img/24383/produtos/400/68b99ad8f3c8924b5562f557c47d1c99.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -108609,8 +108614,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-case-storm-safety-93x37-black-24382.html",
       "price": "USD 115,00",
       "image": "https://www.arsenalsports.com/img/24382/produtos/400/2dc4837fae5e7ca4fa5fff1262575160.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -110890,8 +110895,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-case-storm-safety-93x37-grey-24380.html",
       "price": "USD 115,00",
       "image": "https://www.arsenalsports.com/img/24380/produtos/400/6155125a69d70718e8550e8d880b7785.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -110908,8 +110913,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-case-storm-safety-93x37-tan-24381.html",
       "price": "USD 115,00",
       "image": "https://www.arsenalsports.com/img/24381/produtos/400/0bc6d288df9dbce4be5b82f233dd333f.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -119689,8 +119694,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-heavy-duty-m249-gun-bag-115cm-black--20112.html",
       "price": "USD 52,00",
       "image": "https://www.arsenalsports.com/img/20112/produtos/400/603276f139cc78a9bc9e5fe3b796eb89.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -119707,8 +119712,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-heavy-duty-m249-gun-bag-115cm-od-20115.html",
       "price": "USD 52,00",
       "image": "https://www.arsenalsports.com/img/20115/produtos/400/c39613f89e7610b556337af2d54af536.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -119725,8 +119730,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-heavy-duty-m249-gun-bag-115cm-tan-20114.html",
       "price": "USD 52,00",
       "image": "https://www.arsenalsports.com/img/20114/produtos/400/b3f8f98ae2cf63c06dc58740d07ee849.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -122147,8 +122152,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-laser-molle-gun-bag-100cm-black-21392.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/21392/produtos/400/2b570db66ada0030a2646201cd7256a8.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -122160,8 +122165,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-laser-molle-gun-bag-100cm-multicam-21393.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/21393/produtos/400/78e45171a9bfbfccfc08113c9f764fae.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -122173,8 +122178,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-laser-molle-gun-bag-100cm-od-21394.html",
       "price": "USD 18,00",
       "image": "https://www.arsenalsports.com/img/21394/produtos/400/e6be162681d0757abce60c9101303c93.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -122191,8 +122196,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-laser-molle-gun-bag-100cm-tan-21395.html",
       "price": "USD 18,00",
       "image": "https://www.arsenalsports.com/img/21395/produtos/400/4d573a09492cb5e40f57cafa505643d1.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -132894,8 +132899,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-107cm-multicam-30066.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30066/produtos/400/d2e9f035568c775892ca3bba5e055eaa.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -132907,8 +132912,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-107cm-od-green-21381.html",
       "price": "USD 47,00",
       "image": "https://www.arsenalsports.com/img/21381/produtos/400/c4eaeb0878d448391a48bca9e176569e.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -132925,8 +132930,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-107cm-tan-21382.html",
       "price": "USD 47,00",
       "image": "https://www.arsenalsports.com/img/21382/produtos/400/42005273223df6950cf3dc41f1b43477.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -132943,8 +132948,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-120cm-black-20109.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/20109/produtos/400/f355b38e0dfb9e17bdfe86b0c772fa56.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -132956,8 +132961,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-120cm-od-green-20111.html",
       "price": "USD 50,00",
       "image": "https://www.arsenalsports.com/img/20111/produtos/400/cb58d4874a0baaa5af2fd994b7025bc3.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -132974,8 +132979,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-120cm-tan-20110.html",
       "price": "USD 50,00",
       "image": "https://www.arsenalsports.com/img/20110/produtos/400/0ff51d6586f090d60c6739bdbf3cd67b.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -132992,8 +132997,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-92cm-black-30068.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30068/produtos/400/280ea097bb7b94f23801e63d05cea789.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -133015,8 +133020,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-92cm-od-green-30070.html",
       "price": "USD 45,00",
       "image": "https://www.arsenalsports.com/img/30070/produtos/400/0c3035699f7f4847d8b9f9d0d8212635.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -133033,8 +133038,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-92cm-tan-30071.html",
       "price": "USD 45,00",
       "image": "https://www.arsenalsports.com/img/30071/produtos/400/bcb4371e782c533e1c264afa6c32f5dc.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -133051,8 +133056,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-quick-deployment-black-30064.html",
       "price": "USD 38,00",
       "image": "https://www.arsenalsports.com/img/30064/produtos/400/d7cf8431f281ee9c033bc6795a223094.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -141752,8 +141757,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-75lt-for-rifle-assault--dmr--sniper-35143.html",
       "price": "USD 85,00",
       "image": "https://www.arsenalsports.com/img/35143/produtos/400/45668174df07628157cff0cfda99f6ac.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144117,8 +144122,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-32lt-for-rifle-assault--cqb-16267.html",
       "price": "USD 28,00",
       "image": "https://www.arsenalsports.com/img/16267/produtos/400/f0b78a278361e8c30458953bc038968a.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144135,8 +144140,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-48lt-for-rifles-or-multifunctions-16278.html",
       "price": "USD 68,00",
       "image": "https://www.arsenalsports.com/img/16278/produtos/400/bf3f9fa1fb016fc3137986844a093991.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144161,8 +144166,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-49lt-for-rifle-assault-or-dmr-black-8460.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/8460/produtos/400/4dd41b0810d02bb52244d8e913f8edb8.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144184,8 +144189,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-5lt-for-pistol-or-multifunctional-35138.html",
       "price": "USD 23,00",
       "image": "https://www.arsenalsports.com/img/35138/produtos/400/caddebffcd5330d9f5411479fab2a113.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144202,8 +144207,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-71lt-military-storage-multipurpose-35922.html",
       "price": "USD 110,00",
       "image": "https://www.arsenalsports.com/img/35922/produtos/400/e50af8fbc1c370611c6618624711a694.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-22T12:43:46.988Z",
       "priceHistory": [
         {
@@ -144220,8 +144225,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-91lt-for-rifle-assault--dmr--sniper-35141.html",
       "price": "USD 119,00",
       "image": "https://www.arsenalsports.com/img/35141/produtos/400/87b87d6ef2ae4bb7a1e180a68b1d7ba4.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144246,8 +144251,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-ammo-box-72lt-multifunction-box-35134.html",
       "price": "USD 12,00",
       "image": "https://www.arsenalsports.com/img/35134/produtos/400/66cceb9bd65940ce57bb7843c6fbc617.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144264,8 +144269,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-ammo-box-mod-904-23870.html",
       "price": "USD 10,00",
       "image": "https://www.arsenalsports.com/img/23870/produtos/400/b1969afc8bed5e91f8de9df59726153f.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144290,8 +144295,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-ammo-box-mod-905-35135.html",
       "price": "USD 10,00",
       "image": "https://www.arsenalsports.com/img/35135/produtos/400/1725db2313ecdf1b363e4e41f017617a.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144308,8 +144313,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-ammo-box-mod-909-35137.html",
       "price": "USD 10,00",
       "image": "https://www.arsenalsports.com/img/35137/produtos/400/b2b61289bb20111ad544b35bab045700.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144326,8 +144331,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-ammo-box-mod908-35136.html",
       "price": "USD 10,00",
       "image": "https://www.arsenalsports.com/img/35136/produtos/400/3d6968546e4fcd2509c016135562ee76.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144344,8 +144349,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-for-rifle-117lt-assault--dmr--sniper--35140.html",
       "price": "USD 169,00",
       "image": "https://www.arsenalsports.com/img/35140/produtos/400/2a25bfb3bce69d8b2fecd32752991382.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144362,8 +144367,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-for-rifle-58lt-assault--dmr--sniper-35139.html",
       "price": "USD 88,00",
       "image": "https://www.arsenalsports.com/img/35139/produtos/400/bdacf0a73bab3d9c7079e2f014f583a1.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144380,8 +144385,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-41l-multipurpose-35923.html",
       "price": "USD 95,00",
       "image": "https://www.arsenalsports.com/img/35923/produtos/400/4b625c7481e40636fff6587b0d238b7f.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-22T12:43:46.988Z",
       "priceHistory": [
         {
@@ -144398,8 +144403,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-for-rifle-assault--dmr-23940.html",
       "price": "USD 68,00",
       "image": "https://www.arsenalsports.com/img/23940/produtos/400/8d44dd8d4a822b6f69ce046a8f27a3a7.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -144416,8 +144421,8 @@
       "url": "https://www.arsenalsports.com/produto/armadillo-case-waterproof-hard-protective-medical-and-drone-mod-ar764830-black-16280.html",
       "price": "USD 197,00",
       "image": "https://www.arsenalsports.com/img/16280/produtos/400/aab74fa38ebcf75752f7a174a6a23569.jpeg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -149590,8 +149595,8 @@
       "url": "https://www.arsenalsports.com/produto/snowpeak-rifle-bag-125cm-fabric-600d-woodland-camo-25378.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/25378/produtos/400/a6483c0b8db4a410353b9d9dcaca5175.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -149603,8 +149608,8 @@
       "url": "https://www.arsenalsports.com/produto/snowpeak-rifle-bag-mod-gb02-100cm-fabric-900d-black-35161.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35161/produtos/400/beba70e782a17a61518eddd06a980d83.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -149626,8 +149631,8 @@
       "url": "https://www.arsenalsports.com/produto/snowpeak-rifle-bag-mod-gb03-120cm-fabric-900d-black-25377.html",
       "price": "USD 22,00",
       "image": "https://www.arsenalsports.com/img/25377/produtos/400/4ae54f4f0ab1298d0f62c9bf5750c08c.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -152052,8 +152057,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-bag-rifle-m4-molle-gunbag-100cm-black-30053.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30053/produtos/400/ad8a9bd6d82d04eb97ad5efe3599f675.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -152065,8 +152070,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-bag-rifle-m4-molle-gunbag-100cm-od-green-30054.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30054/produtos/400/c2f31c56a7bb356c02c1047b1253e136.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -154239,8 +154244,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-case-safety-109cm-polymer-black-30408.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30408/produtos/400/9fec60fa5f8499c6d5c292ab26abf66a.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -156298,8 +156303,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-heavy-duty-m249-gun-bag-115cm-multicam-20113.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/20113/produtos/400/decf4d9462cf737aa71eff52e82acbbb.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [
         {
@@ -160958,8 +160963,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-107cm-black-21380.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/21380/produtos/400/f4b14d15722efa0f81126aa44e01dd01.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -160971,8 +160976,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-120cm-multicam-30067.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30067/produtos/400/c58dc551cbb2a2e14ece8ad97e71ef07.jpg",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",
@@ -160984,8 +160989,8 @@
       "url": "https://www.arsenalsports.com/produto/wosport-rifle-bag-double-carbine-case-92cm-multicam-30069.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30069/produtos/400/8e8774328175b2505177caa22467337b.png",
-      "category": "vestuario",
-      "categoryLabel": "Equipamento e Vestuário",
+      "category": "cases",
+      "categoryLabel": "Cases & Maletas",
       "firstSeen": "2026-08-07T02:46:58.568Z",
       "priceHistory": [],
       "priceChangedAt": "2026-08-07T02:46:58.568Z",

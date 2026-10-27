@@ -482,3 +482,29 @@ export function isMagazine(product: { name: string; category?: string }): boolea
   }
   return /\b(magazine|mag\b|mid.?cap|hi.?cap|drum\s*mag)\b/i.test(n);
 }
+
+/**
+ * Identifica se o produto é uma maleta rígida, case de transporte ou bolsa de armas (gun bag/rifle bag).
+ * Exclui carcaças de gearbox ("gearbox shell case"), caixas PEQ de bateria, capas de tracer e magazines.
+ */
+export function isCase(product: { name: string; category?: string }): boolean {
+  const { name, category } = product;
+  if (category === "cases") {
+    return true;
+  }
+  const n = name.toLowerCase();
+
+  // Exclusões explícitas: peças mecânicas ou acessórios que usam 'case' como invólucro
+  if (
+    /\b(gearbox|battery\s*case|peq|mock\s*laser|tracer|flare|barrel\s*case|magazine|mag\b|mid.?cap|hi.?cap|drum|shell\s*shotgun|hop-up\s*chamber|chamber\s*case)\b/i.test(
+      n
+    )
+  ) {
+    return false;
+  }
+
+  // Padrões de maletas rígidas, cases de proteção e bolsas acolchoadas de armas
+  return /\b(gun\s*bag|gunbag|rifle\s*bag|carbine\s*case|pistol\s*case|rifle\s*case|hard\s*case|hardcase|safety\s*case|case\s*safety|protective\s*box|ammo\s*box|ammo\s*case|beauty\s*case|maleta|maletas)\b|\barmadillo\s+case\b|\bcase\s+(?:protective|waterproof|portable|storm)\b|\bcase\s+pistol\b|\bpistol\s+case\b/i.test(
+    n
+  );
+}

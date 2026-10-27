@@ -16,6 +16,7 @@ import {
   isHolster,
   isMagazine,
   isSpeedLoader,
+  isCase,
 } from "./categoryUtils";
 
 describe("categoryUtils - Regras de Categorização Refinada", () => {
@@ -336,6 +337,31 @@ describe("categoryUtils - Regras de Categorização Refinada", () => {
       expect(isTrueSpringSniper(vsr10)).toBe(true);
       expect(isTrueSpringSniper(l96)).toBe(true);
       expect(isShotgun(vsr10)).toBe(false);
+    });
+  });
+
+  describe("Cases & Maletas de Transporte (#cases)", () => {
+    it("deve identificar maletas rígidas, cases de armas e gun bags legítimos", () => {
+      expect(isCase({ name: "ARMADILLO CASE 28LT FOR RIFLE ASSAULT / DMR / SNIPER", category: "vestuario" })).toBe(true);
+      expect(isCase({ name: "ARMADILLO CASE PISTOL WITH KEY & FINGER 286X168X54", category: "vestuario" })).toBe(true);
+      expect(isCase({ name: "ARMADILLO CASE WATERPROOF 34L MULTIPURPOSE", category: "vestuario" })).toBe(true);
+      expect(isCase({ name: "WOSPORT RIFLE BAG DOUBLE CARBINE CASE 107CM MULTICAM", category: "vestuario" })).toBe(true);
+      expect(isCase({ name: "SNOWPEAK RIFLE BAG MOD. GB-01 75CM FABRIC 900D BLACK", category: "vestuario" })).toBe(true);
+      expect(isCase({ name: "WADSN CASE PROTECTIVE BOX LARGE 175X110X50MM BLACK", category: "vestuario" })).toBe(true);
+      expect(isCase({ name: "SRC PISTOL CASE POLYMER - INSIDE DIAMETER 29CM BLACK", category: "vestuario" })).toBe(true);
+      expect(isCase({ name: "CYTAC AMMO CASE 9mm, .40, .45 200R", category: "vestuario" })).toBe(true);
+      expect(isCase({ name: "ARMADILLO CASE 02LT FOR BATTERY OR ACESSORIES", category: "baterias" })).toBe(true);
+    });
+
+    it("não deve considerar carcaças de gearbox, caixas PEQ, capas de tracer ou magazines como cases", () => {
+      expect(isCase({ name: "CLASSIC ARMY GEARBOX CASE 9MM FOR M14", category: "pecas-internas" })).toBe(false);
+      expect(isCase({ name: "G&G GEARBOX CASE FOR EBR ETU", category: "pecas-internas" })).toBe(false);
+      expect(isCase({ name: "WOSPORT BATTERY CASE PICATINNY MOCK LASER MAWL-C1 BLACK", category: "baterias" })).toBe(false);
+      expect(isCase({ name: "ESHOOTER TRACER CARBON FIBER CASE BLACK", category: "pecas-externas" })).toBe(false);
+      expect(isCase({ name: "CTM-TAC BARREL CASE CNC TYPE E FOR AAP01 GREEN", category: "pistolas" })).toBe(false);
+      expect(isCase({ name: "A&K MAGAZINE 2000R DRUM DUAL AMMO BOX FOR M4 BLACK", category: "magazines" })).toBe(false);
+      expect(isCase({ name: "WOSPORT MAGAZINE CASE IPSC MULTI-ANGLE ROTATING BLACK", category: "vestuario" })).toBe(false);
+      expect(isCase({ name: "APS SHELL SHOTGUN CASE ONLY 04PCS FOR M870 GREEN", category: "magazines" })).toBe(false);
     });
   });
 });

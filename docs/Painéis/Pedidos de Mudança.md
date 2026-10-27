@@ -10,6 +10,7 @@ tags:
 
 | Pedido | Status | Pedido por | Data | Urgência |
 |---|---|---|---|---|
+| [[PM-010 Categoria dedicada para cases e maletas de transporte]] | ✅ aprovado | Usuário | 2026-10-27 | media |
 | [[PM-009 Reclassificacao de speed loaders e tracers fora da categoria de BBs]] | ✅ aprovado | Usuário | 2026-10-26 | alta |
 | [[PM-008 Remoção do nome Arsenal Sports dos títulos e descrições dos produtos]] | ✅ aprovado | Usuário | 2026-10-21 | alta |
 | [[PM-007 Dois níveis de acesso no painel e recuperação de senha]] | ✅ aprovado | Luiz | 2026-10-16 | alta |

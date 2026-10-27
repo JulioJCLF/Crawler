@@ -26,6 +26,7 @@ import {
   isHolster,
   isMagazine,
   isSpeedLoader,
+  isCase,
 } from "@/lib/categoryUtils";
 
 export function matchesCategory(p: any, selectedCategory: string | null): boolean {
@@ -84,9 +85,11 @@ export function matchesCategory(p: any, selectedCategory: string | null): boolea
   } else if (selectedCategory === "#pecas-externas") {
     return (p.category === "pecas-externas" && !isShotgun(p) && !isTracerOrSilencer(p)) || isHandguard(p);
   } else if (selectedCategory === "#vestuario") {
-    return p.category === "vestuario" && !isHolster(p);
+    return p.category === "vestuario" && !isHolster(p) && !isCase(p);
   } else if (selectedCategory === "#coldres") {
     return isHolster(p);
+  } else if (selectedCategory === "#cases" || selectedCategory === "cases") {
+    return isCase(p);
   } else if (selectedCategory === "#hpa") {
     return isHpaEquipment(p);
   } else if (selectedCategory === "#bbs") {
