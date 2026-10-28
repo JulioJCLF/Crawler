@@ -5,6 +5,7 @@ Domain business logic, catalog data access services, price calculation rules, st
 
 ## Interface
 - `cleanProductName(name: string): string`: Cleans product names stripping provider branding while maintaining specifications.
+- `buildCartWhatsAppUrl(items: CartItem[], totalItems: number, sellerNumber: string): string`: Builds the `https://wa.me/` checkout URL for the selected WhatsApp seller with the formatted cart summary.
 - `isSpeedLoader(product: { name: string }): boolean`: Identifies speed loaders, quick loaders, and loader repair kits.
 - `isCase(product: { name: string, category?: string }): boolean`: Identifies hard protective cases, gun bags, rifle bags, and pistol cases while excluding mechanical housings.
 - `buildActiveFilterChips(state: FilterState): ActiveFilterChip[]`: Formats active search and category filters into removable UI chips.

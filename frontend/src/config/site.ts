@@ -21,6 +21,15 @@ export const asset = (path: string) => {
   return `${BASE_PATH}${cleanPath}`;
 };
 
+export interface WhatsAppSeller {
+  /** Identificador único do vendedor. */
+  id: string;
+  /** Nome exibido no seletor do carrinho. */
+  name: string;
+  /** Número de WhatsApp (só dígitos, com DDI+DDD). */
+  number: string;
+}
+
 export interface SiteConfig {
   /** Nome da marca (usado em textos e no alt da logo). */
   brandName: string;
@@ -37,8 +46,11 @@ export interface SiteConfig {
   /** Layout dos filtros: "sidebar" (lateral) ou "topbar" (barra no topo). */
   layout: LayoutMode;
 
-  /** Número de WhatsApp (só dígitos, com DDI+DDD) para os botões de pedido. */
+  /** Número de WhatsApp principal (só dígitos, com DDI+DDD) para os botões diretos do card. */
   whatsappNumber: string;
+
+  /** Lista de vendedores disponíveis para escolha ao enviar o carrinho pelo WhatsApp. */
+  whatsappSellers: WhatsAppSeller[];
 
   /**
    * Mostra os botões de troca de Tema/Layout na tela.
@@ -57,5 +69,17 @@ export const siteConfig: SiteConfig = {
   theme: "hunting",
   layout: "sidebar",
   whatsappNumber: "5545999858096",
+  whatsappSellers: [
+    {
+      id: "vendedor-1",
+      name: "Vendedor 1",
+      number: "5545999858096",
+    },
+    {
+      id: "vendedor-2",
+      name: "Vendedor 2",
+      number: "5545999999999", // Placeholder até definir o número fixo
+    },
+  ],
   showDevTools: false,
 };

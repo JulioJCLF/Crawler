@@ -1,6 +1,7 @@
 "use client";
 
-import { ShoppingCart, Plus, Minus, Trash2 } from "lucide-react";
+import { useState } from "react";
+import { ShoppingCart, Plus, Minus, Trash2, MessageCircle } from "lucide-react";
 import { useCart } from "@/providers/CartProvider";
 import {
   Sheet,
@@ -9,24 +10,27 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Badge } from "@/components/ui/badge";
 import { siteConfig } from "@/config/site";
+import { buildCartWhatsAppUrl } from "@/lib/whatsappUtils";
 
 export function FloatingCart() {
   const { items, totalItems, isCartOpen, setIsCartOpen, updateQuantity, removeFromCart, clearCart } = useCart();
+  const sellers = siteConfig.whatsappSellers;
+  const [selectedSellerId, setSelectedSellerId] = useState<string>(
+    sellers[0]?.id ?? "vendedor-1"
+  );
 
-  // Função para montar a URL do Zap com todos os produtos
+  const selectedSeller =
+    sellers.find((seller) => seller.id === selectedSellerId) ??
+    sellers[0] ?? {
+      id: "vendedor-1",
+      name: "Vendedor 1",
+      number: siteConfig.whatsappNumber,
+    };
+
+  // Função para montar a URL do Zap com todos os produtos para o vendedor escolhido
   const generateWhatsAppOrder = () => {
-    let msg = `*NOVO ORÇAMENTO/PEDIDO*\n\n`;
-    items.forEach((item, index) => {
-      msg += `${index + 1}. ${item.product.name}\n`;
-      msg += `   Ref: ${item.product.id}\n`;
-      msg += `   Qtd: ${item.quantity}\n`;
-      msg += `   Preço Listado: ${item.product.price || "Sob consulta"}\n\n`;
-    });
-    msg += `Total de Itens: ${totalItems}`;
-    
-    return `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(msg)}`;
+    return buildCartWhatsAppUrl(items, totalItems, selectedSeller.number);
   };
 
   return (
@@ -101,6 +105,38 @@ export function FloatingCart() {
               </ScrollArea>
 
               <div className="border-t border-border pt-4 mt-auto">
+                <div className="mb-3">
+                  <span className="block text-[11px] font-mono uppercase tracking-wider text-muted-foreground mb-2">
+                    Enviar pedido para:
+                  </span>
+                  <div
+                    className="grid grid-cols-2 gap-2"
+                    role="radiogroup"
+                    aria-label="Escolher vendedor do WhatsApp"
+                  >
+                    {sellers.map((seller) => {
+                      const isSelected = selectedSeller.id === seller.id;
+                      return (
+                        <button
+                          key={seller.id}
+                          type="button"
+                          role="radio"
+                          aria-checked={isSelected}
+                          onClick={() => setSelectedSellerId(seller.id)}
+                          className={`py-2 px-3 text-xs font-mono uppercase border transition-colors flex items-center justify-center gap-1.5 ${
+                            isSelected
+                              ? "border-accent bg-accent/15 text-accent font-bold"
+                              : "border-border bg-background text-muted-foreground hover:text-foreground hover:border-muted-foreground"
+                          }`}
+                        >
+                          <MessageCircle className="w-3.5 h-3.5 shrink-0" />
+                          <span className="truncate">{seller.name}</span>
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
                 <a 
                   href={generateWhatsAppOrder()}
                   target="_blank"

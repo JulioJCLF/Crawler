@@ -18,6 +18,9 @@ export function ProductCard({ product }: { product: Product }) {
   const hasExternalUrl = Boolean(product.url && product.url.trim());
   const zapMessage = `Olá, tenho interesse no produto *${productName}* (Ref: ${product.id}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}${hasExternalUrl ? `\nLink Original: ${product.url}` : ""}`;
   const zapUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(zapMessage)}`;
+  const handleAddToCart = () => {
+    addToCart({ ...product, price: currentBrl ? currentBrl.formatted : product.price });
+  };
 
   // Cálculo de Porcentagem de Desconto
   let discountPercentage = 0;
@@ -93,17 +96,17 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
         
         <div className="flex w-full gap-2">
-          <a 
-            href={zapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+          <button 
+            type="button"
+            onClick={handleAddToCart}
             className="flex-1 flex items-center justify-center text-center bg-accent text-accent-foreground font-display text-xs uppercase font-medium py-2 transition-opacity hover:opacity-90 leading-tight border border-accent"
           >
             Pedir via WhatsApp
-          </a>
+          </button>
           
           <button 
-            onClick={() => addToCart({ ...product, price: currentBrl ? currentBrl.formatted : product.price })}
+            type="button"
+            onClick={handleAddToCart}
             className="flex-1 flex items-center justify-center text-center bg-card text-foreground font-display text-xs uppercase font-medium py-2 transition-colors hover:bg-muted border border-border leading-tight"
           >
             + Carrinho
