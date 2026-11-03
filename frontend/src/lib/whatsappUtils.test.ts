@@ -33,11 +33,13 @@ const mockItems: CartItem[] = [
 describe("buildCartWhatsAppUrl (REQ-014 / PM-011)", () => {
   it("possui ao menos 2 vendedores configurados em siteConfig.whatsappSellers", () => {
     expect(siteConfig.whatsappSellers.length).toBeGreaterThanOrEqual(2);
+    expect(siteConfig.whatsappSellers[0].name).toBe("Matheus");
     expect(siteConfig.whatsappSellers[0].number).toBe("5545999858096");
-    expect(siteConfig.whatsappSellers[1].number).toBeTruthy();
+    expect(siteConfig.whatsappSellers[1].name).toBe("Alexandre");
+    expect(siteConfig.whatsappSellers[1].number).toBe("554598454109");
   });
 
-  it("gera o link de orçamento para o Vendedor 1 (número atual)", () => {
+  it("gera o link de orçamento para Matheus (vendedor 1)", () => {
     const seller1 = siteConfig.whatsappSellers[0];
     const url = buildCartWhatsAppUrl(mockItems, 3, seller1.number);
 
@@ -53,11 +55,11 @@ describe("buildCartWhatsAppUrl (REQ-014 / PM-011)", () => {
     expect(decoded).toContain("Total de Itens: 3");
   });
 
-  it("gera o link de orçamento para o Vendedor 2 (número placeholder)", () => {
+  it("gera o link de orçamento para Alexandre (vendedor 2)", () => {
     const seller2 = siteConfig.whatsappSellers[1];
     const url = buildCartWhatsAppUrl(mockItems, 3, seller2.number);
 
-    expect(url.startsWith(`https://wa.me/${seller2.number}?text=`)).toBe(true);
+    expect(url.startsWith("https://wa.me/554598454109?text=")).toBe(true);
     expect(seller2.number).not.toBe(siteConfig.whatsappSellers[0].number);
   });
 

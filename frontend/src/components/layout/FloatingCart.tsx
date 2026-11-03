@@ -24,7 +24,7 @@ export function FloatingCart() {
     sellers.find((seller) => seller.id === selectedSellerId) ??
     sellers[0] ?? {
       id: "vendedor-1",
-      name: "Vendedor 1",
+      name: "Matheus",
       number: siteConfig.whatsappNumber,
     };
 

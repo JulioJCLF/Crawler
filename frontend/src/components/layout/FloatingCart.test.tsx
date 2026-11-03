@@ -26,7 +26,7 @@ function CartWithInitialItem() {
 }
 
 describe("FloatingCart - Seleção de vendedor (REQ-014 / PM-011)", () => {
-  it("pré-seleciona o Vendedor 1 por padrão e altera o link ao escolher o Vendedor 2", async () => {
+  it("pré-seleciona Matheus por padrão e altera o link ao escolher Alexandre", async () => {
     const user = userEvent.setup();
 
     render(
@@ -35,8 +35,8 @@ describe("FloatingCart - Seleção de vendedor (REQ-014 / PM-011)", () => {
       </CartProvider>
     );
 
-    const seller1Btn = await screen.findByRole("radio", { name: /Vendedor 1/i });
-    const seller2Btn = await screen.findByRole("radio", { name: /Vendedor 2/i });
+    const seller1Btn = await screen.findByRole("radio", { name: /Matheus/i });
+    const seller2Btn = await screen.findByRole("radio", { name: /Alexandre/i });
     const checkoutLink = await screen.findByRole("link", {
       name: /Finalizar Orçamento/i,
     });
@@ -52,7 +52,7 @@ describe("FloatingCart - Seleção de vendedor (REQ-014 / PM-011)", () => {
     expect(seller1Btn).toHaveAttribute("aria-checked", "false");
     expect(seller2Btn).toHaveAttribute("aria-checked", "true");
     expect(checkoutLink.getAttribute("href")).toContain(
-      "https://wa.me/5545999999999?text="
+      "https://wa.me/554598454109?text="
     );
   });
 

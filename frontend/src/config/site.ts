@@ -72,13 +72,13 @@ export const siteConfig: SiteConfig = {
   whatsappSellers: [
     {
       id: "vendedor-1",
-      name: "Vendedor 1",
+      name: "Matheus",
       number: "5545999858096",
     },
     {
       id: "vendedor-2",
-      name: "Vendedor 2",
-      number: "5545999999999", // Placeholder até definir o número fixo
+      name: "Alexandre",
+      number: "554598454109",
     },
   ],
   showDevTools: false,

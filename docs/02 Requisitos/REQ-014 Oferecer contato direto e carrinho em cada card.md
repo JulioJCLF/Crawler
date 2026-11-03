@@ -44,5 +44,6 @@ A vitrine tem fim comercial. Sem caminho de contato, ela vira catálogo morto.
 ## Histórico
 | Data | O que mudou | Quem | Referência |
 |---|---|---|---|
+| 2026-11-03 | Atualizados os nomes dos vendedores para Matheus e Alexandre e definido o número de WhatsApp definitivo do Vendedor 2 | Antigravity | [[2026-11-03 - Antigravity - Definicao dos nomes e numero dos vendedores no carrinho]] |
 | 2026-10-27 | Adicionada escolha entre 2 vendedores no envio do orçamento pelo carrinho | Antigravity | [[PM-011 Seleção de vendedor no envio do carrinho para WhatsApp]] |
 | 2026-09-20 | Requisito escrito a partir do sistema em funcionamento | Luiz | [[DEC-007 Adoção do sistema de documentação e trilhos para agentes]] |
