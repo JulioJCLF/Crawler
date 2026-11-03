@@ -1,5 +1,5 @@
 import { CheerioCrawler, log } from 'crawlee';
-import { CATEGORIES, MAX_PAGES, PAGE_PARAM, isValidProduct, cleanProductName, enforceCategory, CATEGORY_WEIGHTS } from './config.js';
+import { CATEGORIES, MAX_PAGES, PAGE_PARAM, isValidProduct, cleanProductName, enforceCategory, CATEGORY_WEIGHTS, extractSku } from './config.js';
 import type { Product } from './types.js';
 
 export async function runCrawler(): Promise<Product[]> {
@@ -28,6 +28,9 @@ export async function runCrawler(): Promise<Product[]> {
         
         foundOnPage++;
 
+        const card = $(el).closest(".product, .product-wrap, div, li, article");
+        const sku = extractSku(card.text()) || extractSku($(el).text());
+
         const rawTitle = ($(el).attr("title") || $(el).text() || "").trim().replace(/\s+/g, " ");
         if (!rawTitle) return;
 
@@ -45,6 +48,9 @@ export async function runCrawler(): Promise<Product[]> {
         // If product already found, check if new category has higher priority
         if (productsMap.has(id)) {
           const existing = productsMap.get(id)!;
+          if (!existing.sku && sku) {
+            existing.sku = sku;
+          }
           // We can't know the exact weight it was originally stored with unless we recalculate it or store it, 
           // but we can just use the config weight as a fallback, or better, we can re-evaluate it.
           // Wait, since we are doing dynamic weights, we should probably evaluate existing again?
@@ -60,7 +66,6 @@ export async function runCrawler(): Promise<Product[]> {
           return;
         }
 
-        const card = $(el).closest("div,li,article");
         const priceMatch = card.text().match(/USD\s*([\d.,]+)/);
 
         let img =
@@ -74,6 +79,7 @@ export async function runCrawler(): Promise<Product[]> {
 
         productsMap.set(id, {
           id,
+          sku,
           name: title,
           url: href.startsWith("http") ? href : `https://www.arsenalsports.com${href}`,
           price: priceMatch ? `USD ${priceMatch[1]}` : null,

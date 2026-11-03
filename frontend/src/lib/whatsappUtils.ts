@@ -15,7 +15,8 @@ export function buildCartWhatsAppUrl(
   items.forEach((item, index) => {
     const cleanName = cleanProductName(item.product.name);
     msg += `${index + 1}. ${cleanName}\n`;
-    msg += `   Ref: ${item.product.id}\n`;
+    const productRef = item.product.sku || item.product.id;
+    msg += `   Ref: ${productRef}\n`;
     msg += `   Qtd: ${item.quantity}\n`;
     msg += `   Preço Listado: ${item.product.price || "Sob consulta"}\n\n`;
   });

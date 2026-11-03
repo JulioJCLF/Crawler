@@ -16,7 +16,8 @@ export function ProductCard({ product }: { product: Product }) {
   const previousBrl = calculatePrice(product.previousPrice, product.category);
 
   const hasExternalUrl = Boolean(product.url && product.url.trim());
-  const zapMessage = `Olá, tenho interesse no produto *${productName}* (Ref: ${product.id}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}${hasExternalUrl ? `\nLink Original: ${product.url}` : ""}`;
+  const productRef = product.sku || product.id;
+  const zapMessage = `Olá, tenho interesse no produto *${productName}* (Ref: ${productRef}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}${hasExternalUrl ? `\nLink Original: ${product.url}` : ""}`;
   const zapUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(zapMessage)}`;
   const handleAddToCart = () => {
     addToCart({ ...product, price: currentBrl ? currentBrl.formatted : product.price });
@@ -76,7 +77,7 @@ export function ProductCard({ product }: { product: Product }) {
             )}
           </a>
         </h3>
-        <span className="text-[11px] text-muted-foreground font-mono">REF. {product.id} // {product.categoryLabel || product.category}</span>
+        <span className="text-[11px] text-muted-foreground font-mono">REF. {product.sku || product.id} // {product.categoryLabel || product.category}</span>
       </div>
       
       <div className="p-4 pt-0 flex flex-col gap-3">

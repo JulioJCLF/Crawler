@@ -1,8 +1,34 @@
 import { describe, it, expect } from 'vitest';
-import { enforceCategory, CATEGORY_WEIGHTS, cleanProductName } from '../src/config';
+import { enforceCategory, CATEGORY_WEIGHTS, cleanProductName, extractSku } from '../src/config';
 
 describe('Crawler Logic', () => {
+  describe('extractSku (REQ-025 / PM-012)', () => {
+    it('should extract numeric SKU from "Ref.: XXXXX"', () => {
+      expect(extractSku('Ref.: 329859')).toBe('329859');
+      expect(extractSku('Ref: 329859')).toBe('329859');
+      expect(extractSku('ref.: 46237')).toBe('46237');
+    });
+
+    it('should extract SKU embedded in card HTML text', () => {
+      const cardText = `
+        Ref.: 329859
+        ACTION ARMY PRECISION INNER BARREL 6.03/125MM FOR GBB KWA KRISS VECTOR
+        USD 7,00
+      `;
+      expect(extractSku(cardText)).toBe('329859');
+    });
+
+    it('should return undefined when no Ref is present', () => {
+      expect(extractSku('ACTION ARMY BARREL USD 7,00')).toBeUndefined();
+      expect(extractSku('')).toBeUndefined();
+    });
+  });
+
   describe('cleanProductName', () => {
+    it('should remove leading "Ref.: XXXXX" from product titles', () => {
+      expect(cleanProductName('Ref.: 329859 ACTION ARMY PRECISION INNER BARREL')).toBe('ACTION ARMY PRECISION INNER BARREL');
+      expect(cleanProductName('Ref: 46237 APS STOCK TUBE SLIM')).toBe('APS STOCK TUBE SLIM');
+    });
     it('should remove trailing "Arsenal Sports"', () => {
       expect(cleanProductName('APS MAGAZINE 23R CO2 FOR ACP601 BLACK Arsenal Sports')).toBe('APS MAGAZINE 23R CO2 FOR ACP601 BLACK');
     });

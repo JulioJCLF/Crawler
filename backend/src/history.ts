@@ -31,6 +31,9 @@ export function applyChangeTracking(currentProducts: Product[], previousSnapshot
     // Maintain firstSeen
     p.firstSeen = old?.firstSeen || now;
     
+    // Preserve sku if already known
+    p.sku = p.sku || old?.sku;
+    
     // Initialize or copy price history
     p.priceHistory = old?.priceHistory || [];
     

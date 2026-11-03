@@ -704,7 +704,7 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                           </div>
                           <div className="flex items-center gap-2">
                             <span className="font-mono text-[10px] text-muted-foreground uppercase">
-                              Ref: {p.id}
+                              Ref: {p.sku || p.id}
                             </span>
                             {isManual ? (
                               <span className="px-1.5 py-0.2 rounded text-[9px] font-mono uppercase tracking-wider bg-blue-500/20 text-blue-400 border border-blue-500/30 font-bold">
@@ -907,7 +907,7 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
             </div>
 
             <p className="text-sm text-muted-foreground">
-              O produto <strong className="text-foreground font-semibold">"{hidingProduct.name}"</strong> (Ref: {hidingProduct.id}) será imediatamente removido da vitrine pública.
+              O produto <strong className="text-foreground font-semibold">"{hidingProduct.name}"</strong> (Ref: {hidingProduct.sku || hidingProduct.id}) será imediatamente removido da vitrine pública.
             </p>
 
             <div className="space-y-1.5">

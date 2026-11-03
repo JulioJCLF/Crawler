@@ -1,5 +1,6 @@
 export interface Product {
   id: string;
+  sku?: string;
   name: string;
   url: string;
   price: string | null;
@@ -56,6 +57,7 @@ export interface CalculatedPrice {
 
 export interface CustomProductInput {
   name: string;
+  sku?: string;
   category: string;
   categoryLabel?: string;
   price?: string | null; // Ex: "USD 120.00"

@@ -217,6 +217,7 @@ export function createCustomProduct(
 
   const newProduct: Product = {
     id,
+    sku: input.sku ? input.sku.trim() : undefined,
     name: cleanProductName(input.name.trim()),
     category: input.category.trim(),
     categoryLabel: label,
@@ -261,6 +262,7 @@ export function updateCustomProduct(
   const updated: Product = {
     ...existing,
     ...(updates.name ? { name: cleanProductName(updates.name.trim()) } : {}),
+    ...(updates.sku !== undefined ? { sku: updates.sku ? updates.sku.trim() : undefined } : {}),
     ...(updates.category ? { category: updates.category.trim(), categoryLabel: label } : {}),
     ...(updates.price !== undefined ? { price: updates.price ? updates.price.trim() : null } : {}),
     ...(updates.fixedBrlPrice !== undefined

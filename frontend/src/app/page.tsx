@@ -273,7 +273,8 @@ export default function Home() {
   };
 
   const filteredProducts = availableProducts.filter((p: any) => {
-    const matchesSearch = matchesSmartSearch(p.name, search);
+    const searchTarget = p.sku ? `${p.name} ${p.sku} ${p.id}` : `${p.name} ${p.id}`;
+    const matchesSearch = matchesSmartSearch(searchTarget, search);
     const matchesCat = matchesCategory(p, selectedCategory);
 
     let matchesWeight = true;

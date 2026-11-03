@@ -9,6 +9,7 @@ Linha do tempo de tudo o que mudou. **Mais recente no topo.** Detalhes de cada s
 
 | Data | O que mudou (em linguagem simples) | Quem | Detalhes |
 |---|---|---|---|
+| 2026-11-03 | Criada estrutura para extração e exibição do SKU real dos produtos no catálogo, carrinho e WhatsApp (REQ-025 / PM-012), eliminando confusão de pedidos no estoque | Antigravity | [[2026-11-03 - Antigravity - Estrutura de extracao e exibicao do SKU real dos produtos]] |
 | 2026-11-03 | Atualizados os nomes dos vendedores no carrinho para Matheus e Alexandre e definido o número de WhatsApp definitivo do vendedor 2 (+55 45 9845-4109) | Antigravity | [[2026-11-03 - Antigravity - Definicao dos nomes e numero dos vendedores no carrinho]] |
 | 2026-10-27 | Adicionada opção de escolher entre 2 vendedores no carrinho antes de enviar o orçamento pelo WhatsApp, mantendo o Vendedor 1 com o número atual e o Vendedor 2 com número placeholder até definir o número fixo | Antigravity | [[2026-10-27 - Antigravity - Selecao de vendedor no envio do carrinho para WhatsApp]] |
 | 2026-10-27 | Criada a categoria exclusiva "Cases & Maletas" para reunir 84 maletas rígidas, cases de rifles/pistolas e bolsas de transporte de armas que estavam misturadas em vestuário, com filtro próprio na vitrine e suporte a margem customizada no /admin | Antigravity | [[2026-10-27 - Antigravity - Categoria dedicada para cases e maletas]] |

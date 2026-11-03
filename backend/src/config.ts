@@ -141,13 +141,25 @@ export function isValidProduct(name: string): boolean {
 }
 
 /**
+ * Extrai o SKU/código de referência oficial do produto a partir de textos do card
+ * que contenham "Ref.: XXXXX" ou "Ref: XXXXX".
+ */
+export function extractSku(text: string): string | undefined {
+  if (!text) return undefined;
+  const match = text.match(/Ref\.?:\s*([A-Za-z0-9\-_./]+)/i);
+  return match ? match[1].trim() : undefined;
+}
+
+/**
  * Remove qualquer ocorrência da escrita "Arsenal Sports" do título/descrição
  * do produto (seja como sufixo, prefixo, entre parênteses ou separado por hífen),
- * preservando o restante do título e especificações técnicas (como roscas "14MM-").
+ * remove prefixos de referência como "Ref.: XXXXX" e preserva o restante do título
+ * e especificações técnicas (como roscas "14MM-").
  */
 export function cleanProductName(name: string): string {
   if (!name) return "";
   return name
+    .replace(/^\s*Ref\.?:\s*[A-Za-z0-9\-_./]+\s*/i, "")
     .replace(/\s*[\(\[]\s*arsenal\s+sports\s*[\)\]]/gi, "")
     .replace(/(\s+[-|/•]\s*|\s+)\barsenal\s+sports\b/gi, "")
     .replace(/^\barsenal\s+sports\b\s*[-|/•]?\s*/gi, "")

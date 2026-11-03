@@ -6,6 +6,7 @@
 export function cleanProductName(name: string): string {
   if (!name) return "";
   return name
+    .replace(/^\s*Ref\.?:\s*[A-Za-z0-9\-_./]+\s*/i, "")
     .replace(/\s*[\(\[]\s*arsenal\s+sports\s*[\)\]]/gi, "")
     .replace(/(\s+[-|/•]\s*|\s+)\barsenal\s+sports\b/gi, "")
     .replace(/^\barsenal\s+sports\b\s*[-|/•]?\s*/gi, "")

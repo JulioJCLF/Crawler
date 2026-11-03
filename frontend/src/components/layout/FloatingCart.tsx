@@ -81,7 +81,7 @@ export function FloatingCart() {
                       
                       <div className="flex-1">
                         <h4 className="text-sm font-medium leading-tight line-clamp-2">{item.product.name}</h4>
-                        <div className="text-[10px] text-muted-foreground font-mono uppercase mt-1">Ref: {item.product.id}</div>
+                        <div className="text-[10px] text-muted-foreground font-mono uppercase mt-1">Ref: {item.product.sku || item.product.id}</div>
                         <div className="font-mono text-primary font-bold mt-1 text-sm">{item.product.price || "Sob Consulta"}</div>
                       </div>
 

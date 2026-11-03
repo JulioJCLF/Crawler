@@ -27,7 +27,8 @@ Representa um item do site após extração e cálculo de histórico.
 
 | Propriedade | Tipo | Descrição |
 | :--- | :--- | :--- |
-| `id` | `string` | ID único extraído da URL (ex: `12345` a partir de `produto-12345.html`). |
+| `id` | `string` | ID único extraído da URL (ex: `12345` a partir de `produto-12345.html`). Chave primária de histórico. |
+| `sku` | `string` (opcional) | SKU / Referência oficial do produto (ex: `329859` capturado de `Ref.: 329859`). |
 | `name` | `string` | Título / Nome da peça ou réplica. |
 | `url` | `string` | URL canônica e absoluta do produto. |
 | `price` | `string \| null` | Preço atual, extraído (ex: `USD 150.00`). É nulo caso esteja "Sob Consulta". |

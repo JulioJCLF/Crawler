@@ -67,4 +67,27 @@ describe("buildCartWhatsAppUrl (REQ-014 / PM-011)", () => {
     const url = buildCartWhatsAppUrl(mockItems, 3, "+55 (45) 99985-8096");
     expect(url.startsWith("https://wa.me/5545999858096?text=")).toBe(true);
   });
+
+  it("utiliza o sku do produto se disponível na mensagem de WhatsApp (REQ-025)", () => {
+    const itemWithSku: CartItem[] = [
+      {
+        product: {
+          id: "11996",
+          sku: "329859",
+          name: "CANO DE PRECISAO ACTION ARMY",
+          price: "R$ 150,00",
+          url: "https://example.com/p/11996",
+          image: "",
+          category: "rifles-gas",
+          categoryLabel: "Peças para Rifles a Gás",
+        },
+        quantity: 1,
+      },
+    ];
+
+    const url = buildCartWhatsAppUrl(itemWithSku, 1, "5545999858096");
+    const decoded = decodeURIComponent(url.split("?text=")[1]);
+    expect(decoded).toContain("Ref: 329859");
+    expect(decoded).not.toContain("Ref: 11996");
+  });
 });

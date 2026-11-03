@@ -20,10 +20,11 @@ Exemplos monitorados (ao todo 14 categorias):
 ## Mecanismo de Extração (Parsing)
 A lógica ocorre no hook `requestHandler` do Crawlee.
 1. Busca por `a[href*="/produto/"]` (links que levam a produtos).
-2. O **ID do Produto** é garantido via regex da URL: `/\/produto\/.*-(\d+)\.html/`.
-3. O título é limpo de espaços extras e sanitizado via `cleanProductName` para remover a menção ao fornecedor ("Arsenal Sports"), preservando termos técnicos e especificações (como "14MM-").
-4. Preço é localizado via regex para captura explícita em USD: `USD\s*([\d.,]+)`.
-5. URLs de produtos e de imagens sofrem padronização forçada, ganhando o prefixo absoluto (`https://www.arsenalsports.com...`) se vierem como relativas.
+2. O **ID do Produto** é garantido via regex da URL: `/\/produto\/.*-(\d+)\.html/` (mantido como chave única imutável para histórico e rastreamento de preços).
+3. O **SKU / Referência oficial do produto** é capturado a partir do texto do card (`Ref.: XXXXX` via regex `Ref\.?:\s*([A-Za-z0-9\-_./]+)`) e armazenado no campo `sku` (REQ-025 / PM-012).
+4. O título é limpo de prefixos de referência (`Ref.: XXXXX`), espaços extras e sanitizado via `cleanProductName` para remover a menção ao fornecedor ("Arsenal Sports"), preservando termos técnicos e especificações (como "14MM-").
+5. Preço é localizado via regex para captura explícita em USD: `USD\s*([\d.,]+)`.
+6. URLs de produtos e de imagens sofrem padronização forçada, ganhando o prefixo absoluto (`https://www.arsenalsports.com...`) se vierem como relativas.
 
 ### Filtros Anti-Poluição (`isValidProduct`)
 Foi identificado que o site mistura produtos "irrelevantes" (fitness) na seção de Airsoft.
