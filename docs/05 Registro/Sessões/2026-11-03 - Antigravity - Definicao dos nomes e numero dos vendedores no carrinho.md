@@ -22,6 +22,7 @@ Os botões de seleção de vendedor no carrinho de WhatsApp da vitrine agora exi
 - Atualizado o fallback do componente `FloatingCart.tsx` para manter alinhado o nome inicial caso a lista esteja vazia.
 - Atualizados os testes de integração do carrinho (`FloatingCart.test.tsx`) e utilitários de WhatsApp (`whatsappUtils.test.ts`) para cobrir os nomes e o novo número.
 - Atualizado o histórico do requisito `REQ-014`.
+- Conectado o serviço de produção do Railway (`arsenal-crawler`) ao repositório GitHub (`JulioJCLF/Crawler@main`), realizando o deploy com sucesso em `https://hunting-world.up.railway.app` e habilitando deploys contínuos a cada push na `main`.
 
 ## Arquivos alterados
 - `frontend/src/config/site.ts`
