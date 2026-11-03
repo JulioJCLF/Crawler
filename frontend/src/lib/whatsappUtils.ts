@@ -8,7 +8,8 @@ import { cleanProductName } from "@/lib/cleanUtils";
 export function buildCartWhatsAppUrl(
   items: CartItem[],
   totalItems: number,
-  sellerNumber: string
+  sellerNumber: string,
+  subtotalFormatted?: string
 ): string {
   const cleanNumber = sellerNumber.replace(/\D/g, "");
   let msg = `*NOVO ORÇAMENTO/PEDIDO*\n\n`;
@@ -21,6 +22,9 @@ export function buildCartWhatsAppUrl(
     msg += `   Preço Listado: ${item.product.price || "Sob consulta"}\n\n`;
   });
   msg += `Total de Itens: ${totalItems}`;
+  if (subtotalFormatted) {
+    msg += `\nSubtotal: ${subtotalFormatted}`;
+  }
 
   return `https://wa.me/${cleanNumber}?text=${encodeURIComponent(msg)}`;
 }

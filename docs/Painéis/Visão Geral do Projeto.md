@@ -25,10 +25,10 @@ tags:
 Nenhum.
 
 ## 🕒 Últimas sessões de trabalho
+- [[2026-11-03 - Antigravity - Subtotal no carrinho e remocao de links da arsenal]]
 - [[2026-11-03 - Antigravity - Estrutura de extracao e exibicao do SKU real dos produtos]]
 - [[2026-11-03 - Antigravity - Definicao dos nomes e numero dos vendedores no carrinho]]
 - [[2026-10-27 - Antigravity - Selecao de vendedor no envio do carrinho para WhatsApp]]
 - [[2026-10-27 - Antigravity - Compatibilidade de build Vercel e Railway]]
-- [[2026-10-27 - Antigravity - Categoria dedicada para cases e maletas]]
 
 Linha do tempo completa: [[Registro de Mudanças]]

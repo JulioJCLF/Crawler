@@ -12,9 +12,12 @@ import {
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { siteConfig } from "@/config/site";
 import { buildCartWhatsAppUrl } from "@/lib/whatsappUtils";
+import { parseUsdPrice } from "@/lib/pricingConfig";
+import { usePricing } from "@/providers/PricingProvider";
 
 export function FloatingCart() {
   const { items, totalItems, isCartOpen, setIsCartOpen, updateQuantity, removeFromCart, clearCart } = useCart();
+  const { calculatePrice } = usePricing();
   const sellers = siteConfig.whatsappSellers;
   const [selectedSellerId, setSelectedSellerId] = useState<string>(
     sellers[0]?.id ?? "vendedor-1"
@@ -28,9 +31,32 @@ export function FloatingCart() {
       number: siteConfig.whatsappNumber,
     };
 
+  // Cálculo do subtotal monetário do carrinho (soma dos preços unitários * quantidade)
+  const subtotal = items.reduce((sum, item) => {
+    let unitPrice = 0;
+    if (typeof item.product.fixedBrlPrice === "number" && item.product.fixedBrlPrice > 0) {
+      unitPrice = item.product.fixedBrlPrice;
+    } else if (item.product.price && item.product.price.includes("R$")) {
+      unitPrice = parseUsdPrice(item.product.price);
+    } else {
+      const calc = calculatePrice(item.product.price, item.product.category, item.product.fixedBrlPrice);
+      unitPrice = calc?.amount ?? parseUsdPrice(item.product.price);
+    }
+    return sum + unitPrice * item.quantity;
+  }, 0);
+
+  const formattedSubtotal = subtotal > 0
+    ? new Intl.NumberFormat("pt-BR", { style: "currency", currency: "BRL" }).format(subtotal)
+    : "Sob Consulta";
+
   // Função para montar a URL do Zap com todos os produtos para o vendedor escolhido
   const generateWhatsAppOrder = () => {
-    return buildCartWhatsAppUrl(items, totalItems, selectedSeller.number);
+    return buildCartWhatsAppUrl(
+      items,
+      totalItems,
+      selectedSeller.number,
+      formattedSubtotal !== "Sob Consulta" ? formattedSubtotal : undefined
+    );
   };
 
   return (
@@ -105,6 +131,15 @@ export function FloatingCart() {
               </ScrollArea>
 
               <div className="border-t border-border pt-4 mt-auto">
+                <div className="flex items-center justify-between py-2 mb-3 border-b border-border/80">
+                  <span className="font-mono text-xs uppercase tracking-wider text-muted-foreground">
+                    Subtotal ({totalItems} {totalItems === 1 ? "item" : "itens"}):
+                  </span>
+                  <span className="font-mono text-base font-bold text-accent tabular-nums">
+                    {formattedSubtotal}
+                  </span>
+                </div>
+
                 <div className="mb-3">
                   <span className="block text-[11px] font-mono uppercase tracking-wider text-muted-foreground mb-2">
                     Enviar pedido para:

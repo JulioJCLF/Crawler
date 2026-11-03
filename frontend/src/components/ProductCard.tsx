@@ -3,9 +3,9 @@
 import { Product } from "@/types";
 import { useCart } from "@/providers/CartProvider";
 import { usePricing } from "@/providers/PricingProvider";
-import { ExternalLink } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { cleanProductName } from "@/lib/cleanUtils";
+import { MessageCircle, ShoppingCart } from "lucide-react";
 
 export function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
@@ -15,9 +15,8 @@ export function ProductCard({ product }: { product: Product }) {
   const currentBrl = calculatePrice(product.price, product.category, product.fixedBrlPrice);
   const previousBrl = calculatePrice(product.previousPrice, product.category);
 
-  const hasExternalUrl = Boolean(product.url && product.url.trim());
   const productRef = product.sku || product.id;
-  const zapMessage = `Olá, tenho interesse no produto *${productName}* (Ref: ${productRef}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}${hasExternalUrl ? `\nLink Original: ${product.url}` : ""}`;
+  const zapMessage = `Olá, tenho interesse no produto *${productName}* (Ref: ${productRef}).\n${currentBrl ? `Preço: ${currentBrl.formatted}` : `Qual o valor?`}`;
   const zapUrl = `https://wa.me/${siteConfig.whatsappNumber}?text=${encodeURIComponent(zapMessage)}`;
   const handleAddToCart = () => {
     addToCart({ ...product, price: currentBrl ? currentBrl.formatted : product.price });
@@ -65,17 +64,13 @@ export function ProductCard({ product }: { product: Product }) {
       
       <div className="p-4 flex-1 flex flex-col gap-2">
         <h3 className="text-sm font-medium leading-snug line-clamp-2">
-          <a 
-            href={hasExternalUrl ? product.url : zapUrl} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors flex items-start gap-1 group"
+          <button
+            type="button"
+            onClick={handleAddToCart}
+            className="text-left hover:text-accent transition-colors cursor-pointer"
           >
             <span>{productName}</span>
-            {hasExternalUrl && (
-              <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity mt-1 flex-shrink-0" />
-            )}
-          </a>
+          </button>
         </h3>
         <span className="text-[11px] text-muted-foreground font-mono">REF. {product.sku || product.id} // {product.categoryLabel || product.category}</span>
       </div>

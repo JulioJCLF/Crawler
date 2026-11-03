@@ -123,4 +123,58 @@ describe("FloatingCart - Seleção de vendedor (REQ-014 / PM-011)", () => {
     expect(decodedUrl).toContain("Ref: 329859");
     expect(decodedUrl).not.toContain("Ref: 11996");
   });
+
+  it("calcula e exibe o Subtotal somando os itens e quantidades no carrinho e no link (PM-013)", async () => {
+    const user = userEvent.setup();
+
+    render(
+      <CartProvider>
+        <CartWithInitialItem />
+      </CartProvider>
+    );
+
+    // Initial item: PISTOLA GBB GLOCK G17 (1x R$ 1.250,00)
+    expect(await screen.findByText(/Subtotal \(1 item\):/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/1\.250,00/).length).toBeGreaterThanOrEqual(1);
+
+    const checkoutLink = await screen.findByRole("link", {
+      name: /Finalizar Orçamento \(1\)/i,
+    });
+    const decodedUrl = decodeURIComponent(checkoutLink.getAttribute("href") || "").replace(/\u00a0/g, " ");
+    expect(decodedUrl).toContain("Subtotal: R$ 1.250,00");
+
+    // Incrementa a quantidade para 2
+    const buttons = screen.getAllByRole("button");
+    const incrementBtn = buttons.find((btn) => btn.querySelector("svg.lucide-plus"));
+    if (incrementBtn) {
+      await user.click(incrementBtn);
+      expect(await screen.findByText(/Subtotal \(2 itens\):/i)).toBeInTheDocument();
+      expect(screen.getByText(/2\.500,00/)).toBeInTheDocument();
+    }
+  });
+
+  it("não renderiza links de redirecionamento para o site da arsenal no card do produto (PM-013)", () => {
+    render(
+      <CartProvider>
+        <ProductCard
+          product={{
+            id: "555",
+            name: "RIFLE AEG TESTE",
+            price: "100.00",
+            url: "https://arsenalsports.com/item/555",
+            image: "",
+            category: "replicas",
+            categoryLabel: "Réplicas",
+          }}
+        />
+      </CartProvider>
+    );
+
+    // O título não deve ser um link <a> com destino à arsenal
+    const arsenalLinks = screen.queryAllByRole("link").filter((link) => {
+      const href = link.getAttribute("href");
+      return href && href.includes("arsenalsports.com");
+    });
+    expect(arsenalLinks.length).toBe(0);
+  });
 });

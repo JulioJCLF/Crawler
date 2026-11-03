@@ -715,7 +715,7 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                                 Robô
                               </span>
                             )}
-                            {p.url && (
+                            {p.url && !p.url.includes("arsenalsports.com") && (
                               <a
                                 href={p.url}
                                 target="_blank"

@@ -90,4 +90,31 @@ describe("buildCartWhatsAppUrl (REQ-014 / PM-011)", () => {
     expect(decoded).toContain("Ref: 329859");
     expect(decoded).not.toContain("Ref: 11996");
   });
+
+  it("inclui a linha de Subtotal na mensagem quando fornecido (PM-013)", () => {
+    const url = buildCartWhatsAppUrl(mockItems, 3, "5545999858096", "R$ 2.320,00");
+    const decoded = decodeURIComponent(url.split("?text=")[1]);
+    expect(decoded).toContain("Total de Itens: 3");
+    expect(decoded).toContain("Subtotal: R$ 2.320,00");
+  });
+
+  it("não inclui links que referenciam o site da arsenal na mensagem gerada", () => {
+    const itemsWithArsenalUrl: CartItem[] = [
+      {
+        product: {
+          id: "300",
+          name: "PRODUTO TESTE",
+          price: "R$ 50,00",
+          url: "https://arsenalsports.com/item/300",
+          image: "",
+          category: "bbs",
+          categoryLabel: "BBs",
+        },
+        quantity: 1,
+      },
+    ];
+    const url = buildCartWhatsAppUrl(itemsWithArsenalUrl, 1, "5545999858096", "R$ 50,00");
+    const decoded = decodeURIComponent(url.split("?text=")[1]);
+    expect(decoded).not.toContain("arsenalsports.com");
+  });
 });
