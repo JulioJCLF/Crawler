@@ -53,61 +53,61 @@
 }
 
 :root {
-  --background: #0b0d0c;
-  --foreground: #f0efea;
-  --card: #141815;
-  --card-foreground: #f0efea;
-  --popover: #1b201c;
-  --popover-foreground: #f0efea;
-  --primary: #c6ff00;
-  --primary-foreground: #0b0d0c;
-  --secondary: #1b201c;
-  --secondary-foreground: #f0efea;
-  --muted: #1b201c;
-  --muted-foreground: #8b948c;
-  --accent: #c6ff00;
-  --accent-foreground: #0b0d0c;
-  --destructive: #ff5b4a;
-  --destructive-foreground: #0b0d0c;
-  --border: #2a312c;
-  --input: #141815;
-  --ring: #c6ff00;
+  --background: #0c0e0c;
+  --foreground: #f3efe1;
+  --card: #131713;
+  --card-foreground: #f3efe1;
+  --popover: #181d18;
+  --popover-foreground: #f3efe1;
+  --primary: #696f3c;
+  --primary-foreground: #f3efe1;
+  --secondary: #1d231b;
+  --secondary-foreground: #f3efe1;
+  --muted: #1c221a;
+  --muted-foreground: #8f9889;
+  --accent: #7e8f41;
+  --accent-foreground: #0c0e0c;
+  --destructive: #e55342;
+  --destructive-foreground: #ffffff;
+  --border: #2c3528;
+  --input: #151a14;
+  --ring: #7e8f41;
   --radius: 6px;
 }
 
 /* ==================================
-   Theme: Hunting (Original Colors Restored)
+   Theme: Hunting (Cores da Logo)
 ================================== */
 .theme-hunting {
-  --background: #0b0d0c;
-  --foreground: #f0efea;
+  --background: #0c0e0c;
+  --foreground: #f3efe1;
   
-  --card: #141815;
-  --card-foreground: #f0efea;
+  --card: #131713;
+  --card-foreground: #f3efe1;
   
-  --popover: #1b201c;
-  --popover-foreground: #f0efea;
+  --popover: #181d18;
+  --popover-foreground: #f3efe1;
   
-  /* Verde Militar / Destaques */
-  --primary: #c6ff00;
-  --primary-foreground: #0b0d0c;
+  /* Verde Oliva da Logo (#696f3c) */
+  --primary: #696f3c;
+  --primary-foreground: #f3efe1;
   
-  --secondary: #1b201c;
-  --secondary-foreground: #f0efea;
+  --secondary: #1d231b;
+  --secondary-foreground: #f3efe1;
   
-  /* Verde Neon (Highlight Original Hunting World) */
-  --accent: #c6ff00;
-  --accent-foreground: #0b0d0c;
+  /* Verde Tático de Destaque (Harmonizado com a Logo) */
+  --accent: #7e8f41;
+  --accent-foreground: #0c0e0c;
   
-  --muted: #1b201c;
-  --muted-foreground: #8b948c;
+  --muted: #1c221a;
+  --muted-foreground: #8f9889;
   
-  --destructive: #ff5b4a;
-  --destructive-foreground: #0b0d0c;
+  --destructive: #e55342;
+  --destructive-foreground: #ffffff;
   
-  --border: #2a312c;
-  --input: #141815;
-  --ring: #c6ff00;
+  --border: #2c3528;
+  --input: #151a14;
+  --ring: #7e8f41;
   
   --radius: 6px;
 }
