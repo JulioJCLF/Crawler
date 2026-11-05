@@ -1,5 +1,7 @@
 import { describe, it, expect } from 'vitest';
+import * as cheerio from 'cheerio';
 import { enforceCategory, CATEGORY_WEIGHTS, cleanProductName, extractSku } from '../src/config';
+import { extractProductDetails } from '../src/crawler';
 
 describe('Crawler Logic', () => {
   describe('extractSku (REQ-025 / PM-012)', () => {
@@ -210,6 +212,63 @@ describe('Crawler Logic', () => {
       expect(CATEGORY_WEIGHTS['magazines']).toBeGreaterThan(CATEGORY_WEIGHTS['replicas']);
       expect(CATEGORY_WEIGHTS['pecas-internas']).toBeGreaterThan(CATEGORY_WEIGHTS['replicas']);
       expect(CATEGORY_WEIGHTS['bbs']).toBeGreaterThan(CATEGORY_WEIGHTS['replicas']);
+    });
+  });
+
+  describe('extractProductDetails (REQ-026 / PM-014)', () => {
+    it('should extract gallery images, clean description and deduplicated specs from product detail HTML', () => {
+      const html = `
+        <div class="product-gallery">
+          <figure class="product-image">
+            <a href="https://www.arsenalsports.com/img/34272/produtos/1200/img1.jpg" class="fancybox">
+              <img src="https://www.arsenalsports.com/img/34272/produtos/600/img1.jpg" data-zoom-image="https://www.arsenalsports.com/img/34272/produtos/1200/img1.jpg" />
+            </a>
+          </figure>
+          <figure class="product-image">
+            <img src="/img/34272/produtos/600/img2.jpg" />
+          </figure>
+        </div>
+        <div id="product-tab-description">
+          <p><strong>Características:</strong></p>
+          <ul>
+            <li>Estilo Rattler LT na Arsenal Sports.</li>
+            <li>HandGuard M-LOK em alumínio CNC.</li>
+            <li>ACOMPANHA 03 MAGAZINES EXTRAS.</li>
+          </ul>
+          <p>Veja mais em https://www.arsenalsports.com/produto/mcx.html</p>
+        </div>
+        <div id="product-tab-additional">
+          <table class="table">
+            <tbody>
+              <tr><th>SKU</th><td>549998</td></tr>
+              <tr><th>Código Fabricante</th><td>APFG-S-004BK</td></tr>
+              <tr><th>Marca</th><td>VFC</td></tr>
+              <tr><th>PESO</th><td>2185 Gramas</td></tr>
+              <tr><th>MARCA</th><td>VFC</td></tr>
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      const $ = cheerio.load(html);
+      const details = extractProductDetails($);
+
+      expect(details.images).toEqual([
+        'https://www.arsenalsports.com/img/34272/produtos/1200/img1.jpg',
+        'https://www.arsenalsports.com/img/34272/produtos/600/img2.jpg',
+      ]);
+      expect(details.description).toContain('Características:');
+      expect(details.description).toContain('• Estilo Rattler LT na .');
+      expect(details.description).toContain('• HandGuard M-LOK em alumínio CNC.');
+      expect(details.description).not.toMatch(/Arsenal Sports/i);
+      expect(details.description).not.toMatch(/arsenalsports\.com/i);
+      expect(details.sku).toBe('549998');
+      expect(details.specs).toEqual({
+        SKU: '549998',
+        'Código Fabricante': 'APFG-S-004BK',
+        Marca: 'VFC',
+        PESO: '2185 Gramas',
+      });
     });
   });
 });

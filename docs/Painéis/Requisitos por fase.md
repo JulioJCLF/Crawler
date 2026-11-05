@@ -69,9 +69,10 @@ tags:
 | [[REQ-024 Controle de acesso por perfis e recuperação de senha por e-mail]] | 🚀 implementado | must |
 
 ## 7 · Sem fase definida
-🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 1/1
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 2/2
 
 | Requisito | Status | Prioridade |
 |---|---|---|
 | [[REQ-025 Extrair e exibir o SKU real dos produtos no catálogo e carrinho]] | 🚀 implementado | must |
+| [[REQ-026 Extrair e exibir página de detalhes do equipamento com descrição, especificações e galeria]] | 🚀 implementado | must |
 

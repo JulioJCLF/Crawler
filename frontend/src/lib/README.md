@@ -19,6 +19,7 @@ Domain business logic, catalog data access services, price calculation rules, st
 - `hashPassword(password: string, salt: string): string`: Computes SHA-256 salted hashes for administrative authentication.
 - `getStoredAuthConfig(): MultiUserAuthConfig`: Retrieves multi-user authentication data.
 - `normalizeText(text: string): string` / `preprocessSearchTokens(query: string): string[]`: Tokenizes and normalizes search terms with typo and synonym expansion.
+- `parseProductDetailsFromHtml(html: string): ExtractedProductDetails` / `getEnrichedProductById(idOrSku: string): Promise<Product | null>`: Extracts and caches product gallery images, clean description, and technical specifications from product detail HTML.
 - `cn(...inputs: ClassValue[]): string`: Tailwind CSS class merge utility.
 
 ## Invariants

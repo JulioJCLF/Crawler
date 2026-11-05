@@ -16,14 +16,14 @@ const CATEGORY_ALERT_PATH = join(__dirname, "..", "category-alert.json");
 async function main() {
   console.log(`[${new Date().toISOString()}] Iniciando crawler com Crawlee...`);
   
-  const atuais = await runCrawler();
+  const snapshot = await loadSnapshot(SNAPSHOT_PATH);
+  const atuais = await runCrawler({ previousSnapshot: snapshot });
   
   if (atuais.length === 0) {
     console.error("Nenhum produto extraído — verifique seletores/URLs. Snapshot NÃO atualizado.");
     process.exit(1);
   }
 
-  const snapshot = await loadSnapshot(SNAPSHOT_PATH);
   const agora = new Date().toISOString();
 
   // Apply tracking logic (history, radar changes)

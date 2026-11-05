@@ -40,6 +40,9 @@ Representa um item do site após extração e cálculo de histórico.
 | `changeType` | `enum` (opcional) | Tipo de alteração ocorrida na última execução que acionou essa tag. Pode ser: `restock`, `sob_consulta`, `price_change`, `new`. |
 | `previousPrice` | `string \| null` | Qual era o preço na execução imediatamente anterior à mudança. |
 | `priceHistory` | `PricePoint[]` | Histórico temporal. |
+| `description` | `string` (opcional) | Descrição técnica estruturada extraída de `#product-tab-description` e sanitizada sem menções ao fornecedor. |
+| `specs` | `Record<string, string>` (opcional) | Tabela de especificações técnicas extraída de `#product-tab-additional` (ex: SKU, Código Fabricante, Marca, Comprimento, Peso, Calibre, Hop-Up, Material). |
+| `images` | `string[]` (opcional) | Lista de URLs absolutas das imagens de alta resolução da galeria do equipamento (`figure.product-image`). |
 
 ### `PricePoint`
 Usado para montar gráficos ou rastreabilidade de inflação/deflação ao longo do tempo.

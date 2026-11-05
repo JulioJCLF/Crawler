@@ -8,6 +8,7 @@ Next.js App Router root layout and storefront catalog homepage, integrating sear
 - `metadata: Metadata`: Storefront SEO meta tags and viewport definitions.
 - `matchesCategory(p: any, selectedCategory: string | null): boolean`: Category matching predicate supporting virtual and mapped categories.
 - `StorefrontPage()`: Default export catalog browse page with client-side filter synchronization, pagination, and search queries.
+- `ProductDetailPage({ params })` (`/produto/[id]`): Equipment detail page displaying interactive image gallery, BRL pricing, WhatsApp/Cart commercial CTAs, structured description, and responsive technical specifications table.
 - **Subdirectories**:
   - [Admin](./admin/README.md): Back-office management portal and authentication views.
   - [API](./api/README.md): Backend API route handlers for catalog, auth, pricing, and health checks.

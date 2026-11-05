@@ -18,6 +18,9 @@ export interface Product {
   hiddenAt?: string;
   hiddenReason?: string;
   updatedAt?: string;
+  description?: string;
+  specs?: Record<string, string>;
+  images?: string[];
 }
 
 export interface PricePoint {
@@ -65,6 +68,9 @@ export interface CustomProductInput {
   image?: string | null;
   url?: string;
   status?: "active" | "hidden";
+  description?: string;
+  specs?: Record<string, string>;
+  images?: string[];
 }
 
 export interface HiddenProductEntry {

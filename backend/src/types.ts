@@ -12,6 +12,9 @@ export interface Product {
   changeType?: "restock" | "sob_consulta" | "price_change" | "new";
   previousPrice?: string | null;
   priceHistory?: PricePoint[];
+  description?: string;
+  specs?: Record<string, string>;
+  images?: string[];
 }
 
 export interface PricePoint {

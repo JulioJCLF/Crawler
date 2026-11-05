@@ -47,3 +47,10 @@ Depois de extraído, cada produto passa por `enforceCategory(nome, categoriaOrig
 - Nomes que batem com padrão de arma completa (`isCompleteReplicaGun`, ex.: contêm "airsoft rifle", "airsoft shotgun", "airsoft pistol", "sniper rifle", "spring sniper" ou "bolt action" com "airsoft", sem serem peça "for ...") viram `replicas` (peso 100), mesmo quando o título termina com o nome da cor (ex.: "AIRSOFT RIFLE BLACK") ou menciona especificações como "HANDGUARD", "GEARBOX" ou "WITH MAGAZINE".
 - Dentro de `replicas`, nomes que são de fato peças avulsas (magazine, cylinder, spring, gearbox, hop up, stock, grip, etc.) são reclassificados para `magazines`, `pecas-internas` ou `pecas-externas`.
 - Cada categoria tem um peso fixo em `CATEGORY_WEIGHTS` (de 1 a 6, fora os casos acima). Quando o mesmo produto aparece em duas categorias de origem diferentes, vence o de maior peso.
+
+## Extração de Detalhes da Página do Equipamento (`extractProductDetails`)
+Para alimentar a página dedicada do equipamento (`/produto/[id]`, REQ-026 / PM-014), o crawler também processa páginas individuais de produto (`/produto/...-<id>.html`):
+1. **Descrição (`#product-tab-description`)**: Extrai parágrafos (`<p>`) e itens de lista (`<li>`) preservando quebras de linha e marcadores (`• `), removendo menções a `"Arsenal Sports"` ou URLs `arsenalsports.com`.
+2. **Especificações Técnicas (`#product-tab-additional table tr`)**: Extrai cada par `<th>` (atributo) e `<td>` (valor) para o objeto `specs`, preenchendo também `sku` caso ainda não tenha sido extraído na listagem.
+3. **Galeria de Imagens (`figure.product-image`)**: Coleta todas as URLs de imagem da galeria do produto em alta resolução (`1200` ou `600`px), normalizando URLs relativas para absolutas.
+4. **Enriquecimento Incremental e Respeito à Origem**: `applyChangeTracking` preserva `description`, `specs` e `images` do `snapshot.json` anterior. A cada execução do crawler, apenas um lote limitado (`MAX_DETAIL_PAGES`, padrão `50`, priorizando novidades, reposições e réplicas ainda sem detalhes) é enfileirado, mantendo intactos os limites de concorrência (`maxConcurrency: 10`).

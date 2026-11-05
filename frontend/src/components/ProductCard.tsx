@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { Product } from "@/types";
 import { useCart } from "@/providers/CartProvider";
 import { usePricing } from "@/providers/PricingProvider";
@@ -30,7 +31,10 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <article className="flex flex-col h-full bg-card border border-border overflow-hidden transition-colors hover:border-accent">
-      <div className="relative h-48 md:h-52 bg-muted/20 border-b border-border flex items-center justify-center p-4">
+      <Link
+        href={`/produto/${product.id}`}
+        className="relative h-48 md:h-52 bg-muted/20 border-b border-border flex items-center justify-center p-4 group cursor-pointer"
+      >
         <div className="absolute top-2 left-2 z-10 flex flex-col gap-1">
           {product.changeType === "new" && (
             <span className="font-mono text-[10px] uppercase tracking-wider px-1.5 py-0.5 border border-accent text-accent bg-accent/10">
@@ -54,23 +58,22 @@ export function ProductCard({ product }: { product: Product }) {
           <img 
             src={product.image} 
             alt={productName}
-            className="object-contain max-h-full max-w-full"
+            className="object-contain max-h-full max-w-full transition-transform duration-200 group-hover:scale-105"
             loading="lazy"
           />
         ) : (
           <div className="text-muted-foreground font-mono text-xs tracking-widest">SEM IMAGEM</div>
         )}
-      </div>
+      </Link>
       
       <div className="p-4 flex-1 flex flex-col gap-2">
         <h3 className="text-sm font-medium leading-snug line-clamp-2">
-          <button
-            type="button"
-            onClick={handleAddToCart}
+          <Link
+            href={`/produto/${product.id}`}
             className="text-left hover:text-accent transition-colors cursor-pointer"
           >
             <span>{productName}</span>
-          </button>
+          </Link>
         </h3>
         <span className="text-[11px] text-muted-foreground font-mono">REF. {product.sku || product.id} // {product.categoryLabel || product.category}</span>
       </div>

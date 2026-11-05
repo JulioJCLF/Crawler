@@ -17,6 +17,7 @@ Todo "Product Card" deve possuir **obrigatoriamente**:
 - **Botão de Carrinho (+ Carrinho)**: Opção de selecionar o item para montar um orçamento ou compra massiva. No drawer do carrinho (`FloatingCart`), o cliente pode escolher para qual vendedor (`siteConfig.whatsappSellers`) deseja enviar o orçamento antes de finalizar.
 - **Subtotal no Carrinho**: O drawer do carrinho deve exibir a soma monetária de todos os itens considerando suas quantidades, transmitindo o valor total na mensagem enviada ao WhatsApp.
 - **Blindagem contra links de fornecedor**: Nenhum link para o site de origem do fornecedor (Arsenal Sports) deve ser exposto na vitrine, nos títulos dos produtos ou nas mensagens de WhatsApp.
+- **Página de Detalhes do Equipamento (`/produto/[id]`)**: Clicar na imagem ou no título do `ProductCard` leva à página interna do equipamento, que replica a galeria de imagens, a descrição completa e a tabela de especificações técnicas extraídas pelo crawler, mantendo obrigatoriamente o preço em reais (`R$`) e os botões `Pedir via WhatsApp` e `+ Carrinho`.
 
 ## 3. Identidade Tática (Sistema de Temas)
 A base visual é dividida via `ThemeProvider.tsx`.

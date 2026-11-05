@@ -1,9 +1,108 @@
 import { CheerioCrawler, log } from 'crawlee';
 import { CATEGORIES, MAX_PAGES, PAGE_PARAM, isValidProduct, cleanProductName, enforceCategory, CATEGORY_WEIGHTS, extractSku, resolveCategoryLabel } from './config.js';
-import type { Product } from './types.js';
+import type { Product, Snapshot } from './types.js';
 
-export async function runCrawler(): Promise<Product[]> {
+export interface ExtractedProductDetails {
+  description?: string;
+  specs?: Record<string, string>;
+  images?: string[];
+  sku?: string;
+}
+
+function sanitizeDetailText(text: string): string {
+  return text
+    .replace(/https?:\/\/(?:www\.)?arsenalsports\.com[^\s)]*/gi, '')
+    .replace(/\bArsenal\s+Sports\b/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export function extractProductDetails($: any): ExtractedProductDetails {
+  const result: ExtractedProductDetails = {};
+
+  // 1. Extract gallery images (1 best-resolution URL per figure.product-image)
+  const images: string[] = [];
+  const seenImages = new Set<string>();
+  $('figure.product-image').each((_: number, fig: unknown) => {
+    let rawUrl =
+      $(fig).find('a.fancybox').attr('href') ||
+      $(fig).find('img').attr('data-zoom-image') ||
+      $(fig).find('img').attr('src') ||
+      '';
+    rawUrl = rawUrl.trim();
+    if (!rawUrl) return;
+    if (!rawUrl.startsWith('http')) {
+      rawUrl = `https://www.arsenalsports.com${rawUrl.startsWith('/') ? '' : '/'}${rawUrl}`;
+    }
+    if (!seenImages.has(rawUrl)) {
+      seenImages.add(rawUrl);
+      images.push(rawUrl);
+    }
+  });
+  if (images.length > 0) {
+    result.images = images;
+  }
+
+  // 2. Extract structured description from #product-tab-description
+  const descContainer = $('#product-tab-description');
+  if (descContainer.length > 0) {
+    const lines: string[] = [];
+    const blocks = descContainer.find('p, li');
+    if (blocks.length > 0) {
+      blocks.each((_: number, el: unknown) => {
+        const tag = (el as { tagName?: string }).tagName?.toLowerCase();
+        const text = sanitizeDetailText($(el).text());
+        if (!text) return;
+        lines.push(tag === 'li' ? `• ${text}` : text);
+      });
+    } else {
+      const fallbackText = sanitizeDetailText(descContainer.text());
+      if (fallbackText) lines.push(fallbackText);
+    }
+    if (lines.length > 0) {
+      result.description = lines.join('\n');
+    }
+  }
+
+  // 3. Extract technical specifications from #product-tab-additional
+  const specs: Record<string, string> = {};
+  const seenSpecKeys = new Set<string>();
+  $('#product-tab-additional table tr').each((_: number, tr: unknown) => {
+    const rawKey = sanitizeDetailText($(tr).find('th').first().text());
+    const rawVal = sanitizeDetailText($(tr).find('td').first().text());
+    if (!rawKey || !rawVal) return;
+
+    const normalizedKey = rawKey.toLowerCase();
+    if (seenSpecKeys.has(normalizedKey)) return;
+    seenSpecKeys.add(normalizedKey);
+
+    specs[rawKey] = rawVal;
+    if (normalizedKey === 'sku' && !result.sku) {
+      result.sku = rawVal;
+    }
+  });
+  if (Object.keys(specs).length > 0) {
+    result.specs = specs;
+  }
+
+  return result;
+}
+
+export interface RunCrawlerOptions {
+  previousSnapshot?: Snapshot | null;
+  maxDetailPages?: number;
+}
+
+export async function runCrawler(options: RunCrawlerOptions = {}): Promise<Product[]> {
   const productsMap = new Map<string, Product>();
+  const maxDetailPages = options.maxDetailPages ?? Number(process.env.MAX_DETAIL_PAGES ?? 50);
+  const oldById = new Map<string, Product>();
+  if (options.previousSnapshot) {
+    for (const p of options.previousSnapshot.products) {
+      oldById.set(p.id, p);
+    }
+  }
 
   const crawler = new CheerioCrawler({
     minConcurrency: 2,
@@ -12,6 +111,24 @@ export async function runCrawler(): Promise<Product[]> {
     requestHandlerTimeoutSecs: 30,
     
     async requestHandler({ $, request, log }) {
+      if (request.userData.type === 'DETAIL') {
+        const productId = request.userData.productId as string;
+        const product = productsMap.get(productId);
+        if (!product) return;
+
+        const details = extractProductDetails($);
+        if (details.description) product.description = details.description;
+        if (details.specs) product.specs = details.specs;
+        if (details.images && details.images.length > 0) {
+          product.images = details.images;
+          if (!product.image) product.image = details.images[0];
+        }
+        if (!product.sku && details.sku) {
+          product.sku = details.sku;
+        }
+        return;
+      }
+
       const originalCatSlug = request.userData.catSlug as string;
       const catLabel = request.userData.catLabel as string;
       const currentPage = request.userData.page as number;
@@ -124,6 +241,37 @@ export async function runCrawler(): Promise<Product[]> {
   log.info(`Starting crawl for ${initialRequests.length} categories...`);
   await crawler.run(initialRequests);
   log.info(`Crawl finished. Extracted ${productsMap.size} unique products.`);
+
+  if (maxDetailPages > 0) {
+    const candidates = [...productsMap.values()]
+      .filter((p) => {
+        const old = oldById.get(p.id);
+        return !(old?.description && old?.specs && Object.keys(old.specs).length > 0);
+      })
+      .sort((a, b) => {
+        const aHasPrice = a.price ? 1 : 0;
+        const bHasPrice = b.price ? 1 : 0;
+        if (aHasPrice !== bHasPrice) return bHasPrice - aHasPrice;
+        const aIsReplica = a.category === 'replicas' ? 1 : 0;
+        const bIsReplica = b.category === 'replicas' ? 1 : 0;
+        return bIsReplica - aIsReplica;
+      })
+      .slice(0, maxDetailPages);
+
+    if (candidates.length > 0) {
+      log.info(`Enriching detail pages for ${candidates.length} products (maxDetailPages=${maxDetailPages})...`);
+      await crawler.run(
+        candidates.map((p) => ({
+          url: p.url,
+          uniqueKey: `detail:${p.id}`,
+          userData: {
+            type: 'DETAIL',
+            productId: p.id,
+          },
+        }))
+      );
+    }
+  }
 
   return [...productsMap.values()];
 }

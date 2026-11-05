@@ -33,6 +33,11 @@ export function applyChangeTracking(currentProducts: Product[], previousSnapshot
     
     // Preserve sku if already known
     p.sku = p.sku || old?.sku;
+
+    // Preserve enriched detail page fields across listing runs
+    p.description = p.description || old?.description;
+    p.specs = p.specs && Object.keys(p.specs).length > 0 ? p.specs : old?.specs;
+    p.images = p.images && p.images.length > 0 ? p.images : old?.images;
     
     // Initialize or copy price history
     p.priceHistory = old?.priceHistory || [];

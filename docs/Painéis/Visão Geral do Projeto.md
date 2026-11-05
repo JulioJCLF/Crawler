@@ -9,7 +9,7 @@ tags:
 > [!info] Página gerada automaticamente em 2026-11-05. Resumo do andamento. Detalhes: [[Requisitos por fase]].
 
 ## Progresso
-🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **24 de 25** itens concluídos
+🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩⬜ **25 de 26** itens concluídos
 
 ## Requisitos por status
 | Status | Quantidade |
@@ -18,7 +18,7 @@ tags:
 | 👀 em-revisao | 0 |
 | ✅ aprovado | 1 |
 | 🔨 em-desenvolvimento | 0 |
-| 🚀 implementado | 24 |
+| 🚀 implementado | 25 |
 | 🗑️ descartado | 0 |
 
 ## 📨 Pedidos de mudança em aberto: 0
@@ -26,9 +26,9 @@ Nenhum.
 
 ## 🕒 Últimas sessões de trabalho
 - [[2026-11-05 - Antigravity - Remocao de credenciais expostas no login e correcao de margem de replicas]]
+- [[2026-11-05 - Antigravity - Pagina de detalhes do equipamento e extracao de descricao e especificacoes no crawler]]
 - [[2026-11-03 - Antigravity - Subtotal no carrinho e remocao de links da arsenal]]
 - [[2026-11-03 - Antigravity - Estrutura de extracao e exibicao do SKU real dos produtos]]
 - [[2026-11-03 - Antigravity - Definicao dos nomes e numero dos vendedores no carrinho]]
-- [[2026-10-27 - Antigravity - Selecao de vendedor no envio do carrinho para WhatsApp]]
 
 Linha do tempo completa: [[Registro de Mudanças]]

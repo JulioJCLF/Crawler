@@ -19,8 +19,9 @@ Core scraping, snapshot management, category normalization, and workflow reporti
 - `applyOverrides(products: Product[], overrides: OverrideMap): ApplyResult`: Applies manual category corrections over scraped products.
 - `recomputeCategorySummary(products: Product[]): CategorySummary[]`: Recalculates category item counts.
 - `loadSnapshot(path: string): Promise<Snapshot | null>` / `saveSnapshot(path: string, snapshot: Snapshot): Promise<void>`: Snapshot storage operations.
-- `applyChangeTracking(currentProducts: Product[], previousSnapshot: Snapshot | null, now: string): void`: Tracks price history, restocks, new products, and preserves first-seen timestamps.
-- `runCrawler(): Promise<Product[]>`: Executes Crawlee CheerioCrawler pipeline across all categories with concurrency and retry controls.
+- `applyChangeTracking(currentProducts: Product[], previousSnapshot: Snapshot | null, now: string): void`: Tracks price history, restocks, new products, and preserves first-seen timestamps and enriched detail fields (`description`, `specs`, `images`).
+- `extractProductDetails($: any): ExtractedProductDetails`: Extracts high-resolution gallery images, structured description text (stripped of supplier branding), and deduplicated technical specifications from a product detail page.
+- `runCrawler(options?: RunCrawlerOptions): Promise<Product[]>`: Executes Crawlee CheerioCrawler pipeline across all categories and incrementally enriches product detail pages with concurrency and retry controls.
 - **Subdirectories**:
   - [Reliability](./reliability/README.md): Abrupt category drop detection and workflow failure issue management.
 

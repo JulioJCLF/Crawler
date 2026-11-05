@@ -10,6 +10,7 @@ tags:
 
 | Pedido | Status | Pedido por | Data | Urgência |
 |---|---|---|---|---|
+| [[PM-014 Página de detalhes do equipamento com descrição, especificações e galeria extraídas pelo crawler]] | 🚀 aplicado | Usuário | 2026-11-05 | alta |
 | [[PM-013 Subtotal no carrinho e remoção de links para o site de origem]] | ✅ aprovado | Usuário | 2026-11-03 | alta |
 | [[PM-012 Estrutura para extração e exibição do SKU real dos produtos]] | ✅ aprovado | Usuário | 2026-11-03 | alta |
 | [[PM-011 Seleção de vendedor no envio do carrinho para WhatsApp]] | ✅ aprovado | Usuário | 2026-10-27 | media |
