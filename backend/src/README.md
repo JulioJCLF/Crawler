@@ -10,6 +10,8 @@ Core scraping, snapshot management, category normalization, and workflow reporti
 - `Snapshot`: Serialized state of catalog execution containing all products, category counts, and update timestamp.
 - `CATEGORIES`: Crawl source configuration defining target categories and entry URLs.
 - `ALL_CATEGORIES`: Complete catalog taxonomy combining crawl targets and virtual categories.
+- `resolveCategoryLabel(slug: string): string`: Resolves the display label for a category slug.
+- `isCompleteReplicaGun(name: string): boolean`: Identifies complete airsoft guns even when titles contain specification terms (handguard, gearbox, spring, magazine) or color suffixes.
 - `enforceCategory(name: string, originalCategory: string): { categorySlug: string, weight: number }`: Keyword heuristic resolving accurate category and precedence weight based on product titles.
 - `isValidProduct(name: string): boolean`: Exclusion filter filtering out unwanted non-airsoft items.
 - `cleanProductName(name: string): string`: Sanitizes product titles removing provider branding while preserving technical specifications.

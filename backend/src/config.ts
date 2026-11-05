@@ -29,6 +29,50 @@ export const VIRTUAL_CATEGORIES = [
 /** Todas as categorias válidas (crawl + derivadas). Use para resumo/validação. */
 export const ALL_CATEGORIES = [...CATEGORIES, ...VIRTUAL_CATEGORIES];
 
+export function resolveCategoryLabel(slug: string): string {
+  const found = ALL_CATEGORIES.find((c) => c.slug === slug);
+  return found ? found.label : slug;
+}
+
+/**
+ * Identifica se o título descreve uma réplica/arma completa de airsoft
+ * (mesmo quando contém termos de especificações como "HANDGUARD", "GEARBOX",
+ * "SPRING SNIPER", "WITH MAGAZINE" ou cor no final como "AIRSOFT RIFLE BLACK"),
+ * excluindo peças/acessórios feitos "FOR" uma arma.
+ */
+export function isCompleteReplicaGun(name: string): boolean {
+  const n = name.toLowerCase();
+  if (/\bfor\b/.test(n)) return false;
+  if (
+    /^\S+\s+(stock|scope|bipod|mount|cover|magazine|cylinder|rail|barrel|sling|handguard|grip|hop|piston|shell|tracer)\b/.test(
+      n
+    )
+  ) {
+    return false;
+  }
+  if (/micro switch|\bfcu\b|gearbox shell|\b(camo cover|pistol grip|grenade launcher)\b/.test(n)) {
+    return false;
+  }
+
+  if (
+    /\b(airsoft rifle|airsoft shotgun|airsoft pistol|airsoft gun|sniper rifle|airsoft sniper|smg rifle)\b/.test(
+      n
+    )
+  ) {
+    return true;
+  }
+  if (/\b(spring sniper|bolt action)\b/.test(n) && n.includes("airsoft")) {
+    return true;
+  }
+  if (n.includes("blowback airsoft pistol")) {
+    return true;
+  }
+  if (/\bgbb\b/.test(n) && /\broni\b/.test(n) && /\bcombo\b/.test(n)) {
+    return true;
+  }
+  return false;
+}
+
 export const MAX_PAGES = 150;
 export const PAGE_PARAM = "pagina";
 
@@ -103,12 +147,12 @@ export function enforceCategory(name: string, originalCategory: string): { categ
   }
 
   // OVERRIDES GLOBAIS: Garante que armas verdadeiras não caiam em peças (PESO 100)
+  // Preserva armas que já são de categorias especiais (speedsoft / granadas)
   if (
-    lowerName.endsWith("airsoft rifle") || 
-    lowerName.includes("blowback airsoft pistol") ||
-    lowerName.match(/\bsniper rifle\b/) || 
-    lowerName.match(/\bairsoft sniper\b/) ||
-    (lowerName.match(/\baeg\b/) && !lowerName.match(/for aeg|gearbox|part|peça|magazine/i))
+    originalCategory !== "speedsoft" &&
+    originalCategory !== "granadas" &&
+    (isCompleteReplicaGun(lowerName) ||
+      (lowerName.match(/\baeg\b/) && !lowerName.match(/for aeg|gearbox|part|peça|magazine/i)))
   ) {
     return { categorySlug: "replicas", weight: 100 };
   }

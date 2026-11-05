@@ -51,6 +51,7 @@ O robô precisa saber onde olhar. As categorias e suas URLs ficam em `backend/sr
 ## Histórico
 | Data | O que mudou | Quem | Referência |
 |---|---|---|---|
+| 2026-11-05 | Corrigida heurística `isCompleteReplicaGun` em `enforceCategory` para preservar réplicas completas (ex: VFC APFG GBBR MCX, AEGs com gearbox no título e snipers spring) na categoria `replicas` (peso 100), garantindo que recebam a margem de lucro de réplicas (60%) em vez de peças (48%) | Antigravity | [[2026-11-05 - Antigravity - Remocao de credenciais expostas no login e correcao de margem de replicas]] |
 | 2026-10-27 | RN4 adicionada: categoria derivada `cases` para maletas e cases de transporte (PM-010) | Luiz | [[PM-010 Categoria dedicada para cases e maletas de transporte]] |
 | 2026-10-26 | RN3 adicionada: speed loaders vão para magazines e tracer units para peças externas (PM-009) | Luiz | [[PM-009 Reclassificacao de speed loaders e tracers fora da categoria de BBs]] |
 | 2026-09-21 | RN2 corrigida: categoria de produto duplicado é decidida por peso (`enforceCategory`), não por ordem de descoberta. Achado no docs-check | Luiz | branch `docs-check-2026-09-21` |

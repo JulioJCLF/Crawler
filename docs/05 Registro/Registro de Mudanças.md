@@ -9,6 +9,7 @@ Linha do tempo de tudo o que mudou. **Mais recente no topo.** Detalhes de cada s
 
 | Data | O que mudou (em linguagem simples) | Quem | Detalhes |
 |---|---|---|---|
+| 2026-11-05 | Removido o bloco de credenciais e senhas expostas da tela de login do /admin e corrigida a classificação de 218 réplicas completas (incluindo linha VFC APFG MCX, snipers spring e AEGs com gearbox no título) que caíam como peças (48%) para aplicarem a margem correta de Réplicas (60%) | Antigravity | [[2026-11-05 - Antigravity - Remocao de credenciais expostas no login e correcao de margem de replicas]] |
 | 2026-11-03 | Adicionado subtotal monetário somando produtos e quantidades no carrinho e no link do WhatsApp (PM-013 / REQ-014), além da remoção de todos os links que referenciam o site da Arsenal Sports | Antigravity | [[2026-11-03 - Antigravity - Subtotal no carrinho e remocao de links da arsenal]] |
 | 2026-11-03 | Criada estrutura para extração e exibição do SKU real dos produtos no catálogo, carrinho e WhatsApp (REQ-025 / PM-012), eliminando confusão de pedidos no estoque | Antigravity | [[2026-11-03 - Antigravity - Estrutura de extracao e exibicao do SKU real dos produtos]] |
 | 2026-11-03 | Atualizados os nomes dos vendedores no carrinho para Matheus e Alexandre e definido o número de WhatsApp definitivo do vendedor 2 (+55 45 9845-4109) | Antigravity | [[2026-11-03 - Antigravity - Definicao dos nomes e numero dos vendedores no carrinho]] |

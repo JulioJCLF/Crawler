@@ -1,12 +1,12 @@
 ---
 tipo: painel
-gerado_em: 2026-11-03
+gerado_em: 2026-11-05
 tags:
   - crawler/painel
 ---
 # Decisões
 
-> [!info] Página gerada automaticamente em 2026-11-03. Escolhas registradas e por quê.
+> [!info] Página gerada automaticamente em 2026-11-05. Escolhas registradas e por quê.
 
 | Decisão | Status | Data |
 |---|---|---|

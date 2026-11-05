@@ -169,6 +169,40 @@ describe('Crawler Logic', () => {
       expect(result4.categorySlug).not.toBe('cases');
       expect(result5.categorySlug).not.toBe('cases');
     });
+
+    it('should keep complete replica rifles/snipers/pistols in replicas even when title contains handguard, gearbox, spring or color suffix', () => {
+      const mcxRattler = enforceCategory(
+        'VFC APFG GBBR MCX RATTLER LT 5.75 HANDGUARD RAIL BLOWBACK AIRSOFT RIFLE BLACK',
+        'replicas'
+      );
+      const mcxSpear = enforceCategory(
+        'VFC APFG GBBR MCX SPEAR LT 13.1 M-LOK HANDGUARD RAIL BLOWBACK AIRSOFT RIFLE TAN',
+        'replicas'
+      );
+      const mcxVirtus = enforceCategory(
+        'SIG SAUER VFC AVALON AEG MCX VIRTUS 11.5 BARREL WITH GEARBOX AIRSOFT RIFLE BLACK',
+        'replicas'
+      );
+      const springSniper = enforceCategory(
+        'ACTION ARMY SPRING SNIPER BOLT ACTION ACC-T10 AIRSOFT RIFLE BLACK',
+        'replicas'
+      );
+      const tac41 = enforceCategory(
+        'SILVERBACK SPRING SNIPER TAC41 LR BOLT ACTION AIRSOFT BLACK',
+        'replicas'
+      );
+      const pistolCombo = enforceCategory(
+        'ICS GBB SAR9 BLOWBACK WITH OPTICS RED DOT & MAGAZINE AIRSOFT PISTOL BLACK COMBO',
+        'replicas'
+      );
+
+      expect(mcxRattler.categorySlug).toBe('replicas');
+      expect(mcxSpear.categorySlug).toBe('replicas');
+      expect(mcxVirtus.categorySlug).toBe('replicas');
+      expect(springSniper.categorySlug).toBe('replicas');
+      expect(tac41.categorySlug).toBe('replicas');
+      expect(pistolCombo.categorySlug).toBe('replicas');
+    });
   });
 
   describe('CATEGORY_WEIGHTS', () => {

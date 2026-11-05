@@ -1,12 +1,12 @@
 ---
 tipo: painel
-gerado_em: 2026-11-03
+gerado_em: 2026-11-05
 tags:
   - crawler/painel
 ---
 # Pedidos de Mudança
 
-> [!info] Página gerada automaticamente em 2026-11-03. Pedidos da equipe e em que pé estão. Como pedir: [[Como Pedir uma Mudança]].
+> [!info] Página gerada automaticamente em 2026-11-05. Pedidos da equipe e em que pé estão. Como pedir: [[Como Pedir uma Mudança]].
 
 | Pedido | Status | Pedido por | Data | Urgência |
 |---|---|---|---|---|

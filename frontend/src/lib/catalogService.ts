@@ -63,7 +63,28 @@ export function resolveCategoryLabel(slug: string): string {
 }
 
 import { cleanProductName } from "./cleanUtils";
+import { isCompleteReplicaGun } from "./categoryUtils";
 export { cleanProductName };
+
+function normalizeProductCategory(p: Product): Product {
+  const cleaned = cleanProductName(p.name);
+  const shouldBeReplica =
+    p.source !== "manual" &&
+    p.category !== "replicas" &&
+    p.category !== "speedsoft" &&
+    p.category !== "granadas" &&
+    isCompleteReplicaGun(cleaned);
+
+  if (!shouldBeReplica && cleaned === p.name) {
+    return p;
+  }
+
+  return {
+    ...p,
+    name: cleaned,
+    ...(shouldBeReplica ? { category: "replicas", categoryLabel: "Réplicas" } : {}),
+  };
+}
 
 /**
  * Lê o mapa de produtos ocultados (IDs bloqueados) do disco.
@@ -324,11 +345,8 @@ export function buildUnifiedSnapshot(baseSnapshot: Snapshot): Snapshot {
     (p) => !hidden[p.id] && p.status !== "hidden"
   );
 
-  // 3. Junta produtos mantendo manuais no topo/destaque e sanitiza o título removendo referências a "Arsenal Sports"
-  const unifiedProducts = [...activeCustomProducts, ...activeCrawlerProducts].map((p) => {
-    const cleaned = cleanProductName(p.name);
-    return cleaned === p.name ? p : { ...p, name: cleaned };
-  });
+  // 3. Junta produtos mantendo manuais no topo/destaque e sanitiza o título e categoria de réplicas
+  const unifiedProducts = [...activeCustomProducts, ...activeCrawlerProducts].map(normalizeProductCategory);
 
   // 4. Recalcula categorias com contagens atualizadas
   const categoryCountMap = new Map<string, number>();
@@ -399,7 +417,8 @@ export function getAdminCatalog(
   });
 
   // Mapeia os produtos do crawler
-  const formattedCrawler: Product[] = (baseSnapshot.products || []).map((p) => {
+  const formattedCrawler: Product[] = (baseSnapshot.products || []).map((rawP) => {
+    const p = normalizeProductCategory(rawP);
     const isHidden = Boolean(hidden[p.id]);
     return {
       ...p,

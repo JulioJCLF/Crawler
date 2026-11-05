@@ -62,5 +62,6 @@ O sistema possuía apenas uma credencial administrativa única compartilhada. Pa
 ## Histórico
 | Data | O que mudou | Quem | Referência |
 |---|---|---|---|
+| 2026-11-05 | Removido bloco visual de credenciais e dicas de senhas/usuários da tela pública `/admin/login` | Antigravity | [[2026-11-05 - Antigravity - Remocao de credenciais expostas no login e correcao de margem de replicas]] |
 | 2026-10-16 | Implementação concluída com dois perfis de acesso, recuperação por e-mail (SMTP), chave mestra e CLI | Luiz | [[PM-007 Dois níveis de acesso no painel e recuperação de senha]] |
 | 2026-10-16 | Criação do requisito para dois níveis de acesso e recuperação de senha por e-mail | Luiz | [[PM-007 Dois níveis de acesso no painel e recuperação de senha]] |

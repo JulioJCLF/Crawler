@@ -5,17 +5,17 @@
     {
       "slug": "replicas",
       "label": "Réplicas",
-      "count": 1928
+      "count": 2144
     },
     {
       "slug": "pecas-externas",
       "label": "Peças Externas",
-      "count": 1866
+      "count": 1816
     },
     {
       "slug": "pecas-internas",
       "label": "Peças Internas",
-      "count": 1734
+      "count": 1573
     },
     {
       "slug": "pistolas",
@@ -35,7 +35,7 @@
     {
       "slug": "magazines",
       "label": "Magazines",
-      "count": 1170
+      "count": 1165
     },
     {
       "slug": "bbs",
@@ -4014,7 +4014,7 @@
       "url": "https://www.arsenalsports.com/produto/action-army-spring-sniper-bolt-action-acct10-airsoft-rifle-black-15231.html",
       "price": "USD 299,00",
       "image": "https://www.arsenalsports.com/img/15231/produtos/400/668f44f8649485a582c33adfe909d0d2.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -4046,7 +4046,7 @@
       "url": "https://www.arsenalsports.com/produto/agm-spring-sniper-l96-airsoft-rifle-black-26630.html",
       "price": "USD 120,00",
       "image": "https://www.arsenalsports.com/img/26630/produtos/400/ad7994d04b2c297dd9ffd06e0be45f7e.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -4058,7 +4058,7 @@
       "url": "https://www.arsenalsports.com/produto/agm-spring-sniper-l96-airsoft-rifle-od-green-26631.html",
       "price": "USD 120,00",
       "image": "https://www.arsenalsports.com/img/26631/produtos/400/7cae957b8dd62fc1b4d62bd06554fe4f.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -4070,7 +4070,7 @@
       "url": "https://www.arsenalsports.com/produto/agm-spring-sniper-svd-dragunov-airsoft-rifle-black-26632.html",
       "price": "USD 185,00",
       "image": "https://www.arsenalsports.com/img/26632/produtos/400/3d8e08cc7c8285af44ce376eeba21eb0.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -4082,7 +4082,7 @@
       "url": "https://www.arsenalsports.com/produto/agm-spring-sniper-svd-dragunov-airsoft-rifle-black--wood-26633.html",
       "price": "USD 185,00",
       "image": "https://www.arsenalsports.com/img/26633/produtos/400/e88d3b5e75065f96a4b729fdd1d5f9b0.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -4094,7 +4094,7 @@
       "url": "https://www.arsenalsports.com/produto/agm-spring-sniper-vsr10-airsoft-rifle-black-26635.html",
       "price": "USD 110,00",
       "image": "https://www.arsenalsports.com/img/26635/produtos/400/fb8578562fd9bdcf23cf753fe3c468fe.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -4106,7 +4106,7 @@
       "url": "https://www.arsenalsports.com/produto/agm-spring-sniper-vsr10-airsoft-rifle-black--wood-26636.html",
       "price": "USD 110,00",
       "image": "https://www.arsenalsports.com/img/26636/produtos/400/da7d9ddf738d861e78850cecc87d2af1.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -10228,7 +10228,7 @@
       "url": "https://www.arsenalsports.com/produto/amoeba-spring-sniper-striker-as01-airsoft-rifle-black-11364.html",
       "price": "USD 137,00",
       "image": "https://www.arsenalsports.com/img/11364/produtos/400/535451a4452e25d1a2baa5695a20026e.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -10248,7 +10248,7 @@
       "url": "https://www.arsenalsports.com/produto/amoeba-spring-sniper-striker-as01-airsoft-rifle-desert-11365.html",
       "price": "USD 137,00",
       "image": "https://www.arsenalsports.com/img/11365/produtos/400/5fb4ac4f8ec7e2954eb40f5527d1c780.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -10268,7 +10268,7 @@
       "url": "https://www.arsenalsports.com/produto/amoeba-spring-sniper-striker-as01-airsoft-rifle-od-green-11531.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/11531/produtos/400/c794b017bb6362642eabb518b03c0e03.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -10292,7 +10292,7 @@
       "url": "https://www.arsenalsports.com/produto/amoeba-spring-sniper-striker-as01-airsoft-rifle-urban-grey-11700.html",
       "price": "USD 137,00",
       "image": "https://www.arsenalsports.com/img/11700/produtos/400/531e6f8d9dc5b81c36471c5e28f623c4.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -10312,7 +10312,7 @@
       "url": "https://www.arsenalsports.com/produto/amoeba-spring-sniper-striker-as03-airsoft-rifle-black-16148.html",
       "price": "USD 99,00",
       "image": "https://www.arsenalsports.com/img/16148/produtos/400/aefd419411cf75bd477a2a6a7909e424.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -10332,7 +10332,7 @@
       "url": "https://www.arsenalsports.com/produto/amoeba-spring-sniper-striker-as03-airsoft-rifle-od-green-16151.html",
       "price": "USD 99,00",
       "image": "https://www.arsenalsports.com/img/16151/produtos/400/c0ec2c39a189ece181670297d1ef24d3.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -10352,7 +10352,7 @@
       "url": "https://www.arsenalsports.com/produto/amoeba-spring-sniper-striker-as03-airsoft-rifle-tan-16150.html",
       "price": "USD 99,00",
       "image": "https://www.arsenalsports.com/img/16150/produtos/400/aa57779ecdba68324ab08034a9bd3362.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -10372,7 +10372,7 @@
       "url": "https://www.arsenalsports.com/produto/amoeba-spring-sniper-striker-as03-airsoft-rifle-urban-grey-15798.html",
       "price": "USD 99,00",
       "image": "https://www.arsenalsports.com/img/15798/produtos/400/d6357091d12786bb1ea2c5b34394b2d6.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -10392,7 +10392,7 @@
       "url": "https://www.arsenalsports.com/produto/-amoeba-spring-sniper-striker-t01-airsoft-rifle-urban-grey-18048.html",
       "price": "USD 135,00",
       "image": "https://www.arsenalsports.com/img/18048/produtos/400/b30b630d46171a8857219f712380645f.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -17636,7 +17636,7 @@
       "url": "https://www.arsenalsports.com/produto/archwick-spring-sniper-vsr-series-sgmk13-airsoft-rifle-black-20469.html",
       "price": "USD 415,00",
       "image": "https://www.arsenalsports.com/img/20469/produtos/400/4a22ea64bcd4a70a1a68f2b471da1ceb.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -17648,7 +17648,7 @@
       "url": "https://www.arsenalsports.com/produto/archwick-spring-sniper-vsr-series-sgmk13-airsoft-rifle-desert-20470.html",
       "price": "USD 415,00",
       "image": "https://www.arsenalsports.com/img/20470/produtos/400/5e964de8c0fc808e45ec0f407916cdcb.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -17660,7 +17660,7 @@
       "url": "https://www.arsenalsports.com/produto/archwick-spring-sniper-vsr-series-sgmk13c-airsoft-rifle-black-20471.html",
       "price": "USD 405,00",
       "image": "https://www.arsenalsports.com/img/20471/produtos/400/d8abcb25ba8ee0ef26700361faa43e4d.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -17672,7 +17672,7 @@
       "url": "https://www.arsenalsports.com/produto/archwick-spring-sniper-vsr-series-sgmk13c-airsoft-rifle-combat-grey-20473.html",
       "price": "USD 405,00",
       "image": "https://www.arsenalsports.com/img/20473/produtos/400/37468339e0f481f8f2f254b06fcbb22e.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -17684,7 +17684,7 @@
       "url": "https://www.arsenalsports.com/produto/archwick-spring-sniper-vsr-series-sgmk13c-airsoft-rifle-od-green-20474.html",
       "price": "USD 405,00",
       "image": "https://www.arsenalsports.com/img/20474/produtos/400/4afd111bba2208d2a2264fa6f46846bc.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -24911,7 +24911,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-aw338-msr006-airsoft-rifle-black-30692.html",
       "price": "USD 336,00",
       "image": "https://www.arsenalsports.com/img/30692/produtos/400/f8c8c000239272617a36b837ab1309dc.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -24923,7 +24923,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-edm200-power-airsoft-rifle-black-7737.html",
       "price": "USD 630,00",
       "image": "https://www.arsenalsports.com/img/7737/produtos/400/f8e2ea318d8d732b233d62c79545a760.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -24935,7 +24935,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-m40a6-msr025-airsoft-rifle-black-15797.html",
       "price": "USD 390,00",
       "image": "https://www.arsenalsports.com/img/15797/produtos/400/fb9fdc09c4341b42ab98514eaf3c6819.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -24947,7 +24947,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-m40a6-msr025-airsoft-rifle-desert-16091.html",
       "price": "USD 390,00",
       "image": "https://www.arsenalsports.com/img/16091/produtos/400/6bbd415b98b76c20986ec62cfbc230a4.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -24959,7 +24959,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-mcm700x-airsoft-rifle-tan-28685.html",
       "price": "USD 280,00",
       "image": "https://www.arsenalsports.com/img/28685/produtos/400/66de8526019f22dd7b982b5d06f072aa.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -24971,7 +24971,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-msr-msrwr-airsoft-rifle-black-14572.html",
       "price": "USD 325,00",
       "image": "https://www.arsenalsports.com/img/14572/produtos/400/63420a5f980df6a16ccb94a4d7281dda.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -24983,7 +24983,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-wa200-airsoft-rifle-wood-18358.html",
       "price": "USD 475,00",
       "image": "https://www.arsenalsports.com/img/18358/produtos/400/2499cb894596f969219f3d56aa0ea096.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -29789,7 +29789,7 @@
       "url": "https://www.arsenalsports.com/produto/barret-emg-aps-spring-sniper-fieldcraft-with-featherweight-zero-trigger-airsoft-rifle-black-18510.html",
       "price": "USD 169,00",
       "image": "https://www.arsenalsports.com/img/18510/produtos/400/a48ff1bae4a37a1db45416106152507c.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -29809,7 +29809,7 @@
       "url": "https://www.arsenalsports.com/produto/barret-emg-aps-spring-sniper-fieldcraft-with-featherweight-zero-trigger-airsoft-rifle-black-multicam-18512.html",
       "price": "USD 179,00",
       "image": "https://www.arsenalsports.com/img/18512/produtos/400/22641355b882199e66b7a1d6f59c6e13.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -29829,7 +29829,7 @@
       "url": "https://www.arsenalsports.com/produto/barret-emg-aps-spring-sniper-fieldcraft-with-featherweight-zero-trigger-airsoft-rifle-multicam-18511.html",
       "price": "USD 179,00",
       "image": "https://www.arsenalsports.com/img/18511/produtos/400/f3bab1967777eea301329526cd0143fb.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -29853,7 +29853,7 @@
       "url": "https://www.arsenalsports.com/produto/barret-emg-aps-spring-sniper-fieldcraft-with-featherweight-zero-trigger-airsoft-rifle-silver--black-18509.html",
       "price": "USD 179,00",
       "image": "https://www.arsenalsports.com/img/18509/produtos/400/c5907bc872dcc6b1d551058241f96979.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -29877,7 +29877,7 @@
       "url": "https://www.arsenalsports.com/produto/barrett-emg-aps-spring-sniper-fieldcraft-with-featherweight-zero-trigger-airsoft-rifle-woodland-25152.html",
       "price": "USD 170,00",
       "image": "https://www.arsenalsports.com/img/25152/produtos/400/140c8d07912d532d9964daba85bab3e5.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -34456,7 +34456,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-aeg-scar-heavy-long-mk1hl-with-25-gearbox-airsoft-rifle-black-24076.html",
       "price": "USD 256,00",
       "image": "https://www.arsenalsports.com/img/24076/produtos/400/a2ad7fc9e1d07412ad8b8c8265521e60.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -39495,7 +39495,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-spring-sniper-m24-socom-mil-airsoft-rifle-black-29187.html",
       "price": "USD 109,00",
       "image": "https://www.arsenalsports.com/img/29187/produtos/400/4dce73d4186275792ba2fa734e9c339e.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -39647,7 +39647,7 @@
       "url": "https://www.arsenalsports.com/produto/cybergun-spring-pt92-polymer-airsoft-pistol-black-24194.html",
       "price": "USD 18,00",
       "image": "https://www.arsenalsports.com/img/24194/produtos/400/bdce1c156c56329910b2d5299fc37a89.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -39751,7 +39751,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-aeg-ak47-sport-series-imitation-wood-and-metal-gearbox-airsoft-rifle-wood--black-17020.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/17020/produtos/400/15bb79b0c5ff254685f80159ebfd5ba4.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -39850,7 +39850,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-aeg-g36c-sport-abs-with-gearbox-v3-airsoft-rifle-black-26091.html",
       "price": "USD 143,00",
       "image": "https://www.arsenalsports.com/img/26091/produtos/400/775b07d8d0aea0631cc629d733684d62.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -48786,7 +48786,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-gbb-m4a1-ris-handguard-145-with-cgs-system-blowback-airsoft-rifle-black-28557.html",
       "price": "USD 460,00",
       "image": "https://www.arsenalsports.com/img/28557/produtos/400/86a4bde8ac52a36536f6e5be7b8d8435.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -48798,7 +48798,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-gbbr-m4-mlok-handguard-525-smg-with-cgs-system-blowback-airsoft-rifle-black-30523.html",
       "price": "USD 399,00",
       "image": "https://www.arsenalsports.com/img/30523/produtos/400/4ead562719523245640b7da18cd02e56.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -48830,7 +48830,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-noveske-aeg-n4-sbr-7-with-platinum-gearbox-airsoft-rifle-black-34110.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34110/produtos/400/f5c567b1d0eff07d685d4555cb36212a.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -48850,7 +48850,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-spring-sniper-l96-standard-bolt-action-high-power-airsoft-rifle-black-11646.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/11646/produtos/400/bcddbe7bcd68f71c82360f724242b5ec.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -48870,7 +48870,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-spring-sniper-l96-standard-bolt-action-high-power-airsoft-rifle-tan-26114.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/26114/produtos/400/a382ffa20d468fb79c20500cf2fab0dd.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -48890,7 +48890,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-spring-sniper-m24-standard-military-us-army-scout-airsoft-rifle-black-26116.html",
       "price": "USD 109,00",
       "image": "https://www.arsenalsports.com/img/26116/produtos/400/e9aa98678f8f641e515738d06a82019e.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -48902,7 +48902,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-spring-sniper-m24-standard-military-us-army-scout-airsoft-rifle-tan-26117.html",
       "price": "USD 109,00",
       "image": "https://www.arsenalsports.com/img/26117/produtos/400/3b9b79e4e8cb5f0210509b00f1f6df22.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -48914,7 +48914,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-spring-sniper-m700-airsoft-rifle-black-11643.html",
       "price": "USD 99,00",
       "image": "https://www.arsenalsports.com/img/11643/produtos/400/827627462d7347f4eac767f9d9189c6a.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -48926,7 +48926,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-spring-sniper-m700-airsoft-rifle-wood-11644.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/11644/produtos/400/ac100ac628c1a3787d45ca16ba2e9a6a.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [],
@@ -49159,7 +49159,7 @@
       "url": "https://www.arsenalsports.com/produto/dytac-slr-cyma-aeg-ak47-ris-with-qd-spring-gearbox-type-ak74-airsoft-rifle-black-26070.html",
       "price": "USD 339,00",
       "image": "https://www.arsenalsports.com/img/26070/produtos/400/813ee6ff37b988bf9c423bd4b1a7a6fb.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -49171,7 +49171,7 @@
       "url": "https://www.arsenalsports.com/produto/emg-ares-spring-sniper-ev01-helios-airsoft-rifle-black-21206.html",
       "price": "USD 186,00",
       "image": "https://www.arsenalsports.com/img/21206/produtos/400/1b28b2064fef7b268c12924a508d09d0.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -49183,7 +49183,7 @@
       "url": "https://www.arsenalsports.com/produto/emg-ares-spring-sniper-ev01-helios-airsoft-rifle-desert-21207.html",
       "price": "USD 186,00",
       "image": "https://www.arsenalsports.com/img/21207/produtos/400/b9508453dd519a4e047fc9d508b8529b.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -49195,7 +49195,7 @@
       "url": "https://www.arsenalsports.com/produto/emg-ares-spring-sniper-ev01-helios-airsoft-rifle-od-green-21208.html",
       "price": "USD 186,00",
       "image": "https://www.arsenalsports.com/img/21208/produtos/400/d226fca024c6a7d522e8281198430b6c.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -53408,7 +53408,7 @@
       "url": "https://www.arsenalsports.com/produto/emg-ares-spring-sniper-ev01-helios-airsoft-rifle-urban-grey-28646.html",
       "price": "USD 186,00",
       "image": "https://www.arsenalsports.com/img/28646/produtos/400/db82a3c5ba1771e755c7bef4db81260b.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -62017,7 +62017,7 @@
       "url": "https://www.arsenalsports.com/produto/gg-aeg-gtw91p-20-roc-with-gearbox-g2-and-mlok-handguard-airsoft-rifle-black-13689.html",
       "price": "USD 280,00",
       "image": "https://www.arsenalsports.com/img/13689/produtos/400/f08e0478a32bf1f9a325ebd6009a02b3.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -62053,7 +62053,7 @@
       "url": "https://www.arsenalsports.com/produto/gg-aeg-m4-tgr-g3-sgr556-split-gearbox-airsoft-rifle-black-23371.html",
       "price": "USD 390,00",
       "image": "https://www.arsenalsports.com/img/23371/produtos/400/7a2d5419125ce28c3302e3cbebcd3bce.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -66794,7 +66794,7 @@
       "url": "https://www.arsenalsports.com/produto/gg-gbbr-mgcr-556-mlock-handguard-10-blowback-airsoft-rifle-black-25484.html",
       "price": "USD 495,00",
       "image": "https://www.arsenalsports.com/img/25484/produtos/400/474e57eaf8c31ce09ffaf9a4ff2b064f.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -66806,7 +66806,7 @@
       "url": "https://www.arsenalsports.com/produto/gg-gbbr-mgcr-556-mlock-handguard-7-blowback-airsoft-rifle-black-25486.html",
       "price": "USD 495,00",
       "image": "https://www.arsenalsports.com/img/25486/produtos/400/4ac0c8ade3df3261d30d0c3db90727b3.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -75016,7 +75016,7 @@
       "url": "https://www.arsenalsports.com/produto/ics-spring-sniper-cxptomahawk-airsoft-rifle-black-combo-23898.html",
       "price": "USD 629,00",
       "image": "https://www.arsenalsports.com/img/23898/produtos/400/242d703bf47a910a39967485d6ea9318.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -75028,7 +75028,7 @@
       "url": "https://www.arsenalsports.com/produto/ics-spring-sniper-cxptomahawk-airsoft-rifle-od-green-combo-25002.html",
       "price": "USD 629,00",
       "image": "https://www.arsenalsports.com/img/25002/produtos/400/3b6a3c29166dcb12f1824256fe55b24a.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -78353,7 +78353,7 @@
       "url": "https://www.arsenalsports.com/produto/kingarms-spring-sniper-svd-rifle-ultra-grade-airsoft-rifle-black-22200.html",
       "price": "USD 228,00",
       "image": "https://www.arsenalsports.com/img/22200/produtos/400/03d2daf8a3f15dc50d68fe0bb26ef1fe.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -82036,7 +82036,7 @@
       "url": "https://www.arsenalsports.com/produto/kriss-vector-gbb-smg-rifle-by-krytac-with-folding-stock-dual-tone-30680.html",
       "price": "USD 429,00",
       "image": "https://www.arsenalsports.com/img/30680/produtos/400/026e19064a332c1e9f5920fa21408ac2.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -82048,7 +82048,7 @@
       "url": "https://www.arsenalsports.com/produto/kriss-vector-gbb-smg-rifle-by-krytac-with-folding-stock-flat-dark-earth-30681.html",
       "price": "USD 429,00",
       "image": "https://www.arsenalsports.com/img/30681/produtos/400/5625765af75a77a68e969ebc363d0626.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -82386,7 +82386,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-km4-cqb-with-gearbox-2gx-airsoft-rifle-black-18356.html",
       "price": "USD 194,00",
       "image": "https://www.arsenalsports.com/img/18356/produtos/400/0c39bb749b6bae178ca253aa2696a5b9.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -82398,7 +82398,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-km4-sr7-with-gearbox-2gx-with-handguard-7-picatinny-airsoft-rifle-black-15249.html",
       "price": "USD 229,00",
       "image": "https://www.arsenalsports.com/img/15249/produtos/400/688dc0c26b3cca6c46387b23c05d1126.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -82410,7 +82410,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-km4-sr7-with-gearbox-2gx-with-handguard-7-picatinny-airsoft-rifle-flat-dark-earth-16071.html",
       "price": "USD 229,00",
       "image": "https://www.arsenalsports.com/img/16071/produtos/400/3b56bfa3a67979e27435d8ad253576e4.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -82434,7 +82434,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-qrf-mod-2-with-gearbox-25-vps-airsoft-rifle-black-16066.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/16066/produtos/400/39576cb584d3f74f316acc4b1b067314.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -82506,7 +82506,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-vm4-ronin-10-sbr-with-gearbox-aeg-25-airsoft-rifle-black-12744.html",
       "price": "USD 394,00",
       "image": "https://www.arsenalsports.com/img/12744/produtos/400/76762797ca46cc5293a58231b38a3f00.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -82518,7 +82518,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-vm4-ronin-t6-with-gearbox-aeg-25-pdw-airsoft-rifle-black-16074.html",
       "price": "USD 356,00",
       "image": "https://www.arsenalsports.com/img/16074/produtos/400/7c94603f4d33ae7ce829cdc7af22af0b.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -82530,7 +82530,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-vm4a1-with-gearbox-aeg-25-vps--cuttof-airsoft-rifle-black-13392.html",
       "price": "USD 199,00",
       "image": "https://www.arsenalsports.com/img/13392/produtos/400/64062954d65c2670ca349de1c0e07bd0.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -89137,7 +89137,7 @@
       "url": "https://www.arsenalsports.com/produto/modify-spring-sniper-bolt-action-steyr-scout-airsoft-rifle-black-19481.html",
       "price": "USD 395,00",
       "image": "https://www.arsenalsports.com/img/19481/produtos/400/8293489336d023711c853e8111088497.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -92508,7 +92508,7 @@
       "url": "https://www.arsenalsports.com/produto/novritsch-spring-sniper-ssg10-a1-460fps-airsoft-rifle-black-21535.html",
       "price": "USD 327,00",
       "image": "https://www.arsenalsports.com/img/21535/produtos/400/f5bab81734c332eb36db28b84ff61992.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -92520,7 +92520,7 @@
       "url": "https://www.arsenalsports.com/produto/novritsch-spring-sniper-ssg10-a2-460fps-airsoft-rifle-black-21536.html",
       "price": "USD 390,00",
       "image": "https://www.arsenalsports.com/img/21536/produtos/400/be0e18f43e61ffe5a831b6bb53fc31d2.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -92532,7 +92532,7 @@
       "url": "https://www.arsenalsports.com/produto/novritsch-spring-sniper-ssg24-kit-basic-airsoft-rifle-black-combo-15569.html",
       "price": "USD 465,00",
       "image": "https://www.arsenalsports.com/img/15569/produtos/400/8380181fc3fa2de6291a7b5a76140dda.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -92859,7 +92859,7 @@
       "url": "https://www.arsenalsports.com/produto/poseidon-aeg-m4-theseus-with-medusa--tracer-boltin-airsoft-rifle-black-35410.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35410/produtos/400/7ef136d57ca628844a16d800f9cf0dde.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -99322,7 +99322,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-bolt-action-m870-short-airsoft-rifle-silver-23133.html",
       "price": "USD 119,00",
       "image": "https://www.arsenalsports.com/img/23133/produtos/400/41bceab8db9f497b11d7485b7dde7cfe.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -99334,7 +99334,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-bolt-action-m870-short-airsoft-rifle-wood-23136.html",
       "price": "USD 90,00",
       "image": "https://www.arsenalsports.com/img/23136/produtos/400/b264559e7ad318b75d0f76f65144be12.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -99370,7 +99370,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-sniper-m1903-a3-airsoft-rifle-black--real-wood-23140.html",
       "price": "USD 332,00",
       "image": "https://www.arsenalsports.com/img/23140/produtos/400/be6f635c406a92097d2b7a251ddd6d72.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -99394,7 +99394,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-sniper-m24-bolt-action-airsoft-rifle-black-23141.html",
       "price": "USD 119,00",
       "image": "https://www.arsenalsports.com/img/23141/produtos/400/748569f7fbf02d20879656a77d61d932.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -103990,7 +103990,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-desert-tech-spring-sniper-hti-bullpup-bolt-action-airsoft-rifle-black-16372.html",
       "price": "USD 699,00",
       "image": "https://www.arsenalsports.com/img/16372/produtos/400/86691fe87d71a95ed0389eed3e8961aa.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [],
@@ -104005,7 +104005,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-desert-tech-spring-sniper-hti-bullpup-bolt-action-airsoft-rifle-flat-dark-earth-11275.html",
       "price": "USD 699,00",
       "image": "https://www.arsenalsports.com/img/11275/produtos/400/471ec395b3cad98e64841412634869ca.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [],
@@ -104020,7 +104020,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-a2--m2-22-airsoft-rifle-black-19716.html",
       "price": "USD 496,00",
       "image": "https://www.arsenalsports.com/img/19716/produtos/400/7ef9d1ab3847ae3f19e89e83a061c200.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -104032,7 +104032,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-a2-16-bolt-action-airsoft-rifle-black-16902.html",
       "price": "USD 446,00",
       "image": "https://www.arsenalsports.com/img/16902/produtos/400/1874647671fa8fcefff94d4a02990e01.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -104044,7 +104044,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-a2-m2-16-convert-bolt-action-airsoft-rifle-dual-tone-19723.html",
       "price": "USD 486,00",
       "image": "https://www.arsenalsports.com/img/19723/produtos/400/fb0349b8cb5c913d68d94c143d75d660.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -104056,7 +104056,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-a2-m2-16-convert-bolt-action-airsoft-rifle-od-green-19724.html",
       "price": "USD 486,00",
       "image": "https://www.arsenalsports.com/img/19724/produtos/400/5f4c43576042654ce2c1945a0fdee653.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -104068,7 +104068,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-a2-m2-16-sport-bolt-action-airsoft-rifle-od-green-19727.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/19727/produtos/400/b2d949a2c542e3d9fa2e2fd372d41d75.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -104080,7 +104080,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41-lr-bolt-action-airsoft-black-34758.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34758/produtos/400/dac305e3d9230f2ccdbef7688c2cc955.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -104092,7 +104092,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41-lr-bolt-action-airsoft-od-green-34760.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34760/produtos/400/7c89f12664d7171aa0dfa41458625890.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [],
@@ -104107,7 +104107,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41a-bolt-action-airsoft-rifle-black-22221.html",
       "price": "USD 399,00",
       "image": "https://www.arsenalsports.com/img/22221/produtos/400/81295a223e4271fc530bb92bc81b4654.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -104119,7 +104119,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41a-bolt-action-airsoft-rifle-od-green-22223.html",
       "price": "USD 399,00",
       "image": "https://www.arsenalsports.com/img/22223/produtos/400/472ee5a13bf0176693fab9844dfd4e2d.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -104131,7 +104131,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41a2r-bolt-action-airsoft-rifle-black-34755.html",
       "price": "USD 395,00",
       "image": "https://www.arsenalsports.com/img/34755/produtos/400/9bc4dbe0ba2169aeb6e16ffee55cf23c.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [],
@@ -104146,7 +104146,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41a2r-bolt-action-airsoft-rifle-flat-dark-earth-34756.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34756/produtos/400/dc29127a0bf3618dcdb556f8507a2ede.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -104166,7 +104166,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41a2r-bolt-action-airsoft-rifle-od-green-34757.html",
       "price": "USD 395,00",
       "image": "https://www.arsenalsports.com/img/34757/produtos/400/e63525bd91d07406e440f52d72210b59.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [],
@@ -104181,7 +104181,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41p-bolt-action-airsoft-rifle-black-19728.html",
       "price": "USD 349,00",
       "image": "https://www.arsenalsports.com/img/19728/produtos/400/c91a3415fbf03ef018d1aaa75044b5fb.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -104193,7 +104193,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41p-bolt-action-airsoft-rifle-flat-dark-earth-19729.html",
       "price": "USD 349,00",
       "image": "https://www.arsenalsports.com/img/19729/produtos/400/474992b1aa24ffc5cee68e323ee10493.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -107361,7 +107361,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41p-bolt-action-airsoft-rifle-od-green-19730.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/19730/produtos/400/b4199b30b9194fdef0b22390d5cb6eab.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -112196,7 +112196,7 @@
       "url": "https://www.arsenalsports.com/produto/strike-emg-kingarms-ar15-sentinel-with-gridlock-lite-handguard-85-airsoft-rifle-black-26514.html",
       "price": "USD 295,00",
       "image": "https://www.arsenalsports.com/img/26514/produtos/400/398f4c162607930bf6dd2946bc30fc38.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -112520,7 +112520,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-aeg-p90-tr-with-silencer-pdw-airsoft-rifle-black-24271.html",
       "price": "USD 375,00",
       "image": "https://www.arsenalsports.com/img/24271/produtos/400/33af1c6a6790f694d805acdd36c695b7.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -116054,7 +116054,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-gbbr-type-89-folding-stock-blowback-airsoft-rifle-black-26131.html",
       "price": "USD 677,00",
       "image": "https://www.arsenalsports.com/img/26131/produtos/400/1406207716ddfb3b4ae2b52fb301600e.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -116066,7 +116066,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-m40a5-airsoft-rifle-od-green-12751.html",
       "price": "USD 379,00",
       "image": "https://www.arsenalsports.com/img/12751/produtos/400/84c63176e9be5bedfa5fc391d9e55813.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -116078,7 +116078,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-vsr10-pro-airsoft-rifle-black-7760.html",
       "price": "USD 255,00",
       "image": "https://www.arsenalsports.com/img/7760/produtos/400/c397fad3780e3b3b916defb0209b52c1.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -116090,7 +116090,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-vsr10-pro-hunter-airsoft-rifle-black-11451.html",
       "price": "USD 420,00",
       "image": "https://www.arsenalsports.com/img/11451/produtos/400/da009273b2db7d24abaaf2d0ff231f99.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -116102,7 +116102,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-vsr10-shock-g-speck-airsoft-rifle-od-green-24283.html",
       "price": "USD 290,00",
       "image": "https://www.arsenalsports.com/img/24283/produtos/400/b97a2dd4cd7ef7f252eabad13a2c2557.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -116114,7 +116114,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-vsrone-airsoft-rifle-black-24307.html",
       "price": "USD 337,00",
       "image": "https://www.arsenalsports.com/img/24307/produtos/400/472f00edce3276068eb9e0eb36dfa1ba.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -116126,7 +116126,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-vsrone-airsoft-rifle-blue-28730.html",
       "price": "USD 337,00",
       "image": "https://www.arsenalsports.com/img/28730/produtos/400/49a943c439adbb9383d6ce8013aded98.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -116138,7 +116138,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-vsrone-airsoft-rifle-grey-28731.html",
       "price": "USD 337,00",
       "image": "https://www.arsenalsports.com/img/28731/produtos/400/515fc0e6d8ad8f849df89300e8d5d7b5.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -119626,7 +119626,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-gbb-1911-tactical-custom-blowblack-airsoft-pistol-black-w1-extra-magazine-25289.html",
       "price": "USD 160,00",
       "image": "https://www.arsenalsports.com/img/25289/produtos/400/c5adc9e7959e860bded04096806175c9.jpg",
-      "category": "magazines",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -119752,7 +119752,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-spring-sniper-m40a3-mcmilan-airsoft-rifle-od-green-10538.html",
       "price": "USD 225,00",
       "image": "https://www.arsenalsports.com/img/10538/produtos/400/95453cda1fe3b1e3e61ba4735bc7199c.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -131055,7 +131055,7 @@
       "url": "https://www.arsenalsports.com/produto/we-gbbr-plr16-socomgear-blowback-airsoft-rifle-black-18963.html",
       "price": "USD 299,00",
       "image": "https://www.arsenalsports.com/img/18963/produtos/400/1e5f7822d68182a91b77b52e75f4b3f1.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -133680,7 +133680,7 @@
       "url": "https://www.arsenalsports.com/produto/wellpro-gbbr-sig-lt6-cnc-handguard-6-blowback-airsoft-rifle-black-32243.html",
       "price": "USD 660,00",
       "image": "https://www.arsenalsports.com/img/32243/produtos/400/44a4e4359f52ae8303779d397a73698c.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": [
@@ -133983,7 +133983,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-bolt-action--m870-sxr-training-shotgun-long-version-airsoft-rifle-black-32217.html",
       "price": "USD 136,00",
       "image": "https://www.arsenalsports.com/img/32217/produtos/400/a5338da9ad8847a1bfb1f7733db19824.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -133995,7 +133995,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-bolt-action-m870-full-metal-400fps-training-shotgun-long-version-airsoft-rifle-black-27506.html",
       "price": "USD 110,00",
       "image": "https://www.arsenalsports.com/img/27506/produtos/400/b1c38a279d76482f7cd6e6239508dc34.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -134007,7 +134007,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-bolt-action-m870-full-metal-400fps-training-shotgun-long-version-airsoft-rifle-wood--black-32259.html",
       "price": "USD 116,00",
       "image": "https://www.arsenalsports.com/img/32259/produtos/400/77ef2914a735c78c626ff593cf0b1cc7.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -136703,7 +136703,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-bolt-action-m870-sxr-training-shotgun-long-version--adjustable-stock-airsoft-rifle-black-32261.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/32261/produtos/400/2b1a852e8b29db9b2ccfd9516c7807bb.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -136723,7 +136723,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-bolt-action-m870-sxr-training-shotgun-long-version--rectrable-stock-airsoft-rifle-black-32260.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/32260/produtos/400/b5d2395ac218def18ae5366957546493.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -136743,7 +136743,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-bolt-action-m870-sxr-training-shotgun-short-version-airsoft-rifle-black-33467.html",
       "price": "USD 126,00",
       "image": "https://www.arsenalsports.com/img/33467/produtos/400/bee5bab9e0801b61e7c5b469d82e1f51.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -136755,7 +136755,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-bolt-action-m870-training-shotgun-short-version-airsoft-rifle-read-wood--black-32263.html",
       "price": "USD 86,00",
       "image": "https://www.arsenalsports.com/img/32263/produtos/400/c56e5b44bfd5ae3792a3094f908993d1.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -136767,7 +136767,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-bolt-action-m870-training-shotgun-short-version-airsoft-rifle-wood--black-32262.html",
       "price": "USD 98,00",
       "image": "https://www.arsenalsports.com/img/32262/produtos/400/0f79dc69d806207200ab625eb192ce10.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -136779,7 +136779,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-bolt-action-m870-training-shotgun-tactical-version-airsoft-rifle-black-32264.html",
       "price": "USD 139,00",
       "image": "https://www.arsenalsports.com/img/32264/produtos/400/8cd0c6d3d1b8fc993bd3e007303546f1.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -136839,7 +136839,7 @@
       "url": "https://www.arsenalsports.com/produto/action-army-spring-sniper-bolt-action-acct10-airsoft-rifle-flat-dark-earth-combo-14690.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/14690/produtos/400/39d85317c63f2c2a58673fe60bf2a92c.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -137018,7 +137018,7 @@
       "url": "https://www.arsenalsports.com/produto/amoeba-spring-sniper-striker-as01-with-wolverine-airsoft-bolt-m-hpa-engine-airsoft-rifle-black-combo-30413.html",
       "price": "USD 399,00",
       "image": "https://www.arsenalsports.com/img/30413/produtos/400/3b9614c69ca3d5397ea82c5414fb394a.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -141891,7 +141891,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-hpa-spring-sniper-edm200-power-airsoft-rifle-black-combo-32986.html",
       "price": "USD 818,00",
       "image": "https://www.arsenalsports.com/img/32986/produtos/400/66290816b0c21589800bb51ff9f7f90f.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -142047,7 +142047,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-classic-kar98-wwii-airsoft-rifle-wood-36198.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/36198/produtos/400/86aa84ffb877875c2ae2832f43e19272.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-10-26T18:27:27.316Z",
       "priceHistory": [],
@@ -142061,7 +142061,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-classic-l42a1-airsoft-rifle-wood-36196.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/36196/produtos/400/2e4f0220419ac9201cfdedc9344ebbd8.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-10-24T15:36:41.760Z",
       "priceHistory": [],
@@ -142075,7 +142075,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-classic-smle-british-no-4-mk1-airsoft-rifle-wood-36197.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/36197/produtos/400/4e41edcbad800a6376ad1e0446db5303.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-10-26T18:27:27.316Z",
       "priceHistory": [],
@@ -142089,7 +142089,7 @@
       "url": "https://www.arsenalsports.com/produto/ares-spring-sniper-kar98k-wwii-alloy-zinc-airsoft-rifle-wood-28645.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/28645/produtos/400/5c793ab3b663cf4e96be743c75785907.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -146501,7 +146501,7 @@
       "url": "https://www.arsenalsports.com/produto/armorer-works-gbb-g-series-vx02-hex-series-with-roni-and-long-mag-grey-combo-17739.html",
       "price": "USD 235,00",
       "image": "https://www.arsenalsports.com/img/17739/produtos/400/a82fdea408974b1ddd41cdde636dbc83.jpg",
-      "category": "magazines",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -146513,7 +146513,7 @@
       "url": "https://www.arsenalsports.com/produto/armorer-works-gbb-g-series-vx02-hex-series-with-roni-and-long-mag-tan-combo-17738.html",
       "price": "USD 235,00",
       "image": "https://www.arsenalsports.com/img/17738/produtos/400/d57f059eb66f0890c6bc9fd1f6004030.jpg",
-      "category": "magazines",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -146805,7 +146805,7 @@
       "url": "https://www.arsenalsports.com/produto/barret-emg-aps-spring-sniper-fieldcraft-with-featherweight-zero-trigger-airsoft-rifle-black-combo-33943.html",
       "price": "USD 245,00",
       "image": "https://www.arsenalsports.com/img/33943/produtos/400/a9c26ca3066bf15a33987a7b95cc1fa7.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -146817,7 +146817,7 @@
       "url": "https://www.arsenalsports.com/produto/barret-emg-aps-spring-sniper-fieldcraft-with-featherweight-zero-trigger-airsoft-rifle-black-multicam-combo-33945.html",
       "price": "USD 253,00",
       "image": "https://www.arsenalsports.com/img/33945/produtos/400/2de7bd35032354a07071600441f81ba1.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -146829,7 +146829,7 @@
       "url": "https://www.arsenalsports.com/produto/barret-emg-aps-spring-sniper-fieldcraft-with-featherweight-zero-trigger-airsoft-rifle-multicam-combo-33944.html",
       "price": "USD 253,00",
       "image": "https://www.arsenalsports.com/img/33944/produtos/400/0dec9108d8e41075fcf1a1dd97c3e9f1.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -146841,7 +146841,7 @@
       "url": "https://www.arsenalsports.com/produto/barrett-emg-aps-spring-sniper-fieldcraft-with-featherweight-zero-trigger-airsoft-rifle-silver--black-combo-28134.html",
       "price": "USD 259,00",
       "image": "https://www.arsenalsports.com/img/28134/produtos/400/2d80d54104858bc02d5e5140a3770a78.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -150633,7 +150633,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-aeg-scar-heavy-long-mk1hl-with-25-gearbox-airsoft-rifle-desert-24077.html",
       "price": "USD 256,00",
       "image": "https://www.arsenalsports.com/img/24077/produtos/400/52236477a2a9b4fab2d4be5e0b4c00c8.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -152701,7 +152701,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-m4-mk18-handguard-10-system-mws-blowback-airsoft-rifle-black-35873.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35873/produtos/400/no-img.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -152715,7 +152715,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-m4-mk18-handguard-10-system-mws-blowback-airsoft-rifle-dual-tone-35871.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35871/produtos/400/no-img.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -152729,7 +152729,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-mk16-handguard-urgi-135-system-mws-blowback-airsoft-rifle-black-35880.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35880/produtos/400/d7b83977ca3a1e1af0f2f60a0ec11620.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -152743,7 +152743,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-mk16-handguard-urgi-135-system-mws-blowback-airsoft-rifle-dual-tone-35875.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35875/produtos/400/7acf60ffabf78f4e389bd8f2c828531a.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -152757,7 +152757,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-mk16-handguard-urgi-95-system-mws-blowback-airsoft-rifle-black-35883.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35883/produtos/400/499005152bf0a32863589c3984ee7538.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -152771,7 +152771,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-mk16-handguard-urgi-95-system-mws-blowback-airsoft-rifle-dual-tone-35881.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35881/produtos/400/13968b6436537c43b765a1bc6fb359b8.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -152785,7 +152785,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-n4-handguard-135-mlok-system-mws-csr-blowback-airsoft-rifle-black-35866.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35866/produtos/400/27698fd9e585fd19763f9516e978b0cc.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -152799,7 +152799,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-n4-handguard-135-mlok-system-mws-csr-blowback-airsoft-rifle-dual-tone-35867.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35867/produtos/400/25f25e03ffc87dfdbd3f081b5d62b45d.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -152813,7 +152813,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-n4-handguard-95-mlok-system-mws-csr-blowback-airsoft-rifle-black-35864.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35864/produtos/400/c6d463cd6c01a8d7775ec9e2d0d55468.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -152827,7 +152827,7 @@
       "url": "https://www.arsenalsports.com/produto/classic-army-gbbr-n4-handguard-95-mlok-system-mws-csr-blowback-airsoft-rifle-dual-tone-35863.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35863/produtos/400/d7949da7ead2ac66c7eb36ebc34934c1.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-08-13T13:18:16.685Z",
       "priceHistory": [],
@@ -153039,7 +153039,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-aeg-ak47-sport-ris-tactical-with-metal-gearbox-airsoft-rifle-black-17019.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/17019/produtos/400/b601b0302356d1c7f12486aa3e95f1ed.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -156052,7 +156052,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-colt-gbbr-mk18-colt-103-with-cgs-system-handguard-blowback-airsoft-rifle-black-34056.html",
       "price": "USD 486,00",
       "image": "https://www.arsenalsports.com/img/34056/produtos/400/6b1cc5ca644925462e811efd3cc246ec.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -156064,7 +156064,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-emg-gbbr-m4-colt-mk18-mod1-105-with-cgs-system-handguard-blowback-airsoft-rifle-dual-tone-34057.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34057/produtos/400/c0f937f186168f5113cd11de77391fbd.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -156096,7 +156096,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-noveske-aeg-n4-sbr-7-with-platinum-gearbox-airsoft-rifle-flat-dark-earth-34111.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34111/produtos/400/ac005a5ed12d3f92a27dd98e5310e592.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [],
@@ -156111,7 +156111,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-noveske-aeg-n4-sbr-7-with-platinum-gearbox-airsoft-rifle-od-green-34112.html",
       "price": "USD 346,00",
       "image": "https://www.arsenalsports.com/img/34112/produtos/400/7ed53bf6e65c261be12db041ed44a918.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -156123,7 +156123,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-spring-sniper-l96-standard-bolt-action-high-power-airsoft-rifle-od-green-26115.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/26115/produtos/400/5a1f1b53c3f6214f37317852bf14ab11.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -156135,7 +156135,7 @@
       "url": "https://www.arsenalsports.com/produto/cyma-spring-sniper-m700-with-folding-skeletal-stock-series-airsoft-rifle-black-26113.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/26113/produtos/400/aead634523905e81197b63a4fb10bf94.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -158414,7 +158414,7 @@
       "url": "https://www.arsenalsports.com/produto/daniel-defense-emg-cyma-aeg-dd5-sbr-105-rail-with-platinum-gearbox--kestrel-ver-2-mosfet-airsoft-rifle-black-34106.html",
       "price": "USD 480,00",
       "image": "https://www.arsenalsports.com/img/34106/produtos/400/6ddfa4861b18210be860cfe75661beae.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -158426,7 +158426,7 @@
       "url": "https://www.arsenalsports.com/produto/daniel-defense-emg-cyma-aeg-dd5-v3-15-rail-with-platinum-gearbox--kestrel-ver-2-mosfet-airsoft-rifle-black-34109.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34109/produtos/400/514128db995ef33f66f9f1a0d2576840.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -158438,7 +158438,7 @@
       "url": "https://www.arsenalsports.com/produto/daniel-defense-emg-cyma-aeg-m4-ddm4-riii-300-with-gearbox-platinum-airsoft-rifle-black-34098.html",
       "price": "USD 350,00",
       "image": "https://www.arsenalsports.com/img/34098/produtos/400/7c7e2dd0e8ed94039a4bf009af333e10.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -158450,7 +158450,7 @@
       "url": "https://www.arsenalsports.com/produto/daniel-defense-emg-cyma-aeg-m4-ddm4-riii-300-with-gearbox-platinum-airsoft-rifle--flat-dark-earth-34099.html",
       "price": "USD 350,00",
       "image": "https://www.arsenalsports.com/img/34099/produtos/400/4d3ff54da5148e3d85e5d653c11fad53.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -158462,7 +158462,7 @@
       "url": "https://www.arsenalsports.com/produto/daniel-defense-emg-cyma-aeg-m4-ddm4-riii-300-with-gearbox-platinum-airsoft-rifle-silver-34100.html",
       "price": "USD 350,00",
       "image": "https://www.arsenalsports.com/img/34100/produtos/400/3e96ef33816b4b44b77b963a5e3bba01.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -167040,7 +167040,7 @@
       "url": "https://www.arsenalsports.com/produto/ics-gbb-sar9-blowback-with-optics-red-dot--magazine-airsoft-pistol-black-combo-34250.html",
       "price": "USD 239,00",
       "image": "https://www.arsenalsports.com/img/34250/produtos/400/361cc08a016a61e253ee3ffa5ee04013.jpg",
-      "category": "magazines",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -167120,7 +167120,7 @@
       "url": "https://www.arsenalsports.com/produto/kingarms-spring-sniper-svd-rifle-ultra-grade-airsoft-rifle-black-combo-31147.html",
       "price": "USD 365,00",
       "image": "https://www.arsenalsports.com/img/31147/produtos/400/6b4e8362e87e0db8580a363a36880f05.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -168655,7 +168655,7 @@
       "url": "https://www.arsenalsports.com/produto/kingarms-spring-sniper-svd-rifle-ultra-grade-with-hydra-gen-ii-line-up-airsoft-rifle-black-combo-30418.html",
       "price": "USD 650,00",
       "image": "https://www.arsenalsports.com/img/30418/produtos/400/249ae11f537f8fd65bf7461c4db59dfa.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -168679,7 +168679,7 @@
       "url": "https://www.arsenalsports.com/produto/kjw-gbb-m9-blowback-with-mag-co2-airsoft-pistol-black-4880.html",
       "price": "USD 115,00",
       "image": "https://www.arsenalsports.com/img/4880/produtos/400/dc1412f462e3356d969d272181e73e5d.jpg",
-      "category": "magazines",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -168989,7 +168989,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-km4-cqb-with-gearbox-2gx--eshooter-etu-airsoft-rifle-black-combo-28359.html",
       "price": "USD 220,00",
       "image": "https://www.arsenalsports.com/img/28359/produtos/400/5f47a342bddf4db961a0109fb236da42.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -169001,7 +169001,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-km4-sr7-with-gearbox-2gx-with-handguard-7-picatinny--eshooter-etu-airsoft-rifle-black-28368.html",
       "price": "USD 255,00",
       "image": "https://www.arsenalsports.com/img/28368/produtos/400/4cc049ea650d2f31db79df94e23e9a8a.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -169013,7 +169013,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-km4-sr7-with-gearbox-2gx-with-handguard-7-picatinny--eshooter-etu-airsoft-rifle-flat-dark-earth-combo-28370.html",
       "price": "USD 258,00",
       "image": "https://www.arsenalsports.com/img/28370/produtos/400/23575718b911f61e7064afba79930acd.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -169025,7 +169025,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-km4a1-with-gearbox-2gx--eshooter-etu-airsoft-rifle-black-combo-35435.html",
       "price": "USD 218,00",
       "image": "https://www.arsenalsports.com/img/35435/produtos/400/afcaed95e76192bfe65343f513f1dd49.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -169037,7 +169037,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-qrf-mod-2-with-gearbox-25-vps--etu-eshooter-airsoft-rifle-black-combo-18813.html",
       "price": "USD 340,00",
       "image": "https://www.arsenalsports.com/img/18813/produtos/400/c57f3714eb6485281d6dcab877635ec6.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -169085,7 +169085,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-vm4-ronin-10-sbr-with-gearbox-aeg-25-airsoft-rifle-black-combo-35437.html",
       "price": "USD 428,00",
       "image": "https://www.arsenalsports.com/img/35437/produtos/400/511e89be1463718452c0266575d3b096.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -169097,7 +169097,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-vm4-ronin-t6-with-gearbox-aeg-25--eshooter-etu-pdw-airsoft-rifle-black-combo-35442.html",
       "price": "USD 395,00",
       "image": "https://www.arsenalsports.com/img/35442/produtos/400/ed4e79b2a817f871f5dbd681fa215025.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -170088,7 +170088,7 @@
       "url": "https://www.arsenalsports.com/produto/kwa-aeg-vm4a1-with-gearbox-aeg-25-vps--eshooter-etu-airsoft-rifle-black-combo-35443.html",
       "price": "USD 220,00",
       "image": "https://www.arsenalsports.com/img/35443/produtos/400/dabeb2aac3b0a73c6e002f62ee1947a3.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -170577,7 +170577,7 @@
       "url": "https://www.arsenalsports.com/produto/modify-spring-sniper-bolt-action-mod24-136mps-airsoft-rifle-black-combo-28273.html",
       "price": "USD 366,00",
       "image": "https://www.arsenalsports.com/img/28273/produtos/400/de2d6259b23ee1e71f91d66048591445.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -170589,7 +170589,7 @@
       "url": "https://www.arsenalsports.com/produto/modify-spring-sniper-bolt-action-mod24x-gspec-136mps-airsoft-rifle-black-combo-28272.html",
       "price": "USD 490,00",
       "image": "https://www.arsenalsports.com/img/28272/produtos/400/f388263c62e362d9a8a13049de4f7182.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -171752,7 +171752,7 @@
       "url": "https://www.arsenalsports.com/produto/novritsch-spring-sniper-ssg24-kit-basic-airsoft-rifle-with-custom-paint-wtp508-combo-20200.html",
       "price": "USD 527,00",
       "image": "https://www.arsenalsports.com/img/20200/produtos/400/2f8315c0ce30c9c42e5470f4e5ec1c34.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -171764,7 +171764,7 @@
       "url": "https://www.arsenalsports.com/produto/novritsch-spring-sniper-ssg24-kit-basic-airsoft-rifle-with-custom-paint-wtp645-combo-20202.html",
       "price": "USD 527,00",
       "image": "https://www.arsenalsports.com/img/20202/produtos/400/d7afb603d890c5337ef016dbe9ef87a9.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -171776,7 +171776,7 @@
       "url": "https://www.arsenalsports.com/produto/novritsch-spring-sniper-ssg24-kit-basic-airsoft-rifle-with-custom-paint-wtp787-combo-20203.html",
       "price": "USD 527,00",
       "image": "https://www.arsenalsports.com/img/20203/produtos/400/de550acd9f9ae519d0f3c98ee952ba1f.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -171788,7 +171788,7 @@
       "url": "https://www.arsenalsports.com/produto/novritsch-spring-sniper-ssg24-kit-complete-airsoft-rifle-black-combo-15750.html",
       "price": "USD 620,00",
       "image": "https://www.arsenalsports.com/img/15750/produtos/400/b1d64f49d41704bad3d6d07a094c06a9.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -171800,7 +171800,7 @@
       "url": "https://www.arsenalsports.com/produto/poseidon-aeg-m4-theseus-with-medusa--tracer-boltin-airsoft-rifle-tan-35412.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35412/produtos/400/b06607c41421cc8889d66a0350fe919e.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -172076,7 +172076,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-bolt-action-m870-long-airsoft-rifle-black-23128.html",
       "price": "USD 135,00",
       "image": "https://www.arsenalsports.com/img/23128/produtos/400/a7553929b7bbb6684cbd5d52716395e2.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -172088,7 +172088,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-bolt-action-m870-long-airsoft-rifle-silver--black-32368.html",
       "price": "USD 185,00",
       "image": "https://www.arsenalsports.com/img/32368/produtos/400/4ae18ed184d3bf4e50c6433e49e8cf76.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -172100,7 +172100,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-bolt-action-m870-long-airsoft-rifle-wood--black-23134.html",
       "price": "USD 155,00",
       "image": "https://www.arsenalsports.com/img/23134/produtos/400/02135123e06154e00f154042aaef0c96.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -172112,7 +172112,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-bolt-action-m870-long-airsoft-rifle-wood--silver-26594.html",
       "price": "USD 185,00",
       "image": "https://www.arsenalsports.com/img/26594/produtos/400/c9a889e6496ba59c8153a3c25b9c8bf4.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -172124,7 +172124,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-bolt-action-m870-short-airsoft-rifle-black-32532.html",
       "price": "USD 109,00",
       "image": "https://www.arsenalsports.com/img/32532/produtos/400/1c1c7fce5bb6262db255b09bd9b533fe.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173166,7 +173166,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-bolt-action-m870-short-airsoft-rifle-real-wood-32533.html",
       "price": "USD 109,00",
       "image": "https://www.arsenalsports.com/img/32533/produtos/400/34b48f80bfc9c0ee6997115bf46e39e3.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173393,7 +173393,7 @@
       "url": "https://www.arsenalsports.com/produto/salient-arms-emg-cyma-ar15-gbbr-105-mlok-handguard-with-cgs-system-blowback-airsoft-rifle-grey-34089.html",
       "price": "USD 490,00",
       "image": "https://www.arsenalsports.com/img/34089/produtos/400/585e05e9d18c096647419f7435f0f8cf.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173405,7 +173405,7 @@
       "url": "https://www.arsenalsports.com/produto/sig-sauer-vfc-avalon-aeg-mcx-virtus-115-barrel-with-gearbox-airsoft-rifle-black-31229.html",
       "price": "USD 599,00",
       "image": "https://www.arsenalsports.com/img/31229/produtos/400/f1784f6943a1a082985669c98d641900.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173417,7 +173417,7 @@
       "url": "https://www.arsenalsports.com/produto/sig-sauer-vfc-avalon-aeg-mcx-virtus-115-barrel-with-gearbox-airsoft-rifle-tan-31230.html",
       "price": "USD 599,00",
       "image": "https://www.arsenalsports.com/img/31230/produtos/400/79b5d4c44004388c50eeab71474783f5.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173429,7 +173429,7 @@
       "url": "https://www.arsenalsports.com/produto/sig-sauer-vfc-avalon-aeg-mpx-with-gearbox-airsoft-rifle-black-31231.html",
       "price": "USD 539,00",
       "image": "https://www.arsenalsports.com/img/31231/produtos/400/abdd0b658c9f1baf1c1f2804b6512fc9.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173539,7 +173539,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-a2-m2-16-bolt-action-airsoft-rifle-black-19722.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/19722/produtos/400/8a580521c18523d9cf13bf3441327d88.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173551,7 +173551,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-a2-m2-16-sport-bolt-action-airsoft-rifle-black-19725.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/19725/produtos/400/99b75cd0b94963c2711f88e8d65f713a.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173563,7 +173563,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-a2-m2-16-sport-bolt-action-airsoft-rifle-flat-dark-earth-19726.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/19726/produtos/400/02cfd72f5b3fa23e09223d16ee37c3db.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173575,7 +173575,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-a2-m2-22-bolt-action-airsoft-rifle-od-green-19720.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/19720/produtos/400/3f232d025bd2c34a7768a7ff6feb7f75.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -173595,7 +173595,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41-lr-bolt-action-airsoft-flat-dark-earth-34759.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34759/produtos/400/671042a906176975b2ef9790484a24e8.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -173615,7 +173615,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41-lrs-bolt-action-airsoft-black-34179.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34179/produtos/400/f2de2990e903ec6622198225e21db76e.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [],
@@ -173630,7 +173630,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41-lrs-bolt-action-airsoft-flat-dark-earth-34180.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34180/produtos/400/3f04e5046b10ebde78bd4d3d5f82b0fd.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -173642,10 +173642,930 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41-lrs-bolt-action-airsoft-od-green-34181.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34181/produtos/400/11fb7bbbde43960c7c849279239cb52b.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
+    },
+    {
+      "id": "34024",
+      "sku": "561242",
+      "name": "CYMA SLING (BANDOLEIRA) MOUNT DANIEL DEFENSE BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-sling-bandoleira-mount-daniel-defense-black-34024.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/34024/produtos/400/adf9567e959c1bdf448f58d356a41eca.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34026",
+      "sku": "561167",
+      "name": "CYMA SLING (BANDOLEIRA) MOUNT NOVESKE NSR QD BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-sling-bandoleira-mount-noveske-nsr-qd-black-34026.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/34026/produtos/400/af2631b0071dfe00d226136873351541.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34025",
+      "sku": "561181",
+      "name": "CYMA SLING (BANDOLEIRA) MOUNT SWIVEL",
+      "url": "https://www.arsenalsports.com/produto/cyma-sling-bandoleira-mount-swivel-34025.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/34025/produtos/400/79722eb78b3ed30c28f844ffa5deda7f.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34027",
+      "sku": "561228",
+      "name": "CYMA SLING (BANDOLEIRA) MOUNT SWIVEL GBB",
+      "url": "https://www.arsenalsports.com/produto/cyma-sling-bandoleira-mount-swivel-gbb-34027.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/34027/produtos/400/52910db46d181a36dea9e716349f3fdf.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34032",
+      "sku": "561204",
+      "name": "CYMA SLING (BANDOLEIRA) MOUNT SWIVEL MAGPUL BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-sling-bandoleira-mount-swivel-magpul-black-34032.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/34032/produtos/400/3c744c110d91da6be10e63bd5507d0d7.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34033",
+      "sku": "561198",
+      "name": "CYMA SLING (BANDOLEIRA) MOUNT SWIVEL QD PIC",
+      "url": "https://www.arsenalsports.com/produto/cyma-sling-bandoleira-mount-swivel-qd-pic-34033.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/34033/produtos/400/e010c1e66ab1a4ea8988574dd645cf4f.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "33004",
+      "sku": "562393",
+      "name": "CYMA STOCK BLACKHAWK FOR AEG BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-blackhawk-for-aeg-black-33004.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/33004/produtos/400/c448ede5abd1316b16d010a99edb1a2f.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "26732",
+      "sku": "175821",
+      "name": "CYMA STOCK CTR WITHOUT FOLDING TUBE AK74 & M4 AEG BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-ctr-without-folding-tube-ak74--m4-aeg-black-26732.html",
+      "price": "USD 28,00",
+      "image": "https://www.arsenalsports.com/img/26732/produtos/400/bac409a6c57b23b365608744b0a9d8dc.jpg",
+      "category": "replicas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "26664",
+      "sku": "100441",
+      "name": "CYMA STOCK FOLDABLE 028U POLYMER BLACK FOR AK SERIES",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-foldable-028u-polymer-black-for-ak-series-26664.html",
+      "price": "USD 24,00",
+      "image": "https://www.arsenalsports.com/img/26664/produtos/400/ae358be44cd08763fca74eb35314dbae.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "26666",
+      "sku": "100533",
+      "name": "CYMA STOCK FROSTED LIGHT FOR AK47 BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-frosted-light-for-ak47-black-26666.html",
+      "price": "USD 12,00",
+      "image": "https://www.arsenalsports.com/img/26666/produtos/400/fa407c9dcfa28806cc87bbef9c84cd7d.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "26733",
+      "sku": "66426",
+      "name": "CYMA STOCK LE SLIDING SET FOR M4",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-le-sliding-set-for-m4-26733.html",
+      "price": "USD 27,00",
+      "image": "https://www.arsenalsports.com/img/26733/produtos/400/af9160a7f72c060cb80c9f841775df2f.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "29927",
+      "sku": "515467",
+      "name": "CYMA STOCK MDT LSS CM708 SNIPER RIFLE BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-mdt-lss-cm708-sniper-rifle-black-29927.html",
+      "price": "USD 58,00",
+      "image": "https://www.arsenalsports.com/img/29927/produtos/400/65083ace8819d2961638d84342f9354e.jpg",
+      "category": "replicas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "17435",
+      "sku": "409506",
+      "name": "CYMA STOCK POLYMER FOR M4 / M16",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-polymer-for-m4--m16-17435.html",
+      "price": "USD 25,00",
+      "image": "https://www.arsenalsports.com/img/17435/produtos/400/f8ce22d9b0a2d4855e89dcb58816ac94.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "29930",
+      "sku": "485654",
+      "name": "CYMA STOCK RETRACTABLE TACTICAL FOR MP5 BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-retractable-tactical-for-mp5-black-29930.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/29930/produtos/400/8a1d1be21d4a248c23695e2059ba860c.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34031",
+      "sku": "560788",
+      "name": "CYMA STOCK STR FOR AEG BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-str-for-aeg-black-34031.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/34031/produtos/400/d679647e1475d4c38caa20523b424736.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "33003",
+      "sku": "562386",
+      "name": "CYMA STOCK UBR GEN. 2 FOR AEG BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-stock-ubr-gen-2-for-aeg-black-33003.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/33003/produtos/400/621a87263566c4c9a3c8e86cb151923c.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "26756",
+      "sku": "34487",
+      "name": "CYMA TRIGGER FLAT FOR MP5 BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-trigger-flat-for-mp5-black-26756.html",
+      "price": "USD 7,00",
+      "image": "https://www.arsenalsports.com/img/26756/produtos/400/543fbdcfa4c85c1f54be6b5fa48b0c7b.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34067",
+      "sku": "557818",
+      "name": "CYMA TRIGGER GUARD FOR CGS SYSTEM RIFLES",
+      "url": "https://www.arsenalsports.com/produto/cyma-trigger-guard-for-cgs-system-rifles-34067.html",
+      "price": "USD 9,00",
+      "image": "https://www.arsenalsports.com/img/34067/produtos/400/006019bbfa69e58adbd3bff7d14791ff.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34069",
+      "sku": "557887",
+      "name": "CYMA TRIGGER PULL LIGHT BOXER VALVE FOR M4 CGS SYSTEM",
+      "url": "https://www.arsenalsports.com/produto/cyma-trigger-pull-light-boxer-valve-for-m4-cgs-system-34069.html",
+      "price": "USD 95,00",
+      "image": "https://www.arsenalsports.com/img/34069/produtos/400/afcd71da423af8e8c883a50008a33a84.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34004",
+      "sku": "560122",
+      "name": "CYMA TUBE STOCK 6 POSITION ALUMINUM FOR M4 BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-tube-stock-6-position-aluminum-for-m4-black-34004.html",
+      "price": "USD 15,00",
+      "image": "https://www.arsenalsports.com/img/34004/produtos/400/70a09afcf1a468abd89908c0f0513725.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "33012",
+      "sku": "562478",
+      "name": "CYMA TUBE STOCK FOR M4",
+      "url": "https://www.arsenalsports.com/produto/cyma-tube-stock-for-m4-33012.html",
+      "price": "USD 12,00",
+      "image": "https://www.arsenalsports.com/img/33012/produtos/400/1d1c531922ba7f637de6f5c55524b10a.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "26652",
+      "sku": "395021",
+      "name": "CYMA UPPER & LOWER RAIL HANDGUARD WITH PISTOL GRIP FOR AK74U SET BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-upper--lower-rail-handguard-with-pistol-grip-for-ak74u-set-black-26652.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/26652/produtos/400/18161b33c41ab56ac316d9bf7ce4c50b.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "33996",
+      "sku": "562003",
+      "name": "CYMA VERTICAL GRIP BCM GUNFIGHTER VG-S BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-vertical-grip-bcm-gunfighter-vgs-black-33996.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/33996/produtos/400/a1ffff4c546e6a725b460979b03f6dbe.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34000",
+      "sku": "562010",
+      "name": "CYMA VERTICAL GRIP MVG M-LOK BLACK",
+      "url": "https://www.arsenalsports.com/produto/cyma-vertical-grip-mvg-mlok-black-34000.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/34000/produtos/400/d4633032cdff94dc1fbe8a90917a4b38.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "34001",
+      "sku": "561143",
+      "name": "CYMAGRIP GRIP PTK & VTS ERGONOMIC SET BLACK",
+      "url": "https://www.arsenalsports.com/produto/cymagrip-grip-ptk--vts-ergonomic-set-black-34001.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/34001/produtos/400/3497d92555ac25996dae90307855a7dd.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "25006",
+      "sku": "326957",
+      "name": "DANIEL DEFENSE EMG ICS STOCK ZETA FOR AIRSOFT AEG RIFLE BLACK",
+      "url": "https://www.arsenalsports.com/produto/daniel-defense-emg-ics-stock-zeta-for-airsoft-aeg-rifle-black-25006.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/25006/produtos/400/020475b981451f42da0e240d87ca11be.png",
+      "category": "replicas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "25011",
+      "sku": "130691",
+      "name": "DANIEL DEFENSE EMG ICS VERTICAL PISTOL GRIP 20° ZETA FOR AIRSOFT AEG RIFLE COYOTE",
+      "url": "https://www.arsenalsports.com/produto/daniel-defense-emg-ics-vertical-pistol-grip-20-zeta-for-airsoft-aeg-rifle-coyote-25011.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/25011/produtos/400/a1b12f7e02688e302aac5d0f35bef743.jpg",
+      "category": "replicas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": [
+        {
+          "date": "2026-09-14T17:55:15.896Z",
+          "price": null
+        }
+      ],
+      "priceChangedAt": "2026-09-14T17:55:15.896Z",
+      "changeType": "sob_consulta",
+      "previousPrice": "USD 27,00"
+    },
+    {
+      "id": "32160",
+      "sku": "546775",
+      "name": "ESHOOTER TRACER UNIT FLARE M",
+      "url": "https://www.arsenalsports.com/produto/eshooter-tracer-unit-flare-m-32160.html",
+      "price": "USD 45,00",
+      "image": "https://www.arsenalsports.com/img/32160/produtos/400/96345621a73739b0c0095914c864651d.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "33553",
+      "sku": "81283",
+      "name": "G&G DRESS-UP KIT SUPER RANGER FOR ARP9FIRE",
+      "url": "https://www.arsenalsports.com/produto/gg-dressup-kit-super-ranger-for-arp9fire-33553.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/33553/produtos/400/77070ef87c9165de6bce51c069c62b6f.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": [
+        {
+          "date": "2026-10-03T15:56:46.873Z",
+          "price": null
+        },
+        {
+          "date": "2026-10-04T16:39:00.765Z",
+          "price": "USD 69,00"
+        },
+        {
+          "date": "2026-10-05T20:22:57.259Z",
+          "price": null
+        }
+      ],
+      "priceChangedAt": "2026-10-05T20:22:57.259Z",
+      "changeType": "sob_consulta",
+      "previousPrice": "USD 69,00"
+    },
+    {
+      "id": "33528",
+      "sku": "272032",
+      "name": "G&G CHARGING HANDLE GCH-V1 AMBIDEXTROUS SKELETONIZED STYLE BLACK",
+      "url": "https://www.arsenalsports.com/produto/gg-charging-handle-gchv1-ambidextrous-skeletonized-style-black-33528.html",
+      "price": "USD 18,00",
+      "image": "https://www.arsenalsports.com/img/33528/produtos/400/0af30c820bfa3e513a2d2303c7e633ec.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "33529",
+      "sku": "279079",
+      "name": "G&G CHARGING HANDLE GCH-V4 AMBIDEXTROUS RAPTOR STYLE RED",
+      "url": "https://www.arsenalsports.com/produto/gg-charging-handle-gchv4-ambidextrous-raptor-style-red-33529.html",
+      "price": "USD 25,00",
+      "image": "https://www.arsenalsports.com/img/33529/produtos/400/d181711adbdd2f1caac0ddb5d70989d4.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "17594",
+      "sku": "406291",
+      "name": "G&G GRIP VERTICAL M-LOK BLACK",
+      "url": "https://www.arsenalsports.com/produto/gg-grip-vertical-mlok-black-17594.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/17594/produtos/400/66cb05b5707f8f677064f33b928d41c5.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T16:11:58.719Z",
+          "price": null
+        }
+      ],
+      "priceChangedAt": "2026-08-07T16:11:58.719Z",
+      "changeType": "sob_consulta",
+      "previousPrice": "USD 11,00"
+    },
+    {
+      "id": "33565",
+      "sku": "331111",
+      "name": "G&G GRIP VERTICAL M-LOK GRAY",
+      "url": "https://www.arsenalsports.com/produto/gg-grip-vertical-mlok-gray-33565.html",
+      "price": "USD 11,00",
+      "image": "https://www.arsenalsports.com/img/33565/produtos/400/5395032c036106582bff582f104c317f.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "33564",
+      "sku": "292726",
+      "name": "G&G GRIP VERTICAL M-LOK TAN",
+      "url": "https://www.arsenalsports.com/produto/gg-grip-vertical-mlok-tan-33564.html",
+      "price": "USD 11,00",
+      "image": "https://www.arsenalsports.com/img/33564/produtos/400/ee60f812fa8b6127bb1792d69a6895b2.jpg",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": []
+    },
+    {
+      "id": "33484",
+      "sku": "567725",
+      "name": "G&G GRIP VERTICAL SHORT PIC BLACK",
+      "url": "https://www.arsenalsports.com/produto/gg-grip-vertical-short-pic-black-33484.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/33484/produtos/400/12a2eebbf21e30eccb8a04ce919617f4.png",
+      "category": "pecas-externas",
+      "categoryLabel": "Peças Externas",
+      "firstSeen": "2026-07-03T05:23:02.126Z",
+      "priceHistory": [
+        {
+          "date": "2026-10-01T18:13:22.924Z",
+          "price": null
+        }
+      ],
+      "priceChangedAt": "2026-10-01T18:13:22.924Z",
+      "changeType": "sob_consulta",
+      "previousPrice": "USD 16,00"
+    },
+    {
+      "id": "33363",
+      "sku": "566124",
+      "name": "MAXX MODEL HOP-UP CHAMBER SET MGW MTW M4",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-hopup-chamber-set-mgw-mtw-m4-33363.html",
+      "price": "USD 79,00",
+      "image": "https://www.arsenalsports.com/img/33363/produtos/400/dd1b4f2372f36c617aee0d0882ee47cf.png",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 79,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18733",
+      "sku": "423274",
+      "name": "MAXX MODEL NOZZEL AIR SEAL CNC TITANIUM ADJUSTABLE FOR AEG 19-22MM",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzel-air-seal-cnc-titanium-adjustable-for-aeg-1922mm-18733.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/18733/produtos/400/a2d54f0197b2392ae98e49285c4daf1b.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 15,00"
+        },
+        {
+          "date": "2026-10-05T20:22:57.259Z",
+          "price": null
+        }
+      ],
+      "priceChangedAt": "2026-10-05T20:22:57.259Z",
+      "changeType": "sob_consulta",
+      "previousPrice": "USD 15,00"
+    },
+    {
+      "id": "18722",
+      "sku": "423168",
+      "name": "MAXX MODEL NOZZLLE AIR SEAL DOUBLE O-RING CNC ALUMINUM 19.50MM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzlle-air-seal-double-oring-cnc-aluminum-1950mm-for-aeg-18722.html",
+      "price": "USD 10,00",
+      "image": "https://www.arsenalsports.com/img/18722/produtos/400/fff6e8232e4f686eee8e5aa0497c8aa4.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 10,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18725",
+      "sku": "423175",
+      "name": "MAXX MODEL NOZZLLE AIR SEAL DOUBLE O-RING CNC ALUMINUM 20.50MM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzlle-air-seal-double-oring-cnc-aluminum-2050mm-for-aeg-18725.html",
+      "price": "USD 10,00",
+      "image": "https://www.arsenalsports.com/img/18725/produtos/400/6130e5dcab05d46dbe0aa82017d4734b.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 10,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18727",
+      "sku": "423199",
+      "name": "MAXX MODEL NOZZLLE AIR SEAL DOUBLE O-RING CNC ALUMINUM 21.00MM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzlle-air-seal-double-oring-cnc-aluminum-2100mm-for-aeg-18727.html",
+      "price": "USD 10,00",
+      "image": "https://www.arsenalsports.com/img/18727/produtos/400/e6b97214dadb0f8e8f770b2395de40af.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 10,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18728",
+      "sku": "423205",
+      "name": "MAXX MODEL NOZZLLE AIR SEAL DOUBLE O-RING CNC ALUMINUM 21.25MM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzlle-air-seal-double-oring-cnc-aluminum-2125mm-for-aeg-18728.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/18728/produtos/400/13ed2d79cad5559e8c5dfc452289d1db.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18729",
+      "sku": "423212",
+      "name": "MAXX MODEL NOZZLLE AIR SEAL DOUBLE O-RING CNC ALUMINUM 21.50MM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzlle-air-seal-double-oring-cnc-aluminum-2150mm-for-aeg-18729.html",
+      "price": "USD 10,00",
+      "image": "https://www.arsenalsports.com/img/18729/produtos/400/7a7300cd61462afd37dafc8503d4e3a9.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 10,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18724",
+      "sku": "423229",
+      "name": "MAXX MODEL NOZZLLE AIR SEAL DOUBLE O-RING CNC ALUMINUM 21.75MM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzlle-air-seal-double-oring-cnc-aluminum-2175mm-for-aeg-18724.html",
+      "price": "USD 10,00",
+      "image": "https://www.arsenalsports.com/img/18724/produtos/400/3b22ca32daa20035c94bb353fa2b51a4.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 10,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18730",
+      "sku": "423236",
+      "name": "MAXX MODEL NOZZLLE AIR SEAL DOUBLE O-RING CNC ALUMINUM 22.00MM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzlle-air-seal-double-oring-cnc-aluminum-2200mm-for-aeg-18730.html",
+      "price": "USD 10,00",
+      "image": "https://www.arsenalsports.com/img/18730/produtos/400/a3a80919f651d508e6574881b010d178.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 10,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18731",
+      "sku": "423243",
+      "name": "MAXX MODEL NOZZLLE AIR SEAL DOUBLE O-RING CNC ALUMINUM 22.25MM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzlle-air-seal-double-oring-cnc-aluminum-2225mm-for-aeg-18731.html",
+      "price": "USD 10,00",
+      "image": "https://www.arsenalsports.com/img/18731/produtos/400/18946b0dc57ca476bc63e4a72a414aaf.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 10,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18723",
+      "sku": "423267",
+      "name": "MAXX MODEL NOZZLLE AIR SEAL DOUBLE O-RING CNC ALUMINUM 38.50MM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-nozzlle-air-seal-double-oring-cnc-aluminum-3850mm-for-aeg-18723.html",
+      "price": "USD 10,00",
+      "image": "https://www.arsenalsports.com/img/18723/produtos/400/2e38c7be9fcb5f351f82050ae9d36c0a.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 10,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "18748",
+      "sku": "422765",
+      "name": "MAXX MODEL PISTON HEAD DOUBLE O-RING BALL BEARING CNC ALUMINUM FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/maxx-model-piston-head-double-oring-ball-bearing-cnc-aluminum-for-aeg-18748.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/18748/produtos/400/da198c3d6af2244398a4b5db25d69b57.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 15,00"
+        },
+        {
+          "date": "2026-09-29T17:52:14.965Z",
+          "price": null
+        }
+      ],
+      "priceChangedAt": "2026-09-29T17:52:14.965Z",
+      "changeType": "sob_consulta",
+      "previousPrice": "USD 15,00"
+    },
+    {
+      "id": "34946",
+      "sku": "587631",
+      "name": "MECHLABS HOP-UP CHAMBER ROTO SPECIAL FOR HPA BLUE",
+      "url": "https://www.arsenalsports.com/produto/mechlabs-hopup-chamber-roto-special-for-hpa-blue-34946.html",
+      "price": "USD 50,00",
+      "image": "https://www.arsenalsports.com/img/34946/produtos/400/27ed7c6666f21586cada318b99b03b55.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-28T21:53:03.434Z",
+          "price": "USD 50,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-28T21:53:03.434Z",
+      "changeType": "restock"
+    },
+    {
+      "id": "34947",
+      "sku": "587648",
+      "name": "MECHLABS HOP-UP CHAMBER ROTO-PRO SPECIAL FOR HPA ORANGE",
+      "url": "https://www.arsenalsports.com/produto/mechlabs-hopup-chamber-rotopro-special-for-hpa-orange-34947.html",
+      "price": "USD 100,00",
+      "image": "https://www.arsenalsports.com/img/34947/produtos/400/no-img.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-28T21:53:03.434Z",
+          "price": "USD 100,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-28T21:53:03.434Z",
+      "changeType": "restock"
+    },
+    {
+      "id": "34945",
+      "sku": "587679",
+      "name": "MECHLABS REGULATOR FLO MAX TS WITH ON/OFF",
+      "url": "https://www.arsenalsports.com/produto/mechlabs-regulator-flo-max-ts-with-onoff-34945.html",
+      "price": "USD 150,00",
+      "image": "https://www.arsenalsports.com/img/34945/produtos/400/c942603c541685bc69dea85b2d8036e5.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-28T21:53:03.434Z",
+          "price": "USD 150,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-28T21:53:03.434Z",
+      "changeType": "restock"
+    },
+    {
+      "id": "33718",
+      "sku": "339025",
+      "name": "MODIFY BUCKING 60º DEGREE PREDATOR XTREME DUTY FOR AEG / XTC TM",
+      "url": "https://www.arsenalsports.com/produto/modify-bucking-60-degree-predator-xtreme-duty-for-aeg--xtc-tm-33718.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/33718/produtos/400/2fe585586f75a4cb5eb88946b5dc4b6e.png",
+      "category": "buckings",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "33721",
+      "sku": "371537",
+      "name": "MODIFY BUCKING PROFISSIONAL HYBRID 2 RING FOR INNER BARREL",
+      "url": "https://www.arsenalsports.com/produto/modify-bucking-profissional-hybrid-2-ring-for-inner-barrel--33721.html",
+      "price": "USD 7,00",
+      "image": "https://www.arsenalsports.com/img/33721/produtos/400/698aca43bf5e4dfcc93c960b689b3d08.png",
+      "category": "buckings",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 7,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "25695",
+      "sku": "371476",
+      "name": "MODIFY CUT OFF LEVER VER. 2",
+      "url": "https://www.arsenalsports.com/produto/modify-cut-off-lever-ver-2-25695.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/25695/produtos/400/48d627bbc561095c86a1a2773be875b5.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "25700",
+      "sku": "279727",
+      "name": "MODIFY CYLINDER HEAD ALUMINIUM BORE-UP SILENT FOR TOKYO MARUI P90 (SL)",
+      "url": "https://www.arsenalsports.com/produto/modify-cylinder-head-aluminium-boreup-silent-for-tokyo-marui-p90-sl-25700.html",
+      "price": "USD 17,00",
+      "image": "https://www.arsenalsports.com/img/25700/produtos/400/97b785d9f94e38660c768d03202e18e9.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 17,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "14736",
+      "sku": "371254",
+      "name": "MODIFY CYLINDER M16-A1/02/AK TYPE 0",
+      "url": "https://www.arsenalsports.com/produto/modify-cylinder-m16a102ak-type-0-14736.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/14736/produtos/400/85ae1d55ed4d508b8f128a55ea121039.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "14739",
+      "sku": "371780",
+      "name": "MODIFY HOP-UP METAL CHAMBER M4 / M16",
+      "url": "https://www.arsenalsports.com/produto/modify-hopup-metal-chamber-m4--m16-14739.html",
+      "price": null,
+      "image": "https://www.arsenalsports.com/img/14739/produtos/400/961d85f351fd3a6d3fabb70be67de4b7.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "33723",
+      "sku": "362566",
+      "name": "MODIFY PISTON QUANTUM NITROFLON COATING FOR AEG",
+      "url": "https://www.arsenalsports.com/produto/modify-piston-quantum-nitroflon-coating-for-aeg-33723.html",
+      "price": "USD 20,00",
+      "image": "https://www.arsenalsports.com/img/33723/produtos/400/5cc34dd9f7e8ef37dcf25f87af26fd2b.png",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 20,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "28251",
+      "sku": "418973",
+      "name": "PERUN ELECTRIC TRIGGER FOR AUG",
+      "url": "https://www.arsenalsports.com/produto/perun-electric-trigger-for-aug-28251.html",
+      "price": "USD 109,00",
+      "image": "https://www.arsenalsports.com/img/28251/produtos/400/51a9bab8973523aa346d6c45dd33c4ab.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 109,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "28252",
+      "sku": "418911",
+      "name": "PERUN ELECTRIC TRIGGER FOR P90",
+      "url": "https://www.arsenalsports.com/produto/perun-electric-trigger-for-p90-28252.html",
+      "price": "USD 109,00",
+      "image": "https://www.arsenalsports.com/img/28252/produtos/400/3319e2189353f6c04619d3d208a73823.jpg",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 109,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
+    },
+    {
+      "id": "34186",
+      "sku": "402248",
+      "name": "PERUN HPA TRIGGER BOARD FOR VER. 2",
+      "url": "https://www.arsenalsports.com/produto/perun-hpa-trigger-board-for-ver-2-34186.html",
+      "price": "USD 50,00",
+      "image": "https://www.arsenalsports.com/img/34186/produtos/400/f15fea2992adc3013cb5ee3c9165c9ca.png",
+      "category": "pecas-internas",
+      "categoryLabel": "Peças Internas",
+      "firstSeen": "2026-08-07T02:46:58.568Z",
+      "priceHistory": [
+        {
+          "date": "2026-08-07T02:46:58.568Z",
+          "price": "USD 50,00"
+        }
+      ],
+      "priceChangedAt": "2026-08-07T02:46:58.568Z",
+      "changeType": "new"
     },
     {
       "id": "34024",
@@ -174574,7 +175494,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41a-bolt-action-airsoft-rifle-flat-dark-earth-22222.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/22222/produtos/400/b8d114f7127c6aba31438de0f023fe6a.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -174594,7 +175514,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41p-sport-bolt-action-airsoft-rifle-black-30731.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30731/produtos/400/03b75a685cf496da07c8a39ef888f94b.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": [
@@ -174614,7 +175534,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41p-sport-bolt-action-airsoft-rifle-flat-dark-earth-30732.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30732/produtos/400/a542eaefac867e25b565d5de4b652f88.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -174626,7 +175546,7 @@
       "url": "https://www.arsenalsports.com/produto/silverback-spring-sniper-tac41p-sport-bolt-action-airsoft-rifle-od-green-30733.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/30733/produtos/400/8f0ad0203465200954a917728e6a095e.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -175020,7 +175940,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-aeg-p90-tr-with-silencer-pdw--hydra-gen-ii-line-up-airsoft-rifle-black-combo-30422.html",
       "price": "USD 780,00",
       "image": "https://www.arsenalsports.com/img/30422/produtos/400/6c400a6705d67434186bca3d8eff5aec.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -176363,7 +177283,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-m40a5-airsoft-rifle-black-12750.html",
       "price": "USD 379,00",
       "image": "https://www.arsenalsports.com/img/12750/produtos/400/653901ba89d04dc478024085a20c9ab6.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -176375,7 +177295,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-vsr10-shock-airsoft-rifle-wood-4802.html",
       "price": "USD 255,00",
       "image": "https://www.arsenalsports.com/img/4802/produtos/400/176ee090f2837420678e86710f1ce342.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -176387,7 +177307,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-vsr10-shock-g-speck-airsoft-rifle-black-5624.html",
       "price": "USD 290,00",
       "image": "https://www.arsenalsports.com/img/5624/produtos/400/04c1dde65e61d2441469447ff67494b2.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -176399,7 +177319,7 @@
       "url": "https://www.arsenalsports.com/produto/tokyo-marui-spring-sniper-vsr10-shock-g-speck-with-bolt-sniper-airsoft-rifle-black-combo-30420.html",
       "price": "USD 627,00",
       "image": "https://www.arsenalsports.com/img/30420/produtos/400/77a6e98b9acfc5d55efecde557daa93b.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T02:54:16.537Z",
       "priceHistory": []
@@ -177972,7 +178892,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-apfg-gbbr-mcx-rattler-lt-575-handguard-rail-blowback-airsoft-rifle-black-34272.html",
       "price": "USD 799,00",
       "image": "https://www.arsenalsports.com/img/34272/produtos/400/4e06073ee395306d125f2dd4758ef8d2.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": [
@@ -177991,7 +178911,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-apfg-gbbr-mcx-rattler-lt-8-mlok-handguard-rail-blowback-airsoft-rifle-black-34274.html",
       "price": "USD 799,00",
       "image": "https://www.arsenalsports.com/img/34274/produtos/400/937f9794cab3368f3d124dab9547efbb.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": [
@@ -178010,7 +178930,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-apfg-gbbr-mcx-spear-lt-131-mlok-handguard-rail-blowback-airsoft-rifle-tan-34273.html",
       "price": "USD 899,00",
       "image": "https://www.arsenalsports.com/img/34273/produtos/400/272ecd42e34131693d462194350da9b6.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": [
@@ -178029,7 +178949,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-apfg-gbbr-mcx-spear-lt-mcx-115-mlok-handguard-blowback-airsoft-rifle-black-34541.html",
       "price": "USD 899,00",
       "image": "https://www.arsenalsports.com/img/34541/produtos/400/bd25ade7ef20def946533e28318999e2.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": [
@@ -178048,7 +178968,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-apfg-gbbr-mcx-spear-lt-mcx-115-mlok-handguard-blowback-airsoft-rifle-tan-34542.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34542/produtos/400/77625173b74dcd68e0133f48a23c76b3.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": []
@@ -178060,7 +178980,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-apfg-gbbr-mcx-spear-lt-pdw-9-mlok-handguard-rail-blowback-airsoft-rifle-black-34276.html",
       "price": "USD 899,00",
       "image": "https://www.arsenalsports.com/img/34276/produtos/400/ad4fb41e6b953a7b4e24f2fa5b2aa9f4.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": [
@@ -178079,7 +178999,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-apfg-gbbr-mcx-spear-lt-pdw-9-mlok-handguard-rail-blowback-airsoft-rifle-tan-34543.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/34543/produtos/400/f85c6881c97cc95b2c43117dbcf3d59d.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": []
@@ -178091,7 +179011,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-apfg-gbbr-mpxk-45-mlok-handguard-rail-blowback-airsoft-rifle-black-34275.html",
       "price": "USD 799,00",
       "image": "https://www.arsenalsports.com/img/34275/produtos/400/fcf1ae625ce20079795c02ab05b287be.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": [
@@ -179660,7 +180580,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-gbbr-m4-urgi-115-handguard-evo-blowback-airsoft-rifle-dual-tone-35680.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/35680/produtos/400/207a874f1f40820061b49759bbd1f6ae.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-07-15T13:57:32.965Z",
       "priceHistory": [
@@ -179782,7 +180702,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-maruyama-gbbr-scw9k-pro-handguard-mlok-pdw-blowback-airsoft-rifle-black-35163.html",
       "price": "USD 480,00",
       "image": "https://www.arsenalsports.com/img/35163/produtos/400/1aa63091a92be3b807d997145994ceed.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": [
@@ -179801,7 +180721,7 @@
       "url": "https://www.arsenalsports.com/produto/vfc-maruyama-gbbr-scw9k-pro-handguard-picatiny-blowback-airsoft-rifle-black-35049.html",
       "price": "USD 480,00",
       "image": "https://www.arsenalsports.com/img/35049/produtos/400/3c771d309e6af18c587f5587d3aeadff.png",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": [
@@ -182652,7 +183572,7 @@
       "url": "https://www.arsenalsports.com/produto/we-gbbr-plr16-socomgear-blowback-airsoft-rifle-black-combo-28737.html",
       "price": "USD 415,00",
       "image": "https://www.arsenalsports.com/img/28737/produtos/400/01b11a6dfdd66cced4c7bc5fa11627c0.jpg",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": []
@@ -182808,7 +183728,7 @@
       "url": "https://www.arsenalsports.com/produto/wellpro-gbbr-lt10-cnc-handguard-10-blowback-airsoft-rifle-black-32241.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/32241/produtos/400/e1f3da4c8e817ca1c5577e39e36e775a.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": []
@@ -182820,7 +183740,7 @@
       "url": "https://www.arsenalsports.com/produto/wellpro-gbbr-lt7-cnc-handguard-7-blowback-airsoft-rifle-black-32244.html",
       "price": null,
       "image": "https://www.arsenalsports.com/img/32244/produtos/400/423d1f7a5b75a71951bc898d969d451b.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": []
@@ -182844,7 +183764,7 @@
       "url": "https://www.arsenalsports.com/produto/wellpro-gbbr-sig-lt13-cnc-handguard-13-blowback-airsoft-rifle-black-32242.html",
       "price": "USD 699,00",
       "image": "https://www.arsenalsports.com/img/32242/produtos/400/606858c4dbe67cdae47f04190e381491.jpg",
-      "category": "pecas-externas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": []
@@ -182880,7 +183800,7 @@
       "url": "https://www.arsenalsports.com/produto/ak-spring-svd-dragunov-with-metal-gearbox-sniper-airsoft-rifle-black-32216.html",
       "price": "USD 190,00",
       "image": "https://www.arsenalsports.com/img/32216/produtos/400/d96a7fedb5e81672cf7f82039dcc7a66.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": []
@@ -183780,7 +184700,7 @@
       "url": "https://www.arsenalsports.com/produto/st-armament-spring-sniper-sv98-airsoft-rifle-real-wood-32535.html",
       "price": "USD 360,00",
       "image": "https://www.arsenalsports.com/img/32535/produtos/400/97b151aafae509263b15f661ac12e9bc.png",
-      "category": "pecas-internas",
+      "category": "replicas",
       "categoryLabel": "Réplicas",
       "firstSeen": "2026-06-30T03:02:39.097Z",
       "priceHistory": []

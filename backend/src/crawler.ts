@@ -1,5 +1,5 @@
 import { CheerioCrawler, log } from 'crawlee';
-import { CATEGORIES, MAX_PAGES, PAGE_PARAM, isValidProduct, cleanProductName, enforceCategory, CATEGORY_WEIGHTS, extractSku } from './config.js';
+import { CATEGORIES, MAX_PAGES, PAGE_PARAM, isValidProduct, cleanProductName, enforceCategory, CATEGORY_WEIGHTS, extractSku, resolveCategoryLabel } from './config.js';
 import type { Product } from './types.js';
 
 export async function runCrawler(): Promise<Product[]> {
@@ -43,6 +43,7 @@ export async function runCrawler(): Promise<Product[]> {
         if (!title) return;
 
         const { categorySlug: enforcedCatSlug, weight: newWeight } = enforceCategory(title, originalCatSlug);
+        const enforcedCatLabel = resolveCategoryLabel(enforcedCatSlug);
         validOnPage++;
 
         // If product already found, check if new category has higher priority
@@ -61,7 +62,7 @@ export async function runCrawler(): Promise<Product[]> {
           
           if (newWeight > existingWeight) {
             existing.category = enforcedCatSlug;
-            existing.categoryLabel = catLabel;
+            existing.categoryLabel = enforcedCatLabel;
           }
           return;
         }
@@ -85,7 +86,7 @@ export async function runCrawler(): Promise<Product[]> {
           price: priceMatch ? `USD ${priceMatch[1]}` : null,
           image: img,
           category: enforcedCatSlug,
-          categoryLabel: catLabel,
+          categoryLabel: enforcedCatLabel,
         });
       });
 

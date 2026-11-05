@@ -257,4 +257,42 @@ describe("catalogService - Gestão visual de produtos e Catálogo Híbrido", () 
     expect(unified.products[0].name).toBe("Rifle M4 Carbine");
     expect(unified.products[1].name).toBe("Pistola Glock G19");
   });
+
+  it("buildUnifiedSnapshot corrige categoria de réplicas completas (ex: VFC APFG MCX) que estavam como peças", () => {
+    const rawSnapshot: Snapshot = {
+      updatedAt: "2026-11-05T12:00:00.000Z",
+      count: 2,
+      categories: [
+        { slug: "replicas", label: "Réplicas", count: 0 },
+        { slug: "pecas-externas", label: "Peças Externas", count: 1 },
+        { slug: "pecas-internas", label: "Peças Internas", count: 1 },
+      ],
+      products: [
+        {
+          id: "34272",
+          name: "VFC APFG GBBR MCX RATTLER LT 5.75 HANDGUARD RAIL BLOWBACK AIRSOFT RIFLE BLACK",
+          url: "https://example.com/34272",
+          price: "USD 799,00",
+          image: null,
+          category: "pecas-externas",
+          categoryLabel: "Réplicas",
+        },
+        {
+          id: "31229",
+          name: "SIG SAUER VFC AVALON AEG MCX VIRTUS 11.5 BARREL WITH GEARBOX AIRSOFT RIFLE BLACK",
+          url: "https://example.com/31229",
+          price: "USD 599,00",
+          image: null,
+          category: "pecas-internas",
+          categoryLabel: "Réplicas",
+        },
+      ],
+    };
+
+    const unified = buildUnifiedSnapshot(rawSnapshot);
+    expect(unified.products[0].category).toBe("replicas");
+    expect(unified.products[0].categoryLabel).toBe("Réplicas");
+    expect(unified.products[1].category).toBe("replicas");
+    expect(unified.products[1].categoryLabel).toBe("Réplicas");
+  });
 });

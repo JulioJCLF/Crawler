@@ -1,12 +1,12 @@
 ---
 tipo: painel
-gerado_em: 2026-11-03
+gerado_em: 2026-11-05
 tags:
   - crawler/painel
 ---
 # Requisitos por fase
 
-> [!info] Página gerada automaticamente em 2026-11-03. Situação de cada item, organizado pelos blocos de trabalho.
+> [!info] Página gerada automaticamente em 2026-11-05. Situação de cada item, organizado pelos blocos de trabalho.
 
 ## 1 · Crawler
 🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩 5/5
