@@ -13,6 +13,10 @@ data/*.json
 data/*.tmp
 frontend/data/*.json
 frontend/data/*.tmp
+frontend/public/uploads/*
+!frontend/public/uploads/.gitkeep
+data/uploads/
+frontend/data/uploads/
 .vite/
 
 .vercel

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useRef } from "react";
 import {
   Package,
   Plus,
@@ -20,6 +20,9 @@ import {
   ChevronLeft,
   ChevronRight,
   Sparkles,
+  UploadCloud,
+  Image as ImageIcon,
+  FileText,
 } from "lucide-react";
 import { Product, AdminProductListResponse, CustomProductInput } from "@/types";
 import { CATALOG_CATEGORIES_METADATA } from "@/lib/pricingConfig";
@@ -76,10 +79,15 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
   const [formPriceMode, setFormPriceMode] = useState<"usd" | "brl">("brl");
   const [formUsdPrice, setFormUsdPrice] = useState("");
   const [formBrlPrice, setFormBrlPrice] = useState("");
+  const [formDescription, setFormDescription] = useState("");
   const [formImage, setFormImage] = useState("");
+  const [formImageMode, setFormImageMode] = useState<"upload" | "url">("upload");
+  const [uploadingImage, setUploadingImage] = useState(false);
+  const [imageDragActive, setImageDragActive] = useState(false);
   const [formUrl, setFormUrl] = useState("");
   const [formSaving, setFormSaving] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Modal de confirmação de ocultação com motivo
   const [hidingProduct, setHidingProduct] = useState<Product | null>(null);
@@ -159,7 +167,9 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
     setFormPriceMode("brl");
     setFormUsdPrice("");
     setFormBrlPrice("");
+    setFormDescription("");
     setFormImage("");
+    setFormImageMode("upload");
     setFormUrl("");
     setFormError(null);
     setShowModal(true);
@@ -179,10 +189,74 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
       setFormUsdPrice(p.price || "");
       setFormBrlPrice("");
     }
+    setFormDescription(p.description || "");
     setFormImage(p.image || "");
+    setFormImageMode(p.image && !p.image.startsWith("/api/uploads/") ? "url" : "upload");
     setFormUrl(p.url || "");
     setFormError(null);
     setShowModal(true);
+  };
+
+  // Upload de Foto de Produto
+  const handleImageFileChange = async (file: File) => {
+    if (!file) return;
+
+    if (!file.type.startsWith("image/")) {
+      setFormError("Por favor, selecione um arquivo de imagem válido (JPG, PNG, WEBP, GIF, AVIF).");
+      return;
+    }
+
+    if (file.size > 10 * 1024 * 1024) {
+      setFormError("A imagem excede o tamanho máximo de 10MB.");
+      return;
+    }
+
+    setUploadingImage(true);
+    setFormError(null);
+
+    try {
+      const data = new FormData();
+      data.append("file", file);
+
+      const res = await fetch("/api/admin/catalog/upload", {
+        method: "POST",
+        body: data,
+      });
+
+      const json = await res.json();
+      if (!res.ok) {
+        throw new Error(json.error || "Falha ao enviar imagem.");
+      }
+
+      setFormImage(json.url);
+      setToast({
+        type: "success",
+        title: "Foto enviada!",
+        message: "Foto do produto vinculada com sucesso.",
+      });
+    } catch (err: any) {
+      setFormError(err.message || "Erro ao realizar upload da foto.");
+    } finally {
+      setUploadingImage(false);
+    }
+  };
+
+  const handleDrop = (e: React.DragEvent) => {
+    e.preventDefault();
+    setImageDragActive(false);
+    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+      handleImageFileChange(e.dataTransfer.files[0]);
+    }
+  };
+
+  const handleDragOver = (e: React.DragEvent) => {
+    e.preventDefault();
+    setImageDragActive(true);
+  };
+
+  const handleDragLeave = (e: React.DragEvent) => {
+    e.preventDefault();
+    setImageDragActive(false);
   };
 
   // Salvar produto (criar ou atualizar)
@@ -225,7 +299,9 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
         category: formCategory,
         price: priceValue,
         fixedBrlPrice: fixedBrlValue,
+        description: formDescription.trim() || undefined,
         image: formImage.trim() || null,
+        images: formImage.trim() ? [formImage.trim()] : [],
         url: formUrl.trim() || undefined,
         status: "active",
       };
@@ -702,7 +778,7 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                           >
                             {p.name}
                           </div>
-                          <div className="flex items-center gap-2">
+                          <div className="flex items-center gap-2 flex-wrap">
                             <span className="font-mono text-[10px] text-muted-foreground uppercase">
                               Ref: {p.sku || p.id}
                             </span>
@@ -715,6 +791,24 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                                 Robô
                               </span>
                             )}
+                            {p.description && (
+                              <span
+                                className="px-1.5 py-0.2 rounded text-[9px] font-mono uppercase tracking-wider bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-medium"
+                                title={p.description.slice(0, 100) + (p.description.length > 100 ? "..." : "")}
+                              >
+                                Com descrição
+                              </span>
+                            )}
+                            <a
+                              href={`/produto/${p.id}`}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="inline-flex items-center gap-0.5 text-[10px] font-mono text-muted-foreground hover:text-accent transition-colors"
+                              title="Visualizar produto na vitrine"
+                            >
+                              <span>Ver na loja</span>
+                              <ExternalLink className="w-2.5 h-2.5" />
+                            </a>
                             {p.url && !p.url.includes("arsenalsports.com") && (
                               <a
                                 href={p.url}
@@ -946,53 +1040,64 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
 
       {/* Modal de Criação / Edição de Produto Manual */}
       {showModal && (
-        <div className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-card border border-border rounded-xl max-w-lg w-full p-6 shadow-xl space-y-5 my-8 animate-in fade-in zoom-in-95">
-            <div className="flex items-center justify-between border-b border-border pb-3">
-              <h3 className="font-heading text-lg font-bold uppercase tracking-wider flex items-center gap-2">
-                <Package className="w-5 h-5 text-primary" />
-                {editingProduct ? "Editar Produto Manual" : "Cadastrar Novo Produto"}
-              </h3>
+        <div className="fixed inset-0 z-50 bg-black/75 backdrop-blur-sm flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+          <div className="bg-card border border-border rounded-2xl max-w-2xl w-full p-5 sm:p-7 shadow-2xl space-y-6 my-6 animate-in fade-in zoom-in-95 max-h-[92vh] overflow-y-auto">
+            <div className="flex items-center justify-between border-b border-border pb-4">
+              <div className="flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary">
+                  <Package className="w-5 h-5" />
+                </div>
+                <div>
+                  <h3 className="font-heading text-lg sm:text-xl font-bold uppercase tracking-wider">
+                    {editingProduct ? "Editar Produto Manual" : "Cadastrar Novo Produto"}
+                  </h3>
+                  <p className="text-xs font-mono text-muted-foreground">
+                    {editingProduct
+                      ? `Ref: ${editingProduct.sku || editingProduct.id}`
+                      : "Insira foto, descrição, categoria e valor para a vitrine"}
+                  </p>
+                </div>
+              </div>
               <button
                 onClick={() => setShowModal(false)}
-                className="text-muted-foreground hover:text-foreground"
+                className="text-muted-foreground hover:text-foreground p-1.5 rounded-lg hover:bg-muted transition-colors cursor-pointer"
               >
                 <X className="w-5 h-5" />
               </button>
             </div>
 
             {formError && (
-              <div className="p-3 rounded-lg bg-destructive/15 border border-destructive/40 text-destructive text-xs font-mono flex items-center gap-2">
+              <div className="p-3.5 rounded-xl bg-destructive/15 border border-destructive/40 text-destructive text-xs font-mono flex items-center gap-2.5">
                 <AlertCircle className="w-4 h-4 shrink-0" />
                 <span>{formError}</span>
               </div>
             )}
 
-            <form onSubmit={handleSaveProduct} className="space-y-4">
-              {/* Nome */}
+            <form onSubmit={handleSaveProduct} className="space-y-5">
+              {/* Nome do Produto */}
               <div className="space-y-1.5">
-                <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
-                  Nome do Produto *
+                <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground flex items-center gap-1.5 font-bold">
+                  <span>Nome do Produto *</span>
                 </label>
                 <input
                   type="text"
                   required
-                  placeholder="Ex: Rifle Elétrico M4 CQB Metal Hunting"
+                  placeholder="Ex: Rifle Airsoft Elétrico M4 CQB Metal Hunting"
                   value={formName}
                   onChange={(e) => setFormName(e.target.value)}
-                  className="w-full bg-background border border-border rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="w-full bg-background border border-border rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 font-sans"
                 />
               </div>
 
               {/* Categoria */}
               <div className="space-y-1.5">
-                <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
-                  Categoria *
+                <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground flex items-center gap-1.5 font-bold">
+                  <span>Categoria do Catálogo *</span>
                 </label>
                 <select
                   value={formCategory}
                   onChange={(e) => setFormCategory(e.target.value)}
-                  className="w-full bg-background border border-border rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-primary uppercase tracking-wider"
+                  className="w-full bg-background border border-border rounded-xl px-3.5 py-2.5 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40 uppercase tracking-wider"
                 >
                   {CATALOG_CATEGORIES_METADATA.map((cat) => (
                     <option key={cat.slug} value={cat.slug}>
@@ -1002,11 +1107,14 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                 </select>
               </div>
 
-              {/* Modo de Preço */}
-              <div className="space-y-2 bg-muted/20 border border-border p-3.5 rounded-lg">
-                <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground block">
-                  Modelo de Precificação *
-                </label>
+              {/* Precificação e Valor */}
+              <div className="space-y-3 bg-muted/20 border border-border p-4 rounded-xl">
+                <div className="flex items-center justify-between">
+                  <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground font-bold flex items-center gap-1.5">
+                    <DollarSign className="w-4 h-4 text-primary" />
+                    <span>Valor e Precificação *</span>
+                  </label>
+                </div>
 
                 <div className="grid grid-cols-2 gap-2 text-xs font-mono">
                   <button
@@ -1030,17 +1138,17 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                         : "border-border text-muted-foreground hover:bg-muted"
                     }`}
                   >
-                    Dólar (USD) Automático
+                    Preço Base em Dólar (USD)
                   </button>
                 </div>
 
                 {formPriceMode === "brl" ? (
-                  <div className="space-y-1 pt-2">
-                    <label className="text-[11px] font-mono text-muted-foreground">
+                  <div className="space-y-1 pt-1">
+                    <label className="text-[11px] font-mono text-muted-foreground block">
                       Valor Final de Venda em Reais (R$):
                     </label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-sm text-muted-foreground">
+                      <span className="absolute left-3.5 top-1/2 -translate-y-1/2 font-mono text-sm text-primary font-bold">
                         R$
                       </span>
                       <input
@@ -1049,97 +1157,243 @@ export function CatalogManager({ onCatalogChanged }: CatalogManagerProps) {
                         placeholder="Ex: 899.90"
                         value={formBrlPrice}
                         onChange={(e) => setFormBrlPrice(e.target.value)}
-                        className="w-full bg-background border border-border rounded-lg pl-10 pr-3 py-2 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-primary"
+                        className="w-full bg-background border border-border rounded-xl pl-12 pr-4 py-2.5 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40 font-bold"
                       />
                     </div>
+                    <span className="text-[10px] text-muted-foreground font-mono block">
+                      Este valor exato será exibido para o cliente na vitrine e enviado ao carrinho do WhatsApp.
+                    </span>
                   </div>
                 ) : (
-                  <div className="space-y-1 pt-2">
-                    <label className="text-[11px] font-mono text-muted-foreground">
-                      Preço Base em Dólar (USD):
+                  <div className="space-y-1 pt-1">
+                    <label className="text-[11px] font-mono text-muted-foreground block">
+                      Preço de Custo / Base em Dólar (USD):
                     </label>
                     <div className="relative">
-                      <span className="absolute left-3 top-1/2 -translate-y-1/2 font-mono text-sm text-muted-foreground">
-                        $
+                      <span className="absolute left-3.5 top-1/2 -translate-y-1/2 font-mono text-sm text-primary font-bold">
+                        USD $
                       </span>
                       <input
                         type="text"
                         placeholder="Ex: 150.00"
                         value={formUsdPrice}
                         onChange={(e) => setFormUsdPrice(e.target.value)}
-                        className="w-full bg-background border border-border rounded-lg pl-8 pr-3 py-2 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-primary"
+                        className="w-full bg-background border border-border rounded-xl pl-16 pr-4 py-2.5 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40 font-bold"
                       />
                     </div>
                     <span className="text-[10px] text-muted-foreground font-mono block">
-                      O valor em R$ será calculado automaticamente com a cotação e a margem da categoria.
+                      O valor em R$ será convertido automaticamente usando a cotação do dólar e a margem de lucro definida para a categoria.
                     </span>
                   </div>
                 )}
               </div>
 
-              {/* Imagem */}
-              <div className="space-y-1.5">
-                <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
-                  URL da Imagem (opcional)
-                </label>
+              {/* Foto do Equipamento */}
+              <div className="space-y-3 bg-muted/20 border border-border p-4 rounded-xl">
+                <div className="flex items-center justify-between">
+                  <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground font-bold flex items-center gap-1.5">
+                    <ImageIcon className="w-4 h-4 text-primary" />
+                    <span>Foto do Produto</span>
+                  </label>
+
+                  <div className="flex items-center gap-1 bg-muted/40 p-1 rounded-lg border border-border text-[11px] font-mono">
+                    <button
+                      type="button"
+                      onClick={() => setFormImageMode("upload")}
+                      className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                        formImageMode === "upload"
+                          ? "bg-primary text-primary-foreground font-bold"
+                          : "text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      Enviar Arquivo
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setFormImageMode("url")}
+                      className={`px-2.5 py-1 rounded transition-colors cursor-pointer ${
+                        formImageMode === "url"
+                          ? "bg-primary text-primary-foreground font-bold"
+                          : "text-muted-foreground hover:text-foreground"
+                      }`}
+                    >
+                      Colar Link (URL)
+                    </button>
+                  </div>
+                </div>
+
+                {/* Input de arquivo oculto */}
                 <input
-                  type="url"
-                  placeholder="https://exemplo.com/foto-do-produto.jpg"
-                  value={formImage}
-                  onChange={(e) => setFormImage(e.target.value)}
-                  className="w-full bg-background border border-border rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-primary"
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/png, image/jpeg, image/webp, image/gif, image/avif"
+                  className="hidden"
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files[0]) {
+                      handleImageFileChange(e.target.files[0]);
+                    }
+                  }}
                 />
 
-                {formImage && (
-                  <div className="mt-2 flex items-center gap-3 p-2 border border-border rounded-lg bg-muted/20">
-                    <div className="w-12 h-12 rounded bg-background border flex items-center justify-center overflow-hidden shrink-0">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
-                        src={formImage}
-                        alt="Preview"
-                        className="w-full h-full object-contain"
-                        onError={(e) => {
-                          (e.target as HTMLElement).style.display = "none";
-                        }}
-                      />
-                    </div>
-                    <span className="text-[11px] font-mono text-muted-foreground">
-                      Pré-visualização da imagem
-                    </span>
+                {formImageMode === "upload" ? (
+                  <div className="space-y-3">
+                    {formImage ? (
+                      <div className="flex items-center gap-4 p-3 bg-background border border-border rounded-xl">
+                        <div className="w-20 h-20 rounded-lg bg-muted/40 border border-border flex items-center justify-center overflow-hidden shrink-0">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={formImage}
+                            alt="Prévia da foto"
+                            className="w-full h-full object-contain"
+                          />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded text-[10px] font-mono bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 font-bold uppercase mb-1">
+                            Foto pronta
+                          </span>
+                          <p className="text-xs font-mono text-muted-foreground truncate" title={formImage}>
+                            {formImage}
+                          </p>
+                          <div className="flex items-center gap-2 mt-2">
+                            <button
+                              type="button"
+                              onClick={() => fileInputRef.current?.click()}
+                              className="text-xs font-mono text-primary hover:underline cursor-pointer"
+                            >
+                              Trocar foto
+                            </button>
+                            <span className="text-muted-foreground text-xs">•</span>
+                            <button
+                              type="button"
+                              onClick={() => setFormImage("")}
+                              className="text-xs font-mono text-destructive hover:underline cursor-pointer"
+                            >
+                              Remover foto
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div
+                        onDrop={handleDrop}
+                        onDragOver={handleDragOver}
+                        onDragLeave={handleDragLeave}
+                        onClick={() => fileInputRef.current?.click()}
+                        className={`border-2 border-dashed rounded-xl p-6 text-center cursor-pointer transition-all flex flex-col items-center justify-center gap-2.5 ${
+                          imageDragActive
+                            ? "border-primary bg-primary/10"
+                            : "border-border hover:border-primary/60 hover:bg-muted/40"
+                        }`}
+                      >
+                        {uploadingImage ? (
+                          <div className="flex flex-col items-center gap-2 py-2">
+                            <RefreshCw className="w-7 h-7 text-primary animate-spin" />
+                            <span className="text-xs font-mono text-muted-foreground">
+                              Fazendo upload da imagem para o servidor...
+                            </span>
+                          </div>
+                        ) : (
+                          <>
+                            <div className="p-3 rounded-full bg-muted border border-border text-muted-foreground">
+                              <UploadCloud className="w-6 h-6 text-primary" />
+                            </div>
+                            <div className="space-y-0.5">
+                              <p className="text-xs font-bold font-heading uppercase tracking-wider text-foreground">
+                                Clique para selecionar ou arraste a foto aqui
+                              </p>
+                              <p className="text-[11px] font-mono text-muted-foreground">
+                                Suporta JPG, PNG, WEBP, GIF até 10MB
+                              </p>
+                            </div>
+                          </>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div className="space-y-2">
+                    <input
+                      type="url"
+                      placeholder="https://exemplo.com/fotos/arma-airsoft.jpg"
+                      value={formImage}
+                      onChange={(e) => setFormImage(e.target.value)}
+                      className="w-full bg-background border border-border rounded-xl px-3.5 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
+                    />
+                    {formImage && (
+                      <div className="flex items-center gap-3 p-2.5 bg-background border border-border rounded-xl">
+                        <div className="w-14 h-14 rounded-lg bg-muted/40 border border-border flex items-center justify-center overflow-hidden shrink-0">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <img
+                            src={formImage}
+                            alt="Prévia"
+                            className="w-full h-full object-contain"
+                            onError={(e) => {
+                              (e.target as HTMLElement).style.display = "none";
+                            }}
+                          />
+                        </div>
+                        <span className="text-xs font-mono text-muted-foreground">
+                          Pré-visualização da foto vinculada via URL
+                        </span>
+                      </div>
+                    )}
                   </div>
                 )}
+              </div>
+
+              {/* Descrição do Produto */}
+              <div className="space-y-1.5">
+                <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground flex items-center justify-between font-bold">
+                  <span className="flex items-center gap-1.5">
+                    <FileText className="w-4 h-4 text-primary" />
+                    Descrição Detalhada do Produto
+                  </span>
+                  <span className="text-[10px] text-muted-foreground font-normal">
+                    Exibida na ficha do item
+                  </span>
+                </label>
+                <textarea
+                  rows={5}
+                  placeholder={`Insira a descrição completa, especificações técnicas, materiais e itens inclusos...\n\nExemplo:\n- Calibre: 6mm BB\n- Potência: 380 FPS com BBs 0.20g\n- Coronha retrátil ajustável em 5 posições\n- Acompanha magazine mid-cap, vareta e manual`}
+                  value={formDescription}
+                  onChange={(e) => setFormDescription(e.target.value)}
+                  className="w-full bg-background border border-border rounded-xl p-3.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/40 font-mono leading-relaxed"
+                />
+                <span className="text-[10px] text-muted-foreground font-mono block">
+                  Linhas iniciadas por hífen ou ponto serão organizadas automaticamente em tópicos na página de detalhes.
+                </span>
               </div>
 
               {/* Link Original / Destino */}
               <div className="space-y-1.5">
                 <label className="text-xs font-mono uppercase tracking-wider text-muted-foreground">
-                  Link Externo do Produto (opcional)
+                  Link Externo do Fornecedor / Fabricante (opcional)
                 </label>
                 <input
                   type="url"
-                  placeholder="Deixe em branco para direcionar direto ao WhatsApp oficial"
+                  placeholder="https://fornecedor.com/item/123 (opcional)"
                   value={formUrl}
                   onChange={(e) => setFormUrl(e.target.value)}
-                  className="w-full bg-background border border-border rounded-lg px-3 py-2 text-sm font-mono focus:outline-none focus:ring-1 focus:ring-primary"
+                  className="w-full bg-background border border-border rounded-xl px-3.5 py-2 text-sm font-mono focus:outline-none focus:ring-2 focus:ring-primary/40"
                 />
               </div>
 
               {/* Botões do Rodapé */}
-              <div className="flex items-center justify-end gap-3 pt-3 border-t border-border">
+              <div className="flex items-center justify-end gap-3 pt-4 border-t border-border">
                 <button
                   type="button"
                   onClick={() => setShowModal(false)}
-                  className="px-4 py-2 rounded-lg border border-border text-xs font-mono uppercase tracking-wider hover:bg-muted transition-colors cursor-pointer"
+                  className="px-4 py-2.5 rounded-xl border border-border text-xs font-mono uppercase tracking-wider hover:bg-muted transition-colors cursor-pointer"
                 >
                   Cancelar
                 </button>
                 <button
                   type="submit"
-                  disabled={formSaving}
-                  className="inline-flex items-center gap-2 px-5 py-2 rounded-lg bg-primary text-primary-foreground font-mono text-xs uppercase tracking-wider font-bold hover:opacity-90 transition-opacity cursor-pointer disabled:opacity-50"
+                  disabled={formSaving || uploadingImage}
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-xl bg-primary text-primary-foreground font-mono text-xs uppercase tracking-wider font-bold hover:opacity-90 transition-opacity cursor-pointer disabled:opacity-50 shadow-md"
                 >
                   {formSaving && <RefreshCw className="w-3.5 h-3.5 animate-spin" />}
-                  <span>{editingProduct ? "Atualizar Produto" : "Salvar Produto"}</span>
+                  <span>{editingProduct ? "Atualizar Produto" : "Salvar e Publicar Produto"}</span>
                 </button>
               </div>
             </form>

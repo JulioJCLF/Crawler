@@ -110,3 +110,77 @@ export interface PasswordResetToken {
   expiresAt: number;
 }
 
+export type RaffleStatus = "active" | "paused" | "awaiting_draw" | "completed" | "drawn" | "cancelled";
+export type QuotaStatus = "available" | "reserved" | "paid";
+
+export interface QuotaEntry {
+  number: string; // "01".."100" ou "001".."1000"
+  status: QuotaStatus;
+  customerName?: string;
+  customerPhone?: string;
+  buyerName?: string;
+  buyerPhone?: string;
+  reservedAt?: string;
+  paidAt?: string;
+  sellerId?: string; // "matheus" | "alexandre"
+}
+
+export interface FederalDrawResult {
+  contestNumber: string;
+  drawDate: string;
+  firstPrize: string;
+  secondPrize?: string;
+  thirdPrize?: string;
+  fourthPrize?: string;
+  fifthPrize?: string;
+  winningQuota: string;
+  prizeOrigin: "1º Prêmio" | "2º Prêmio" | "3º Prêmio" | "4º Prêmio" | "5º Prêmio";
+  winner: {
+    name: string;
+    phone: string;
+    quota: string;
+  };
+  drawnAt: string;
+}
+
+export interface Raffle {
+  id: string;
+  title: string;
+  description?: string;
+  image: string;
+  images?: string[];
+  pricePerQuota: number;
+  totalQuotas: 100 | 1000;
+  status: RaffleStatus;
+  drawDate?: string;
+  federalLotteryContest?: string;
+  drawResults?: FederalDrawResult;
+  federalLotteryDraw?: any;
+  winnerQuota?: string;
+  winnerName?: string;
+  drawnAt?: string;
+  stats?: any;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface CreateRaffleInput {
+  title: string;
+  description?: string;
+  image: string;
+  images?: string[];
+  pricePerQuota: number;
+  totalQuotas: 100 | 1000;
+  drawDate?: string;
+  federalLotteryContest?: string;
+}
+
+export interface RaffleStats {
+  totalQuotas: number;
+  paidCount: number;
+  reservedCount: number;
+  availableCount: number;
+  percentPaid: number;
+  totalRevenue: number;
+}
+

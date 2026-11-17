@@ -23,10 +23,12 @@ import {
   Mail,
   Users,
   UserCheck,
+  Ticket,
 } from "lucide-react";
 import Link from "next/link";
 import { Logo } from "@/components/layout/Logo";
 import { CatalogManager } from "@/components/admin/CatalogManager";
+import { RaffleManager } from "@/components/admin/RaffleManager";
 import { PricingConfig, UserRole, AuthUser } from "@/types";
 import {
   DEFAULT_PRICING_CONFIG,
@@ -84,7 +86,7 @@ export default function AdminDashboardPage() {
   const [lastSaved, setLastSaved] = useState<PricingConfig | null>(null);
 
   // Estados da interface
-  const [activeTab, setActiveTab] = useState<"catalog" | "pricing">("catalog");
+  const [activeTab, setActiveTab] = useState<"catalog" | "pricing" | "raffles">("catalog");
   const [categorySearch, setCategorySearch] = useState("");
   const [saving, setSaving] = useState(false);
   const [feedback, setFeedback] = useState<{ type: "success" | "error"; message: string } | null>(null);
@@ -568,6 +570,18 @@ export default function AdminDashboardPage() {
             <DollarSign className="w-4 h-4" />
             <span>Precificação e Câmbio</span>
           </button>
+
+          <button
+            onClick={() => setActiveTab("raffles")}
+            className={`inline-flex items-center gap-2 px-5 py-3 border-b-2 font-heading text-sm uppercase tracking-wider font-bold transition-all cursor-pointer ${
+              activeTab === "raffles"
+                ? "border-primary text-primary bg-primary/5"
+                : "border-transparent text-muted-foreground hover:text-foreground hover:bg-muted/30"
+            }`}
+          >
+            <Ticket className="w-4 h-4" />
+            <span>Rifas & Sorteios</span>
+          </button>
         </div>
 
         {activeTab === "catalog" ? (
@@ -593,6 +607,8 @@ export default function AdminDashboardPage() {
               </div>
             </div>
           )
+        ) : activeTab === "raffles" ? (
+          <RaffleManager />
         ) : (
           <div className="space-y-8">
             {/* Aviso para Operador de Dólar */}

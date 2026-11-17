@@ -18,9 +18,13 @@ export function setDataDirForTesting(dir: string | null) {
   inMemoryHiddenProducts = null;
 }
 
-function getDataDir(): string {
+export function getDataDir(): string {
   if (customDataDirForTesting) return customDataDirForTesting;
   return process.env.DATA_DIR || path.join(process.cwd(), "data");
+}
+
+export function getUploadsDir(): string {
+  return path.join(getDataDir(), "uploads");
 }
 
 function getCustomProductsFile(): string {
@@ -245,6 +249,9 @@ export function createCustomProduct(
     price: input.price ? input.price.trim() : null,
     fixedBrlPrice: hasFixedBrl ? Number(input.fixedBrlPrice) : undefined,
     image: input.image ? input.image.trim() : null,
+    images: input.images && input.images.length > 0 ? input.images : (input.image ? [input.image.trim()] : []),
+    description: input.description ? input.description.trim() : undefined,
+    specs: input.specs || undefined,
     url: input.url ? input.url.trim() : "",
     source: "manual",
     status: input.status || "active",
@@ -290,6 +297,11 @@ export function updateCustomProduct(
       ? { fixedBrlPrice: updates.fixedBrlPrice > 0 ? Number(updates.fixedBrlPrice) : undefined }
       : {}),
     ...(updates.image !== undefined ? { image: updates.image ? updates.image.trim() : null } : {}),
+    ...(updates.images !== undefined ? { images: updates.images } : {}),
+    ...(updates.description !== undefined
+      ? { description: updates.description ? updates.description.trim() : undefined }
+      : {}),
+    ...(updates.specs !== undefined ? { specs: updates.specs } : {}),
     ...(updates.url !== undefined ? { url: updates.url ? updates.url.trim() : "" } : {}),
     ...(updates.status ? { status: updates.status } : {}),
     updatedAt: new Date().toISOString(),

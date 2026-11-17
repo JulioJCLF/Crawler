@@ -77,13 +77,14 @@ describe("catalogService - Gestão visual de produtos e Catálogo Híbrido", () 
     }
   });
 
-  it("cria um novo produto manual com ID único e salva com sucesso", () => {
+  it("cria um novo produto manual com foto, descrição e valor e salva com sucesso", () => {
     const res = createCustomProduct({
       name: "Rifle Exclusivo Hunting World",
       category: "replicas",
       price: "USD 250.00",
       fixedBrlPrice: 1699.9,
       image: "https://exemplo.com/rifle.jpg",
+      description: "Rifle de precisão com corpo full metal e coronha ajustável.",
     });
 
     expect(res.success).toBe(true);
@@ -93,10 +94,14 @@ describe("catalogService - Gestão visual de produtos e Catálogo Híbrido", () 
     expect(res.product?.categoryLabel).toBe("Réplicas");
     expect(res.product?.source).toBe("manual");
     expect(res.product?.fixedBrlPrice).toBe(1699.9);
+    expect(res.product?.image).toBe("https://exemplo.com/rifle.jpg");
+    expect(res.product?.images).toEqual(["https://exemplo.com/rifle.jpg"]);
+    expect(res.product?.description).toBe("Rifle de precisão com corpo full metal e coronha ajustável.");
 
     const custom = getCustomProducts();
     expect(custom.length).toBe(1);
     expect(custom[0].id).toBe(res.product?.id);
+    expect(custom[0].description).toBe("Rifle de precisão com corpo full metal e coronha ajustável.");
   });
 
   it("rejeita produto sem nome ou sem preço", () => {

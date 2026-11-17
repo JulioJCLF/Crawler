@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { Search, X, SlidersHorizontal, ArrowDownUp, Check, RotateCcw } from "lucide-react";
+import Link from "next/link";
+import { Search, X, SlidersHorizontal, ArrowDownUp, Check, RotateCcw, Ticket } from "lucide-react";
 import { useTheme } from "@/providers/ThemeProvider";
 import { CategorySummary } from "@/types";
 import { Logo } from "@/components/layout/Logo";
@@ -130,6 +131,28 @@ export function Filters({
       </div>
 
       <div className={`flex flex-col gap-5 ${mobileExpanded ? 'block' : 'hidden md:flex'}`}>
+        {/* Link para Rifas Oficiais Loteria Federal */}
+        <Link
+          href="/rifas"
+          className="flex items-center justify-between p-3 rounded-xl border border-amber-500/40 bg-gradient-to-r from-amber-950/40 via-amber-900/20 to-card hover:border-amber-400 text-amber-300 transition-all group shadow-sm"
+        >
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-lg bg-amber-500/20 flex items-center justify-center text-amber-400 group-hover:scale-110 transition-transform">
+              <Ticket className="w-4 h-4" />
+            </div>
+            <div>
+              <div className="font-heading uppercase text-xs tracking-wider font-bold text-foreground group-hover:text-amber-300 transition-colors">
+                Rifas & Sorteios
+              </div>
+              <div className="text-[10px] font-mono text-muted-foreground">
+                Loteria Federal Oficial
+              </div>
+            </div>
+          </div>
+          <span className="text-[10px] font-mono uppercase bg-amber-500/20 px-2 py-0.5 rounded-full border border-amber-500/30 text-amber-300 font-bold">
+            Ao Vivo
+          </span>
+        </Link>
         
         {/* 1. BUSCA INTELIGENTE COM BOTÃO LIMPAR DIRETO */}
         <div className="space-y-2">

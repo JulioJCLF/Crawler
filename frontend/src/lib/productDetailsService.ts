@@ -237,7 +237,7 @@ export async function getEnrichedProductById(idOrSku: string): Promise<Product |
       (enriched.images && enriched.images.length > 0)
   );
 
-  if (hasSnapshotDetails) {
+  if (enriched.source === "manual" || hasSnapshotDetails) {
     if (!enriched.images || enriched.images.length === 0) {
       enriched.images = enriched.image ? [enriched.image] : [];
     }

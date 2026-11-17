@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useState, useMemo } from "react";
+import Link from "next/link";
+import { Ticket } from "lucide-react";
 import { Filters, MACRO_CATEGORIES } from "@/components/layout/Filters";
 import { ActiveFilters } from "@/components/layout/ActiveFilters";
 import { Radar } from "@/components/layout/Radar";
@@ -401,6 +403,13 @@ export default function Home() {
 
             {/* Quick Category Rail for instantaneous 1-click filtering */}
             <div className="flex items-center gap-1.5 overflow-x-auto pb-2 mb-4 scrollbar-hide pt-2">
+              <Link
+                href="/rifas"
+                className="flex-shrink-0 text-xs font-mono px-3 py-1.5 rounded transition-all border border-amber-500/40 bg-gradient-to-r from-amber-500/20 to-orange-500/20 text-amber-300 hover:border-amber-400 font-bold flex items-center gap-1.5 shadow-xs"
+              >
+                <Ticket className="w-3.5 h-3.5 text-amber-400" />
+                <span>Rifas</span>
+              </Link>
               <button
                 onClick={() => handleCategoryChange(null)}
                 className={`flex-shrink-0 text-xs font-mono px-3 py-1.5 rounded transition-all border ${
