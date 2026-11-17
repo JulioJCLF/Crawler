@@ -2,7 +2,23 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Search, X, SlidersHorizontal, ArrowDownUp, Check, RotateCcw, Ticket } from "lucide-react";
+import {
+  Search,
+  X,
+  SlidersHorizontal,
+  ArrowDownUp,
+  Check,
+  RotateCcw,
+  Ticket,
+  ChevronDown,
+  Layers,
+  DollarSign,
+  Tag,
+  Crosshair,
+  Shield,
+  Wrench,
+  Shirt,
+} from "lucide-react";
 import { useTheme } from "@/providers/ThemeProvider";
 import { CategorySummary } from "@/types";
 import { Logo } from "@/components/layout/Logo";
@@ -57,7 +73,27 @@ export const MACRO_CATEGORIES = [
   { slug: "#suprimentos", label: "Gás e Baterias", group: "suprimentos" },
 ];
 
-export const BB_WEIGHTS = ["0.20g", "0.23g", "0.25g", "0.28g", "0.30g", "0.32g", "0.36g", "0.40g", "0.43g", "0.45g", "0.48g", "0.50g"];
+export const CATEGORY_GROUPS = [
+  { id: "armas", label: "Armas & Réplicas", icon: Crosshair },
+  { id: "opticos", label: "Ópticos & Iluminação", icon: Shield },
+  { id: "pecas", label: "Peças & Upgrades", icon: Wrench },
+  { id: "vestuario", label: "Vestuário & Suprimentos", icon: Shirt },
+];
+
+export const BB_WEIGHTS = [
+  "0.20g",
+  "0.23g",
+  "0.25g",
+  "0.28g",
+  "0.30g",
+  "0.32g",
+  "0.36g",
+  "0.40g",
+  "0.43g",
+  "0.45g",
+  "0.48g",
+  "0.50g",
+];
 
 export const VEST_CATEGORIES = [
   { value: "holsters", label: "Holsters" },
@@ -72,7 +108,12 @@ export const VEST_CATEGORIES = [
   { value: "eyewear", label: "Eyewear & Masks" },
 ];
 
-const POPULAR_BRANDS = ["Tokyo Marui", "G&G", "Krytac", "VFC", "CYMA", "KWA", "ARES", "Novritsch"];
+const SORT_OPTIONS = [
+  { id: "recent", label: "Recentes" },
+  { id: "price_asc", label: "Menor R$" },
+  { id: "price_desc", label: "Maior R$" },
+  { id: "asc", label: "A - Z" },
+];
 
 export function Filters({
   selectedCategory,
@@ -90,10 +131,24 @@ export function Filters({
   onSelectPriceRange,
   sortOrder,
   onSortChange,
-  availableBrands
+  availableBrands,
 }: FiltersProps) {
   const [mobileExpanded, setMobileExpanded] = useState(false);
-  const isReplicaCategory = selectedCategory === "#aeg" || selectedCategory === "#gbb" || selectedCategory === "#gbbr" || selectedCategory === "#sniper" || selectedCategory === "#shotgun" || selectedCategory === "#hpa" || selectedCategory === "replicas";
+
+  // Estados dos acordeões colapsáveis (fechados por padrão para manter a barra limpa)
+  const [openSections, setOpenSections] = useState<Record<string, boolean>>({
+    categories: false,
+    price: false,
+    sort: false,
+    brand: false,
+  });
+
+  const toggleSection = (section: string) => {
+    setOpenSections((prev) => ({
+      ...prev,
+      [section]: !prev[section],
+    }));
+  };
 
   const hasActiveFilters = Boolean(
     search || selectedCategory || selectedBrand || selectedWeight || selectedVestCategory || selectedPriceRange
@@ -108,29 +163,36 @@ export function Filters({
     onSelectPriceRange(null);
   };
 
+  // Encontra labels dos filtros selecionados para exibir no badge dos acordeões
+  const activeCategoryMeta = MACRO_CATEGORIES.find((c) => c.slug === selectedCategory);
+  const activePriceMeta = PRICE_RANGES.find((p) => p.id === selectedPriceRange);
+  const activeSortMeta = SORT_OPTIONS.find((s) => s.id === sortOrder);
+
   return (
-    <aside className="w-full md:w-80 border-b md:border-b-0 md:border-r border-border bg-card/60 p-4 md:p-6 flex flex-col gap-5 md:sticky md:top-0 md:h-screen md:overflow-y-auto">
+    <aside className="w-full md:w-80 border-b md:border-b-0 md:border-r border-border bg-card/60 p-4 md:p-5 flex flex-col gap-4 md:sticky md:top-0 md:h-screen md:overflow-y-auto">
       {/* Brand Header */}
-      <div className="flex items-center justify-between border-b border-border pb-4">
+      <div className="flex items-center justify-between border-b border-border pb-3.5">
         <div className="flex items-center gap-3">
-          <Logo className="h-10 md:h-12 w-auto object-contain" />
+          <Logo className="h-9 md:h-11 w-auto object-contain" />
           <div>
-            <h2 className="font-display font-bold text-base uppercase tracking-tight text-foreground">Filtros Táticos</h2>
-            <span className="font-mono text-xs text-muted-foreground">{totalCount} equipamentos</span>
+            <h2 className="font-display font-bold text-sm uppercase tracking-tight text-foreground">
+              Filtros Táticos
+            </h2>
+            <span className="font-mono text-[11px] text-muted-foreground">{totalCount} equipamentos</span>
           </div>
         </div>
 
         {/* Mobile Toggle Button */}
         <button
           onClick={() => setMobileExpanded(!mobileExpanded)}
-          className="md:hidden flex items-center gap-1.5 px-3 py-1.5 rounded bg-muted border border-border text-xs font-mono text-foreground"
+          className="md:hidden flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-muted border border-border text-xs font-mono text-foreground cursor-pointer"
         >
           <SlidersHorizontal className="w-3.5 h-3.5 text-accent" />
           <span>{mobileExpanded ? "Ocultar" : "Expandir"}</span>
         </button>
       </div>
 
-      <div className={`flex flex-col gap-5 ${mobileExpanded ? 'block' : 'hidden md:flex'}`}>
+      <div className={`flex flex-col gap-3.5 ${mobileExpanded ? "block" : "hidden md:flex"}`}>
         {/* Link para Rifas Oficiais Loteria Federal */}
         <Link
           href="/rifas"
@@ -142,7 +204,7 @@ export function Filters({
             </div>
             <div>
               <div className="font-heading uppercase text-xs tracking-wider font-bold text-foreground group-hover:text-amber-300 transition-colors">
-                Rifas & Sorteios
+                RIFA HUNTING
               </div>
               <div className="text-[10px] font-mono text-muted-foreground">
                 Loteria Federal Oficial
@@ -153,37 +215,42 @@ export function Filters({
             Ao Vivo
           </span>
         </Link>
-        
-        {/* 1. BUSCA INTELIGENTE COM BOTÃO LIMPAR DIRETO */}
-        <div className="space-y-2">
+
+        {/* ───────────────────────────────────────────────────────────── */}
+        {/* 1. BUSCA POR TEXTO (FILTRO PRINCIPAL SEMPRE VISÍVEL)          */}
+        {/* ───────────────────────────────────────────────────────────── */}
+        <div className="p-3.5 rounded-xl border border-border bg-card/80 space-y-2.5 shadow-xs">
           <div className="flex items-center justify-between">
-            <label htmlFor="search-input" className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground font-semibold flex items-center gap-1.5">
+            <label
+              htmlFor="search-input"
+              className="font-mono text-[11px] uppercase tracking-wider text-foreground font-bold flex items-center gap-1.5"
+            >
               <Search className="w-3.5 h-3.5 text-accent" />
-              Busca Rápida
+              <span>Pesquisar Equipamento</span>
             </label>
             {search && (
-              <button 
+              <button
                 onClick={() => onSearchChange("")}
-                className="font-mono text-[10px] text-muted-foreground hover:text-accent flex items-center gap-1"
+                className="font-mono text-[10px] text-muted-foreground hover:text-accent flex items-center gap-1 cursor-pointer"
               >
-                Limpar busca
+                Limpar
               </button>
             )}
           </div>
 
           <div className="relative">
-            <input 
+            <input
               id="search-input"
               type="text"
-              placeholder="Ex: Glock, M4, Red Dot, 0.25g..." 
+              placeholder="Ex: Glock, M4, Red Dot, 0.25g..."
               value={search}
               onChange={(e) => onSearchChange(e.target.value)}
-              className="w-full font-mono text-xs py-2.5 pl-3 pr-8 rounded bg-background border border-border text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-accent transition-colors"
+              className="w-full font-mono text-xs py-2.5 pl-3 pr-8 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground/60 focus:outline-none focus:border-accent transition-colors shadow-inner"
             />
             {search && (
-              <button 
+              <button
                 onClick={() => onSearchChange("")}
-                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-0.5"
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground p-0.5 cursor-pointer"
                 title="Limpar busca"
               >
                 <X className="w-3.5 h-3.5" />
@@ -191,8 +258,8 @@ export function Filters({
             )}
           </div>
 
-          {/* Atalhos de Busca Rápida (1 clique para buscar) */}
-          <div className="flex flex-wrap gap-1 pt-1">
+          {/* Atalhos Rápidos Populares */}
+          <div className="flex flex-wrap gap-1 pt-0.5">
             {QUICK_SEARCH_SUGGESTIONS.map((s) => {
               const active = search.toLowerCase() === s.query.toLowerCase();
               return (
@@ -200,10 +267,10 @@ export function Filters({
                   key={s.label}
                   type="button"
                   onClick={() => onSearchChange(active ? "" : s.query)}
-                  className={`text-[10px] font-mono px-2 py-0.5 rounded transition-all border ${
+                  className={`text-[10px] font-mono px-2 py-0.5 rounded-md transition-all border cursor-pointer ${
                     active
-                      ? "bg-accent text-accent-foreground border-accent font-bold shadow-sm"
-                      : "bg-background/80 text-muted-foreground border-border hover:border-accent hover:text-foreground"
+                      ? "bg-accent text-accent-foreground border-accent font-bold shadow-xs"
+                      : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
                   }`}
                 >
                   {s.label}
@@ -213,91 +280,21 @@ export function Filters({
           </div>
         </div>
 
-        {/* 2. ORDENAÇÃO COMPACTA */}
-        <div className="space-y-1.5">
-          <label className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground font-semibold flex items-center gap-1.5">
-            <ArrowDownUp className="w-3.5 h-3.5 text-accent" />
-            Ordenar Por
-          </label>
-          <div className="grid grid-cols-2 gap-1 bg-background/50 p-1 border border-border rounded">
-            {[
-              { id: "recent", label: "Recentes" },
-              { id: "price_asc", label: "Menor R$" },
-              { id: "price_desc", label: "Maior R$" },
-              { id: "asc", label: "A - Z" },
-            ].map((sort) => {
-              const active = sortOrder === sort.id;
-              return (
-                <button
-                  key={sort.id}
-                  onClick={() => onSortChange(sort.id)}
-                  className={`text-[11px] font-mono py-1 px-2 rounded text-center transition-all ${
-                    active
-                      ? "bg-accent text-accent-foreground font-bold shadow-xs"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                  }`}
-                >
-                  {sort.label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
+        {/* ───────────────────────────────────────────────────────────── */}
+        {/* 2. SUB-FILTROS CONTEXTUAIS RÁPIDOS (BBs e Vestuário)         */}
+        {/* Abrem automaticamente se a categoria relevante for ativada     */}
+        {/* ───────────────────────────────────────────────────────────── */}
 
-        {/* 3. FAIXA DE PREÇO (PILLS DIRETOS DE 1 CLIQUE) */}
-        <div className="space-y-1.5">
-          <div className="flex items-center justify-between">
-            <label className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">
-              Faixa de Preço
-            </label>
-            {selectedPriceRange && (
-              <button 
-                onClick={() => onSelectPriceRange(null)} 
-                className="font-mono text-[10px] text-muted-foreground hover:text-accent"
-              >
-                Reset
-              </button>
-            )}
-          </div>
-          <div className="grid grid-cols-2 gap-1.5">
-            <button
-              onClick={() => onSelectPriceRange(null)}
-              className={`text-[11px] font-mono py-1.5 px-2 rounded text-center border transition-all ${
-                selectedPriceRange === null
-                  ? "bg-accent text-accent-foreground border-accent font-bold"
-                  : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
-              }`}
-            >
-              Todos os Valores
-            </button>
-            {PRICE_RANGES.map((r) => {
-              const active = selectedPriceRange === r.id;
-              return (
-                <button
-                  key={r.id}
-                  onClick={() => onSelectPriceRange(active ? null : r.id)}
-                  className={`text-[11px] font-mono py-1.5 px-2 rounded text-center border transition-all ${
-                    active
-                      ? "bg-accent text-accent-foreground border-accent font-bold"
-                      : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
-                  }`}
-                >
-                  {r.label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* 4. SUB-FILTROS CONTEXTUAIS RÁPIDOS */}
-
-        {/* A. Gramatura de BBs */}
+        {/* Gramatura de BBs */}
         {selectedCategory === "#bbs" && (
-          <div className="p-3 bg-muted/30 border border-border rounded space-y-2">
+          <div className="p-3 bg-accent/5 border border-accent/30 rounded-xl space-y-2 animate-in fade-in duration-200">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[11px] uppercase font-bold text-accent">Peso da Esfera (BBs)</span>
               {selectedWeight && (
-                <button onClick={() => onSelectWeight(null)} className="font-mono text-[10px] text-muted-foreground hover:text-accent">
+                <button
+                  onClick={() => onSelectWeight(null)}
+                  className="font-mono text-[10px] text-muted-foreground hover:text-accent cursor-pointer"
+                >
                   Reset
                 </button>
               )}
@@ -309,7 +306,7 @@ export function Filters({
                   <button
                     key={w}
                     onClick={() => onSelectWeight(active ? null : w)}
-                    className={`text-xs font-mono py-1 rounded text-center border transition-all ${
+                    className={`text-xs font-mono py-1 rounded-md text-center border transition-all cursor-pointer ${
                       active
                         ? "bg-accent text-accent-foreground border-accent font-bold"
                         : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
@@ -323,13 +320,16 @@ export function Filters({
           </div>
         )}
 
-        {/* B. Tipo de Vestuário */}
+        {/* Tipo de Vestuário */}
         {selectedCategory === "#vestuario" && (
-          <div className="p-3 bg-muted/30 border border-border rounded space-y-2">
+          <div className="p-3 bg-accent/5 border border-accent/30 rounded-xl space-y-2 animate-in fade-in duration-200">
             <div className="flex items-center justify-between">
               <span className="font-mono text-[11px] uppercase font-bold text-accent">Tipo de Equipamento</span>
               {selectedVestCategory && (
-                <button onClick={() => onSelectVestCategory(null)} className="font-mono text-[10px] text-muted-foreground hover:text-accent">
+                <button
+                  onClick={() => onSelectVestCategory(null)}
+                  className="font-mono text-[10px] text-muted-foreground hover:text-accent cursor-pointer"
+                >
                   Reset
                 </button>
               )}
@@ -341,7 +341,7 @@ export function Filters({
                   <button
                     key={v.value}
                     onClick={() => onSelectVestCategory(active ? null : v.value)}
-                    className={`text-[11px] font-mono py-1.5 px-2 rounded text-left truncate border transition-all ${
+                    className={`text-[11px] font-mono py-1.5 px-2 rounded-md text-left truncate border transition-all cursor-pointer ${
                       active
                         ? "bg-accent text-accent-foreground border-accent font-bold"
                         : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
@@ -355,118 +355,312 @@ export function Filters({
           </div>
         )}
 
-        {/* C. Fabricante / Marca (Disponível dinamicamente conforme a categoria ativa) */}
-        {availableBrands.length > 0 && (
-          <div className="p-3 bg-muted/30 border border-border rounded space-y-2">
-            <div className="flex items-center justify-between">
-              <span className="font-mono text-[11px] uppercase font-bold text-accent">Fabricante / Marca</span>
-              {selectedBrand && (
-                <button onClick={() => onSelectBrand(null)} className="font-mono text-[10px] text-muted-foreground hover:text-accent">
-                  Reset
-                </button>
+        {/* ───────────────────────────────────────────────────────────── */}
+        {/* 3. FILTROS COLAPSÁVEIS (ACORDEÕES)                             */}
+        {/* ───────────────────────────────────────────────────────────── */}
+
+        {/* ACORDEÃO 1: CATEGORIAS */}
+        <div className="border border-border rounded-xl bg-card/60 overflow-hidden transition-all duration-200">
+          <button
+            type="button"
+            onClick={() => toggleSection("categories")}
+            className="w-full flex items-center justify-between p-3.5 cursor-pointer hover:bg-muted/30 transition-colors"
+          >
+            <div className="flex items-center gap-2">
+              <Layers className="w-4 h-4 text-accent" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wide text-foreground">
+                Categorias
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              {activeCategoryMeta ? (
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30 font-bold max-w-[120px] truncate">
+                  {activeCategoryMeta.label}
+                </span>
+              ) : (
+                <span className="text-[10px] font-mono text-muted-foreground">Todas</span>
               )}
+              <ChevronDown
+                className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${
+                  openSections.categories ? "rotate-180 text-foreground" : ""
+                }`}
+              />
             </div>
-            <div className="flex flex-wrap gap-1">
-              {availableBrands.slice(0, 8).map((b) => {
-                const active = selectedBrand === b;
-                return (
-                  <button
-                    key={b}
-                    onClick={() => onSelectBrand(active ? null : b)}
-                    className={`text-[10px] font-mono px-2 py-1 rounded border transition-all ${
-                      active
-                        ? "bg-accent text-accent-foreground border-accent font-bold"
-                        : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
-                    }`}
-                  >
-                    {b}
-                  </button>
-                );
-              })}
-            </div>
-            {availableBrands.length > 8 && (
-              <select
-                value={selectedBrand || ""}
-                onChange={(e) => onSelectBrand(e.target.value || null)}
-                className="w-full font-mono text-xs p-1.5 mt-1 rounded bg-background border border-border text-foreground"
-              >
-                <option value="">Todas as marcas ({availableBrands.length})...</option>
-                {availableBrands.map((b) => (
-                  <option key={b} value={b}>{b}</option>
-                ))}
-              </select>
-            )}
-          </div>
-        )}
+          </button>
 
-        {/* 5. CATEGORIAS DE PRODUTOS */}
-        <div className="space-y-2">
-          <div className="flex items-center justify-between border-b border-border pb-2">
-            <h3 className="font-mono text-[11px] uppercase tracking-wider text-muted-foreground font-semibold">
-              Categorias
-            </h3>
-            {selectedCategory && (
-              <button 
-                onClick={() => onSelectCategory(null)} 
-                className="font-mono text-[10px] text-muted-foreground hover:text-accent"
+          {openSections.categories && (
+            <div className="p-3.5 pt-0 border-t border-border/40 space-y-3.5 animate-in fade-in duration-150">
+              {/* Botão de Todos os Produtos */}
+              <button
+                type="button"
+                onClick={() => {
+                  onSelectCategory(null);
+                  onSelectBrand(null);
+                }}
+                className={`w-full flex items-center justify-between font-mono text-xs px-3 py-2 rounded-lg transition-all border cursor-pointer ${
+                  selectedCategory === null
+                    ? "bg-accent text-accent-foreground border-accent font-bold shadow-xs"
+                    : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
+                }`}
               >
-                Ver todas
+                <span>TODOS OS PRODUTOS</span>
+                <span className="text-[10px] opacity-80 font-bold">({totalCount})</span>
               </button>
-            )}
-          </div>
 
-          <div className="flex flex-col gap-1">
-            <button
-              onClick={() => {
-                onSelectCategory(null);
-                onSelectBrand(null);
-              }}
-              className={`flex items-center justify-between font-mono text-xs px-3 py-2 rounded transition-all border ${
-                selectedCategory === null 
-                  ? "bg-accent text-accent-foreground border-accent font-bold" 
-                  : "bg-background/40 hover:bg-muted text-muted-foreground border-transparent hover:border-border"
-              }`}
-            >
-              <span>TODOS OS PRODUTOS</span>
-              <span className="text-[10px] opacity-80">({totalCount})</span>
-            </button>
+              {/* Grupos Táticos de Categorias */}
+              <div className="space-y-3">
+                {CATEGORY_GROUPS.map((group) => {
+                  const groupCats = MACRO_CATEGORIES.filter(
+                    (c) =>
+                      c.group === group.id ||
+                      (group.id === "vestuario" && (c.group === "vestuario" || c.group === "suprimentos"))
+                  );
 
-            {MACRO_CATEGORIES.map((cat) => {
-              const active = selectedCategory === cat.slug;
-              return (
-                <button
-                  key={cat.slug}
-                  onClick={() => {
-                    onSelectCategory(active ? null : cat.slug);
-                    if (cat.slug !== "#bbs") onSelectWeight(null);
-                    if (cat.slug !== "#vestuario") onSelectVestCategory(null);
-                    onSelectBrand(null);
-                  }}
-                  className={`flex items-center justify-between font-mono text-xs px-3 py-2 rounded transition-all border ${
-                    active
-                      ? "bg-accent text-accent-foreground border-accent font-bold"
-                      : "bg-background/40 hover:bg-muted text-muted-foreground border-transparent hover:border-border"
-                  }`}
-                >
-                  <span className="truncate mr-2 uppercase">{cat.label}</span>
-                  {active && <Check className="w-3.5 h-3.5 flex-shrink-0" />}
-                </button>
-              );
-            })}
-          </div>
+                  return (
+                    <div key={group.id} className="space-y-1.5">
+                      <div className="flex items-center gap-1.5 text-[10px] font-mono uppercase tracking-wider text-muted-foreground font-bold">
+                        <group.icon className="w-3 h-3 text-accent" />
+                        <span>{group.label}</span>
+                      </div>
+
+                      <div className="grid grid-cols-1 gap-1">
+                        {groupCats.map((cat) => {
+                          const active = selectedCategory === cat.slug;
+                          return (
+                            <button
+                              key={cat.slug}
+                              type="button"
+                              onClick={() => {
+                                onSelectCategory(active ? null : cat.slug);
+                                if (cat.slug !== "#bbs") onSelectWeight(null);
+                                if (cat.slug !== "#vestuario") onSelectVestCategory(null);
+                                onSelectBrand(null);
+                              }}
+                              className={`flex items-center justify-between font-mono text-xs px-2.5 py-1.5 rounded-lg transition-all border text-left cursor-pointer ${
+                                active
+                                  ? "bg-accent text-accent-foreground border-accent font-bold"
+                                  : "bg-background/80 hover:bg-muted text-muted-foreground border-border/50 hover:border-border hover:text-foreground"
+                              }`}
+                            >
+                              <span className="truncate mr-2 uppercase">{cat.label}</span>
+                              {active && <Check className="w-3.5 h-3.5 flex-shrink-0" />}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </div>
 
-        {/* 6. BOTÃO DE LIMPAR TUDO */}
-        {hasActiveFilters && (
+        {/* ACORDEÃO 2: FAIXA DE PREÇO */}
+        <div className="border border-border rounded-xl bg-card/60 overflow-hidden transition-all duration-200">
           <button
-            onClick={resetAllFilters}
-            className="w-full flex items-center justify-center gap-2 py-2 px-3 rounded border border-destructive/40 text-destructive bg-destructive/10 hover:bg-destructive/20 font-mono text-xs uppercase font-semibold transition-colors mt-2"
+            type="button"
+            onClick={() => toggleSection("price")}
+            className="w-full flex items-center justify-between p-3.5 cursor-pointer hover:bg-muted/30 transition-colors"
           >
-            <RotateCcw className="w-3.5 h-3.5" />
-            Limpar Todos os Filtros
+            <div className="flex items-center gap-2">
+              <DollarSign className="w-4 h-4 text-accent" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wide text-foreground">
+                Faixa de Preço
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              {activePriceMeta ? (
+                <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30 font-bold max-w-[120px] truncate">
+                  {activePriceMeta.label}
+                </span>
+              ) : (
+                <span className="text-[10px] font-mono text-muted-foreground">Todos</span>
+              )}
+              <ChevronDown
+                className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${
+                  openSections.price ? "rotate-180 text-foreground" : ""
+                }`}
+              />
+            </div>
           </button>
+
+          {openSections.price && (
+            <div className="p-3.5 pt-0 border-t border-border/40 space-y-2 animate-in fade-in duration-150">
+              <div className="grid grid-cols-2 gap-1.5">
+                <button
+                  type="button"
+                  onClick={() => onSelectPriceRange(null)}
+                  className={`text-[11px] font-mono py-1.5 px-2 rounded-lg text-center border transition-all cursor-pointer ${
+                    selectedPriceRange === null
+                      ? "bg-accent text-accent-foreground border-accent font-bold shadow-xs"
+                      : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
+                  }`}
+                >
+                  Todos os Valores
+                </button>
+                {PRICE_RANGES.map((r) => {
+                  const active = selectedPriceRange === r.id;
+                  return (
+                    <button
+                      key={r.id}
+                      type="button"
+                      onClick={() => onSelectPriceRange(active ? null : r.id)}
+                      className={`text-[11px] font-mono py-1.5 px-2 rounded-lg text-center border transition-all cursor-pointer ${
+                        active
+                          ? "bg-accent text-accent-foreground border-accent font-bold shadow-xs"
+                          : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
+                      }`}
+                    >
+                      {r.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* ACORDEÃO 3: ORDENAR POR */}
+        <div className="border border-border rounded-xl bg-card/60 overflow-hidden transition-all duration-200">
+          <button
+            type="button"
+            onClick={() => toggleSection("sort")}
+            className="w-full flex items-center justify-between p-3.5 cursor-pointer hover:bg-muted/30 transition-colors"
+          >
+            <div className="flex items-center gap-2">
+              <ArrowDownUp className="w-4 h-4 text-accent" />
+              <span className="font-mono text-xs font-bold uppercase tracking-wide text-foreground">
+                Ordenar Por
+              </span>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30 font-bold">
+                {activeSortMeta?.label || "Padrão"}
+              </span>
+              <ChevronDown
+                className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${
+                  openSections.sort ? "rotate-180 text-foreground" : ""
+                }`}
+              />
+            </div>
+          </button>
+
+          {openSections.sort && (
+            <div className="p-3.5 pt-0 border-t border-border/40 space-y-2 animate-in fade-in duration-150">
+              <div className="grid grid-cols-2 gap-1.5">
+                {SORT_OPTIONS.map((sort) => {
+                  const active = sortOrder === sort.id;
+                  return (
+                    <button
+                      key={sort.id}
+                      type="button"
+                      onClick={() => onSortChange(sort.id)}
+                      className={`text-[11px] font-mono py-1.5 px-2 rounded-lg text-center border transition-all cursor-pointer ${
+                        active
+                          ? "bg-accent text-accent-foreground border-accent font-bold shadow-xs"
+                          : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
+                      }`}
+                    >
+                      {sort.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* ACORDEÃO 4: FABRICANTE / MARCA */}
+        {availableBrands.length > 0 && (
+          <div className="border border-border rounded-xl bg-card/60 overflow-hidden transition-all duration-200">
+            <button
+              type="button"
+              onClick={() => toggleSection("brand")}
+              className="w-full flex items-center justify-between p-3.5 cursor-pointer hover:bg-muted/30 transition-colors"
+            >
+              <div className="flex items-center gap-2">
+                <Tag className="w-4 h-4 text-accent" />
+                <span className="font-mono text-xs font-bold uppercase tracking-wide text-foreground">
+                  Fabricante / Marca
+                </span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                {selectedBrand ? (
+                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-accent/15 text-accent border border-accent/30 font-bold max-w-[120px] truncate">
+                    {selectedBrand}
+                  </span>
+                ) : (
+                  <span className="text-[10px] font-mono text-muted-foreground">
+                    {availableBrands.length} marcas
+                  </span>
+                )}
+                <ChevronDown
+                  className={`w-4 h-4 text-muted-foreground transition-transform duration-200 ${
+                    openSections.brand ? "rotate-180 text-foreground" : ""
+                  }`}
+                />
+              </div>
+            </button>
+
+            {openSections.brand && (
+              <div className="p-3.5 pt-0 border-t border-border/40 space-y-2.5 animate-in fade-in duration-150">
+                <div className="flex flex-wrap gap-1">
+                  {availableBrands.slice(0, 8).map((b) => {
+                    const active = selectedBrand === b;
+                    return (
+                      <button
+                        key={b}
+                        type="button"
+                        onClick={() => onSelectBrand(active ? null : b)}
+                        className={`text-[10px] font-mono px-2 py-1 rounded-md border transition-all cursor-pointer ${
+                          active
+                            ? "bg-accent text-accent-foreground border-accent font-bold"
+                            : "bg-background text-muted-foreground border-border hover:border-accent hover:text-foreground"
+                        }`}
+                      >
+                        {b}
+                      </button>
+                    );
+                  })}
+                </div>
+
+                {availableBrands.length > 8 && (
+                  <select
+                    value={selectedBrand || ""}
+                    onChange={(e) => onSelectBrand(e.target.value || null)}
+                    className="w-full font-mono text-xs p-2 rounded-lg bg-background border border-border text-foreground cursor-pointer focus:outline-none focus:border-accent"
+                  >
+                    <option value="">Todas as marcas ({availableBrands.length})...</option>
+                    {availableBrands.map((b) => (
+                      <option key={b} value={b}>
+                        {b}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </div>
+            )}
+          </div>
         )}
 
+        {/* ───────────────────────────────────────────────────────────── */}
+        {/* 4. BOTÃO LIMPAR TODOS OS FILTROS                              */}
+        {/* ───────────────────────────────────────────────────────────── */}
+        {hasActiveFilters && (
+          <button
+            type="button"
+            onClick={resetAllFilters}
+            className="w-full flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl border border-destructive/40 text-destructive bg-destructive/10 hover:bg-destructive/20 font-mono text-xs uppercase font-bold transition-colors cursor-pointer shadow-xs mt-1"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            <span>Limpar Todos os Filtros</span>
+          </button>
+        )}
       </div>
     </aside>
   );
