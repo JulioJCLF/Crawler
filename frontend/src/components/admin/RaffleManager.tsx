@@ -570,7 +570,7 @@ export function RaffleManager() {
                         </span>
                       ) : (
                         <span className="px-2.5 py-1 rounded-md text-[10px] font-mono uppercase tracking-wider bg-emerald-500/20 text-emerald-300 font-bold border border-emerald-500/40 backdrop-blur-xs">
-                          Ao Vivo
+                          Ativa
                         </span>
                       )}
 

@@ -345,7 +345,7 @@ export default function RaffleDetailPage() {
                 ) : (
                   <span className="px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 font-mono text-xs uppercase font-bold flex items-center gap-1.5">
                     <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                    Ao Vivo
+                    Ativa
                   </span>
                 )}
                 <span className="px-2.5 py-0.5 rounded-full bg-muted border border-border text-muted-foreground font-mono text-xs">

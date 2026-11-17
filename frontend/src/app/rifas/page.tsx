@@ -194,7 +194,7 @@ export default function PublicRafflesPage() {
                           <div className="absolute top-3 left-3">
                             <span className="px-2.5 py-1 rounded-full bg-black/75 backdrop-blur border border-white/10 text-emerald-400 font-mono text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5">
                               <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                              Ao Vivo
+                              Ativa
                             </span>
                           </div>
 

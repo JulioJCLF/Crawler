@@ -211,9 +211,6 @@ export function Filters({
               </div>
             </div>
           </div>
-          <span className="text-[10px] font-mono uppercase bg-amber-500/20 px-2 py-0.5 rounded-full border border-amber-500/30 text-amber-300 font-bold">
-            Ao Vivo
-          </span>
         </Link>
 
         {/* ───────────────────────────────────────────────────────────── */}
