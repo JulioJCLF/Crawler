@@ -6,11 +6,18 @@ import { useCart } from "@/providers/CartProvider";
 import { usePricing } from "@/providers/PricingProvider";
 import { siteConfig } from "@/config/site";
 import { cleanProductName } from "@/lib/cleanUtils";
+import { saveCatalogScroll } from "@/lib/catalogState";
 import { MessageCircle, ShoppingCart } from "lucide-react";
 
 export function ProductCard({ product }: { product: Product }) {
   const { addToCart } = useCart();
   const { calculatePrice } = usePricing();
+
+  const handleProductClick = () => {
+    if (typeof window !== "undefined") {
+      saveCatalogScroll(window.scrollY);
+    }
+  };
 
   const productName = cleanProductName(product.name);
   const currentBrl = calculatePrice(product.price, product.category, product.fixedBrlPrice);
@@ -33,6 +40,7 @@ export function ProductCard({ product }: { product: Product }) {
     <article className="flex flex-col h-full bg-card border border-border overflow-hidden transition-colors hover:border-accent">
       <Link
         href={`/produto/${product.id}`}
+        onClick={handleProductClick}
         className="relative h-48 md:h-52 bg-muted/20 border-b border-border flex items-center justify-center p-4 group cursor-pointer"
       >
         <div className="absolute top-2 left-2 z-10 flex flex-col gap-1">
@@ -70,6 +78,7 @@ export function ProductCard({ product }: { product: Product }) {
         <h3 className="text-sm font-medium leading-snug line-clamp-2">
           <Link
             href={`/produto/${product.id}`}
+            onClick={handleProductClick}
             className="text-left hover:text-accent transition-colors cursor-pointer"
           >
             <span>{productName}</span>

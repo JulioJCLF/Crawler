@@ -2,6 +2,7 @@
 
 import { useEffect, useState, use } from "react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { Product } from "@/types";
 import { useCart } from "@/providers/CartProvider";
 import { usePricing } from "@/providers/PricingProvider";
@@ -24,6 +25,7 @@ export default function ProductDetailPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  const router = useRouter();
   const { id } = use(params);
   const [product, setProduct] = useState<Product | null>(null);
   const [loading, setLoading] = useState(true);
@@ -32,6 +34,14 @@ export default function ProductDetailPage({
 
   const { addToCart } = useCart();
   const { calculatePrice } = usePricing();
+
+  const handleBack = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+    } else {
+      router.push("/");
+    }
+  };
 
   useEffect(() => {
     let active = true;
@@ -81,13 +91,14 @@ export default function ProductDetailPage({
         <div className="font-mono text-sm uppercase tracking-wider text-destructive border border-destructive/40 bg-destructive/10 px-4 py-3">
           [ERRO 404] Equipamento não localizado no acervo.
         </div>
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider px-4 py-2 border border-border bg-card hover:border-accent hover:text-accent transition-colors"
+        <button
+          type="button"
+          onClick={handleBack}
+          className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider px-4 py-2 border border-border bg-card hover:border-accent hover:text-accent transition-colors cursor-pointer"
         >
           <ArrowLeft className="w-3.5 h-3.5" />
           Voltar para a Vitrine
-        </Link>
+        </button>
       </div>
     );
   }
@@ -152,13 +163,14 @@ export default function ProductDetailPage({
       {/* Top Bar / Breadcrumb */}
       <header className="border-b border-border bg-card/60 sticky top-0 z-30 backdrop-blur-xs">
         <div className="max-w-[1300px] mx-auto px-4 md:px-8 py-3 flex items-center justify-between gap-4">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors"
+          <button
+            type="button"
+            onClick={handleBack}
+            className="inline-flex items-center gap-2 font-mono text-xs uppercase tracking-wider text-muted-foreground hover:text-accent transition-colors cursor-pointer"
           >
             <ArrowLeft className="w-4 h-4" />
             <span>Voltar ao Acervo</span>
-          </Link>
+          </button>
 
           <div className="flex items-center gap-2 font-mono text-[11px] text-muted-foreground truncate">
             <span className="uppercase px-2 py-0.5 bg-muted border border-border text-foreground">

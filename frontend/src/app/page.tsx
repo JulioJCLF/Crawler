@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState, useMemo, useRef } from "react";
 import Link from "next/link";
 import { Ticket } from "lucide-react";
 import { Filters, MACRO_CATEGORIES } from "@/components/layout/Filters";
@@ -14,6 +14,16 @@ import { AIRSOFT_BRANDS } from "@/lib/brands";
 import { siteConfig } from "@/config/site";
 import { buildActiveFilterChips, CLEARED_FILTER_STATE, FilterKey } from "@/lib/activeFilters";
 import { matchesSmartSearch, matchesPriceRange } from "@/lib/searchUtils";
+import {
+  CatalogState,
+  DEFAULT_CATALOG_STATE,
+  serializeCatalogState,
+  parseCatalogState,
+  saveCatalogStateToStorage,
+  loadCatalogStateFromStorage,
+  clearCatalogStateFromStorage,
+  getAndClearCatalogScroll,
+} from "@/lib/catalogState";
 import {
   isAegReplica,
   isTrueSpringSniper,
@@ -126,6 +136,76 @@ export default function Home() {
 
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 36;
+  const isRestoredRef = useRef(false);
+
+  // 1. Restaura estado (URL ou sessionStorage) na montagem do cliente
+  useEffect(() => {
+    const urlState = parseCatalogState(window.location.search);
+    const hasUrlParams = Object.keys(urlState).length > 0;
+    const storageState = !hasUrlParams ? loadCatalogStateFromStorage() : null;
+    const resolved = hasUrlParams ? urlState : (storageState || {});
+
+    if (resolved.search !== undefined) setSearch(resolved.search);
+    if (resolved.category !== undefined) setSelectedCategory(resolved.category);
+    if (resolved.weight !== undefined) setSelectedWeight(resolved.weight);
+    if (resolved.vestCategory !== undefined) setSelectedVestCategory(resolved.vestCategory);
+    if (resolved.brand !== undefined) setSelectedBrand(resolved.brand);
+    if (resolved.priceRange !== undefined) setSelectedPriceRange(resolved.priceRange);
+    if (resolved.sortOrder !== undefined) setSortOrder(resolved.sortOrder);
+    if (resolved.page !== undefined && resolved.page > 0) setCurrentPage(resolved.page);
+
+    isRestoredRef.current = true;
+
+    const handlePopState = () => {
+      const fromUrl = parseCatalogState(window.location.search);
+      setSearch(fromUrl.search ?? DEFAULT_CATALOG_STATE.search);
+      setSelectedCategory(fromUrl.category ?? DEFAULT_CATALOG_STATE.category);
+      setSelectedWeight(fromUrl.weight ?? DEFAULT_CATALOG_STATE.weight);
+      setSelectedVestCategory(fromUrl.vestCategory ?? DEFAULT_CATALOG_STATE.vestCategory);
+      setSelectedBrand(fromUrl.brand ?? DEFAULT_CATALOG_STATE.brand);
+      setSelectedPriceRange(fromUrl.priceRange ?? DEFAULT_CATALOG_STATE.priceRange);
+      setSortOrder(fromUrl.sortOrder ?? DEFAULT_CATALOG_STATE.sortOrder);
+      setCurrentPage(fromUrl.page ?? DEFAULT_CATALOG_STATE.page);
+    };
+
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
+  }, []);
+
+  // 2. Persiste estado atual no sessionStorage e sincroniza com a URL do navegador
+  useEffect(() => {
+    if (!isRestoredRef.current) return;
+
+    const currentState: CatalogState = {
+      page: currentPage,
+      search,
+      category: selectedCategory,
+      weight: selectedWeight,
+      vestCategory: selectedVestCategory,
+      brand: selectedBrand,
+      priceRange: selectedPriceRange,
+      sortOrder,
+    };
+
+    saveCatalogStateToStorage(currentState);
+
+    const newQs = serializeCatalogState(currentState);
+    const currentPath = window.location.pathname;
+    const newUrl = newQs ? `${currentPath}${newQs}` : currentPath;
+
+    if (window.location.search !== (newQs || "")) {
+      window.history.replaceState(null, "", newUrl);
+    }
+  }, [
+    currentPage,
+    search,
+    selectedCategory,
+    selectedWeight,
+    selectedVestCategory,
+    selectedBrand,
+    selectedPriceRange,
+    sortOrder,
+  ]);
 
   useEffect(() => {
     // Prioriza o endpoint de cache server-side acelerado no Railway, com fallback para o GitHub Raw
@@ -182,6 +262,19 @@ export default function Home() {
       .sort((a, b) => b[1] - a[1])
       .map(([brand]) => brand);
   }, [availableProducts, selectedCategory]);
+
+  // 3. Restaura a posição de rolagem caso o usuário volte de um produto
+  useEffect(() => {
+    if (!loading && snapshot) {
+      const scrollY = getAndClearCatalogScroll();
+      if (scrollY !== null) {
+        const timer = setTimeout(() => {
+          window.scrollTo({ top: scrollY, behavior: "instant" });
+        }, 50);
+        return () => clearTimeout(timer);
+      }
+    }
+  }, [loading, snapshot]);
 
   if (loading) {
     return (
@@ -272,6 +365,10 @@ export default function Home() {
     setSelectedVestCategory(CLEARED_FILTER_STATE.vestCategory);
     setSelectedPriceRange(CLEARED_FILTER_STATE.priceRange);
     setCurrentPage(1);
+    clearCatalogStateFromStorage();
+    if (typeof window !== "undefined") {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
   };
 
   const filteredProducts = availableProducts.filter((p: any) => {
